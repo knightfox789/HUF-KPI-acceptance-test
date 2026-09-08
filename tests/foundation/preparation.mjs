@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import {createPipelineOrchestrator} from '../../pipeline/orchestrator.js';
+import {createAppStateStore} from '../../state/app-state.js';
+import {createSnapshotRegistry} from '../../pipeline/snapshot-registry.js';
+const calls=[],appState=createAppStateStore(),snapshots=createSnapshotRegistry();
+const adapter={runStage:async s=>(calls.push(s),{engine:s}),getPublicProtectedState:()=>({})};
+const o=createPipelineOrchestrator({adapter,appState,snapshotRegistry:snapshots,supportedTemplateVersion:'HUF-SS-INPUT-v1.1'});
+await assert.rejects(()=>o.prepareData(),/Confirm mapping/);
+appState.setRunState('MAPPING_CONFIRMED');await o.prepareData();assert.deepEqual(calls,['E03']);assert.equal(appState.getState().runState,'PREPARED');
+await o.validateData();assert.deepEqual(calls,['E03','E04']);assert.equal(appState.getState().runState,'VALIDATION_REVIEW');
+o.invalidateFrom('E03');assert.equal(snapshots.has('E03'),false);await assert.rejects(()=>o.validateData(),/Prepare data/);
+console.log('PASS E03-only preparation, separate validation and invalidation');

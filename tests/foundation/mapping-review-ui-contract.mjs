@@ -3,7 +3,7 @@ const surface=ui+'\n'+vm;for(const [id,text] of [['EXCEPTION_FIRST','Needs atten
 check('USES_VIEW_MODEL',ui.includes('createMappingReviewViewModel'));
 for(const [id,method] of [['UPDATE_SHEET','controller.updateSheetMapping'],['CONFIRM_SHEET','controller.confirmSheetMapping'],['UPDATE_FIELD','controller.updateFieldMapping'],['CONFIRM_FIELD','controller.confirmFieldMapping'],['FINALIZE','controller.confirmMapping']])check(id,ui.includes(method));
 check('NO_DIRECT_PROTECTED_IMPORT',!ui.includes('protected-core/')&&!vm.includes('protected-core/'));
-check('BOOTSTRAP_MOUNTS_MAPPING',boot.includes('mountMappingReview')&&boot.includes('renderMapping'));
+check('BOOTSTRAP_MOUNTS_MAPPING',boot.includes('mountMappingReview')&&boot.includes('async function mapping'));
 check('FINALIZE_TRANSITION_SEPARATE',ui.includes('confirmMappingReview({controller,onConfirmed})')&&!ui.includes('act(async()=>{const final=await controller.confirmMapping()'));
-check('DATA_PREP_BOUNDARY',boot.includes('does not execute E03 yet'));
+check('DATA_PREP_BOUNDARY',boot.includes('mountDataPreparation')&&!ui.includes('prepareAndValidate'));
 const failed=checks.filter(x=>x.status==='FAIL');console.log(JSON.stringify({suite:'mapping-review-ui-contract',status:failed.length?'FAIL':'PASS',checks:checks.length,failed:failed.length,details:checks},null,2));if(failed.length)process.exitCode=1;

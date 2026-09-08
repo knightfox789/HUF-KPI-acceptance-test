@@ -27,6 +27,7 @@ export function createWorkerPipelineClient({WorkerCtor=globalThis.Worker,workerU
     getCapabilities:()=>rpc('GET_CAPABILITIES'),
     getMappingMetadata:()=>rpc('GET_MAPPING_METADATA'),
     runIntake:file=>rpc('RUN_INTAKE',{file}),
+    getPreparationDetail:()=>rpc('GET_PREPARATION_DETAIL'),getResultPackage:()=>rpc('GET_RESULT_PACKAGE'),applySourceCorrection:correction=>rpc('APPLY_SOURCE_CORRECTION',correction),
     buildMapping:()=>rpc('BUILD_MAPPING'),
     updateSheetMapping:(expectedSheet,sourceSheetName)=>rpc('UPDATE_SHEET_MAPPING',{expectedSheet,sourceSheetName}),
     confirmSheetMapping:(expectedSheet,confirmed=true)=>rpc('CONFIRM_SHEET_MAPPING',{expectedSheet,confirmed}),

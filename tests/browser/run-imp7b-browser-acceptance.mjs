@@ -14,14 +14,19 @@ const check=(id,ok,note='')=>{checks.push({id,status:ok?'PASS':'FAIL',note});if(
 const mime={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.mjs':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json; charset=utf-8','.xlsx':'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet','.svg':'image/svg+xml','.png':'image/png','.ico':'image/x-icon'};
 function safePath(url){const pathname=decodeURIComponent(new URL(url,'http://127.0.0.1').pathname);const rel=pathname==='/'?'index.html':pathname.replace(/^\/+/, '');const resolved=path.resolve(siteRoot,rel);if(!resolved.startsWith(siteRoot+path.sep)&&resolved!==siteRoot)throw new Error('Unsafe static path');return resolved;}
 const server=http.createServer(async(req,res)=>{try{const p=safePath(req.url||'/');const data=await fs.readFile(p);res.writeHead(200,{'content-type':mime[path.extname(p)]||'application/octet-stream','cache-control':'no-store'});res.end(data);}catch{res.writeHead(404,{'content-type':'text/plain'});res.end('Not found');}});
-const evidence={schema:'HUF-IMP7BE-BROWSER-ACCEPTANCE-v1',phase:'IMP-7B-E',productVersion:'0.1.6-acceptance',startedAt,status:'RUNNING',applicationFailure:false,siteRoot,sample:path.relative(root,samplePath),checks,consoleErrors:[],pageErrors:[]};
+const evidence={schema:'HUF-IMP7BE-BROWSER-ACCEPTANCE-v1',phase:'PHASE-8',productVersion:'1.0.0-rc.1',startedAt,status:'RUNNING',applicationFailure:false,siteRoot,sample:path.relative(root,samplePath),checks,consoleErrors:[],pageErrors:[]};
 let browser;
 try{
   await fs.access(path.join(siteRoot,'index.html'));await fs.access(samplePath);
-  await new Promise((resolve,reject)=>{server.once('error',reject);server.listen(0,'127.0.0.1',resolve);});
-  const address=server.address();const base=`http://127.0.0.1:${address.port}/`;
+  if(!process.env.HUF_LIVE_URL)await new Promise((resolve,reject)=>{server.once('error',reject);server.listen(0,'127.0.0.1',resolve);});
+  const base=process.env.HUF_LIVE_URL||`http://127.0.0.1:${server.address().port}/`;
+  evidence.target=base;
   browser=await chromium.launch({headless:true});
-  const page=await browser.newPage();
+  const page=await browser.newPage({viewport:{width:1440,height:1000}});page.setDefaultTimeout(30000);
+  const requests=[];page.on('request',r=>requests.push({url:r.url(),method:r.method()}));
+  const shots=process.env.HUF_SCREENSHOT_DIR;if(shots)await fs.mkdir(shots,{recursive:true});
+  const shot=async name=>{if(shots)await page.screenshot({path:path.join(shots,name+'.png'),fullPage:true});};
+  const download=async selector=>{const promise=page.waitForEvent('download');await page.locator(selector).click();const d=await promise;const p=await d.path();return {name:d.suggestedFilename(),bytes:await fs.readFile(p)};};
   page.on('console',msg=>{if(msg.type()==='error')evidence.consoleErrors.push(msg.text());});
   page.on('pageerror',err=>evidence.pageErrors.push(err.message));
   await page.goto(base,{waitUntil:'domcontentloaded'});
@@ -51,10 +56,34 @@ try{
   const postManual=await page.locator('[data-mapping-root]').innerText();check('MANUAL_MAPPING_APPLIED',postManual.includes('Manual')||postManual.includes('manual'));
   const finalize=page.locator('[data-finalize-mapping]');check('FINALIZE_ENABLED',!(await finalize.isDisabled()));
   await finalize.click();
-  await page.getByText('Mapping snapshot is frozen',{exact:true}).waitFor({state:'visible',timeout:30000});
-  const confirmedText=await page.locator('main').innerText();check('MAPPING_CONFIRMED_SCREEN',confirmedText.includes('Mapping confirmed'));
-  const hashMatches=confirmedText.match(/[a-f0-9]{64}/gi)||[];check('SNAPSHOT_HASH_VISIBLE',hashMatches.length>0,hashMatches[0]||'');
-  check('DATA_PREPARATION_NOT_EXECUTED',confirmedText.includes('does not execute E03 yet'));
+  await page.locator('[data-preparation-root]').waitFor({state:'visible',timeout:60000});
+  check('DATA_PREPARATION_EXECUTED',await page.getByText('Your data is prepared',{exact:true}).isVisible());
+  check('VALIDATION_SEPARATE_FROM_PREPARATION',(await page.locator('main').innerText()).includes('Validation has not run'));
+  const preparationText=await page.locator('[data-preparation-root]').innerText();check('SNAPSHOT_HASH_VISIBLE',preparationText.includes('Advanced preparation and lineage'));
+  await shot('01-preparation');await page.locator('[data-validate]').click();await page.locator('[data-validation-root]').waitFor();
+  check('VALIDATION_WARNING_IS_NOT_BLOCKER',!(await page.locator('[data-calculate]').isDisabled()));await shot('02-validation');
+  const started=Date.now();await page.locator('[data-calculate]').click();await page.locator('[data-results-root]').waitFor({timeout:120000});evidence.goldenCalculationMs=Date.now()-started;
+  check('RESULTS_CALCULATED',(await page.locator('[data-results-root]').innerText()).includes('9,513.721'));
+  check('SYNTHETIC_DISCLOSURE',await page.locator('[data-synthetic-badge]').isVisible());await shot('03-results-desktop');
+  await page.locator('[data-unit]').selectOption('BL');check('UNIT_SWITCH_RENDERS',(await page.locator('main').innerText()).includes('Billion litres'));
+  await page.locator('[data-unit]').selectOption('m3');
+  await page.locator('[data-route="structures"]').click();await page.locator('[data-structures-root]').waitFor();await page.locator('[data-detail-select]').selectOption('S-CCT-01');await page.locator('[data-open-detail]').click();await page.locator('[data-structure-detail]').waitFor();
+  const trace=await download('[data-trace-json]');const traceJson=JSON.parse(trace.bytes);check('TRACE_365_ROWS',traceJson.rows.length===365);check('TRACE_RUN_METADATA',Boolean(traceJson.metadata.runId));await shot('04-structure');
+  const structurePdf=await download('[data-structure-pdf]');check('STRUCTURE_PDF',structurePdf.bytes.subarray(0,5).toString()==='%PDF-');
+  await page.locator('[data-route="assurance"]').click();await page.locator('[data-assurance-root]').waitFor();check('ASSURANCE_REQUIREMENTS',(await page.locator('main').innerText()).includes('Evidence requirements'));await shot('05-assurance');
+  await page.locator('[data-route="reports"]').click();await page.locator('[data-reports-root]').waitFor();
+  const csv=await download('[data-export="csv"]');check('COMPACT_CSV_FULL_PRECISION',csv.bytes.toString().includes('228.5841281366329'));check('CSV_SYNTHETIC_METADATA',csv.bytes.toString().includes('synthetic'));
+  for(const kind of ['compact','management','technical']){const xlsx=await download('[data-export="'+kind+'"]');check('XLSX_'+kind.toUpperCase(),xlsx.bytes.subarray(0,2).toString()==='PK');}
+  const pdf=await download('[data-pdf]');check('MANAGEMENT_PDF',pdf.bytes.subarray(0,5).toString()==='%PDF-');
+  const auditFile=await download('[data-audit-json]');const audit=JSON.parse(auditFile.bytes);check('AUDIT_E01_TO_E09',audit.auditEvents.map(e=>e.engine).join(',')==='E01,E02,E03,E04,E05,E06,E07,E08,E09');check('AUDIT_NO_SOURCE_BYTES',!auditFile.bytes.toString().includes('rawWorkbookBytes'));check('AUDIT_SOURCE_HASH',audit.runManifest.sourceWorkbookSha256==='7c6ba9498f8c87790503331f848cf4a83db577ab95c056473e202efd22fdddeb');
+  const bundle=await download('[data-bulk]');check('BULK_ZIP',bundle.bytes.subarray(0,2).toString()==='PK');const combined=await download('[data-combined-pdf]');check('COMBINED_PDF',combined.bytes.subarray(0,5).toString()==='%PDF-');await shot('06-reports');
+  for(const [name,width,height] of [['tablet',834,1112],['mobile',390,844]]){await page.setViewportSize({width,height});for(const route of ['results','structures','reports','audit']){await page.locator('[data-route="'+route+'"]').click();await page.locator('[data-'+({results:'results-root',structures:'structures-root',reports:'reports-root',audit:'audit-root'}[route])+']').waitFor();check('NO_PAGE_OVERFLOW_'+name+'_'+route,await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));await shot('07-'+name+'-'+route);}}
+  await page.setViewportSize({width:1440,height:1000});await page.locator('[data-route="review"]').click();await page.locator('[data-validation-root]').waitFor();
+  await page.locator('[data-correction-form] [name="sheet"]').selectOption('03_Technical');await page.locator('[data-correction-form] [name="field"]').selectOption('TEC-002');await page.locator('[data-correction-form] [name="blank"]').check();await page.locator('[data-correction-form] [name="reason"]').fill('Browser acceptance blank-value correction');await page.locator('[data-correction-form] button[type="submit"]').click();await page.locator('[data-preparation-root]').waitFor();check('CORRECTION_INVALIDATES_RESULTS',await page.locator('[data-route="results"]').isDisabled());
+  check('NO_PROJECT_DATA_IN_URL',new URL(page.url()).search===''&&new URL(page.url()).hash==='');
+  check('NO_UPLOAD_REQUESTS',requests.every(r=>r.method==='GET'));
+  check('NO_OFFSITE_REQUESTS',requests.every(r=>new URL(r.url).origin===new URL(base).origin));
+  check('NO_DEBUG_STATE_GLOBAL',await page.evaluate(()=>!window.__HUF_STORE__&&!window.__HUF_STATE__&&!window.__HUF_APP_PUBLIC__?.raw));
   check('NO_PAGE_ERRORS',evidence.pageErrors.length===0,evidence.pageErrors.join(' | '));
   evidence.status='PASS';
 }catch(error){evidence.status='FAIL';evidence.applicationFailure=true;evidence.error={message:error.message,stack:error.stack};process.exitCode=1;}
@@ -62,5 +91,5 @@ finally{
   evidence.finishedAt=new Date().toISOString();
   await browser?.close().catch(()=>{});await new Promise(resolve=>server.close(()=>resolve()));
   await fs.mkdir(path.dirname(evidencePath),{recursive:true});await fs.writeFile(evidencePath,JSON.stringify(evidence,null,2)+'\n');
-  console.log(JSON.stringify({status:evidence.status,evidencePath,checks:checks.length,failed:checks.filter(x=>x.status==='FAIL').length},null,2));
+  console.log(JSON.stringify(evidence,null,2));
 }

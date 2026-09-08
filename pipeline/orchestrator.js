@@ -70,8 +70,18 @@ export function createPipelineOrchestrator({adapter,appState,bus,snapshotRegistr
       const safeState=createMappingState(frozen,'confirmed');
       appState.patch({mapping:safeState});appState.setRunState('MAPPING_CONFIRMED');return safeState.snapshot;
     },
+    async prepareData(){
+      if(appState.getState().runState!=='MAPPING_CONFIRMED')throw new Error('Confirm mapping before preparing data.');
+      await executeStages(['E03']);appState.setRunState('PREPARED');return publicState();
+    },
+    async validateData(){
+      if(!snapshotRegistry?.has('E03'))throw new Error('Prepare data before validation.');
+      await executeStages(['E04']);appState.setRunState('VALIDATION_REVIEW');return publicState();
+    },
     async prepareAndValidate(){await executeStages(['E03','E04']);appState.setRunState('VALIDATION_REVIEW');return publicState();},
     async calculateToAudit(){
+      const validation=(await publicState())?.validation;if(validation?.workbookReadiness==='workbook_not_ready')throw new Error('Resolve workbook blockers before calculation.');
+      if(!snapshotRegistry?.has('E04'))throw new Error('Validate data before calculation.');
       appState.setRunState('CALCULATING');await executeStages(['E05','E06','E07','E08']);appState.setRunState('FINALIZING');await executeStages(['E09']);
       const state=await publicState();const audit=state?.audit??null;
       snapshotRegistry?.complete({runId:audit?.runId??audit?.runManifest?.runId??null,audit});

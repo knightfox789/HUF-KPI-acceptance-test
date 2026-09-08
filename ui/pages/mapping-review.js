@@ -23,7 +23,7 @@ function drawerHtml(row,vm){
 export async function confirmMappingReview({controller,onConfirmed=null}={}){
   if(!controller?.confirmMapping)throw new Error('Mapping Review finalization requires the governed controller.');
   const final=await controller.confirmMapping();
-  onConfirmed?.(final);
+  await onConfirmed?.(final);
   return final;
 }
 
@@ -38,7 +38,7 @@ export async function mountMappingReview({main,controller,onBack=null,onConfirme
     const vm=createMappingReviewViewModel(mapping,metadata,filter);const active=activeFieldId?vm.fields.find(x=>x.fieldId===activeFieldId):null;
     const sheetAttention=vm.sheets.filter(x=>x.status.attention);
     main.innerHTML=`<div class="mapping-page" data-mapping-root>
-      <section class="page-heading"><div><span class="eyebrow">IMP-7B-D · Mapping Review</span><h1>Confirm adaptive field mapping</h1><p class="lead">Review only exceptions first. Mapping methods, confidence, conflicts and suggestions come from protected E02; this screen does not rematch fields itself.</p></div><span class="status-pill ${vm.canConfirm?'ready':'warning'}">${vm.canConfirm?'Ready to confirm':`${vm.summary.blocking} blocking / pending`}</span></section>
+      <section class="page-heading"><div><span class="eyebrow">Review & Correct · Mapping</span><h1>Confirm adaptive field mapping</h1><p class="lead">Review only exceptions first. Suggestions follow the controlled mapping policy. Confirm the source fields before preparing your data.</p></div><span class="status-pill ${vm.canConfirm?'ready':'warning'}">${vm.canConfirm?'Ready to confirm':`${vm.summary.blocking} blocking / pending`}</span></section>
       ${errorMessage?`<div class="mapping-alert error-text" role="alert">${esc(errorMessage)}</div>`:''}
       <section class="mapping-summary-grid" aria-label="Mapping summary">
         ${summaryCard('Mapped automatically',vm.summary.mappedAutomatically,'ready')}

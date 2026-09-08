@@ -1,7 +1,7 @@
 {
   "schema": "HUF-IMP7BE-ACCEPTANCE-READINESS-VALIDATION-v1",
-  "version": "0.1.6-acceptance",
-  "phase": "IMP-7B-E",
+  "version": "1.0.0-rc.1",
+  "phase": "IMP-7C-G / PHASE-8",
   "status": "PASS",
   "methodologyChanged": false,
   "protectedCore": "UNCHANGED",

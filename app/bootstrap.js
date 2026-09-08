@@ -1,43 +1,31 @@
-import { ROUTES } from './routes.js';
-import { createAppController } from './app-controller.js';
-import { browserCapabilities } from '../adapters/browser-capabilities.js';
-import { createPipelineClient } from '../pipeline/pipeline-client.js';
-import { loadTemplateManifest } from '../services/template-service.js';
-import { loadProductConfig,resolveSupportedTemplateVersion } from '../services/product-config-service.js';
-import { mountHomeUpload } from '../ui/pages/home-upload.js';
-import { mountWorkbookPreflight } from '../ui/pages/workbook-preflight.js';
-import { mountMappingReview } from '../ui/pages/mapping-review.js';
-
-const nav=document.querySelector('[data-nav]');const main=document.querySelector('main');
-const navButtons=new Map();
-for(const route of ROUTES){
-  const item=document.createElement('button');item.type='button';item.className='nav-item';item.textContent=route.label;item.dataset.route=route.id;
-  if(!['home','review'].includes(route.id)){item.disabled=true;item.setAttribute('aria-disabled','true');item.title='Available in a later governed implementation batch';}
-  nav.append(item);navButtons.set(route.id,item);
-}
-const caps=browserCapabilities();
-let pipelineClient=null;let pipelineError=null;
-try{pipelineClient=await createPipelineClient();}catch(error){pipelineError=error;}
-const mode=pipelineClient?.mode??'unavailable';
-let templateManifest=null;let productConfig=null;let supportedTemplateVersion=null;let configError=null;
-try{[templateManifest,productConfig]=await Promise.all([loadTemplateManifest(),loadProductConfig()]);supportedTemplateVersion=resolveSupportedTemplateVersion(productConfig,templateManifest);}catch(error){configError=error;}
-if(configError&&!pipelineError)pipelineError=configError;
-const controller=createAppController({adapter:supportedTemplateVersion?pipelineClient:null,supportedTemplateVersion});
-let cleanup=null;
-function activate(route){for(const [id,button] of navButtons){if(id===route)button.setAttribute('aria-current','page');else button.removeAttribute('aria-current');}}
-function renderHome(){cleanup?.();controller.navigate('home');activate('home');cleanup=mountHomeUpload({main,controller,templateManifest,pipelineMode:mode,onReview:renderPreflight});main.focus();}
-function renderPreflight(){cleanup?.();controller.navigate('review');activate('review');mountWorkbookPreflight({main,controller,onBack:renderHome,onContinue:renderMapping});cleanup=null;main.focus();}
-async function renderMapping(){
-  cleanup?.();controller.navigate('review');activate('review');main.innerHTML='<section class="card"><span class="eyebrow">IMP-7B-D · Mapping Review</span><h2>Building protected E02 mapping preview…</h2><p class="muted">The workbook is being mapped locally through the governed pipeline.</p></section>';
-  try{cleanup=await mountMappingReview({main,controller,onBack:renderPreflight,onConfirmed:renderMappingConfirmed});}catch(error){main.innerHTML=`<section class="card"><span class="eyebrow">Mapping Review</span><h2>Mapping could not be opened</h2><p class="error-text">${String(error?.message||error)}</p><button class="button secondary" data-return-preflight>Return to Preflight</button></section>`;main.querySelector('[data-return-preflight]').addEventListener('click',renderPreflight);}main.focus();
-}
-function renderMappingConfirmed(mapping){
-  controller.navigate('review');activate('review');main.innerHTML=`<div class="mapping-page"><section class="page-heading"><div><span class="eyebrow">IMP-7B-D · Mapping confirmed</span><h1>Mapping snapshot is frozen</h1><p class="lead">Protected E02 mapping confirmation is complete. Data Preparation remains the next governed implementation batch; this screen does not execute E03 yet.</p></div><span class="status-pill ready">Mapping confirmed</span></section><section class="card"><dl class="compact-meta"><div><dt>Status</dt><dd class="mono">${mapping?.status||'mapping_confirmed'}</dd></div><div><dt>Snapshot hash</dt><dd class="mono">${mapping?.snapshotHash||'Not available'}</dd></div></dl><div class="sample-actions" style="margin-top:16px"><button class="button secondary" data-review-mapping>Review mapping</button></div></section></div>`;main.querySelector('[data-review-mapping]').addEventListener('click',renderMapping);main.focus();
-}
-navButtons.get('home').addEventListener('click',renderHome);
-navButtons.get('review').addEventListener('click',()=>{if(controller.getState().mapping?.snapshot)renderMapping();else if(controller.getState().source?.preflight)renderPreflight();});
-const unsub=controller.subscribe(state=>{const review=navButtons.get('review');const enabled=Boolean(state.source?.preflight);review.disabled=!enabled;review.setAttribute('aria-disabled',String(!enabled));review.title=enabled?'Workbook Preflight':'Run workbook intake from Home / Upload first';});
-renderHome();
-const runtime=document.querySelector('[data-runtime-status]');if(runtime)runtime.textContent=`${mode}${pipelineError?` · ${pipelineError.message}`:''}`;
-globalThis.__HUF_APP_PUBLIC__=Object.freeze({version:'0.1.5-mapping',phase:'IMP-7B-D',pipelineMode:supportedTemplateVersion?mode:'unavailable',workerAvailable:caps.worker,supportedTemplateVersion});
-void unsub;
+import {ROUTES} from './routes.js';import {createAppController} from './app-controller.js';
+import {createPipelineClient} from '../pipeline/pipeline-client.js';import {loadTemplateManifest} from '../services/template-service.js';import {loadProductConfig,resolveSupportedTemplateVersion} from '../services/product-config-service.js';
+import {mountHomeUpload} from '../ui/pages/home-upload.js';import {mountWorkbookPreflight} from '../ui/pages/workbook-preflight.js';import {mountMappingReview} from '../ui/pages/mapping-review.js';
+import {mountDataPreparation} from '../ui/pages/data-preparation.js';import {mountValidation} from '../ui/pages/validation-centre.js';import {mountResults,mountStructures,mountStructureDetail} from '../ui/pages/results.js';import {mountAssurance} from '../ui/pages/assurance.js';import {mountReports} from '../ui/pages/report-centre.js';import {mountAudit} from '../ui/pages/audit.js';
+import {createResultModel} from '../views/result-model.js';import {esc,action} from '../ui/product-ui.js';import {downloadBlob,traceCsv,traceExport} from '../services/export-service.js';import {reportData,makePdf} from '../services/report-service.js';
+const nav=document.querySelector('[data-nav]'),main=document.querySelector('main'),navButtons=new Map();
+for(const route of ROUTES){const b=document.createElement('button');b.type='button';b.className='nav-item';b.textContent=route.label;b.dataset.route=route.id;nav.append(b);navButtons.set(route.id,b);}
+let client,templateManifest,productConfig,controller,cleanup=null,model=null;const filter={};let busy=false;
+try{[client,templateManifest,productConfig]=await Promise.all([createPipelineClient(),loadTemplateManifest(),loadProductConfig()]);controller=createAppController({adapter:client,supportedTemplateVersion:resolveSupportedTemplateVersion(productConfig,templateManifest)});}catch(error){main.innerHTML=`<section class="card"><h1>Calculator could not start</h1><p role="alert">${esc(error.message)}</p><p>Reload the page after checking the application files are available.</p></section>`;throw error;}
+function activate(route){cleanup?.();cleanup=null;controller.navigate(route);for(const [id,b] of navButtons)id===route?b.setAttribute('aria-current','page'):b.removeAttribute('aria-current');}
+function notice(error){main.innerHTML=`<section class="card"><h1>This action could not finish</h1><p class="error-text" role="alert">${esc(error.message)}</p><button class="button secondary" data-recover>Return to review</button></section>`;action(main,'[data-recover]',review);}
+async function guarded(fn){if(busy)return;busy=true;try{await fn();}catch(e){notice(e);}finally{busy=false;refreshNavigation(controller.getState());main.focus();}}
+function home(){activate('home');cleanup=mountHomeUpload({main,controller,templateManifest,pipelineMode:client.mode,onReview:preflight});}
+function preflight(){activate('review');mountWorkbookPreflight({main,controller,onBack:home,onContinue:()=>guarded(mapping)});}
+async function mapping(){activate('review');cleanup=await mountMappingReview({main,controller,onBack:preflight,onConfirmed:()=>guarded(prepare)});}
+async function prepare(){activate('review');main.innerHTML='<section class="card" role="status"><h1>Preparing data…</h1></section>';await mountDataPreparation({main,controller,onMapping:()=>guarded(mapping),onValidate:()=>guarded(async()=>{await controller.validateData();await validation();})});}
+async function validation(){activate('review');await mountValidation({main,controller,onPrepare:()=>guarded(prepare),onCalculate:()=>guarded(calculate)});}
+async function review(){const s=controller.getState();if(['VALIDATION_REVIEW','READY_TO_CALCULATE','COMPLETE'].includes(s.runState))await validation();else if(['PREPARED','MAPPING_CONFIRMED'].includes(s.runState))await prepare();else if(s.mapping?.snapshot)await mapping();else if(s.source.preflight)preflight();else home();}
+async function calculate(){activate('results');main.innerHTML='<section class="card" role="status"><h1>Calculating valid scopes</h1><p data-processing-progress>Preparing calculation…</p><p>Routing, calculation, assurance, aggregation and audit are processed in order.</p></section>';await new Promise(r=>setTimeout(r,30));await controller.calculateToAudit();model=createResultModel(await controller.resultPackage());results();}
+function requireResults(){if(controller.getState().runState!=='COMPLETE'||!model)throw new Error('Results need recalculation. Complete validation and calculation first.');}
+function results(){requireResults();activate('results');mountResults({main,model,filter,onChange:results,onStructure:structures});}
+function structures(){requireResults();activate('structures');mountStructures({main,model,filter,onChange:structures,onDetail:detail});}
+function detail(id){requireResults();activate('structures');mountStructureDetail({main,model,id,onBack:structures,onTrace:(r,format)=>downloadBlob(new Blob([format==='json'?JSON.stringify(traceExport(model,r,controller.getState().source.synthetic),null,2):traceCsv(model,r,controller.getState().source.synthetic)],{type:format==='json'?'application/json':'text/csv'}),'HUF_'+id+'_Daily_Trace.'+format),onPdf:r=>{const scope=model.scopes.find(s=>s.level==='structure'&&r.memberships.includes(s.key));downloadBlob(makePdf(reportData(model,{scope:scope?.key},controller.getState().source.synthetic,'technical')).output('blob'),'HUF_'+id+'_Technical_Report.pdf');}});}
+function assurance(){requireResults();activate('assurance');mountAssurance({main,model,filter,onChange:assurance,onCorrect:()=>guarded(validation)});}
+function reports(){requireResults();activate('reports');mountReports({main,model,filter,synthetic:controller.getState().source.synthetic,onChange:reports});}
+function audit(){activate('audit');mountAudit({main,model:controller.getState().runState==='COMPLETE'?model:null,controller});}
+function refreshNavigation(s){for(const [id,b] of navButtons){const enabled=id==='home'||id==='audit'||(id==='review'?Boolean(s.source.preflight):s.runState==='COMPLETE'&&Boolean(model));b.disabled=!enabled||busy;b.setAttribute('aria-disabled',String(b.disabled));}let badge=document.querySelector('[data-synthetic-badge]');if(!badge){badge=document.createElement('strong');badge.dataset.syntheticBadge='';badge.className='synthetic-banner';document.querySelector('.topbar').append(badge);}badge.textContent=s.source.synthetic?'Synthetic validation data — not for project reporting':'';badge.hidden=!s.source.synthetic;if(s.runState==='INVALIDATED'||['EMPTY','FILE_SELECTED'].includes(s.runState)){model=null;for(const key of Object.keys(filter))delete filter[key];}const progress=main.querySelector('[data-processing-progress]');if(progress)progress.textContent=({E05:'Assigning official routes',E06:'Calculating water potential and person-days',E07:'Assessing evidence',E08:'Preparing geography totals',E09:'Finalizing audit'})[s.pipeline.stage]||'Processing';}
+for(const [id,fn] of Object.entries({home,review,results,structures,assurance,reports,audit}))navButtons.get(id).addEventListener('click',()=>guarded(fn));
+controller.subscribe(refreshNavigation);home();
+const runtime=document.querySelector('[data-runtime-status]');if(runtime)runtime.textContent='Local workbook processing';
+globalThis.__HUF_APP_PUBLIC__=Object.freeze({version:productConfig.appVersion,phase:productConfig.implementationPhase,pipelineMode:client.mode,supportedTemplateVersion:resolveSupportedTemplateVersion(productConfig,templateManifest)});

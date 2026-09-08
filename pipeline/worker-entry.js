@@ -18,6 +18,9 @@ export async function handleWorkerCommand(command,payload={}){
   const a=await adapter();
   switch(command){
     case'RESET':a.reset();return {reset:true};
+    case'GET_PREPARATION_DETAIL':return a.getPreparationDetail();
+    case'GET_RESULT_PACKAGE':return a.getResultPackage();
+    case'APPLY_SOURCE_CORRECTION':return a.applySourceCorrection(payload);
     case'GET_PUBLIC_STATE':return a.getPublicProtectedState();
     case'GET_MAPPING_METADATA':return a.getMappingMetadata();
     case'RUN_INTAKE':return a.runIntake(payload.file);

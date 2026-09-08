@@ -11,6 +11,15 @@
       "purpose": "Controlled XLSX ZIP parsing",
       "source": "Protected HUF v1.0.0 release",
       "licensePath": "vendor/jszip/JSZIP-LICENSE.md"
+    },
+    {
+      "library": "jsPDF",
+      "version": "3.0.3",
+      "path": "vendor/jspdf/jspdf.umd.min.js",
+      "sha256": "509a1b5b1f3402b81e28510e46145618373a9cba61c94c119d5e9242a86261e1",
+      "purpose": "Structured local PDF generation",
+      "source": "npm jspdf@3.0.3",
+      "licensePath": "vendor/jspdf/LICENSE"
     }
   ]
 }
