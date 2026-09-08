@@ -176,8 +176,8 @@
     },
     {
       "path": "docs/continuity/master-plan.md",
-      "sizeBytes": 488103,
-      "sha256": "5aabba90b2317817142c9ad1b36dd8dfabc7607db5e077004d5ed4181be6ef0a"
+      "sizeBytes": 488371,
+      "sha256": "7ce019881e58c89d95715c73e11e8ed643f8ea70666484a92f5526b2c3d55fcd"
     },
     {
       "path": "docs/release/PHASE7A_IMPLEMENTATION_REPORT.md",
@@ -526,8 +526,8 @@
     },
     {
       "path": "tests/browser/run-imp7b-browser-acceptance.mjs",
-      "sizeBytes": 14623,
-      "sha256": "f372f9ab51fb511ff97c2c42e2bc067bcb5f820489f2987659c448e0d9c4c720"
+      "sizeBytes": 14641,
+      "sha256": "ec8b45dc4275fc18d6e5800f43ad0e0b0efda36025df084c298168b04077c8a8"
     },
     {
       "path": "tests/design6/certification/HUF_D6_Remaining80_Execution_Results_v1.1.json",
