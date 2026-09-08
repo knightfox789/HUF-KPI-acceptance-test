@@ -1,11 +1,12 @@
 import { loadProtectedConfig } from '../adapters/protected-config-adapter.js';
 import { createProtectedPipelineAdapter } from './pipeline-adapter.js';
-import { ensureLocalJsZip, probePipelineRuntimeCapabilities } from './worker-runtime.js';
+import { ensureLocalJsZip, ensureWorkerDomParser, probePipelineRuntimeCapabilities } from './worker-runtime.js';
 
 let adapterPromise=null;
 async function adapter(){
   adapterPromise??=(async()=>{
     await ensureLocalJsZip();
+    await ensureWorkerDomParser();
     return createProtectedPipelineAdapter(await loadProtectedConfig());
   })();
   return adapterPromise;
@@ -18,6 +19,9 @@ export async function handleWorkerCommand(command,payload={}){
   const a=await adapter();
   switch(command){
     case'RESET':a.reset();return {reset:true};
+    case'GET_PREPARATION_DETAIL':return a.getPreparationDetail();
+    case'GET_RESULT_PACKAGE':return a.getResultPackage();
+    case'APPLY_SOURCE_CORRECTION':return a.applySourceCorrection(payload);
     case'GET_PUBLIC_STATE':return a.getPublicProtectedState();
     case'GET_MAPPING_METADATA':return a.getMappingMetadata();
     case'RUN_INTAKE':return a.runIntake(payload.file);
@@ -33,10 +37,19 @@ export async function handleWorkerCommand(command,payload={}){
   }
 }
 
+const chunkAcks=new Map();
+async function sendResultPackage(requestId,command,pack){
+  const send=payload=>new Promise(resolve=>{chunkAcks.set(requestId,resolve);self.postMessage(envelope(requestId,command,'partial',payload));});
+  await send({kind:'header',value:{...pack,calculation:{...pack.calculation,waterCalculations:[]}}});
+  for(let i=0;i<pack.calculation.waterCalculations.length;i+=20)await send({kind:'water',value:pack.calculation.waterCalculations.slice(i,i+20)});
+  self.postMessage(envelope(requestId,command,'complete'));
+}
+
 if(typeof self!=='undefined'&&'postMessage' in self){
   self.onmessage=async event=>{
     const {requestId,command,payload}=event.data||{};
-    try{self.postMessage(envelope(requestId,command,'complete',await handleWorkerCommand(command,payload)));}
+    if(command==='ACK_RESULT_CHUNK'){const ack=chunkAcks.get(requestId);chunkAcks.delete(requestId);ack?.();return;}
+    try{const result=await handleWorkerCommand(command,payload);if(command==='GET_RESULT_PACKAGE')await sendResultPackage(requestId,command,result);else self.postMessage(envelope(requestId,command,'complete',result));}
     catch(error){self.postMessage(envelope(requestId,command,'failed',null,{message:error.message,name:error.name}));}
   };
 }

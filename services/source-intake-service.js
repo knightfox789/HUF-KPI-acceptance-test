@@ -19,7 +19,7 @@ export async function prepareSelectedWorkbook(file,{kind='upload',synthetic=fals
       templateVersion:null,
       sourceSessionId:null,
       kind,
-      synthetic:Boolean(synthetic),
+      synthetic:Boolean(synthetic)||['e1a592ce49e3a308b8d402ca65a090f5d5f0e39b7bda3484be6e653ddc015f56','7c6ba9498f8c87790503331f848cf4a83db577ab95c056473e202efd22fdddeb'].includes(sha256),
       sampleId:sampleId||null,
       lastModified:Number.isFinite(file.lastModified)?file.lastModified:null
     })

@@ -53,6 +53,12 @@ export function createAppController({adapter=null,appState=createAppStateStore()
     confirmFieldMapping:(fieldId,confirmed=true)=>requirePipeline().confirmFieldMapping(fieldId,confirmed),
     confirmAllSuggested:()=>requirePipeline().confirmAllSuggested(),
     confirmMapping:()=>requirePipeline().confirmMapping(),
+    preparationDetail:()=>adapter.getPreparationDetail(),
+    resultPackage:()=>adapter.getResultPackage(),
+    async correctSource(correction){const entry=await adapter.applySourceCorrection(correction);requirePipeline().invalidateFrom('E03','Source correction applied');appState.setRunState('MAPPING_CONFIRMED');return entry;},
+    publicState:()=>adapter.getPublicProtectedState(),
+    prepareData:()=>requirePipeline().prepareData(),
+    validateData:()=>requirePipeline().validateData(),
     prepareAndValidate:()=>requirePipeline().prepareAndValidate(),
     calculateToAudit:()=>requirePipeline().calculateToAudit(),
     invalidateFrom:(stage,reason)=>requirePipeline().invalidateFrom(stage,reason)

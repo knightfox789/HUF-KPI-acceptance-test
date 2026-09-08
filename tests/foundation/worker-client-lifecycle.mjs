@@ -34,4 +34,9 @@ await client4.confirmAllSuggested();check('WORKER_CONFIRM_ALL_COMMAND',Responsiv
 await client4.confirmMapping();check('WORKER_FINALIZE_NO_MAPPING_PAYLOAD',ResponsiveWorker.last.lastMessage.command==='CONFIRM_MAPPING'&&ResponsiveWorker.last.lastMessage.payload===null);
 client4.terminate();
 
+const streamed=createWorkerPipelineClient({WorkerCtor:FakeWorker,timeoutMs:5000});const streamPromise=streamed.getResultPackage();const w=FakeWorker.last,id=w.lastMessage.requestId;
+w.onmessage({data:{requestId:id,status:'partial',payload:{kind:'header',value:{calculation:{waterCalculations:[]},hash:'preserved'}}}});
+check('CHUNK_ACK_YIELDS',w.lastMessage.command==='GET_RESULT_PACKAGE');await new Promise(r=>setTimeout(r,5));check('CHUNK_ACK_SENT',w.lastMessage.command==='ACK_RESULT_CHUNK');
+w.onmessage({data:{requestId:id,status:'partial',payload:{kind:'water',value:[{value:null,trace:[0,1.2345678901234567]}]}}});w.onmessage({data:{requestId:id,status:'complete',payload:null}});const rebuilt=await streamPromise;check('CHUNK_VALUES_PRESERVED',rebuilt.hash==='preserved'&&rebuilt.calculation.waterCalculations[0].value===null&&rebuilt.calculation.waterCalculations[0].trace[1]===1.2345678901234567);streamed.terminate();
+
 const failed=checks.filter(x=>x.status==='FAIL');console.log(JSON.stringify({suite:'worker-client-lifecycle',status:failed.length?'FAIL':'PASS',checks:checks.length,failed:failed.length,details:checks},null,2));if(failed.length)process.exitCode=1;

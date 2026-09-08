@@ -1,8 +1,8 @@
 {
   "appName": "HUF Supply-Side KPI Calculator",
-  "appVersion": "0.1.6-acceptance",
-  "implementationPhase": "IMP-7B-E",
-  "implementationStatus": "BROWSER_CI_RELEASE_ACCEPTANCE_READY",
+  "appVersion": "1.0.0",
+  "implementationPhase": "PHASE-9",
+  "implementationStatus": "IMPLEMENTATION_COMPLETE_GATED_RELEASE",
   "methodologyBaseline": "HUF protected v1.0.0 E01-E09",
   "designVersions": {
     "routeRegistry": "HUF-DESIGN1-ROUTE-REGISTRY-v1.1",
@@ -32,8 +32,8 @@
     "workbookUpload": true,
     "workbookPreflight": true,
     "mappingReview": true,
-    "resultsDashboard": false,
-    "reports": false
+    "resultsDashboard": true,
+    "reports": true
   },
   "controlledTemplate": {
     "version": "HUF-SS-INPUT-v1.1",

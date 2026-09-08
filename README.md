@@ -1,56 +1,49 @@
-# HUF Supply-Side KPI Calculator — Clean Rebuild
+# HUF Supply-Side KPI Calculator
 
-## Current implementation
+Browser-local preparation, controlled calculation, analysis and reporting for HUF supply-side water KPIs and person-days.
 
-**Version:** `0.1.6-acceptance`  
-**Phase:** `IMP-7B-E — Exception-first Mapping Review`
+**Release build: 1.0.0.** Publication requires successful staged, capacity and live acceptance. The published release certificate records those completed gates; `FINAL_VALIDATION_STATUS.json` explains the source snapshot and `docs/continuity/master-plan.md` retains the governing history.
 
-This package preserves the protected HUF v1.0.0 E01–E09 methodology byte-for-byte while implementing the governed workbook-entry, Workbook Preflight and exception-first Mapping Review workflow.
+## Workflow
 
-Implemented through this baseline:
+Upload a controlled XLSX or try a labelled synthetic sample. Review preflight and mapping, prepare data, resolve validation findings, then calculate valid scopes. Results, geography, structures, evidence, exports and reports share the prepared result package.
 
-- `.xlsx` upload/drag-drop, controlled samples and blank template;
-- immutable source metadata, SHA-256 and browser-local privacy boundary;
-- protected E01-backed Workbook Preflight;
-- governed template-version agreement/injection and clean manifest-driven source packaging;
-- protected E02 mapping preview through the existing adapter/controller command boundary;
-- exception-first Mapping Review summary: mapped automatically, needs confirmation, conflicts and unmapped required;
-- Needs attention / Confirmed / All fields / Advanced views;
-- sheet mapping review and explicit confirmation;
-- field mapping drawer with expected sheet, data type/unit, E02 method/confidence and protected candidate suggestions;
-- controlled manual source selection and confirmation through E02 commands only;
-- raw workbook sample rows withheld from product Mapping Review state;
-- Core-unmapped, conflict and pending-confirmation workflow blocking;
-- deterministic protected E02 final mapping snapshot/hash;
-- downstream E03–E09 snapshot invalidation when a mapping changes;
-- Data Preparation boundary preserved: E03 is not executed by this phase.
+Source processing occurs in the browser. Corrections are recorded session overlays; the original workbook stays unchanged. Replacing the source invalidates dependent results. Download outputs before closing the session.
 
-Next governed implementation work follows Mapping Review closure and the Phase 7 integration/browser sequence recorded in the living master plan.
+Calculated total includes accepted, provisional and warning results. “Accepted under controlled methodology” is separate from formal HUF confirmation. Missing, HOLD and excluded numeric results remain null; zero is preserved only when the source result is zero.
 
-Run validation:
+## Reports and exports
 
-```bash
+- Compact CSV/XLSX and multi-sheet management/technical XLSX.
+- Structure daily-trace CSV/JSON with run/version metadata.
+- Structured management and technical PDFs at the governed hierarchy levels.
+- Audit JSON, audit ZIP, bulk report ZIP and combined PDF.
+- Filter and scope membership are retained. Default result exports omit participant names/tokens, sensitive demographics and source notes.
+
+## Development and verification
+
+No build system or runtime CDN is required. Serve the repository with a static HTTP server, or build the curated Pages payload with `npm run build:pages`.
+
+```sh
+npm install --no-save --package-lock=false jszip@3.10.1 @xmldom/xmldom@0.9.12 playwright@1.55.0
 npm test
-```
-
-Generate release manifest:
-
-```bash
-npm run release:manifest
-```
-
-Build governed source ZIP:
-
-```bash
-npm run release:zip
-```
-
-Build curated GitHub Pages payload:
-
-```bash
+npm run test:product
+node tests/protected/run.mjs
+node tests/protected/remaining80.mjs
+node tests/protected/design6-summary.mjs
 npm run build:pages
+npx playwright install --with-deps chromium
+npm run accept:browser
 ```
 
+The protected harness extracts unmodified original test sources and fixtures into a temporary directory and executes them against this repository's protected core. The remaining-80 runner follows the frozen scenario registry plus the approved VAL-027 v1.1 positive invariant. Four calculation-state injection cases use the explicit test-only prepared-state/tolerance oracle; they do not claim production execution of arbitrary mutated daily snapshots.
 
-## Browser / CI acceptance
-IMP-7B-E adds a pinned Playwright/Chromium CI acceptance job that exercises a real controlled XLSX through Upload → protected E01 → Workbook Preflight → protected E02 Mapping Review → manual mapping → final mapping snapshot against the curated GitHub Pages payload. Local Chromium in the current build container is environment-blocked; a full IMP-7B browser PASS requires the compatible CI job and deployed Pages workflow evidence.
+The browser runner accepts `HUF_LIVE_URL` for the authorized deployed project-subpath URL. CI retains result JSON and screenshots. Runtime evidence may regenerate timestamps and hashes; regenerate the source manifest only after collecting final evidence, then verify it.
+
+## Governance and release
+
+The sole authorized repository is `knightfox789/HUF-KPI-acceptance-test`. Protected E01–E09 and controlled configuration files must remain identical to `PROTECTED_CORE_MANIFEST.json`. Product changes must not replace formula, route, assurance, null or aggregation semantics.
+
+Final release requires fresh logical/physical tests, browser and actual deployed workflow acceptance, privacy, cross-surface reconciliation, report/visual QA, the declared 1,000-structure/1,000-person-day synthetic desktop workload and fixed performance budget, and a complete release/evidence manifest. Passing a small synthetic golden is not production-scale acceptance.
+
+The initial capacity envelope covers365/366 days, five districts and at least50 villages on the recorded reference desktop environment. Actual production volumes were not supplied. Larger or materially different portfolios require further qualification. See `docs/release/USER_GUIDE.md`, `RECOVERY_AND_CHANGE_GUIDE.md` and `RELEASE_NOTES.md`.

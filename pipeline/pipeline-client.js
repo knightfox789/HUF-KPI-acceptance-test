@@ -7,6 +7,7 @@ function wrapSameThread(adapter,reason){
   return Object.freeze({
     mode:'same-thread',fallbackReason:reason||null,
     runIntake:file=>adapter.runIntake(file),
+    getPreparationDetail:()=>adapter.getPreparationDetail(),getResultPackage:()=>adapter.getResultPackage(),applySourceCorrection:c=>adapter.applySourceCorrection(c),
     getMappingMetadata:()=>adapter.getMappingMetadata(),
     buildMapping:()=>adapter.buildMapping(),
     updateSheetMapping:(expectedSheet,sourceSheetName)=>adapter.updateSheetMapping(expectedSheet,sourceSheetName),

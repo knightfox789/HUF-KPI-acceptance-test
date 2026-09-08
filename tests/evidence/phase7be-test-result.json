@@ -1,7 +1,7 @@
 {
   "schema": "HUF-IMP7BE-ACCEPTANCE-READINESS-TEST-RESULT-v1",
-  "productVersion": "0.1.6-acceptance",
-  "phase": "IMP-7B-E",
+  "productVersion": "1.0.0",
+  "phase": "PHASE-9",
   "status": "PASS",
   "tests": 28,
   "passed": 28,
@@ -95,7 +95,7 @@
       "test": "worker-client-lifecycle.mjs",
       "status": "PASS",
       "exitCode": 0,
-      "stdout": "{\n  \"suite\": \"worker-client-lifecycle\",\n  \"status\": \"PASS\",\n  \"checks\": 12,\n  \"failed\": 0,\n  \"details\": [\n    {\n      \"id\": \"FATAL_ERROR_REJECTS_PENDING\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"FATAL_ERROR_TERMINATES\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"FATAL_ERROR_CLOSES_CLIENT\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"MESSAGE_ERROR_FAILS_CLOSED\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"EXPLICIT_TERMINATE_CLOSES\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"WORKER_MAPPING_METADATA_COMMAND\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"WORKER_UPDATE_SHEET_COMMAND\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"WORKER_CONFIRM_SHEET_COMMAND\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"WORKER_UPDATE_FIELD_COMMAND\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"WORKER_CONFIRM_FIELD_COMMAND\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"WORKER_CONFIRM_ALL_COMMAND\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"WORKER_FINALIZE_NO_MAPPING_PAYLOAD\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    }\n  ]\n}",
+      "stdout": "{\n  \"suite\": \"worker-client-lifecycle\",\n  \"status\": \"PASS\",\n  \"checks\": 15,\n  \"failed\": 0,\n  \"details\": [\n    {\n      \"id\": \"FATAL_ERROR_REJECTS_PENDING\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"FATAL_ERROR_TERMINATES\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"FATAL_ERROR_CLOSES_CLIENT\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"MESSAGE_ERROR_FAILS_CLOSED\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"EXPLICIT_TERMINATE_CLOSES\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"WORKER_MAPPING_METADATA_COMMAND\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"WORKER_UPDATE_SHEET_COMMAND\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"WORKER_CONFIRM_SHEET_COMMAND\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"WORKER_UPDATE_FIELD_COMMAND\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"WORKER_CONFIRM_FIELD_COMMAND\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"WORKER_CONFIRM_ALL_COMMAND\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"WORKER_FINALIZE_NO_MAPPING_PAYLOAD\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"CHUNK_ACK_YIELDS\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"CHUNK_ACK_SENT\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"CHUNK_VALUES_PRESERVED\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    }\n  ]\n}",
       "stderr": ""
     },
     {
@@ -151,21 +151,21 @@
       "test": "source-package-governance.mjs",
       "status": "PASS",
       "exitCode": 0,
-      "stdout": "{\n  \"suite\": \"source-package-governance\",\n  \"status\": \"PASS\",\n  \"checks\": 8,\n  \"failed\": 0,\n  \"details\": [\n    {\n      \"id\": \"NO_SITE_IN_SOURCE_PACKAGE\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"NO_NODE_MODULES_IN_SOURCE_PACKAGE\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"RELEASE_MANIFEST_INCLUDED\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"MANIFEST_DRIVES_PACKAGE\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"BUILD_ENTRY_COUNT\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"ZIP_LIST_READABLE\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"ZIP_EXACT_COVERAGE\",\n      \"status\": \"PASS\",\n      \"note\": \"zip=172, expected=172\"\n    },\n    {\n      \"id\": \"ZIP_NO_SITE\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    }\n  ]\n}",
+      "stdout": "{\n  \"suite\": \"source-package-governance\",\n  \"status\": \"PASS\",\n  \"checks\": 8,\n  \"failed\": 0,\n  \"details\": [\n    {\n      \"id\": \"NO_SITE_IN_SOURCE_PACKAGE\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"NO_NODE_MODULES_IN_SOURCE_PACKAGE\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"RELEASE_MANIFEST_INCLUDED\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"MANIFEST_DRIVES_PACKAGE\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"BUILD_ENTRY_COUNT\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"ZIP_LIST_READABLE\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"ZIP_EXACT_COVERAGE\",\n      \"status\": \"PASS\",\n      \"note\": \"zip=215, expected=215\"\n    },\n    {\n      \"id\": \"ZIP_NO_SITE\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    }\n  ]\n}",
       "stderr": ""
     },
     {
       "test": "static-architecture.mjs",
       "status": "PASS",
       "exitCode": 0,
-      "stdout": "{\n  \"suite\": \"static-architecture\",\n  \"status\": \"PASS\",\n  \"jsFiles\": 104,\n  \"violations\": []\n}",
+      "stdout": "{\n  \"suite\": \"static-architecture\",\n  \"status\": \"PASS\",\n  \"jsFiles\": 128,\n  \"violations\": []\n}",
       "stderr": ""
     },
     {
       "test": "relative-imports.mjs",
       "status": "PASS",
       "exitCode": 0,
-      "stdout": "{\n  \"suite\": \"relative-imports\",\n  \"status\": \"PASS\",\n  \"files\": 103,\n  \"imports\": 93,\n  \"unresolved\": []\n}",
+      "stdout": "{\n  \"suite\": \"relative-imports\",\n  \"status\": \"PASS\",\n  \"files\": 124,\n  \"imports\": 154,\n  \"unresolved\": []\n}",
       "stderr": ""
     },
     {
@@ -179,7 +179,7 @@
       "test": "javascript-syntax.mjs",
       "status": "PASS",
       "exitCode": 0,
-      "stdout": "{\n  \"suite\": \"javascript-syntax\",\n  \"status\": \"PASS\",\n  \"checked\": 103,\n  \"failed\": []\n}",
+      "stdout": "{\n  \"suite\": \"javascript-syntax\",\n  \"status\": \"PASS\",\n  \"checked\": 124,\n  \"failed\": []\n}",
       "stderr": ""
     },
     {

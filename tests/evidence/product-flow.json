@@ -1,0 +1,367 @@
+{
+  "status": "PASS",
+  "checks": 90,
+  "failed": 0,
+  "results": [
+    {
+      "id": "nonleap/GOLDEN_E2E_NONLEAP_FY2024-25.xlsx calendar",
+      "status": "PASS"
+    },
+    {
+      "id": "KPI-1.1.1 truth",
+      "status": "PASS"
+    },
+    {
+      "id": "KPI-1.1.2 truth",
+      "status": "PASS"
+    },
+    {
+      "id": "KPI-1.2.1 truth",
+      "status": "PASS"
+    },
+    {
+      "id": "LINED-FP truth",
+      "status": "PASS"
+    },
+    {
+      "id": "WATER-EXCL truth",
+      "status": "PASS"
+    },
+    {
+      "id": "WATER-HOLD truth",
+      "status": "PASS"
+    },
+    {
+      "id": "BLOCK:Gujarat|Mehsana|Kheralu scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "DISTRICT:Gujarat|Mehsana scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "GP:Gujarat|Mehsana|Kheralu|Synthetic GP scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "PIA:Synthetic PIA scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "PROJECT:SYN-ALL-STRUCT-001 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "STRUCTURE:S-CB-01 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "STRUCTURE:S-CCT-01 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "STRUCTURE:S-CD-01 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "STRUCTURE:S-FB-01 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "STRUCTURE:S-FP-L-01 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "STRUCTURE:S-FP-P-01 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "STRUCTURE:S-FP-U-01 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "STRUCTURE:S-GOV-01 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "STRUCTURE:S-GP-01 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "STRUCTURE:S-GS-01 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "STRUCTURE:S-LBS-01 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "STRUCTURE:S-LL-01 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "STRUCTURE:S-MW-01 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "STRUCTURE:S-OASS-01 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "STRUCTURE:S-PT-01 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "STRUCTURE:S-SCT-01 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "STRUCTURE:S-SUB-01 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "STRUCTURE:S-TCB-01 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "STRUCTURE:S-VP-01 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "STRUCTURE:S-WAT-01 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "VILLAGE:Gujarat|Mehsana|Kheralu|Synthetic GP|Synthetic Village 1 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "VILLAGE:Gujarat|Mehsana|Kheralu|Synthetic GP|Synthetic Village 2 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "VILLAGE:Gujarat|Mehsana|Kheralu|Synthetic GP|Synthetic Village 3 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "VILLAGE:Gujarat|Mehsana|Kheralu|Synthetic GP|Synthetic Village 4 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "VILLAGE:Gujarat|Mehsana|Kheralu|Synthetic GP|Synthetic Village 5 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "Terminal null preservation",
+      "status": "PASS"
+    },
+    {
+      "id": "CSV injection",
+      "status": "PASS"
+    },
+    {
+      "id": "XLSX workbook",
+      "status": "PASS"
+    },
+    {
+      "id": "Corrections invalidate completed audit",
+      "status": "PASS"
+    },
+    {
+      "id": "Correction blank preserved",
+      "status": "PASS"
+    },
+    {
+      "id": "Source SHA unchanged",
+      "status": "PASS"
+    },
+    {
+      "id": "Correction history original",
+      "status": "PASS"
+    },
+    {
+      "id": "Canonical content changes",
+      "status": "PASS"
+    },
+    {
+      "id": "leap/GOLDEN_E2E_LEAP_FY2023-24.xlsx calendar",
+      "status": "PASS"
+    },
+    {
+      "id": "KPI-1.1.1 truth",
+      "status": "PASS"
+    },
+    {
+      "id": "KPI-1.1.2 truth",
+      "status": "PASS"
+    },
+    {
+      "id": "KPI-1.2.1 truth",
+      "status": "PASS"
+    },
+    {
+      "id": "LINED-FP truth",
+      "status": "PASS"
+    },
+    {
+      "id": "WATER-EXCL truth",
+      "status": "PASS"
+    },
+    {
+      "id": "WATER-HOLD truth",
+      "status": "PASS"
+    },
+    {
+      "id": "BLOCK:Gujarat|Mehsana|Kheralu scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "DISTRICT:Gujarat|Mehsana scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "GP:Gujarat|Mehsana|Kheralu|Synthetic GP scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "PIA:Synthetic PIA scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "PROJECT:SYN-ALL-STRUCT-001 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "STRUCTURE:S-CB-01 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "STRUCTURE:S-CCT-01 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "STRUCTURE:S-CD-01 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "STRUCTURE:S-FB-01 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "STRUCTURE:S-FP-L-01 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "STRUCTURE:S-FP-P-01 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "STRUCTURE:S-FP-U-01 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "STRUCTURE:S-GOV-01 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "STRUCTURE:S-GP-01 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "STRUCTURE:S-GS-01 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "STRUCTURE:S-LBS-01 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "STRUCTURE:S-LL-01 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "STRUCTURE:S-MW-01 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "STRUCTURE:S-OASS-01 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "STRUCTURE:S-PT-01 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "STRUCTURE:S-SCT-01 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "STRUCTURE:S-SUB-01 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "STRUCTURE:S-TCB-01 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "STRUCTURE:S-VP-01 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "STRUCTURE:S-WAT-01 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "VILLAGE:Gujarat|Mehsana|Kheralu|Synthetic GP|Synthetic Village 1 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "VILLAGE:Gujarat|Mehsana|Kheralu|Synthetic GP|Synthetic Village 2 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "VILLAGE:Gujarat|Mehsana|Kheralu|Synthetic GP|Synthetic Village 3 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "VILLAGE:Gujarat|Mehsana|Kheralu|Synthetic GP|Synthetic Village 4 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "VILLAGE:Gujarat|Mehsana|Kheralu|Synthetic GP|Synthetic Village 5 scope membership",
+      "status": "PASS"
+    },
+    {
+      "id": "Terminal null preservation",
+      "status": "PASS"
+    },
+    {
+      "id": "CSV injection",
+      "status": "PASS"
+    },
+    {
+      "id": "XLSX workbook",
+      "status": "PASS"
+    },
+    {
+      "id": "Corrections invalidate completed audit",
+      "status": "PASS"
+    },
+    {
+      "id": "Correction blank preserved",
+      "status": "PASS"
+    },
+    {
+      "id": "Source SHA unchanged",
+      "status": "PASS"
+    },
+    {
+      "id": "Correction history original",
+      "status": "PASS"
+    },
+    {
+      "id": "Canonical content changes",
+      "status": "PASS"
+    }
+  ]
+}

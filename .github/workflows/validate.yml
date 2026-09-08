@@ -1,5 +1,8 @@
 name: Validate Hardened Foundation
-on: [push, pull_request]
+on:
+  push:
+    branches: [main]
+  pull_request:
 permissions: { contents: read }
 jobs:
   foundation:
@@ -8,7 +11,12 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with: { node-version: '20' }
+      - run: npm install --no-save --package-lock=false jszip@3.10.1 @xmldom/xmldom@0.9.12
       - run: npm test
+      - run: npm run test:product
+      - run: node tests/protected/run.mjs
+      - run: node tests/protected/remaining80.mjs
+      - run: node tests/protected/design6-summary.mjs
       - name: Retain machine-readable validation evidence
         if: always()
         uses: actions/upload-artifact@v4
@@ -17,6 +25,12 @@ jobs:
           if-no-files-found: error
           path: |
             tests/evidence/phase7be-test-result.json
+            tests/evidence/product-flow.json
+            tests/evidence/protected-regression.json
+            tests/evidence/design6-remaining80.json
+            tests/evidence/design6-logical.json
+            tests/evidence/report-contract.json
+            tests/evidence/export-reconciliation.json
             VALIDATION_STATUS.json
             RELEASE_MANIFEST.json
             PROTECTED_CORE_MANIFEST.json
@@ -34,6 +48,7 @@ jobs:
         run: npx playwright install --with-deps chromium
       - name: Run IMP-7B real-XLSX browser acceptance
         env:
+          HUF_SCREENSHOT_DIR: ${{ runner.temp }}/screenshots
           HUF_SITE_ROOT: _site
           HUF_ACCEPTANCE_EVIDENCE_PATH: ${{ runner.temp }}/phase7be-browser-acceptance.json
         run: node tests/browser/run-imp7b-browser-acceptance.mjs
@@ -43,4 +58,22 @@ jobs:
         with:
           name: huf-phase7be-browser-acceptance
           if-no-files-found: error
-          path: ${{ runner.temp }}/phase7be-browser-acceptance.json
+          path: |
+            ${{ runner.temp }}/phase7be-browser-acceptance.json
+            ${{ runner.temp }}/screenshots
+  capacity_acceptance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - run: npm install --no-save --package-lock=false jszip@3.10.1 @xmldom/xmldom@0.9.12 playwright@1.55.0
+      - run: node tests/performance/generate-fixture.mjs
+      - run: npm run build:pages
+      - run: npx playwright install --with-deps chromium
+      - run: node tests/performance/browser-capacity.mjs
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: huf-capacity-acceptance
+          path: /tmp/huf-performance

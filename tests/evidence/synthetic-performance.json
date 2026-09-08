@@ -1,0 +1,54 @@
+{
+  "schema": "HUF-SYNTHETIC-CAPACITY-PROBE-v1",
+  "status": "MEASURED_NOT_PRODUCTION_ACCEPTANCE",
+  "environment": "Node runtime; browser responsiveness and production scale require separate acceptance",
+  "budget": null,
+  "results": [
+    {
+      "synthetic": true,
+      "representativeProductionFixture": false,
+      "structures": 100,
+      "personDayRecords": 100,
+      "rainfallRows": 365,
+      "bytes": 994028,
+      "calculatedWaterResults": 85,
+      "aggregationStatus": "aggregation_complete",
+      "timings": {
+        "intakeMs": 266.026424,
+        "mappingMs": 21.073769000000084,
+        "E03Ms": 191.42319999999995,
+        "E04Ms": 35.815297999999984,
+        "E05Ms": 5.380002999999988,
+        "E06Ms": 268.887469,
+        "E07Ms": 9.309437000000116,
+        "E08Ms": 33.74238700000001,
+        "E09Ms": 3.135084000000006,
+        "viewPreparationAnd50QueriesMs": 11.954661000000215
+      },
+      "peakRssBytes": 362364928
+    },
+    {
+      "synthetic": true,
+      "representativeProductionFixture": false,
+      "structures": 1000,
+      "personDayRecords": 1000,
+      "rainfallRows": 365,
+      "bytes": 7417349,
+      "calculatedWaterResults": 850,
+      "aggregationStatus": "aggregation_complete",
+      "timings": {
+        "intakeMs": 2552.2068040000004,
+        "mappingMs": 22.30448299999989,
+        "E03Ms": 3297.137221,
+        "E04Ms": 500.2036280000011,
+        "E05Ms": 188.2916150000001,
+        "E06Ms": 3746.9989970000006,
+        "E07Ms": 123.65808900000047,
+        "E08Ms": 445.05405900000005,
+        "E09Ms": 25.47882099999879,
+        "viewPreparationAnd50QueriesMs": 658.9403129999992
+      },
+      "peakRssBytes": 1341493248
+    }
+  ]
+}

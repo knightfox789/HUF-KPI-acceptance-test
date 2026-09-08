@@ -1,0 +1,4601 @@
+{
+  "schema": "HUF-PROTECTED-REGRESSION-v1",
+  "status": "PASS",
+  "baselineTestArchiveSha256": "78f18f0f468a440e2bbb2af201f503fd6832e746270ebf4ce8a1a83875229f79",
+  "execution": "Unmodified archived tests against current protected-core symlinks; no archived result summaries consumed",
+  "suites": [
+    {
+      "name": "node-design6-d5.mjs",
+      "status": "PASS",
+      "evidence": {
+        "suite": "Design6 D5 output-schema assertions",
+        "status": "PASS",
+        "caseCount": 28,
+        "failedCount": 0,
+        "checks": [
+          {
+            "case_id": "D5-001",
+            "status": "PASS",
+            "note": "field_ids=230"
+          },
+          {
+            "case_id": "D5-002",
+            "status": "PASS",
+            "note": "entities=9"
+          },
+          {
+            "case_id": "D5-003",
+            "status": "PASS",
+            "note": ""
+          },
+          {
+            "case_id": "D5-004",
+            "status": "PASS",
+            "note": "mapped=workbook_not_ready|excluded|hold|not_ready|ready_with_warning|ready"
+          },
+          {
+            "case_id": "D5-005",
+            "status": "PASS",
+            "note": "routes=10"
+          },
+          {
+            "case_id": "D5-006",
+            "status": "PASS",
+            "note": "used=66"
+          },
+          {
+            "case_id": "D5-007",
+            "status": "PASS",
+            "note": "issues=1"
+          },
+          {
+            "case_id": "D5-008",
+            "status": "PASS",
+            "note": ""
+          },
+          {
+            "case_id": "D5-009",
+            "status": "PASS",
+            "note": ""
+          },
+          {
+            "case_id": "D5-010",
+            "status": "PASS",
+            "note": "rows=20"
+          },
+          {
+            "case_id": "D5-011",
+            "status": "PASS",
+            "note": "assurance=40"
+          },
+          {
+            "case_id": "D5-012",
+            "status": "PASS",
+            "note": ""
+          },
+          {
+            "case_id": "D5-013",
+            "status": "PASS",
+            "note": ""
+          },
+          {
+            "case_id": "D5-014",
+            "status": "PASS",
+            "note": ""
+          },
+          {
+            "case_id": "D5-015",
+            "status": "PASS",
+            "note": ""
+          },
+          {
+            "case_id": "D5-016",
+            "status": "PASS",
+            "note": ""
+          },
+          {
+            "case_id": "D5-017",
+            "status": "PASS",
+            "note": ""
+          },
+          {
+            "case_id": "D5-018",
+            "status": "PASS",
+            "note": ""
+          },
+          {
+            "case_id": "D5-019",
+            "status": "PASS",
+            "note": ""
+          },
+          {
+            "case_id": "D5-020",
+            "status": "PASS",
+            "note": ""
+          },
+          {
+            "case_id": "D5-021",
+            "status": "PASS",
+            "note": ""
+          },
+          {
+            "case_id": "D5-022",
+            "status": "PASS",
+            "note": ""
+          },
+          {
+            "case_id": "D5-023",
+            "status": "PASS",
+            "note": ""
+          },
+          {
+            "case_id": "D5-024",
+            "status": "PASS",
+            "note": ""
+          },
+          {
+            "case_id": "D5-025",
+            "status": "PASS",
+            "note": ""
+          },
+          {
+            "case_id": "D5-026",
+            "status": "PASS",
+            "note": "trace_rows=3905"
+          },
+          {
+            "case_id": "D5-027",
+            "status": "PASS",
+            "note": ""
+          },
+          {
+            "case_id": "D5-028",
+            "status": "PASS",
+            "note": ""
+          }
+        ]
+      }
+    },
+    {
+      "name": "node-engine01.mjs",
+      "status": "PASS",
+      "evidence": {
+        "stdout": "{\n  \"status\": \"PASS\",\n  \"checks\": [\n    {\n      \"id\": \"NONLEAP_STATUS\",\n      \"actual\": \"complete\",\n      \"expected\": \"complete\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"NONLEAP_SHEETS\",\n      \"actual\": 13,\n      \"expected\": 13,\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"NONLEAP_TEMPLATE_HINT\",\n      \"actual\": \"controlled-template-structure-match\",\n      \"expected\": \"controlled-template-structure-match\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"NONLEAP_STRUCTURES\",\n      \"actual\": 20,\n      \"expected\": 20,\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"NONLEAP_RAIN_ROWS\",\n      \"actual\": 365,\n      \"expected\": 365,\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"NONLEAP_CONTROL_START\",\n      \"actual\": \"2024-04-01\",\n      \"expected\": \"2024-04-01\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"NONLEAP_CONTROL_END\",\n      \"actual\": \"2025-03-31\",\n      \"expected\": \"2025-03-31\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"NONLEAP_HASH\",\n      \"actual\": \"7c6ba9498f8c87790503331f848cf4a83db577ab95c056473e202efd22fdddeb\",\n      \"expected\": \"7c6ba9498f8c87790503331f848cf4a83db577ab95c056473e202efd22fdddeb\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"NONLEAP_FIRST_STRUCTURE_ID\",\n      \"actual\": \"S-CCT-01\",\n      \"expected\": \"S-CCT-01\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"NONLEAP_MISSING_FUNCTIONAL_DATE_REMAINS_NULL\",\n      \"actual\": null,\n      \"expected\": null,\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"NONLEAP_ZERO_RAIN_REMAINS_ZERO\",\n      \"actual\": 0,\n      \"expected\": 0,\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"NONLEAP_LAST_RAIN_DATE\",\n      \"actual\": \"2025-03-31\",\n      \"expected\": \"2025-03-31\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"RAW_BYTES_MEMORY_ONLY\",\n      \"actual\": 195495,\n      \"expected\": 195495,\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"RAW_SHEETS_FROZEN\",\n      \"actual\": true,\n      \"expected\": true,\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"RAW_FIRST_RECORD_FROZEN\",\n      \"actual\": true,\n      \"expected\": true,\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"RAW_BYTES_COPY_LENGTH\",\n      \"actual\": 195495,\n      \"expected\": 195495,\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"PUBLIC_STATE_HAS_NO_RAW\",\n      \"actual\": false,\n      \"expected\": false,\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"FORMULA_CELLS_ZERO\",\n      \"actual\": 0,\n      \"expected\": 0,\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"LEAP_RAIN_ROWS\",\n      \"actual\": 366,\n      \"expected\": 366,\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"LEAP_CONTROL_START\",\n      \"actual\": \"2023-04-01\",\n      \"expected\": \"2023-04-01\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"LEAP_CONTROL_END\",\n      \"actual\": \"2024-03-31\",\n      \"expected\": \"2024-03-31\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"LEAP_HASH\",\n      \"actual\": \"e1a592ce49e3a308b8d402ca65a090f5d5f0e39b7bda3484be6e653ddc015f56\",\n      \"expected\": \"e1a592ce49e3a308b8d402ca65a090f5d5f0e39b7bda3484be6e653ddc015f56\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"LEAP_HAS_FEB29\",\n      \"actual\": true,\n      \"expected\": true,\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"WRONG_EXTENSION_BLOCKED\",\n      \"actual\": true,\n      \"expected\": true,\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"MALFORMED_XLSX_BLOCKED\",\n      \"actual\": true,\n      \"expected\": true,\n      \"status\": \"PASS\"\n    }\n  ],\n  \"failedCount\": 0\n}\n",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "node-engine02.mjs",
+      "status": "PASS",
+      "evidence": {
+        "status": "PASS",
+        "checks": [
+          {
+            "id": "E02_STATUS",
+            "actual": "mapping_review",
+            "expected": "mapping_review",
+            "status": "PASS"
+          },
+          {
+            "id": "EXPECTED_FIELDS",
+            "actual": 147,
+            "expected": 147,
+            "status": "PASS"
+          },
+          {
+            "id": "MAPPED_FIELDS",
+            "actual": 147,
+            "expected": 147,
+            "status": "PASS"
+          },
+          {
+            "id": "UNMAPPED_FIELDS",
+            "actual": 0,
+            "expected": 0,
+            "status": "PASS"
+          },
+          {
+            "id": "CONFIRMATION_REQUIRED_EXACT_TEMPLATE",
+            "actual": 0,
+            "expected": 0,
+            "status": "PASS"
+          },
+          {
+            "id": "CONFLICTS_EXACT_TEMPLATE",
+            "actual": 0,
+            "expected": 0,
+            "status": "PASS"
+          },
+          {
+            "id": "NORMALIZED_HEADER_METHOD_COUNT",
+            "actual": 147,
+            "expected": 147,
+            "status": "PASS"
+          },
+          {
+            "id": "SOURCE_CATALOG_SHEETS",
+            "actual": 13,
+            "expected": 13,
+            "status": "PASS"
+          },
+          {
+            "id": "RAW_SOURCE_STILL_FROZEN",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          },
+          {
+            "id": "PUBLIC_STATE_HAS_NO_RAW",
+            "actual": false,
+            "expected": false,
+            "status": "PASS"
+          },
+          {
+            "id": "FINAL_STATUS",
+            "actual": "mapping_confirmed",
+            "expected": "mapping_confirmed",
+            "status": "PASS"
+          },
+          {
+            "id": "MAPPING_HASH_LENGTH",
+            "actual": 64,
+            "expected": 64,
+            "status": "PASS"
+          },
+          {
+            "id": "IMMUTABLE_MAPPING_SNAPSHOT",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          },
+          {
+            "id": "ALIAS_METHOD",
+            "actual": "alias",
+            "expected": "alias",
+            "status": "PASS"
+          },
+          {
+            "id": "ALIAS_NEEDS_CONFIRMATION",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          },
+          {
+            "id": "ALIAS_SOURCE_HEADER",
+            "actual": "Project Code",
+            "expected": "Project Code",
+            "status": "PASS"
+          },
+          {
+            "id": "ALIAS_CONFIRM_ALL_CLEARS_PENDING",
+            "actual": 0,
+            "expected": 0,
+            "status": "PASS"
+          },
+          {
+            "id": "FUZZY_METHOD",
+            "actual": "fuzzy",
+            "expected": "fuzzy",
+            "status": "PASS"
+          },
+          {
+            "id": "FUZZY_NEEDS_CONFIRMATION",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          },
+          {
+            "id": "FUZZY_SOURCE_HEADER",
+            "actual": "Verified Base Aera",
+            "expected": "Verified Base Aera",
+            "status": "PASS"
+          },
+          {
+            "id": "UNKNOWN_HEADER_UNMAPPED",
+            "actual": "unmapped",
+            "expected": "unmapped",
+            "status": "PASS"
+          },
+          {
+            "id": "MANUAL_METHOD",
+            "actual": "manual",
+            "expected": "manual",
+            "status": "PASS"
+          },
+          {
+            "id": "MANUAL_CONFIRMED",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          },
+          {
+            "id": "EXACT_FIELD_ID_METHOD",
+            "actual": "exact-field-id",
+            "expected": "exact-field-id",
+            "status": "PASS"
+          },
+          {
+            "id": "EXACT_FIELD_ID_AUTO_CONFIRMED",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          },
+          {
+            "id": "SHEET_ALIAS_METHOD",
+            "actual": "sheet-alias",
+            "expected": "sheet-alias",
+            "status": "PASS"
+          },
+          {
+            "id": "SHEET_ALIAS_CONFIRM_REQUIRED",
+            "actual": 1,
+            "expected": 1,
+            "status": "PASS"
+          },
+          {
+            "id": "SHEET_CONFIRM_CLEARS_PENDING",
+            "actual": 0,
+            "expected": 0,
+            "status": "PASS"
+          },
+          {
+            "id": "MANUAL_SHEET_METHOD",
+            "actual": "manual-sheet",
+            "expected": "manual-sheet",
+            "status": "PASS"
+          },
+          {
+            "id": "MANUAL_SHEET_REMAPS_FIELDS",
+            "actual": 16,
+            "expected": 16,
+            "status": "PASS"
+          },
+          {
+            "id": "DETERMINISTIC_MAPPING_HASH",
+            "actual": "716ed60820c3d097e7c7e12e8c959cd0228894601574a176942ed7e388122975",
+            "expected": "716ed60820c3d097e7c7e12e8c959cd0228894601574a176942ed7e388122975",
+            "status": "PASS"
+          },
+          {
+            "id": "FINAL_WITH_UNMAPPED_STATUS",
+            "actual": "mapping_confirmed_with_unmapped",
+            "expected": "mapping_confirmed_with_unmapped",
+            "status": "PASS"
+          },
+          {
+            "id": "FINAL_WITH_UNMAPPED_COUNT",
+            "actual": 1,
+            "expected": 1,
+            "status": "PASS"
+          },
+          {
+            "id": "CONFLICT_DETECTED",
+            "actual": 2,
+            "expected": 2,
+            "status": "PASS"
+          },
+          {
+            "id": "CONFLICT_BLOCKS_FINALIZE",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          }
+        ],
+        "failedCount": 0
+      }
+    },
+    {
+      "name": "node-engine03.mjs",
+      "status": "PASS",
+      "evidence": {
+        "status": "PASS",
+        "checks": [
+          {
+            "id": "E03_STATUS",
+            "actual": "canonical_complete",
+            "expected": "canonical_complete",
+            "status": "PASS"
+          },
+          {
+            "id": "E03_LIFECYCLE",
+            "actual": "canonical_ready",
+            "expected": "canonical_ready",
+            "status": "PASS"
+          },
+          {
+            "id": "TABLE_COUNT",
+            "actual": 11,
+            "expected": 11,
+            "status": "PASS"
+          },
+          {
+            "id": "RAIN_RECORDS_NONLEAP",
+            "actual": 365,
+            "expected": 365,
+            "status": "PASS"
+          },
+          {
+            "id": "STAGE_AREA_EMPTY_ALLOWED",
+            "actual": 0,
+            "expected": 0,
+            "status": "PASS"
+          },
+          {
+            "id": "TYPE_ERRORS_STANDARD",
+            "actual": 0,
+            "expected": 0,
+            "status": "PASS"
+          },
+          {
+            "id": "UNIT_ERRORS_STANDARD",
+            "actual": 0,
+            "expected": 0,
+            "status": "PASS"
+          },
+          {
+            "id": "UNIT_CONVERSIONS_STANDARD",
+            "actual": 0,
+            "expected": 0,
+            "status": "PASS"
+          },
+          {
+            "id": "BLANKS_PRESERVED_PRESENT",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          },
+          {
+            "id": "ZEROS_PRESERVED_PRESENT",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          },
+          {
+            "id": "CANONICAL_HASH_LENGTH",
+            "actual": 64,
+            "expected": 64,
+            "status": "PASS"
+          },
+          {
+            "id": "MAPPING_HASH_LINEAGE",
+            "actual": "aaea5286d66988c892f3eac5df3543219897bac68dffb1cda589e859788a7928",
+            "expected": "aaea5286d66988c892f3eac5df3543219897bac68dffb1cda589e859788a7928",
+            "status": "PASS"
+          },
+          {
+            "id": "CANONICAL_POLICY_VERSION",
+            "actual": "HUF-CANONICALIZATION-v1.1",
+            "expected": "HUF-CANONICALIZATION-v1.1",
+            "status": "PASS"
+          },
+          {
+            "id": "IMMUTABLE_CANONICAL_SNAPSHOT",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          },
+          {
+            "id": "IMMUTABLE_CANONICAL_TABLES",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          },
+          {
+            "id": "PUBLIC_STATE_HAS_NO_CANONICAL",
+            "actual": false,
+            "expected": false,
+            "status": "PASS"
+          },
+          {
+            "id": "PUBLIC_SUMMARY_HAS_NO_TABLE_VALUES",
+            "actual": false,
+            "expected": false,
+            "status": "PASS"
+          },
+          {
+            "id": "CONTROL_SOURCE_ROW",
+            "actual": 2,
+            "expected": 2,
+            "status": "PASS"
+          },
+          {
+            "id": "CONTROL_DATE_CANONICAL",
+            "actual": "2024-04-01",
+            "expected": "2024-04-01",
+            "status": "PASS"
+          },
+          {
+            "id": "CONTROL_PROJECT_ID",
+            "actual": "SYN-ALL-STRUCT-001",
+            "expected": "SYN-ALL-STRUCT-001",
+            "status": "PASS"
+          },
+          {
+            "id": "BLANK_REMAINS_NULL",
+            "actual": null,
+            "expected": null,
+            "status": "PASS"
+          },
+          {
+            "id": "SOURCE_VALUE_PRESERVED",
+            "actual": "2024-04-01",
+            "expected": "2024-04-01",
+            "status": "PASS"
+          },
+          {
+            "id": "CANONICAL_UNIT_DATE",
+            "actual": "date",
+            "expected": "date",
+            "status": "PASS"
+          },
+          {
+            "id": "EXPLICIT_RAIN_ZERO_EXISTS",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          },
+          {
+            "id": "EXPLICIT_ZERO_IS_NUMBER",
+            "actual": "number",
+            "expected": "number",
+            "status": "PASS"
+          },
+          {
+            "id": "RAIN_EVENT_VALUE",
+            "actual": 80,
+            "expected": 80,
+            "status": "PASS"
+          },
+          {
+            "id": "RAIN_CANONICAL_UNIT",
+            "actual": "mm/day",
+            "expected": "mm/day",
+            "status": "PASS"
+          },
+          {
+            "id": "RAIN_UNIT_STATUS_STANDARD",
+            "actual": "assumed-canonical-by-schema",
+            "expected": "assumed-canonical-by-schema",
+            "status": "PASS"
+          },
+          {
+            "id": "RAIN_RECORDS_LEAP",
+            "actual": 366,
+            "expected": 366,
+            "status": "PASS"
+          },
+          {
+            "id": "LEAP_DAY_PRESERVED",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          },
+          {
+            "id": "DETERMINISTIC_CANONICAL_CONTENT_HASH",
+            "actual": "f612fa0b308b7c1590fab462ca0ea58f9138c75b6f3d3a6bb62d6ff70eb4ef1a",
+            "expected": "f612fa0b308b7c1590fab462ca0ea58f9138c75b6f3d3a6bb62d6ff70eb4ef1a",
+            "status": "PASS"
+          },
+          {
+            "id": "SESSION_BOUND_SNAPSHOT_HASH_DIFFERS",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          },
+          {
+            "id": "UNIT_CONVERT_CM_TO_M",
+            "actual": 100,
+            "expected": 100,
+            "status": "PASS"
+          },
+          {
+            "id": "UNIT_CONVERT_STATUS",
+            "actual": "converted",
+            "expected": "converted",
+            "status": "PASS"
+          },
+          {
+            "id": "FRACTION_PERCENT_TO_RATIO",
+            "actual": 0.8,
+            "expected": 0.8,
+            "status": "PASS"
+          },
+          {
+            "id": "UNSUPPORTED_EXPLICIT_UNIT_STATUS",
+            "actual": "unit-error",
+            "expected": "unit-error",
+            "status": "PASS"
+          },
+          {
+            "id": "UNSUPPORTED_EXPLICIT_UNIT_NULL",
+            "actual": null,
+            "expected": null,
+            "status": "PASS"
+          },
+          {
+            "id": "TEXT_TRIM_OUTER",
+            "actual": "Demo Project",
+            "expected": "Demo Project",
+            "status": "PASS"
+          },
+          {
+            "id": "TEXT_INTERNAL_WHITESPACE_PRESERVED",
+            "actual": "Demo   Project",
+            "expected": "Demo   Project",
+            "status": "PASS"
+          },
+          {
+            "id": "NUMERIC_STRING_COMMAS",
+            "actual": 123456.75,
+            "expected": 123456.75,
+            "status": "PASS"
+          },
+          {
+            "id": "NUMERIC_STRING_ZERO",
+            "actual": 0,
+            "expected": 0,
+            "status": "PASS"
+          },
+          {
+            "id": "AMBIGUOUS_DATE_REJECTED",
+            "actual": false,
+            "expected": false,
+            "status": "PASS"
+          },
+          {
+            "id": "ISO_DATE_ACCEPTED",
+            "actual": "2025-03-31",
+            "expected": "2025-03-31",
+            "status": "PASS"
+          },
+          {
+            "id": "INVALID_CALENDAR_DATE_REJECTED",
+            "actual": false,
+            "expected": false,
+            "status": "PASS"
+          },
+          {
+            "id": "DIAGNOSTIC_DATE_TYPE_ERROR",
+            "actual": "DATE_TYPE_ERROR",
+            "expected": "DATE_TYPE_ERROR",
+            "status": "PASS"
+          },
+          {
+            "id": "DIAGNOSTIC_CANONICAL_NULL",
+            "actual": null,
+            "expected": null,
+            "status": "PASS"
+          },
+          {
+            "id": "DIAGNOSTIC_SOURCE_PRESERVED",
+            "actual": "03/04/2024",
+            "expected": "03/04/2024",
+            "status": "PASS"
+          },
+          {
+            "id": "UNFINALIZED_MAPPING_BLOCKED",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          },
+          {
+            "id": "MAPPING_INVALIDATES_CANONICAL_SUMMARY",
+            "actual": null,
+            "expected": null,
+            "status": "PASS"
+          },
+          {
+            "id": "MAPPING_INVALIDATES_CANONICAL_PRIVATE",
+            "actual": null,
+            "expected": null,
+            "status": "PASS"
+          }
+        ],
+        "failedCount": 0
+      }
+    },
+    {
+      "name": "node-engine04-fixtures.mjs",
+      "status": "PASS",
+      "evidence": {
+        "status": "PASS",
+        "cases": [
+          {
+            "file": "FX_HR_001_Missing_Leap_Day.xlsx",
+            "rule": "VAL-049",
+            "scope": "SERIES_BLOCK",
+            "targetOk": true,
+            "scopeOk": true,
+            "waterBlocked": 11,
+            "expectedWaterBlocked": 11,
+            "pdBlocked": 0,
+            "expectedPdBlocked": 0,
+            "independenceOk": true,
+            "status": "PASS",
+            "issues": [
+              "VAL-013",
+              "VAL-049",
+              "VAL-049",
+              "VAL-049",
+              "VAL-049",
+              "VAL-049",
+              "VAL-049",
+              "VAL-049",
+              "VAL-049",
+              "VAL-049",
+              "VAL-049",
+              "VAL-049"
+            ]
+          },
+          {
+            "file": "FX_HR_002_Duplicate_Rainfall_Date.xlsx",
+            "rule": "VAL-045",
+            "scope": "SERIES_BLOCK",
+            "targetOk": true,
+            "scopeOk": true,
+            "waterBlocked": 10,
+            "expectedWaterBlocked": 10,
+            "pdBlocked": 0,
+            "expectedPdBlocked": 0,
+            "independenceOk": true,
+            "status": "PASS",
+            "issues": [
+              "VAL-013",
+              "VAL-045"
+            ]
+          },
+          {
+            "file": "FX_HR_003_Negative_Rainfall.xlsx",
+            "rule": "VAL-047",
+            "scope": "SERIES_BLOCK",
+            "targetOk": true,
+            "scopeOk": true,
+            "waterBlocked": 10,
+            "expectedWaterBlocked": 10,
+            "pdBlocked": 0,
+            "expectedPdBlocked": 0,
+            "independenceOk": true,
+            "status": "PASS",
+            "issues": [
+              "VAL-013",
+              "VAL-047"
+            ]
+          },
+          {
+            "file": "FX_HR_004_Missing_Verified_Base_Area.xlsx",
+            "rule": "VAL-055",
+            "scope": "RECORD_BLOCK",
+            "targetOk": true,
+            "scopeOk": true,
+            "waterBlocked": 1,
+            "expectedWaterBlocked": 1,
+            "pdBlocked": 0,
+            "expectedPdBlocked": 0,
+            "independenceOk": true,
+            "status": "PASS",
+            "issues": [
+              "VAL-013",
+              "VAL-055"
+            ]
+          },
+          {
+            "file": "FX_HR_005_Base_Area_Exceeds_Surface.xlsx",
+            "rule": "VAL-056",
+            "scope": "RECORD_BLOCK",
+            "targetOk": true,
+            "scopeOk": true,
+            "waterBlocked": 1,
+            "expectedWaterBlocked": 1,
+            "pdBlocked": 0,
+            "expectedPdBlocked": 0,
+            "independenceOk": true,
+            "status": "PASS",
+            "issues": [
+              "VAL-013",
+              "VAL-056"
+            ]
+          },
+          {
+            "file": "FX_HR_006_Missing_Feb_Evaporation.xlsx",
+            "rule": "VAL-059",
+            "scope": "RECORD_BLOCK",
+            "targetOk": true,
+            "scopeOk": true,
+            "waterBlocked": 11,
+            "expectedWaterBlocked": 11,
+            "pdBlocked": 0,
+            "expectedPdBlocked": 0,
+            "independenceOk": true,
+            "status": "PASS",
+            "issues": [
+              "VAL-013",
+              "VAL-059",
+              "VAL-059",
+              "VAL-059",
+              "VAL-059",
+              "VAL-059",
+              "VAL-059",
+              "VAL-059",
+              "VAL-059",
+              "VAL-059",
+              "VAL-059",
+              "VAL-059"
+            ]
+          },
+          {
+            "file": "FX_HR_007_Advanced_Stage_Missing_Group.xlsx",
+            "rule": "VAL-019",
+            "scope": "RECORD_BLOCK",
+            "targetOk": true,
+            "scopeOk": true,
+            "waterBlocked": 1,
+            "expectedWaterBlocked": 1,
+            "pdBlocked": 0,
+            "expectedPdBlocked": 0,
+            "independenceOk": true,
+            "status": "PASS",
+            "issues": [
+              "VAL-013",
+              "VAL-019",
+              "VAL-064"
+            ]
+          },
+          {
+            "file": "FX_HR_008_Cascade_Cycle.xlsx",
+            "rule": "VAL-043",
+            "scope": "NETWORK_BLOCK",
+            "targetOk": true,
+            "scopeOk": true,
+            "waterBlocked": 2,
+            "expectedWaterBlocked": 2,
+            "pdBlocked": 0,
+            "expectedPdBlocked": 0,
+            "independenceOk": true,
+            "status": "PASS",
+            "issues": [
+              "VAL-013",
+              "VAL-043"
+            ]
+          },
+          {
+            "file": "FX_HR_009_REJ_A_Missing_Baseline.xlsx",
+            "rule": "VAL-033",
+            "scope": "RECORD_BLOCK",
+            "targetOk": true,
+            "scopeOk": true,
+            "waterBlocked": 1,
+            "expectedWaterBlocked": 1,
+            "pdBlocked": 0,
+            "expectedPdBlocked": 0,
+            "independenceOk": true,
+            "status": "PASS",
+            "issues": [
+              "VAL-033",
+              "VAL-013"
+            ]
+          },
+          {
+            "file": "FX_HR_010_REJ_B_Missing_Desilted.xlsx",
+            "rule": "VAL-034",
+            "scope": "RECORD_BLOCK",
+            "targetOk": true,
+            "scopeOk": true,
+            "waterBlocked": 1,
+            "expectedWaterBlocked": 1,
+            "pdBlocked": 0,
+            "expectedPdBlocked": 0,
+            "independenceOk": true,
+            "status": "PASS",
+            "issues": [
+              "VAL-034",
+              "VAL-013"
+            ]
+          },
+          {
+            "file": "FX_HR_011_Lined_Pond_Inlet_Fail.xlsx",
+            "rule": "VAL-073",
+            "scope": "RECORD_BLOCK",
+            "targetOk": true,
+            "scopeOk": true,
+            "waterBlocked": 1,
+            "expectedWaterBlocked": 1,
+            "pdBlocked": 0,
+            "expectedPdBlocked": 0,
+            "independenceOk": true,
+            "status": "PASS",
+            "issues": [
+              "VAL-013",
+              "VAL-073"
+            ]
+          },
+          {
+            "file": "FX_HR_012_Other_Surface_Approval_Missing.xlsx",
+            "rule": "VAL-031",
+            "scope": "RECORD_BLOCK",
+            "targetOk": true,
+            "scopeOk": true,
+            "waterBlocked": 1,
+            "expectedWaterBlocked": 1,
+            "pdBlocked": 0,
+            "expectedPdBlocked": 0,
+            "independenceOk": true,
+            "status": "PASS",
+            "issues": [
+              "VAL-031",
+              "VAL-013"
+            ]
+          },
+          {
+            "file": "FX_HR_013_Person_Day_Duplicate.xlsx",
+            "rule": "VAL-082",
+            "scope": "RECORD_BLOCK",
+            "targetOk": true,
+            "scopeOk": true,
+            "waterBlocked": 0,
+            "expectedWaterBlocked": 0,
+            "pdBlocked": 2,
+            "expectedPdBlocked": 2,
+            "independenceOk": true,
+            "status": "PASS",
+            "issues": [
+              "VAL-015",
+              "VAL-013",
+              "VAL-076",
+              "VAL-082",
+              "VAL-082"
+            ]
+          },
+          {
+            "file": "FX_HR_014_Rainfall_Outside_FY.xlsx",
+            "rule": "VAL-050",
+            "scope": "WARNING_ONLY",
+            "targetOk": true,
+            "scopeOk": true,
+            "waterBlocked": 0,
+            "expectedWaterBlocked": 0,
+            "pdBlocked": 0,
+            "expectedPdBlocked": 0,
+            "independenceOk": true,
+            "status": "PASS",
+            "issues": [
+              "VAL-013",
+              "VAL-050"
+            ]
+          },
+          {
+            "file": "FX_HR_015_Partial_Season_Missing_Functional_Date.xlsx",
+            "rule": "VAL-026",
+            "scope": "RECORD_BLOCK",
+            "targetOk": true,
+            "scopeOk": true,
+            "waterBlocked": 1,
+            "expectedWaterBlocked": 1,
+            "pdBlocked": 0,
+            "expectedPdBlocked": 0,
+            "independenceOk": true,
+            "status": "PASS",
+            "issues": [
+              "VAL-026",
+              "VAL-013"
+            ]
+          }
+        ],
+        "failedCount": 0
+      }
+    },
+    {
+      "name": "node-engine04.mjs",
+      "status": "PASS",
+      "evidence": {
+        "status": "PASS",
+        "checks": [
+          {
+            "id": "E04_ENGINE",
+            "actual": "E04",
+            "expected": "E04",
+            "status": "PASS"
+          },
+          {
+            "id": "E04_LIFECYCLE",
+            "actual": "validation_ready",
+            "expected": "validation_ready",
+            "status": "PASS"
+          },
+          {
+            "id": "D4_RULES_LOADED",
+            "actual": 95,
+            "expected": 95,
+            "status": "PASS"
+          },
+          {
+            "id": "D4_RULES_DEFERRED",
+            "actual": 8,
+            "expected": 8,
+            "status": "PASS"
+          },
+          {
+            "id": "D4_RULES_EVALUATED",
+            "actual": 87,
+            "expected": 87,
+            "status": "PASS"
+          },
+          {
+            "id": "NONLEAP_DAYS",
+            "actual": 365,
+            "expected": 365,
+            "status": "PASS"
+          },
+          {
+            "id": "NONLEAP_LEAPDATES",
+            "actual": 0,
+            "expected": 0,
+            "status": "PASS"
+          },
+          {
+            "id": "LEAP_DAYS",
+            "actual": 366,
+            "expected": 366,
+            "status": "PASS"
+          },
+          {
+            "id": "LEAP_DATE",
+            "actual": "2024-02-29",
+            "expected": "2024-02-29",
+            "status": "PASS"
+          },
+          {
+            "id": "NON_WORKBOOK_READY",
+            "actual": "ready",
+            "expected": "ready",
+            "status": "PASS"
+          },
+          {
+            "id": "LEAP_WORKBOOK_READY",
+            "actual": "ready",
+            "expected": "ready",
+            "status": "PASS"
+          },
+          {
+            "id": "NON_STRUCTURE_COUNT",
+            "actual": 20,
+            "expected": 20,
+            "status": "PASS"
+          },
+          {
+            "id": "NON_PD_COUNT",
+            "actual": 20,
+            "expected": 20,
+            "status": "PASS"
+          },
+          {
+            "id": "PRIVATE_VALIDATION_FROZEN",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          },
+          {
+            "id": "PUBLIC_STATE_NO_PRIVATE_VALIDATED",
+            "actual": false,
+            "expected": false,
+            "status": "PASS"
+          },
+          {
+            "id": "VALIDATION_HASH_LENGTH",
+            "actual": 64,
+            "expected": 64,
+            "status": "PASS"
+          },
+          {
+            "id": "LEGACY_WARNING_PRESENT",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          },
+          {
+            "id": "PARTLY_HOLD",
+            "actual": "hold",
+            "expected": "hold",
+            "status": "PASS"
+          },
+          {
+            "id": "GOV_EXCLUDED",
+            "actual": "excluded",
+            "expected": "excluded",
+            "status": "PASS"
+          },
+          {
+            "id": "SUB_EXCLUDED",
+            "actual": "excluded",
+            "expected": "excluded",
+            "status": "PASS"
+          },
+          {
+            "id": "PD_INDEPENDENT_READY",
+            "actual": 20,
+            "expected": 20,
+            "status": "PASS"
+          },
+          {
+            "id": "DATE_RANGE_LEAP",
+            "actual": 366,
+            "expected": 366,
+            "status": "PASS"
+          },
+          {
+            "id": "DATE_RANGE_NONLEAP",
+            "actual": 365,
+            "expected": 365,
+            "status": "PASS"
+          },
+          {
+            "id": "NO_CYCLE_EMPTY",
+            "actual": null,
+            "expected": null,
+            "status": "PASS"
+          }
+        ],
+        "failedCount": 0,
+        "nonleapStats": {
+          "issueCount": 1,
+          "blockingIssueCount": 0,
+          "warningIssueCount": 1,
+          "routeControlIssueCount": 0,
+          "structureCount": 20,
+          "personDayCount": 20,
+          "severityCounts": {
+            "WARNING": 1
+          },
+          "scopeCounts": {
+            "WARNING_ONLY": 1
+          },
+          "readinessCounts": {
+            "ready_with_warning": 11,
+            "ready": 6,
+            "hold": 1,
+            "excluded": 2
+          }
+        },
+        "leapStats": {
+          "issueCount": 1,
+          "blockingIssueCount": 0,
+          "warningIssueCount": 1,
+          "routeControlIssueCount": 0,
+          "structureCount": 20,
+          "personDayCount": 20,
+          "severityCounts": {
+            "WARNING": 1
+          },
+          "scopeCounts": {
+            "WARNING_ONLY": 1
+          },
+          "readinessCounts": {
+            "ready_with_warning": 11,
+            "ready": 6,
+            "hold": 1,
+            "excluded": 2
+          }
+        }
+      }
+    },
+    {
+      "name": "node-engine05-fixtures.mjs",
+      "status": "PASS",
+      "evidence": {
+        "status": "PASS",
+        "cases": [
+          {
+            "file": "FX_HR_001_Missing_Leap_Day.xlsx",
+            "diffs": [],
+            "expectedDiff": 0,
+            "notReadyWater": 11,
+            "validationNotReady": 11,
+            "pdNotReady": 0,
+            "validationPdNotReady": 0,
+            "unresolvedWaterRoutes": 0,
+            "status": "PASS"
+          },
+          {
+            "file": "FX_HR_002_Duplicate_Rainfall_Date.xlsx",
+            "diffs": [],
+            "expectedDiff": 0,
+            "notReadyWater": 10,
+            "validationNotReady": 10,
+            "pdNotReady": 0,
+            "validationPdNotReady": 0,
+            "unresolvedWaterRoutes": 0,
+            "status": "PASS"
+          },
+          {
+            "file": "FX_HR_003_Negative_Rainfall.xlsx",
+            "diffs": [],
+            "expectedDiff": 0,
+            "notReadyWater": 10,
+            "validationNotReady": 10,
+            "pdNotReady": 0,
+            "validationPdNotReady": 0,
+            "unresolvedWaterRoutes": 0,
+            "status": "PASS"
+          },
+          {
+            "file": "FX_HR_004_Missing_Verified_Base_Area.xlsx",
+            "diffs": [],
+            "expectedDiff": 0,
+            "notReadyWater": 1,
+            "validationNotReady": 1,
+            "pdNotReady": 0,
+            "validationPdNotReady": 0,
+            "unresolvedWaterRoutes": 0,
+            "status": "PASS"
+          },
+          {
+            "file": "FX_HR_005_Base_Area_Exceeds_Surface.xlsx",
+            "diffs": [],
+            "expectedDiff": 0,
+            "notReadyWater": 1,
+            "validationNotReady": 1,
+            "pdNotReady": 0,
+            "validationPdNotReady": 0,
+            "unresolvedWaterRoutes": 0,
+            "status": "PASS"
+          },
+          {
+            "file": "FX_HR_006_Missing_Feb_Evaporation.xlsx",
+            "diffs": [],
+            "expectedDiff": 0,
+            "notReadyWater": 11,
+            "validationNotReady": 11,
+            "pdNotReady": 0,
+            "validationPdNotReady": 0,
+            "unresolvedWaterRoutes": 0,
+            "status": "PASS"
+          },
+          {
+            "file": "FX_HR_007_Advanced_Stage_Missing_Group.xlsx",
+            "diffs": [],
+            "expectedDiff": 0,
+            "notReadyWater": 1,
+            "validationNotReady": 1,
+            "pdNotReady": 0,
+            "validationPdNotReady": 0,
+            "unresolvedWaterRoutes": 0,
+            "status": "PASS"
+          },
+          {
+            "file": "FX_HR_008_Cascade_Cycle.xlsx",
+            "diffs": [],
+            "expectedDiff": 0,
+            "notReadyWater": 2,
+            "validationNotReady": 2,
+            "pdNotReady": 0,
+            "validationPdNotReady": 0,
+            "unresolvedWaterRoutes": 0,
+            "status": "PASS"
+          },
+          {
+            "file": "FX_HR_009_REJ_A_Missing_Baseline.xlsx",
+            "diffs": [],
+            "expectedDiff": 0,
+            "notReadyWater": 1,
+            "validationNotReady": 1,
+            "pdNotReady": 0,
+            "validationPdNotReady": 0,
+            "unresolvedWaterRoutes": 0,
+            "status": "PASS"
+          },
+          {
+            "file": "FX_HR_010_REJ_B_Missing_Desilted.xlsx",
+            "diffs": [],
+            "expectedDiff": 0,
+            "notReadyWater": 1,
+            "validationNotReady": 1,
+            "pdNotReady": 0,
+            "validationPdNotReady": 0,
+            "unresolvedWaterRoutes": 0,
+            "status": "PASS"
+          },
+          {
+            "file": "FX_HR_011_Lined_Pond_Inlet_Fail.xlsx",
+            "diffs": [],
+            "expectedDiff": 0,
+            "notReadyWater": 1,
+            "validationNotReady": 1,
+            "pdNotReady": 0,
+            "validationPdNotReady": 0,
+            "unresolvedWaterRoutes": 0,
+            "status": "PASS"
+          },
+          {
+            "file": "FX_HR_012_Other_Surface_Approval_Missing.xlsx",
+            "diffs": [],
+            "expectedDiff": 0,
+            "notReadyWater": 1,
+            "validationNotReady": 1,
+            "pdNotReady": 0,
+            "validationPdNotReady": 0,
+            "unresolvedWaterRoutes": 0,
+            "status": "PASS"
+          },
+          {
+            "file": "FX_HR_013_Person_Day_Duplicate.xlsx",
+            "diffs": [],
+            "expectedDiff": 0,
+            "notReadyWater": 0,
+            "validationNotReady": 0,
+            "pdNotReady": 2,
+            "validationPdNotReady": 2,
+            "unresolvedWaterRoutes": 0,
+            "status": "PASS"
+          },
+          {
+            "file": "FX_HR_014_Rainfall_Outside_FY.xlsx",
+            "diffs": [],
+            "expectedDiff": 0,
+            "notReadyWater": 0,
+            "validationNotReady": 0,
+            "pdNotReady": 0,
+            "validationPdNotReady": 0,
+            "unresolvedWaterRoutes": 0,
+            "status": "PASS"
+          },
+          {
+            "file": "FX_HR_015_Partial_Season_Missing_Functional_Date.xlsx",
+            "diffs": [
+              {
+                "sid": "S-MW-01",
+                "baseline": "WTR-111-NEW",
+                "actual": null
+              }
+            ],
+            "expectedDiff": 1,
+            "notReadyWater": 0,
+            "validationNotReady": 1,
+            "pdNotReady": 0,
+            "validationPdNotReady": 0,
+            "unresolvedWaterRoutes": 1,
+            "status": "PASS"
+          }
+        ],
+        "failedCount": 0
+      }
+    },
+    {
+      "name": "node-engine05.mjs",
+      "status": "PASS",
+      "evidence": {
+        "status": "PASS",
+        "checks": [
+          {
+            "id": "E05_ENGINE",
+            "actual": "E05",
+            "expected": "E05",
+            "status": "PASS"
+          },
+          {
+            "id": "E05_LIFECYCLE",
+            "actual": "routing_ready",
+            "expected": "routing_ready",
+            "status": "PASS"
+          },
+          {
+            "id": "ROUTING_STATUS",
+            "actual": "routing_ready",
+            "expected": "routing_ready",
+            "status": "PASS"
+          },
+          {
+            "id": "WATER_DECISIONS",
+            "actual": 20,
+            "expected": 20,
+            "status": "PASS"
+          },
+          {
+            "id": "WATER_ASSIGNED",
+            "actual": 20,
+            "expected": 20,
+            "status": "PASS"
+          },
+          {
+            "id": "WATER_UNRESOLVED",
+            "actual": 0,
+            "expected": 0,
+            "status": "PASS"
+          },
+          {
+            "id": "PD_ASSIGNED",
+            "actual": 20,
+            "expected": 20,
+            "status": "PASS"
+          },
+          {
+            "id": "PD_UNRESOLVED",
+            "actual": 0,
+            "expected": 0,
+            "status": "PASS"
+          },
+          {
+            "id": "ROUTE_WTR-111-NEW",
+            "actual": 9,
+            "expected": 9,
+            "status": "PASS"
+          },
+          {
+            "id": "ROUTE_WTR-111-REJ-A",
+            "actual": 1,
+            "expected": 1,
+            "status": "PASS"
+          },
+          {
+            "id": "ROUTE_WTR-111-REJ-B",
+            "actual": 1,
+            "expected": 1,
+            "status": "PASS"
+          },
+          {
+            "id": "ROUTE_WTR-112-NEW",
+            "actual": 3,
+            "expected": 3,
+            "status": "PASS"
+          },
+          {
+            "id": "ROUTE_WTR-112-REJ-A",
+            "actual": 1,
+            "expected": 1,
+            "status": "PASS"
+          },
+          {
+            "id": "ROUTE_WTR-112-REJ-B",
+            "actual": 1,
+            "expected": 1,
+            "status": "PASS"
+          },
+          {
+            "id": "ROUTE_WTR-LFP",
+            "actual": 1,
+            "expected": 1,
+            "status": "PASS"
+          },
+          {
+            "id": "ROUTE_WTR-HOLD-PARTLY-LINED",
+            "actual": 1,
+            "expected": 1,
+            "status": "PASS"
+          },
+          {
+            "id": "ROUTE_WTR-EXCL-GOV",
+            "actual": 1,
+            "expected": 1,
+            "status": "PASS"
+          },
+          {
+            "id": "ROUTE_WTR-EXCL-SUB",
+            "actual": 1,
+            "expected": 1,
+            "status": "PASS"
+          },
+          {
+            "id": "PD_PD-DIRECT",
+            "actual": 5,
+            "expected": 5,
+            "status": "PASS"
+          },
+          {
+            "id": "PD_PD-COMMUNITY",
+            "actual": 5,
+            "expected": 5,
+            "status": "PASS"
+          },
+          {
+            "id": "PD_PD-VOLUME",
+            "actual": 5,
+            "expected": 5,
+            "status": "PASS"
+          },
+          {
+            "id": "PD_PD-MACHINERY",
+            "actual": 5,
+            "expected": 5,
+            "status": "PASS"
+          },
+          {
+            "id": "EXACTLY_ONE_PER_STRUCTURE",
+            "actual": 20,
+            "expected": 20,
+            "status": "PASS"
+          },
+          {
+            "id": "OFFICIAL_ROUTE_ENUMS_VALID",
+            "actual": 0,
+            "expected": 0,
+            "status": "PASS"
+          },
+          {
+            "id": "CANDIDATE_MATCH_GOLDEN",
+            "actual": 0,
+            "expected": 0,
+            "status": "PASS"
+          },
+          {
+            "id": "PARTLY_OFFICIAL_HOLD",
+            "actual": "WTR-HOLD-PARTLY-LINED",
+            "expected": "WTR-HOLD-PARTLY-LINED",
+            "status": "PASS"
+          },
+          {
+            "id": "PARTLY_ELIGIBILITY",
+            "actual": "hold",
+            "expected": "hold",
+            "status": "PASS"
+          },
+          {
+            "id": "GOV_OFFICIAL_EXCL",
+            "actual": "WTR-EXCL-GOV",
+            "expected": "WTR-EXCL-GOV",
+            "status": "PASS"
+          },
+          {
+            "id": "SUB_OFFICIAL_EXCL",
+            "actual": "WTR-EXCL-SUB",
+            "expected": "WTR-EXCL-SUB",
+            "status": "PASS"
+          },
+          {
+            "id": "LFP_ROUTE",
+            "actual": "WTR-LFP",
+            "expected": "WTR-LFP",
+            "status": "PASS"
+          },
+          {
+            "id": "MW_PARTIAL_ROUTE",
+            "actual": "WTR-111-NEW",
+            "expected": "WTR-111-NEW",
+            "status": "PASS"
+          },
+          {
+            "id": "MW_SIM_START",
+            "actual": "2024-07-20",
+            "expected": "2024-07-20",
+            "status": "PASS"
+          },
+          {
+            "id": "LEGACY_READY_WARNING_COUNT",
+            "actual": 11,
+            "expected": 11,
+            "status": "PASS"
+          },
+          {
+            "id": "ELIGIBLE_COUNT",
+            "actual": 6,
+            "expected": 6,
+            "status": "PASS"
+          },
+          {
+            "id": "HOLD_COUNT",
+            "actual": 1,
+            "expected": 1,
+            "status": "PASS"
+          },
+          {
+            "id": "EXCLUDED_COUNT",
+            "actual": 2,
+            "expected": 2,
+            "status": "PASS"
+          },
+          {
+            "id": "PD_INDEPENDENT_ALL",
+            "actual": 20,
+            "expected": 20,
+            "status": "PASS"
+          },
+          {
+            "id": "PRIVATE_ROUTING_FROZEN",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          },
+          {
+            "id": "PUBLIC_STATE_NO_PRIVATE_ROUTED",
+            "actual": false,
+            "expected": false,
+            "status": "PASS"
+          },
+          {
+            "id": "ROUTING_HASH_LENGTH",
+            "actual": 64,
+            "expected": 64,
+            "status": "PASS"
+          },
+          {
+            "id": "CONTENT_HASH_LENGTH",
+            "actual": 64,
+            "expected": 64,
+            "status": "PASS"
+          },
+          {
+            "id": "ROUTE_REGISTRY_VERSION",
+            "actual": "HUF-DESIGN1-ROUTE-REGISTRY-v1.1",
+            "expected": "HUF-DESIGN1-ROUTE-REGISTRY-v1.1",
+            "status": "PASS"
+          },
+          {
+            "id": "ROUTING_POLICY_VERSION",
+            "actual": "HUF-E05-OFFICIAL-ROUTING-v1.0",
+            "expected": "HUF-E05-OFFICIAL-ROUTING-v1.0",
+            "status": "PASS"
+          },
+          {
+            "id": "LEAP_SAME_ROUTE_COUNTS",
+            "actual": "{\"WTR-111-NEW\":9,\"WTR-112-NEW\":3,\"WTR-111-REJ-A\":1,\"WTR-111-REJ-B\":1,\"WTR-LFP\":1,\"WTR-HOLD-PARTLY-LINED\":1,\"WTR-112-REJ-A\":1,\"WTR-112-REJ-B\":1,\"WTR-EXCL-SUB\":1,\"WTR-EXCL-GOV\":1}",
+            "expected": "{\"WTR-111-NEW\":9,\"WTR-112-NEW\":3,\"WTR-111-REJ-A\":1,\"WTR-111-REJ-B\":1,\"WTR-LFP\":1,\"WTR-HOLD-PARTLY-LINED\":1,\"WTR-112-REJ-A\":1,\"WTR-112-REJ-B\":1,\"WTR-EXCL-SUB\":1,\"WTR-EXCL-GOV\":1}",
+            "status": "PASS"
+          },
+          {
+            "id": "LEAP_SAME_PD_COUNTS",
+            "actual": "{\"PD-DIRECT\":5,\"PD-COMMUNITY\":5,\"PD-VOLUME\":5,\"PD-MACHINERY\":5}",
+            "expected": "{\"PD-DIRECT\":5,\"PD-COMMUNITY\":5,\"PD-VOLUME\":5,\"PD-MACHINERY\":5}",
+            "status": "PASS"
+          },
+          {
+            "id": "NO_NUMERIC_WATER_RESULT_FIELDS",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          },
+          {
+            "id": "NO_CALCULATED_PERSON_DAYS_FIELDS",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          },
+          {
+            "id": "PURE_NEW_BEFORE",
+            "actual": "WTR-111-NEW",
+            "expected": "WTR-111-NEW",
+            "status": "PASS"
+          },
+          {
+            "id": "PURE_NEW_AFTER",
+            "actual": "WTR-112-NEW",
+            "expected": "WTR-112-NEW",
+            "status": "PASS"
+          },
+          {
+            "id": "PURE_REJA_BEFORE",
+            "actual": "WTR-111-REJ-A",
+            "expected": "WTR-111-REJ-A",
+            "status": "PASS"
+          },
+          {
+            "id": "PURE_REJB_AFTER",
+            "actual": "WTR-112-REJ-B",
+            "expected": "WTR-112-REJ-B",
+            "status": "PASS"
+          },
+          {
+            "id": "PURE_PARTIAL_AFTER",
+            "actual": "WTR-111-NEW",
+            "expected": "WTR-111-NEW",
+            "status": "PASS"
+          },
+          {
+            "id": "PURE_LFP_PRECEDENCE",
+            "actual": "WTR-LFP",
+            "expected": "WTR-LFP",
+            "status": "PASS"
+          },
+          {
+            "id": "PURE_PARTLY_PRECEDENCE",
+            "actual": "WTR-HOLD-PARTLY-LINED",
+            "expected": "WTR-HOLD-PARTLY-LINED",
+            "status": "PASS"
+          },
+          {
+            "id": "PURE_GOV_PRECEDENCE",
+            "actual": "WTR-EXCL-GOV",
+            "expected": "WTR-EXCL-GOV",
+            "status": "PASS"
+          },
+          {
+            "id": "PURE_SUB_PRECEDENCE",
+            "actual": "WTR-EXCL-SUB",
+            "expected": "WTR-EXCL-SUB",
+            "status": "PASS"
+          },
+          {
+            "id": "PURE_MISSING_COMPLETION",
+            "actual": "unresolved",
+            "expected": "unresolved",
+            "status": "PASS"
+          },
+          {
+            "id": "PURE_MISSING_REJ_METHOD",
+            "actual": "unresolved",
+            "expected": "unresolved",
+            "status": "PASS"
+          },
+          {
+            "id": "PURE_WORKBOOK_WITHHOLD",
+            "actual": "withheld_workbook_not_ready",
+            "expected": "withheld_workbook_not_ready",
+            "status": "PASS"
+          },
+          {
+            "id": "PURE_PD_PD-DIRECT",
+            "actual": "PD-DIRECT",
+            "expected": "PD-DIRECT",
+            "status": "PASS"
+          },
+          {
+            "id": "PURE_PD_PD-COMMUNITY",
+            "actual": "PD-COMMUNITY",
+            "expected": "PD-COMMUNITY",
+            "status": "PASS"
+          },
+          {
+            "id": "PURE_PD_PD-VOLUME",
+            "actual": "PD-VOLUME",
+            "expected": "PD-VOLUME",
+            "status": "PASS"
+          },
+          {
+            "id": "PURE_PD_PD-MACHINERY",
+            "actual": "PD-MACHINERY",
+            "expected": "PD-MACHINERY",
+            "status": "PASS"
+          },
+          {
+            "id": "PURE_PD_UNKNOWN",
+            "actual": "unresolved",
+            "expected": "unresolved",
+            "status": "PASS"
+          }
+        ],
+        "failedCount": 0,
+        "nonleapStats": {
+          "structureRecords": 20,
+          "waterRouteDecisions": 20,
+          "assignedWaterRoutes": 20,
+          "unresolvedWaterRoutes": 0,
+          "personDayRecords": 20,
+          "assignedPersonDayRoutes": 20,
+          "unresolvedPersonDayRoutes": 0,
+          "routeCounts": {
+            "WTR-111-NEW": 9,
+            "WTR-112-NEW": 3,
+            "WTR-111-REJ-A": 1,
+            "WTR-111-REJ-B": 1,
+            "WTR-LFP": 1,
+            "WTR-HOLD-PARTLY-LINED": 1,
+            "WTR-112-REJ-A": 1,
+            "WTR-112-REJ-B": 1,
+            "WTR-EXCL-SUB": 1,
+            "WTR-EXCL-GOV": 1
+          },
+          "pdRouteCounts": {
+            "PD-DIRECT": 5,
+            "PD-COMMUNITY": 5,
+            "PD-VOLUME": 5,
+            "PD-MACHINERY": 5
+          },
+          "eligibilityCounts": {
+            "eligible_with_warning": 11,
+            "eligible": 6,
+            "hold": 1,
+            "excluded": 2
+          }
+        },
+        "leapStats": {
+          "structureRecords": 20,
+          "waterRouteDecisions": 20,
+          "assignedWaterRoutes": 20,
+          "unresolvedWaterRoutes": 0,
+          "personDayRecords": 20,
+          "assignedPersonDayRoutes": 20,
+          "unresolvedPersonDayRoutes": 0,
+          "routeCounts": {
+            "WTR-111-NEW": 9,
+            "WTR-112-NEW": 3,
+            "WTR-111-REJ-A": 1,
+            "WTR-111-REJ-B": 1,
+            "WTR-LFP": 1,
+            "WTR-HOLD-PARTLY-LINED": 1,
+            "WTR-112-REJ-A": 1,
+            "WTR-112-REJ-B": 1,
+            "WTR-EXCL-SUB": 1,
+            "WTR-EXCL-GOV": 1
+          },
+          "pdRouteCounts": {
+            "PD-DIRECT": 5,
+            "PD-COMMUNITY": 5,
+            "PD-VOLUME": 5,
+            "PD-MACHINERY": 5
+          },
+          "eligibilityCounts": {
+            "eligible_with_warning": 11,
+            "eligible": 6,
+            "hold": 1,
+            "excluded": 2
+          }
+        }
+      }
+    },
+    {
+      "name": "node-engine06-fixtures.mjs",
+      "status": "PASS",
+      "evidence": {
+        "status": "PASS",
+        "caseCount": 15,
+        "failedCount": 0,
+        "cases": [
+          {
+            "file": "FX_HR_001_Missing_Leap_Day.xlsx",
+            "expectedCalculatedWater": 6,
+            "actualCalculatedWater": 6,
+            "blockedWater": 14,
+            "expectedCalculatedPersonDays": 20,
+            "actualCalculatedPersonDays": 20,
+            "qaFail": 0,
+            "errorCount": 0,
+            "badNumeric": 0,
+            "status": "PASS"
+          },
+          {
+            "file": "FX_HR_002_Duplicate_Rainfall_Date.xlsx",
+            "expectedCalculatedWater": 7,
+            "actualCalculatedWater": 7,
+            "blockedWater": 13,
+            "expectedCalculatedPersonDays": 20,
+            "actualCalculatedPersonDays": 20,
+            "qaFail": 0,
+            "errorCount": 0,
+            "badNumeric": 0,
+            "status": "PASS"
+          },
+          {
+            "file": "FX_HR_003_Negative_Rainfall.xlsx",
+            "expectedCalculatedWater": 7,
+            "actualCalculatedWater": 7,
+            "blockedWater": 13,
+            "expectedCalculatedPersonDays": 20,
+            "actualCalculatedPersonDays": 20,
+            "qaFail": 0,
+            "errorCount": 0,
+            "badNumeric": 0,
+            "status": "PASS"
+          },
+          {
+            "file": "FX_HR_004_Missing_Verified_Base_Area.xlsx",
+            "expectedCalculatedWater": 15,
+            "actualCalculatedWater": 15,
+            "blockedWater": 5,
+            "expectedCalculatedPersonDays": 20,
+            "actualCalculatedPersonDays": 20,
+            "qaFail": 0,
+            "errorCount": 0,
+            "badNumeric": 0,
+            "status": "PASS"
+          },
+          {
+            "file": "FX_HR_005_Base_Area_Exceeds_Surface.xlsx",
+            "expectedCalculatedWater": 15,
+            "actualCalculatedWater": 15,
+            "blockedWater": 5,
+            "expectedCalculatedPersonDays": 20,
+            "actualCalculatedPersonDays": 20,
+            "qaFail": 0,
+            "errorCount": 0,
+            "badNumeric": 0,
+            "status": "PASS"
+          },
+          {
+            "file": "FX_HR_006_Missing_Feb_Evaporation.xlsx",
+            "expectedCalculatedWater": 6,
+            "actualCalculatedWater": 6,
+            "blockedWater": 14,
+            "expectedCalculatedPersonDays": 20,
+            "actualCalculatedPersonDays": 20,
+            "qaFail": 0,
+            "errorCount": 0,
+            "badNumeric": 0,
+            "status": "PASS"
+          },
+          {
+            "file": "FX_HR_007_Advanced_Stage_Missing_Group.xlsx",
+            "expectedCalculatedWater": 15,
+            "actualCalculatedWater": 15,
+            "blockedWater": 5,
+            "expectedCalculatedPersonDays": 20,
+            "actualCalculatedPersonDays": 20,
+            "qaFail": 0,
+            "errorCount": 0,
+            "badNumeric": 0,
+            "status": "PASS"
+          },
+          {
+            "file": "FX_HR_008_Cascade_Cycle.xlsx",
+            "expectedCalculatedWater": 15,
+            "actualCalculatedWater": 15,
+            "blockedWater": 5,
+            "expectedCalculatedPersonDays": 20,
+            "actualCalculatedPersonDays": 20,
+            "qaFail": 0,
+            "errorCount": 0,
+            "badNumeric": 0,
+            "status": "PASS"
+          },
+          {
+            "file": "FX_HR_009_REJ_A_Missing_Baseline.xlsx",
+            "expectedCalculatedWater": 16,
+            "actualCalculatedWater": 16,
+            "blockedWater": 4,
+            "expectedCalculatedPersonDays": 20,
+            "actualCalculatedPersonDays": 20,
+            "qaFail": 0,
+            "errorCount": 0,
+            "badNumeric": 0,
+            "status": "PASS"
+          },
+          {
+            "file": "FX_HR_010_REJ_B_Missing_Desilted.xlsx",
+            "expectedCalculatedWater": 16,
+            "actualCalculatedWater": 16,
+            "blockedWater": 4,
+            "expectedCalculatedPersonDays": 20,
+            "actualCalculatedPersonDays": 20,
+            "qaFail": 0,
+            "errorCount": 0,
+            "badNumeric": 0,
+            "status": "PASS"
+          },
+          {
+            "file": "FX_HR_011_Lined_Pond_Inlet_Fail.xlsx",
+            "expectedCalculatedWater": 16,
+            "actualCalculatedWater": 16,
+            "blockedWater": 4,
+            "expectedCalculatedPersonDays": 20,
+            "actualCalculatedPersonDays": 20,
+            "qaFail": 0,
+            "errorCount": 0,
+            "badNumeric": 0,
+            "status": "PASS"
+          },
+          {
+            "file": "FX_HR_012_Other_Surface_Approval_Missing.xlsx",
+            "expectedCalculatedWater": 16,
+            "actualCalculatedWater": 16,
+            "blockedWater": 4,
+            "expectedCalculatedPersonDays": 20,
+            "actualCalculatedPersonDays": 20,
+            "qaFail": 0,
+            "errorCount": 0,
+            "badNumeric": 0,
+            "status": "PASS"
+          },
+          {
+            "file": "FX_HR_013_Person_Day_Duplicate.xlsx",
+            "expectedCalculatedWater": 17,
+            "actualCalculatedWater": 17,
+            "blockedWater": 3,
+            "expectedCalculatedPersonDays": 19,
+            "actualCalculatedPersonDays": 19,
+            "qaFail": 0,
+            "errorCount": 0,
+            "badNumeric": 0,
+            "status": "PASS"
+          },
+          {
+            "file": "FX_HR_014_Rainfall_Outside_FY.xlsx",
+            "expectedCalculatedWater": 17,
+            "actualCalculatedWater": 17,
+            "blockedWater": 3,
+            "expectedCalculatedPersonDays": 20,
+            "actualCalculatedPersonDays": 20,
+            "qaFail": 0,
+            "errorCount": 0,
+            "badNumeric": 0,
+            "status": "PASS"
+          },
+          {
+            "file": "FX_HR_015_Partial_Season_Missing_Functional_Date.xlsx",
+            "expectedCalculatedWater": 16,
+            "actualCalculatedWater": 16,
+            "blockedWater": 4,
+            "expectedCalculatedPersonDays": 20,
+            "actualCalculatedPersonDays": 20,
+            "qaFail": 0,
+            "errorCount": 0,
+            "badNumeric": 0,
+            "status": "PASS"
+          }
+        ]
+      }
+    },
+    {
+      "name": "node-engine06.mjs",
+      "status": "PASS",
+      "evidence": {
+        "status": "PASS",
+        "checkCount": 121,
+        "failedCount": 0,
+        "checks": [
+          {
+            "id": "G-001",
+            "actual": 1200,
+            "expected": 1200,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "G-002",
+            "actual": 1,
+            "expected": 1,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "G-003",
+            "actual": 2000,
+            "expected": 2000,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "G-004",
+            "actual": 1000,
+            "expected": 1000,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "G-005",
+            "actual": 8800,
+            "expected": 8800,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "G-006",
+            "actual": 0.09000000000000008,
+            "expected": 0.09,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "G-007",
+            "actual": 8900,
+            "expected": 8900,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "G-008",
+            "actual": 46,
+            "expected": 46,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "G-009",
+            "actual": 0.2,
+            "expected": 0.2,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "G-010",
+            "actual": 800,
+            "expected": 800,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "G-011",
+            "actual": 750,
+            "expected": 750,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "G-012",
+            "actual": 800,
+            "expected": 800,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "G-013_AREA",
+            "actual": 400,
+            "expected": 400,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "G-013_EVAP",
+            "actual": 2,
+            "expected": 2,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "G-014",
+            "actual": 300,
+            "expected": 300,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "G-015",
+            "actual": 0.5,
+            "expected": 0.5,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "G-016_available",
+            "actual": 150,
+            "expected": 150,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "G-016_opening",
+            "actual": 120,
+            "expected": 120,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "G-016_overflow",
+            "actual": 30,
+            "expected": 30,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "G-016_actualEvaporation",
+            "actual": 5,
+            "expected": 5,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "G-016_actualInfiltration",
+            "actual": 30,
+            "expected": 30,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "G-016_closing",
+            "actual": 85,
+            "expected": 85,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "G-016_massResidual",
+            "actual": 0,
+            "expected": 0,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "G-017_PRIMARY",
+            "actual": 1000,
+            "expected": 1000,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "G-017_CROSS",
+            "actual": 1000,
+            "expected": 1000,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "G-018",
+            "actual": 1.5,
+            "expected": 1.5,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "G-019",
+            "actual": 5.5,
+            "expected": 5.5,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "G-020",
+            "actual": 80,
+            "expected": 80,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "G-021",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          },
+          {
+            "id": "G-023_PURE_LINED_SINGLE_FILL",
+            "actual": 2400,
+            "expected": 2400,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "G-024",
+            "actual": null,
+            "expected": null,
+            "status": "PASS"
+          },
+          {
+            "id": "G-025",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          },
+          {
+            "id": "G-026",
+            "actual": 120,
+            "expected": 120,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "G-027",
+            "actual": 5,
+            "expected": 5,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "G-028_AREA",
+            "actual": 400,
+            "expected": 400,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "G-028_EVAP",
+            "actual": 2,
+            "expected": 2,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "G-029",
+            "actual": 4,
+            "expected": 4,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "E06_ENGINE",
+            "actual": "E06",
+            "expected": "E06",
+            "status": "PASS"
+          },
+          {
+            "id": "E06_LIFECYCLE",
+            "actual": "calculation_ready",
+            "expected": "calculation_ready",
+            "status": "PASS"
+          },
+          {
+            "id": "FORMULA_CATALOG",
+            "actual": "HUF-DESIGN2-FORMULA-CATALOG-v1.1",
+            "expected": "HUF-DESIGN2-FORMULA-CATALOG-v1.1",
+            "status": "PASS"
+          },
+          {
+            "id": "CALC_STATUS",
+            "actual": "calculation_complete",
+            "expected": "calculation_complete",
+            "status": "PASS"
+          },
+          {
+            "id": "WATER_CALC_COUNT",
+            "actual": 17,
+            "expected": 17,
+            "status": "PASS"
+          },
+          {
+            "id": "KPI111_COUNT",
+            "actual": 11,
+            "expected": 11,
+            "status": "PASS"
+          },
+          {
+            "id": "KPI112_COUNT",
+            "actual": 5,
+            "expected": 5,
+            "status": "PASS"
+          },
+          {
+            "id": "LINED_COUNT",
+            "actual": 1,
+            "expected": 1,
+            "status": "PASS"
+          },
+          {
+            "id": "NULL_WATER_COUNT",
+            "actual": 3,
+            "expected": 3,
+            "status": "PASS"
+          },
+          {
+            "id": "PD_CALC_COUNT",
+            "actual": 20,
+            "expected": 20,
+            "status": "PASS"
+          },
+          {
+            "id": "PD_TOTAL",
+            "actual": 322.66666666666663,
+            "expected": 322.6666666666667,
+            "tolerance": 1e-10,
+            "status": "PASS"
+          },
+          {
+            "id": "TRACE_ROWS_NONLEAP",
+            "actual": 3905,
+            "expected": 3905,
+            "status": "PASS"
+          },
+          {
+            "id": "TRACE_ROWS_LEAP",
+            "actual": 3916,
+            "expected": 3916,
+            "status": "PASS"
+          },
+          {
+            "id": "E2E_S-CCT-01",
+            "actual": 228.5841281366329,
+            "expected": 228.5841281366329,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "LEAP_S-CCT-01",
+            "actual": 228.5841281366329,
+            "expected": 228.5841281366329,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "E2E_S-SCT-01",
+            "actual": 175.8630822942423,
+            "expected": 175.8630822942423,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "LEAP_S-SCT-01",
+            "actual": 175.8630822942423,
+            "expected": 175.8630822942423,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "E2E_S-WAT-01",
+            "actual": 38.4,
+            "expected": 38.4,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "LEAP_S-WAT-01",
+            "actual": 38.4,
+            "expected": 38.4,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "E2E_S-FB-01",
+            "actual": 101.775,
+            "expected": 101.775,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "LEAP_S-FB-01",
+            "actual": 101.775,
+            "expected": 101.775,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "E2E_S-TCB-01",
+            "actual": 147.22719999999995,
+            "expected": 147.22719999999995,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "LEAP_S-TCB-01",
+            "actual": 147.22719999999995,
+            "expected": 147.22719999999995,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "E2E_S-CB-01",
+            "actual": 337.8007706611572,
+            "expected": 337.8007706611572,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "LEAP_S-CB-01",
+            "actual": 337.8007706611572,
+            "expected": 337.8007706611572,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "E2E_S-LL-01",
+            "actual": 25,
+            "expected": 25,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "LEAP_S-LL-01",
+            "actual": 25,
+            "expected": 25,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "E2E_S-FP-U-01",
+            "actual": 3062.5310432328447,
+            "expected": 3062.5310432328447,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "LEAP_S-FP-U-01",
+            "actual": 3062.5310432328447,
+            "expected": 3062.5310432328447,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "E2E_S-FP-L-01",
+            "actual": 1250,
+            "expected": 1250,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "LEAP_S-FP-L-01",
+            "actual": 1250,
+            "expected": 1250,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "E2E_S-GS-01",
+            "actual": 884.4745839771674,
+            "expected": 884.4745839771674,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "LEAP_S-GS-01",
+            "actual": 884.4745839771674,
+            "expected": 884.4745839771674,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "E2E_S-GP-01",
+            "actual": 36,
+            "expected": 36,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "LEAP_S-GP-01",
+            "actual": 36,
+            "expected": 36,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "E2E_S-CD-01",
+            "actual": 2463.234216143206,
+            "expected": 2463.234216143206,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "LEAP_S-CD-01",
+            "actual": 2463.234216143206,
+            "expected": 2463.234216143206,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "E2E_S-VP-01",
+            "actual": 150,
+            "expected": 150,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "LEAP_S-VP-01",
+            "actual": 150,
+            "expected": 150,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "E2E_S-PT-01",
+            "actual": 220,
+            "expected": 220,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "LEAP_S-PT-01",
+            "actual": 220,
+            "expected": 220,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "E2E_S-LBS-01",
+            "actual": 255.11902247071868,
+            "expected": 255.11902247071868,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "LEAP_S-LBS-01",
+            "actual": 255.11902247071868,
+            "expected": 255.11902247071868,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "E2E_S-MW-01",
+            "actual": 886.1077994811992,
+            "expected": 886.1077994811992,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "LEAP_S-MW-01",
+            "actual": 886.1077994811992,
+            "expected": 886.1077994811992,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "E2E_S-OASS-01",
+            "actual": 971.0043354384484,
+            "expected": 971.0043354384484,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "LEAP_S-OASS-01",
+            "actual": 971.0043354384484,
+            "expected": 971.0043354384484,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "NULL_S-FP-P-01",
+            "actual": null,
+            "expected": null,
+            "status": "PASS"
+          },
+          {
+            "id": "NULL_S-SUB-01",
+            "actual": null,
+            "expected": null,
+            "status": "PASS"
+          },
+          {
+            "id": "NULL_S-GOV-01",
+            "actual": null,
+            "expected": null,
+            "status": "PASS"
+          },
+          {
+            "id": "PD_S-CCT-01",
+            "actual": 11,
+            "expected": 11,
+            "tolerance": 1e-10,
+            "status": "PASS"
+          },
+          {
+            "id": "PD_S-SCT-01",
+            "actual": 7,
+            "expected": 7,
+            "tolerance": 1e-10,
+            "status": "PASS"
+          },
+          {
+            "id": "PD_S-WAT-01",
+            "actual": 26,
+            "expected": 26,
+            "tolerance": 1e-10,
+            "status": "PASS"
+          },
+          {
+            "id": "PD_S-FB-01",
+            "actual": 2,
+            "expected": 2,
+            "tolerance": 1e-10,
+            "status": "PASS"
+          },
+          {
+            "id": "PD_S-TCB-01",
+            "actual": 15,
+            "expected": 15,
+            "tolerance": 1e-10,
+            "status": "PASS"
+          },
+          {
+            "id": "PD_S-CB-01",
+            "actual": 6,
+            "expected": 6,
+            "tolerance": 1e-10,
+            "status": "PASS"
+          },
+          {
+            "id": "PD_S-LL-01",
+            "actual": 28.333333333333332,
+            "expected": 28.333333333333332,
+            "tolerance": 1e-10,
+            "status": "PASS"
+          },
+          {
+            "id": "PD_S-FP-U-01",
+            "actual": 2,
+            "expected": 2,
+            "tolerance": 1e-10,
+            "status": "PASS"
+          },
+          {
+            "id": "PD_S-FP-L-01",
+            "actual": 19,
+            "expected": 19,
+            "tolerance": 1e-10,
+            "status": "PASS"
+          },
+          {
+            "id": "PD_S-FP-P-01",
+            "actual": 5,
+            "expected": 5,
+            "tolerance": 1e-10,
+            "status": "PASS"
+          },
+          {
+            "id": "PD_S-GS-01",
+            "actual": 30,
+            "expected": 30,
+            "tolerance": 1e-10,
+            "status": "PASS"
+          },
+          {
+            "id": "PD_S-GP-01",
+            "actual": 2,
+            "expected": 2,
+            "tolerance": 1e-10,
+            "status": "PASS"
+          },
+          {
+            "id": "PD_S-CD-01",
+            "actual": 23,
+            "expected": 23,
+            "tolerance": 1e-10,
+            "status": "PASS"
+          },
+          {
+            "id": "PD_S-VP-01",
+            "actual": 9,
+            "expected": 9,
+            "tolerance": 1e-10,
+            "status": "PASS"
+          },
+          {
+            "id": "PD_S-PT-01",
+            "actual": 50,
+            "expected": 50,
+            "tolerance": 1e-10,
+            "status": "PASS"
+          },
+          {
+            "id": "PD_S-LBS-01",
+            "actual": 2,
+            "expected": 2,
+            "tolerance": 1e-10,
+            "status": "PASS"
+          },
+          {
+            "id": "PD_S-MW-01",
+            "actual": 27,
+            "expected": 27,
+            "tolerance": 1e-10,
+            "status": "PASS"
+          },
+          {
+            "id": "PD_S-OASS-01",
+            "actual": 8,
+            "expected": 8,
+            "tolerance": 1e-10,
+            "status": "PASS"
+          },
+          {
+            "id": "PD_S-SUB-01",
+            "actual": 48.333333333333336,
+            "expected": 48.333333333333336,
+            "tolerance": 1e-10,
+            "status": "PASS"
+          },
+          {
+            "id": "PD_S-GOV-01",
+            "actual": 2,
+            "expected": 2,
+            "tolerance": 1e-10,
+            "status": "PASS"
+          },
+          {
+            "id": "QA_VAL-063",
+            "actual": "PASS",
+            "expected": "PASS",
+            "status": "PASS"
+          },
+          {
+            "id": "QA_VAL-066",
+            "actual": "PASS",
+            "expected": "PASS",
+            "status": "PASS"
+          },
+          {
+            "id": "QA_VAL-086",
+            "actual": "PASS",
+            "expected": "PASS",
+            "status": "PASS"
+          },
+          {
+            "id": "QA_VAL-087",
+            "actual": "PASS",
+            "expected": "PASS",
+            "status": "PASS"
+          },
+          {
+            "id": "QA_VAL-088",
+            "actual": "PASS",
+            "expected": "PASS",
+            "status": "PASS"
+          },
+          {
+            "id": "QA_VAL-089",
+            "actual": "PASS",
+            "expected": "PASS",
+            "status": "PASS"
+          },
+          {
+            "id": "QA_DEFERRED_E8",
+            "actual": "[\"VAL-090\",\"VAL-091\"]",
+            "expected": "[\"VAL-090\",\"VAL-091\"]",
+            "status": "PASS"
+          },
+          {
+            "id": "G-022_RAINFALL_SERIES_SCOPE_PREP",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          },
+          {
+            "id": "PRIVATE_CALC_FROZEN",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          },
+          {
+            "id": "PUBLIC_STATE_NO_PRIVATE_CALCULATED",
+            "actual": false,
+            "expected": false,
+            "status": "PASS"
+          },
+          {
+            "id": "CALC_HASH_LEN",
+            "actual": 64,
+            "expected": 64,
+            "status": "PASS"
+          },
+          {
+            "id": "CONTENT_HASH_LEN",
+            "actual": 64,
+            "expected": 64,
+            "status": "PASS"
+          },
+          {
+            "id": "NO_ROUNDING_INTERMEDIATE",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          },
+          {
+            "id": "UNKNOWN_FORMULA_IDS",
+            "actual": 0,
+            "expected": 0,
+            "status": "PASS"
+          }
+        ],
+        "stats": {
+          "waterRouteRecords": 20,
+          "calculatedWaterResults": 17,
+          "calculatedKpi111": 11,
+          "calculatedKpi112": 5,
+          "calculatedLinedPond": 1,
+          "notCalculatedWaterResults": 3,
+          "qaFailedWaterResults": 0,
+          "personDayRecords": 20,
+          "calculatedPersonDayResults": 20,
+          "kpi121TotalPersonDays": 322.66666666666663,
+          "dailyTraceRows": 3905
+        }
+      }
+    },
+    {
+      "name": "node-engine07-fixtures.mjs",
+      "status": "PASS",
+      "evidence": {
+        "status": "PASS",
+        "caseCount": 15,
+        "failedCount": 0,
+        "cases": [
+          {
+            "file": "FX_HR_001_Missing_Leap_Day.xlsx",
+            "status": "PASS",
+            "statusCounts": {
+              "accepted-certified": 26,
+              "provisional-evidence-pending": 0,
+              "calculated-warning": 0,
+              "not-calculated": 12,
+              "excluded": 2
+            },
+            "notes": []
+          },
+          {
+            "file": "FX_HR_002_Duplicate_Rainfall_Date.xlsx",
+            "status": "PASS",
+            "statusCounts": {
+              "accepted-certified": 26,
+              "provisional-evidence-pending": 0,
+              "calculated-warning": 1,
+              "not-calculated": 11,
+              "excluded": 2
+            },
+            "notes": []
+          },
+          {
+            "file": "FX_HR_003_Negative_Rainfall.xlsx",
+            "status": "PASS",
+            "statusCounts": {
+              "accepted-certified": 26,
+              "provisional-evidence-pending": 0,
+              "calculated-warning": 1,
+              "not-calculated": 11,
+              "excluded": 2
+            },
+            "notes": []
+          },
+          {
+            "file": "FX_HR_004_Missing_Verified_Base_Area.xlsx",
+            "status": "PASS",
+            "statusCounts": {
+              "accepted-certified": 26,
+              "provisional-evidence-pending": 0,
+              "calculated-warning": 9,
+              "not-calculated": 3,
+              "excluded": 2
+            },
+            "notes": []
+          },
+          {
+            "file": "FX_HR_005_Base_Area_Exceeds_Surface.xlsx",
+            "status": "PASS",
+            "statusCounts": {
+              "accepted-certified": 26,
+              "provisional-evidence-pending": 0,
+              "calculated-warning": 9,
+              "not-calculated": 3,
+              "excluded": 2
+            },
+            "notes": []
+          },
+          {
+            "file": "FX_HR_006_Missing_Feb_Evaporation.xlsx",
+            "status": "PASS",
+            "statusCounts": {
+              "accepted-certified": 26,
+              "provisional-evidence-pending": 0,
+              "calculated-warning": 0,
+              "not-calculated": 12,
+              "excluded": 2
+            },
+            "notes": []
+          },
+          {
+            "file": "FX_HR_007_Advanced_Stage_Missing_Group.xlsx",
+            "status": "PASS",
+            "statusCounts": {
+              "accepted-certified": 26,
+              "provisional-evidence-pending": 0,
+              "calculated-warning": 9,
+              "not-calculated": 3,
+              "excluded": 2
+            },
+            "notes": []
+          },
+          {
+            "file": "FX_HR_008_Cascade_Cycle.xlsx",
+            "status": "PASS",
+            "statusCounts": {
+              "accepted-certified": 26,
+              "provisional-evidence-pending": 0,
+              "calculated-warning": 9,
+              "not-calculated": 3,
+              "excluded": 2
+            },
+            "notes": []
+          },
+          {
+            "file": "FX_HR_009_REJ_A_Missing_Baseline.xlsx",
+            "status": "PASS",
+            "statusCounts": {
+              "accepted-certified": 26,
+              "provisional-evidence-pending": 0,
+              "calculated-warning": 10,
+              "not-calculated": 2,
+              "excluded": 2
+            },
+            "notes": []
+          },
+          {
+            "file": "FX_HR_010_REJ_B_Missing_Desilted.xlsx",
+            "status": "PASS",
+            "statusCounts": {
+              "accepted-certified": 26,
+              "provisional-evidence-pending": 0,
+              "calculated-warning": 10,
+              "not-calculated": 2,
+              "excluded": 2
+            },
+            "notes": []
+          },
+          {
+            "file": "FX_HR_011_Lined_Pond_Inlet_Fail.xlsx",
+            "status": "PASS",
+            "statusCounts": {
+              "accepted-certified": 25,
+              "provisional-evidence-pending": 0,
+              "calculated-warning": 11,
+              "not-calculated": 2,
+              "excluded": 2
+            },
+            "notes": []
+          },
+          {
+            "file": "FX_HR_012_Other_Surface_Approval_Missing.xlsx",
+            "status": "PASS",
+            "statusCounts": {
+              "accepted-certified": 26,
+              "provisional-evidence-pending": 0,
+              "calculated-warning": 10,
+              "not-calculated": 2,
+              "excluded": 2
+            },
+            "notes": []
+          },
+          {
+            "file": "FX_HR_013_Person_Day_Duplicate.xlsx",
+            "status": "PASS",
+            "statusCounts": {
+              "accepted-certified": 25,
+              "provisional-evidence-pending": 0,
+              "calculated-warning": 11,
+              "not-calculated": 3,
+              "excluded": 2
+            },
+            "notes": []
+          },
+          {
+            "file": "FX_HR_014_Rainfall_Outside_FY.xlsx",
+            "status": "PASS",
+            "statusCounts": {
+              "accepted-certified": 26,
+              "provisional-evidence-pending": 0,
+              "calculated-warning": 11,
+              "not-calculated": 1,
+              "excluded": 2
+            },
+            "notes": []
+          },
+          {
+            "file": "FX_HR_015_Partial_Season_Missing_Functional_Date.xlsx",
+            "status": "PASS",
+            "statusCounts": {
+              "accepted-certified": 26,
+              "provisional-evidence-pending": 0,
+              "calculated-warning": 10,
+              "not-calculated": 2,
+              "excluded": 2
+            },
+            "notes": []
+          }
+        ]
+      }
+    },
+    {
+      "name": "node-engine07.mjs",
+      "status": "PASS",
+      "evidence": {
+        "status": "PASS",
+        "checkCount": 36,
+        "failedCount": 0,
+        "checks": [
+          {
+            "id": "E07_ENGINE",
+            "actual": "E07",
+            "expected": "E07",
+            "status": "PASS"
+          },
+          {
+            "id": "E07_LIFECYCLE",
+            "actual": "assurance_ready",
+            "expected": "assurance_ready",
+            "status": "PASS"
+          },
+          {
+            "id": "POLICY",
+            "actual": "HUF-E07-ASSURANCE-v1.0",
+            "expected": "HUF-E07-ASSURANCE-v1.0",
+            "status": "PASS"
+          },
+          {
+            "id": "STATUS",
+            "actual": "assurance_complete",
+            "expected": "assurance_complete",
+            "status": "PASS"
+          },
+          {
+            "id": "ASSURANCE_RECORDS",
+            "actual": 40,
+            "expected": 40,
+            "status": "PASS"
+          },
+          {
+            "id": "WATER_RECORDS",
+            "actual": 20,
+            "expected": 20,
+            "status": "PASS"
+          },
+          {
+            "id": "PD_RECORDS",
+            "actual": 20,
+            "expected": 20,
+            "status": "PASS"
+          },
+          {
+            "id": "COUNT_accepted-certified",
+            "actual": 26,
+            "expected": 26,
+            "status": "PASS"
+          },
+          {
+            "id": "COUNT_provisional-evidence-pending",
+            "actual": 0,
+            "expected": 0,
+            "status": "PASS"
+          },
+          {
+            "id": "COUNT_calculated-warning",
+            "actual": 11,
+            "expected": 11,
+            "status": "PASS"
+          },
+          {
+            "id": "COUNT_not-calculated",
+            "actual": 1,
+            "expected": 1,
+            "status": "PASS"
+          },
+          {
+            "id": "COUNT_excluded",
+            "actual": 2,
+            "expected": 2,
+            "status": "PASS"
+          },
+          {
+            "id": "LEAP_STATUS_COUNTS",
+            "actual": "{\"accepted-certified\":26,\"provisional-evidence-pending\":0,\"calculated-warning\":11,\"not-calculated\":1,\"excluded\":2}",
+            "expected": "{\"accepted-certified\":26,\"provisional-evidence-pending\":0,\"calculated-warning\":11,\"not-calculated\":1,\"excluded\":2}",
+            "status": "PASS"
+          },
+          {
+            "id": "ALL_CONTROLLED",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          },
+          {
+            "id": "GOLDEN_EVIDENCE_COMPLETE",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          },
+          {
+            "id": "PD_ALL_ACCEPTED",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          },
+          {
+            "id": "W111_WARNING_COUNT",
+            "actual": 11,
+            "expected": 11,
+            "status": "PASS"
+          },
+          {
+            "id": "W111_LEGACY_CODE",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          },
+          {
+            "id": "W112_ACCEPTED",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          },
+          {
+            "id": "LFP_ACCEPTED",
+            "actual": "accepted-certified",
+            "expected": "accepted-certified",
+            "status": "PASS"
+          },
+          {
+            "id": "LFP_REQ_COUNT",
+            "actual": 4,
+            "expected": 4,
+            "status": "PASS"
+          },
+          {
+            "id": "HOLD_STATUS",
+            "actual": "not-calculated",
+            "expected": "not-calculated",
+            "status": "PASS"
+          },
+          {
+            "id": "GOV_EXCLUDED",
+            "actual": "excluded",
+            "expected": "excluded",
+            "status": "PASS"
+          },
+          {
+            "id": "SUB_EXCLUDED",
+            "actual": "excluded",
+            "expected": "excluded",
+            "status": "PASS"
+          },
+          {
+            "id": "CALC_HASH_UNCHANGED",
+            "actual": "8e151653df449c2218e076bbb88c2e866d799ebd8002ebe5d09944b3d1b801aa",
+            "expected": "8e151653df449c2218e076bbb88c2e866d799ebd8002ebe5d09944b3d1b801aa",
+            "status": "PASS"
+          },
+          {
+            "id": "WATER_NUMBERS_UNCHANGED",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          },
+          {
+            "id": "PRIVATE_ASSURANCE_FROZEN",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          },
+          {
+            "id": "PUBLIC_STATE_NO_PRIVATE_ASSURED",
+            "actual": false,
+            "expected": false,
+            "status": "PASS"
+          },
+          {
+            "id": "HASH_LEN",
+            "actual": 64,
+            "expected": 64,
+            "status": "PASS"
+          },
+          {
+            "id": "CONTENT_HASH_LEN",
+            "actual": 64,
+            "expected": 64,
+            "status": "PASS"
+          },
+          {
+            "id": "EXTERNAL_GOV",
+            "actual": "Expert-selected controlled methodology baseline; formal HUF confirmation pending",
+            "expected": "Expert-selected controlled methodology baseline; formal HUF confirmation pending",
+            "status": "PASS"
+          },
+          {
+            "id": "EVIDENCE_ONLY_PROVISIONAL",
+            "actual": "provisional-evidence-pending",
+            "expected": "provisional-evidence-pending",
+            "status": "PASS"
+          },
+          {
+            "id": "EVIDENCE_ONLY_PENDING_COUNT",
+            "actual": 1,
+            "expected": 1,
+            "status": "PASS"
+          },
+          {
+            "id": "EVIDENCE_ONLY_NUMBER_STILL_38_4",
+            "actual": 38.4,
+            "expected": 38.4,
+            "tolerance": 1e-12,
+            "status": "PASS"
+          },
+          {
+            "id": "WARNING_PRECEDENCE",
+            "actual": "calculated-warning",
+            "expected": "calculated-warning",
+            "status": "PASS"
+          },
+          {
+            "id": "WARNING_WITH_PENDING_EVIDENCE",
+            "actual": 1,
+            "expected": 1,
+            "status": "PASS"
+          }
+        ],
+        "statusCounts": {
+          "accepted-certified": 26,
+          "provisional-evidence-pending": 0,
+          "calculated-warning": 11,
+          "not-calculated": 1,
+          "excluded": 2
+        },
+        "stats": {
+          "assuranceRecords": 40,
+          "waterAssuranceRecords": 20,
+          "personDayAssuranceRecords": 20,
+          "pendingEvidenceRecords": 0,
+          "methodWarningRecords": 11,
+          "calculatedNumericRecords": 37
+        }
+      }
+    },
+    {
+      "name": "node-engine08-fixtures.mjs",
+      "status": "PASS",
+      "evidence": {
+        "status": "PASS",
+        "caseCount": 15,
+        "failedCount": 0,
+        "cases": [
+          {
+            "file": "FX_HR_001_Missing_Leap_Day.xlsx",
+            "status": "PASS",
+            "sourceRecords": 40,
+            "aggregateRows": 88,
+            "statusCounts": {
+              "accepted-certified": 26,
+              "provisional-evidence-pending": 0,
+              "calculated-warning": 0,
+              "not-calculated": 12,
+              "excluded": 2
+            },
+            "notes": []
+          },
+          {
+            "file": "FX_HR_002_Duplicate_Rainfall_Date.xlsx",
+            "status": "PASS",
+            "sourceRecords": 40,
+            "aggregateRows": 94,
+            "statusCounts": {
+              "accepted-certified": 26,
+              "provisional-evidence-pending": 0,
+              "calculated-warning": 1,
+              "not-calculated": 11,
+              "excluded": 2
+            },
+            "notes": []
+          },
+          {
+            "file": "FX_HR_003_Negative_Rainfall.xlsx",
+            "status": "PASS",
+            "sourceRecords": 40,
+            "aggregateRows": 94,
+            "statusCounts": {
+              "accepted-certified": 26,
+              "provisional-evidence-pending": 0,
+              "calculated-warning": 1,
+              "not-calculated": 11,
+              "excluded": 2
+            },
+            "notes": []
+          },
+          {
+            "file": "FX_HR_004_Missing_Verified_Base_Area.xlsx",
+            "status": "PASS",
+            "sourceRecords": 40,
+            "aggregateRows": 95,
+            "statusCounts": {
+              "accepted-certified": 26,
+              "provisional-evidence-pending": 0,
+              "calculated-warning": 9,
+              "not-calculated": 3,
+              "excluded": 2
+            },
+            "notes": []
+          },
+          {
+            "file": "FX_HR_005_Base_Area_Exceeds_Surface.xlsx",
+            "status": "PASS",
+            "sourceRecords": 40,
+            "aggregateRows": 95,
+            "statusCounts": {
+              "accepted-certified": 26,
+              "provisional-evidence-pending": 0,
+              "calculated-warning": 9,
+              "not-calculated": 3,
+              "excluded": 2
+            },
+            "notes": []
+          },
+          {
+            "file": "FX_HR_006_Missing_Feb_Evaporation.xlsx",
+            "status": "PASS",
+            "sourceRecords": 40,
+            "aggregateRows": 88,
+            "statusCounts": {
+              "accepted-certified": 26,
+              "provisional-evidence-pending": 0,
+              "calculated-warning": 0,
+              "not-calculated": 12,
+              "excluded": 2
+            },
+            "notes": []
+          },
+          {
+            "file": "FX_HR_007_Advanced_Stage_Missing_Group.xlsx",
+            "status": "PASS",
+            "sourceRecords": 40,
+            "aggregateRows": 95,
+            "statusCounts": {
+              "accepted-certified": 26,
+              "provisional-evidence-pending": 0,
+              "calculated-warning": 9,
+              "not-calculated": 3,
+              "excluded": 2
+            },
+            "notes": []
+          },
+          {
+            "file": "FX_HR_008_Cascade_Cycle.xlsx",
+            "status": "PASS",
+            "sourceRecords": 40,
+            "aggregateRows": 95,
+            "statusCounts": {
+              "accepted-certified": 26,
+              "provisional-evidence-pending": 0,
+              "calculated-warning": 9,
+              "not-calculated": 3,
+              "excluded": 2
+            },
+            "notes": []
+          },
+          {
+            "file": "FX_HR_009_REJ_A_Missing_Baseline.xlsx",
+            "status": "PASS",
+            "sourceRecords": 40,
+            "aggregateRows": 93,
+            "statusCounts": {
+              "accepted-certified": 26,
+              "provisional-evidence-pending": 0,
+              "calculated-warning": 10,
+              "not-calculated": 2,
+              "excluded": 2
+            },
+            "notes": []
+          },
+          {
+            "file": "FX_HR_010_REJ_B_Missing_Desilted.xlsx",
+            "status": "PASS",
+            "sourceRecords": 40,
+            "aggregateRows": 93,
+            "statusCounts": {
+              "accepted-certified": 26,
+              "provisional-evidence-pending": 0,
+              "calculated-warning": 10,
+              "not-calculated": 2,
+              "excluded": 2
+            },
+            "notes": []
+          },
+          {
+            "file": "FX_HR_011_Lined_Pond_Inlet_Fail.xlsx",
+            "status": "PASS",
+            "sourceRecords": 40,
+            "aggregateRows": 88,
+            "statusCounts": {
+              "accepted-certified": 25,
+              "provisional-evidence-pending": 0,
+              "calculated-warning": 11,
+              "not-calculated": 2,
+              "excluded": 2
+            },
+            "notes": []
+          },
+          {
+            "file": "FX_HR_012_Other_Surface_Approval_Missing.xlsx",
+            "status": "PASS",
+            "sourceRecords": 40,
+            "aggregateRows": 94,
+            "statusCounts": {
+              "accepted-certified": 26,
+              "provisional-evidence-pending": 0,
+              "calculated-warning": 10,
+              "not-calculated": 2,
+              "excluded": 2
+            },
+            "notes": []
+          },
+          {
+            "file": "FX_HR_013_Person_Day_Duplicate.xlsx",
+            "status": "PASS",
+            "sourceRecords": 41,
+            "aggregateRows": 94,
+            "statusCounts": {
+              "accepted-certified": 25,
+              "provisional-evidence-pending": 0,
+              "calculated-warning": 11,
+              "not-calculated": 3,
+              "excluded": 2
+            },
+            "notes": []
+          },
+          {
+            "file": "FX_HR_014_Rainfall_Outside_FY.xlsx",
+            "status": "PASS",
+            "sourceRecords": 40,
+            "aggregateRows": 88,
+            "statusCounts": {
+              "accepted-certified": 26,
+              "provisional-evidence-pending": 0,
+              "calculated-warning": 11,
+              "not-calculated": 1,
+              "excluded": 2
+            },
+            "notes": []
+          },
+          {
+            "file": "FX_HR_015_Partial_Season_Missing_Functional_Date.xlsx",
+            "status": "PASS",
+            "sourceRecords": 40,
+            "aggregateRows": 94,
+            "statusCounts": {
+              "accepted-certified": 26,
+              "provisional-evidence-pending": 0,
+              "calculated-warning": 10,
+              "not-calculated": 2,
+              "excluded": 2
+            },
+            "notes": []
+          }
+        ]
+      }
+    },
+    {
+      "name": "node-engine08.mjs",
+      "status": "PASS",
+      "evidence": {
+        "status": "PASS",
+        "checkCount": 64,
+        "failedCount": 0,
+        "checks": [
+          {
+            "id": "E08_ENGINE",
+            "actual": "E08",
+            "expected": "E08",
+            "status": "PASS"
+          },
+          {
+            "id": "E08_LIFECYCLE",
+            "actual": "aggregation_ready",
+            "expected": "aggregation_ready",
+            "status": "PASS"
+          },
+          {
+            "id": "POLICY",
+            "actual": "HUF-E08-STATUS-SEGREGATED-AGGREGATION-v1.0",
+            "expected": "HUF-E08-STATUS-SEGREGATED-AGGREGATION-v1.0",
+            "status": "PASS"
+          },
+          {
+            "id": "STATUS",
+            "actual": "aggregation_complete",
+            "expected": "aggregation_complete",
+            "status": "PASS"
+          },
+          {
+            "id": "SOURCE_RECORDS",
+            "actual": 40,
+            "expected": 40,
+            "status": "PASS"
+          },
+          {
+            "id": "WATER_SOURCE",
+            "actual": 20,
+            "expected": 20,
+            "status": "PASS"
+          },
+          {
+            "id": "PD_SOURCE",
+            "actual": 20,
+            "expected": 20,
+            "status": "PASS"
+          },
+          {
+            "id": "LEVELS",
+            "actual": 7,
+            "expected": 7,
+            "status": "PASS"
+          },
+          {
+            "id": "PROJECT_ROWS",
+            "actual": 6,
+            "expected": 6,
+            "status": "PASS"
+          },
+          {
+            "id": "QA_FAILS",
+            "actual": 0,
+            "expected": 0,
+            "status": "PASS"
+          },
+          {
+            "id": "QA_PASSED",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          },
+          {
+            "id": "VAL090",
+            "actual": "PASS",
+            "expected": "PASS",
+            "status": "PASS"
+          },
+          {
+            "id": "VAL091",
+            "actual": "PASS",
+            "expected": "PASS",
+            "status": "PASS"
+          },
+          {
+            "id": "COUNT_accepted-certified",
+            "actual": 26,
+            "expected": 26,
+            "status": "PASS"
+          },
+          {
+            "id": "COUNT_provisional-evidence-pending",
+            "actual": 0,
+            "expected": 0,
+            "status": "PASS"
+          },
+          {
+            "id": "COUNT_calculated-warning",
+            "actual": 11,
+            "expected": 11,
+            "status": "PASS"
+          },
+          {
+            "id": "COUNT_not-calculated",
+            "actual": 1,
+            "expected": 1,
+            "status": "PASS"
+          },
+          {
+            "id": "COUNT_excluded",
+            "actual": 2,
+            "expected": 2,
+            "status": "PASS"
+          },
+          {
+            "id": "LEAP_STATUS_COUNTS",
+            "actual": "{\"accepted-certified\":26,\"provisional-evidence-pending\":0,\"calculated-warning\":11,\"not-calculated\":1,\"excluded\":2}",
+            "expected": "{\"accepted-certified\":26,\"provisional-evidence-pending\":0,\"calculated-warning\":11,\"not-calculated\":1,\"excluded\":2}",
+            "status": "PASS"
+          },
+          {
+            "id": "LEAP_PROJECT_SUMMARY",
+            "actual": "[{\"component\":\"KPI-1.1.1\",\"resultUnit\":\"m3\",\"acceptedCertifiedResult\":null,\"provisionalEvidencePendingResult\":null,\"calculatedWarningResult\":9513.721181835617,\"calculatedTotal\":9513.721181835617,\"acceptedCertifiedCount\":0,\"provisionalCount\":0,\"warningCount\":11,\"notCalculatedCount\":0,\"excludedCount\":0,\"totalSourceRecordCount\":11,\"coveragePercentage\":100,\"pendingEvidenceRecordCount\":0,\"methodWarningRecordCount\":11},{\"component\":\"KPI-1.1.2\",\"resultUnit\":\"m3\",\"acceptedCertifiedResult\":469.4,\"provisionalEvidencePendingResult\":null,\"calculatedWarningResult\":null,\"calculatedTotal\":469.4,\"acceptedCertifiedCount\":5,\"provisionalCount\":0,\"warningCount\":0,\"notCalculatedCount\":0,\"excludedCount\":0,\"totalSourceRecordCount\":5,\"coveragePercentage\":100,\"pendingEvidenceRecordCount\":0,\"methodWarningRecordCount\":0},{\"component\":\"KPI-1.2.1\",\"resultUnit\":\"person-days\",\"acceptedCertifiedResult\":322.66666666666663,\"provisionalEvidencePendingResult\":null,\"calculatedWarningResult\":null,\"calculatedTotal\":322.66666666666663,\"acceptedCertifiedCount\":20,\"provisionalCount\":0,\"warningCount\":0,\"notCalculatedCount\":0,\"excludedCount\":0,\"totalSourceRecordCount\":20,\"coveragePercentage\":100,\"pendingEvidenceRecordCount\":0,\"methodWarningRecordCount\":0},{\"component\":\"LINED-FP\",\"resultUnit\":\"m3\",\"acceptedCertifiedResult\":1250,\"provisionalEvidencePendingResult\":null,\"calculatedWarningResult\":null,\"calculatedTotal\":1250,\"acceptedCertifiedCount\":1,\"provisionalCount\":0,\"warningCount\":0,\"notCalculatedCount\":0,\"excludedCount\":0,\"totalSourceRecordCount\":1,\"coveragePercentage\":100,\"pendingEvidenceRecordCount\":0,\"methodWarningRecordCount\":0},{\"component\":\"WATER-EXCL\",\"resultUnit\":\"m3\",\"acceptedCertifiedResult\":null,\"provisionalEvidencePendingResult\":null,\"calculatedWarningResult\":null,\"calculatedTotal\":null,\"acceptedCertifiedCount\":0,\"provisionalCount\":0,\"warningCount\":0,\"notCalculatedCount\":0,\"excludedCount\":2,\"totalSourceRecordCount\":2,\"coveragePercentage\":0,\"pendingEvidenceRecordCount\":0,\"methodWarningRecordCount\":0},{\"component\":\"WATER-HOLD\",\"resultUnit\":\"m3\",\"acceptedCertifiedResult\":null,\"provisionalEvidencePendingResult\":null,\"calculatedWarningResult\":null,\"calculatedTotal\":null,\"acceptedCertifiedCount\":0,\"provisionalCount\":0,\"warningCount\":0,\"notCalculatedCount\":1,\"excludedCount\":0,\"totalSourceRecordCount\":1,\"coveragePercentage\":0,\"pendingEvidenceRecordCount\":0,\"methodWarningRecordCount\":0}]",
+            "expected": "[{\"component\":\"KPI-1.1.1\",\"resultUnit\":\"m3\",\"acceptedCertifiedResult\":null,\"provisionalEvidencePendingResult\":null,\"calculatedWarningResult\":9513.721181835617,\"calculatedTotal\":9513.721181835617,\"acceptedCertifiedCount\":0,\"provisionalCount\":0,\"warningCount\":11,\"notCalculatedCount\":0,\"excludedCount\":0,\"totalSourceRecordCount\":11,\"coveragePercentage\":100,\"pendingEvidenceRecordCount\":0,\"methodWarningRecordCount\":11},{\"component\":\"KPI-1.1.2\",\"resultUnit\":\"m3\",\"acceptedCertifiedResult\":469.4,\"provisionalEvidencePendingResult\":null,\"calculatedWarningResult\":null,\"calculatedTotal\":469.4,\"acceptedCertifiedCount\":5,\"provisionalCount\":0,\"warningCount\":0,\"notCalculatedCount\":0,\"excludedCount\":0,\"totalSourceRecordCount\":5,\"coveragePercentage\":100,\"pendingEvidenceRecordCount\":0,\"methodWarningRecordCount\":0},{\"component\":\"KPI-1.2.1\",\"resultUnit\":\"person-days\",\"acceptedCertifiedResult\":322.66666666666663,\"provisionalEvidencePendingResult\":null,\"calculatedWarningResult\":null,\"calculatedTotal\":322.66666666666663,\"acceptedCertifiedCount\":20,\"provisionalCount\":0,\"warningCount\":0,\"notCalculatedCount\":0,\"excludedCount\":0,\"totalSourceRecordCount\":20,\"coveragePercentage\":100,\"pendingEvidenceRecordCount\":0,\"methodWarningRecordCount\":0},{\"component\":\"LINED-FP\",\"resultUnit\":\"m3\",\"acceptedCertifiedResult\":1250,\"provisionalEvidencePendingResult\":null,\"calculatedWarningResult\":null,\"calculatedTotal\":1250,\"acceptedCertifiedCount\":1,\"provisionalCount\":0,\"warningCount\":0,\"notCalculatedCount\":0,\"excludedCount\":0,\"totalSourceRecordCount\":1,\"coveragePercentage\":100,\"pendingEvidenceRecordCount\":0,\"methodWarningRecordCount\":0},{\"component\":\"WATER-EXCL\",\"resultUnit\":\"m3\",\"acceptedCertifiedResult\":null,\"provisionalEvidencePendingResult\":null,\"calculatedWarningResult\":null,\"calculatedTotal\":null,\"acceptedCertifiedCount\":0,\"provisionalCount\":0,\"warningCount\":0,\"notCalculatedCount\":0,\"excludedCount\":2,\"totalSourceRecordCount\":2,\"coveragePercentage\":0,\"pendingEvidenceRecordCount\":0,\"methodWarningRecordCount\":0},{\"component\":\"WATER-HOLD\",\"resultUnit\":\"m3\",\"acceptedCertifiedResult\":null,\"provisionalEvidencePendingResult\":null,\"calculatedWarningResult\":null,\"calculatedTotal\":null,\"acceptedCertifiedCount\":0,\"provisionalCount\":0,\"warningCount\":0,\"notCalculatedCount\":1,\"excludedCount\":0,\"totalSourceRecordCount\":1,\"coveragePercentage\":0,\"pendingEvidenceRecordCount\":0,\"methodWarningRecordCount\":0}]",
+            "status": "PASS"
+          },
+          {
+            "id": "KPI111_WARNING",
+            "actual": 9513.721181835617,
+            "expected": 9513.721181835617,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "KPI111_ACCEPTED_NULL",
+            "actual": null,
+            "expected": null,
+            "status": "PASS"
+          },
+          {
+            "id": "KPI111_CALC_TOTAL",
+            "actual": 9513.721181835617,
+            "expected": 9513.721181835617,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "KPI111_WARNING_COUNT",
+            "actual": 11,
+            "expected": 11,
+            "status": "PASS"
+          },
+          {
+            "id": "KPI112_ACCEPTED",
+            "actual": 469.4,
+            "expected": 469.4,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "KPI112_TOTAL",
+            "actual": 469.4,
+            "expected": 469.4,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "KPI112_ACCEPTED_COUNT",
+            "actual": 5,
+            "expected": 5,
+            "status": "PASS"
+          },
+          {
+            "id": "LINED_ACCEPTED",
+            "actual": 1250,
+            "expected": 1250,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "PD_ACCEPTED",
+            "actual": 322.66666666666663,
+            "expected": 322.66666666666663,
+            "tolerance": 1e-12,
+            "status": "PASS"
+          },
+          {
+            "id": "PD_ACCEPTED_COUNT",
+            "actual": 20,
+            "expected": 20,
+            "status": "PASS"
+          },
+          {
+            "id": "HOLD_TOTAL_NULL",
+            "actual": null,
+            "expected": null,
+            "status": "PASS"
+          },
+          {
+            "id": "HOLD_NOTCALC_COUNT",
+            "actual": 1,
+            "expected": 1,
+            "status": "PASS"
+          },
+          {
+            "id": "EXCL_TOTAL_NULL",
+            "actual": null,
+            "expected": null,
+            "status": "PASS"
+          },
+          {
+            "id": "EXCL_COUNT",
+            "actual": 2,
+            "expected": 2,
+            "status": "PASS"
+          },
+          {
+            "id": "HIERARCHY_structure_ROWS",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          },
+          {
+            "id": "HIERARCHY_structure_MEMBERS",
+            "actual": 40,
+            "expected": 40,
+            "status": "PASS"
+          },
+          {
+            "id": "HIERARCHY_village_ROWS",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          },
+          {
+            "id": "HIERARCHY_village_MEMBERS",
+            "actual": 40,
+            "expected": 40,
+            "status": "PASS"
+          },
+          {
+            "id": "HIERARCHY_gram_panchayat_ROWS",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          },
+          {
+            "id": "HIERARCHY_gram_panchayat_MEMBERS",
+            "actual": 40,
+            "expected": 40,
+            "status": "PASS"
+          },
+          {
+            "id": "HIERARCHY_block_ROWS",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          },
+          {
+            "id": "HIERARCHY_block_MEMBERS",
+            "actual": 40,
+            "expected": 40,
+            "status": "PASS"
+          },
+          {
+            "id": "HIERARCHY_district_ROWS",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          },
+          {
+            "id": "HIERARCHY_district_MEMBERS",
+            "actual": 40,
+            "expected": 40,
+            "status": "PASS"
+          },
+          {
+            "id": "HIERARCHY_PIA_ROWS",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          },
+          {
+            "id": "HIERARCHY_PIA_MEMBERS",
+            "actual": 40,
+            "expected": 40,
+            "status": "PASS"
+          },
+          {
+            "id": "HIERARCHY_project_ROWS",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          },
+          {
+            "id": "HIERARCHY_project_MEMBERS",
+            "actual": 40,
+            "expected": 40,
+            "status": "PASS"
+          },
+          {
+            "id": "TERMINAL_NULL",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          },
+          {
+            "id": "CALC_HASH_UNCHANGED",
+            "actual": "9f5d0a09102c64fb179982de61d0d0bb0f282a5edab26140930af795a533e3d6",
+            "expected": "9f5d0a09102c64fb179982de61d0d0bb0f282a5edab26140930af795a533e3d6",
+            "status": "PASS"
+          },
+          {
+            "id": "ASSURANCE_HASH_UNCHANGED",
+            "actual": "9f4e206f64137ee439445d264ca873a9aa7adde74e2d259b038f7e54d5da5f37",
+            "expected": "9f4e206f64137ee439445d264ca873a9aa7adde74e2d259b038f7e54d5da5f37",
+            "status": "PASS"
+          },
+          {
+            "id": "PRIVATE_AGG_FROZEN",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          },
+          {
+            "id": "PUBLIC_STATE_NO_PRIVATE_AGGREGATED",
+            "actual": false,
+            "expected": false,
+            "status": "PASS"
+          },
+          {
+            "id": "HASH_LEN",
+            "actual": 64,
+            "expected": 64,
+            "status": "PASS"
+          },
+          {
+            "id": "CONTENT_HASH_LEN",
+            "actual": 64,
+            "expected": 64,
+            "status": "PASS"
+          },
+          {
+            "id": "MUT_ACCEPTED_431",
+            "actual": 431,
+            "expected": 431,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "MUT_PROVISIONAL_38_4",
+            "actual": 38.4,
+            "expected": 38.4,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "MUT_TOTAL_UNCHANGED_469_4",
+            "actual": 469.4,
+            "expected": 469.4,
+            "tolerance": 1e-9,
+            "status": "PASS"
+          },
+          {
+            "id": "MUT_PROVISIONAL_COUNT",
+            "actual": 1,
+            "expected": 1,
+            "status": "PASS"
+          },
+          {
+            "id": "MUT_QA_PASS",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          },
+          {
+            "id": "DUP_ASSURANCE_STATUS",
+            "actual": "aggregation_not_ready",
+            "expected": "aggregation_not_ready",
+            "status": "PASS"
+          },
+          {
+            "id": "DUP_ASSURANCE_VAL091",
+            "actual": "FAIL",
+            "expected": "FAIL",
+            "status": "PASS"
+          },
+          {
+            "id": "BAD_STATUS_AGG_NOT_READY",
+            "actual": "aggregation_not_ready",
+            "expected": "aggregation_not_ready",
+            "status": "PASS"
+          },
+          {
+            "id": "BAD_STATUS_VAL090",
+            "actual": "FAIL",
+            "expected": "FAIL",
+            "status": "PASS"
+          }
+        ],
+        "stats": {
+          "sourceAssuranceRecords": 40,
+          "waterSourceResults": 20,
+          "personDaySourceResults": 20,
+          "aggregateRows": 88,
+          "projectAggregateRows": 6,
+          "reportingLevels": 7,
+          "qaPassed": true,
+          "qaFailedRules": 0
+        },
+        "statusCounts": {
+          "accepted-certified": 26,
+          "provisional-evidence-pending": 0,
+          "calculated-warning": 11,
+          "not-calculated": 1,
+          "excluded": 2
+        },
+        "projectSummary": [
+          {
+            "component": "KPI-1.1.1",
+            "resultUnit": "m3",
+            "acceptedCertifiedResult": null,
+            "provisionalEvidencePendingResult": null,
+            "calculatedWarningResult": 9513.721181835617,
+            "calculatedTotal": 9513.721181835617,
+            "acceptedCertifiedCount": 0,
+            "provisionalCount": 0,
+            "warningCount": 11,
+            "notCalculatedCount": 0,
+            "excludedCount": 0,
+            "totalSourceRecordCount": 11,
+            "coveragePercentage": 100,
+            "pendingEvidenceRecordCount": 0,
+            "methodWarningRecordCount": 11
+          },
+          {
+            "component": "KPI-1.1.2",
+            "resultUnit": "m3",
+            "acceptedCertifiedResult": 469.4,
+            "provisionalEvidencePendingResult": null,
+            "calculatedWarningResult": null,
+            "calculatedTotal": 469.4,
+            "acceptedCertifiedCount": 5,
+            "provisionalCount": 0,
+            "warningCount": 0,
+            "notCalculatedCount": 0,
+            "excludedCount": 0,
+            "totalSourceRecordCount": 5,
+            "coveragePercentage": 100,
+            "pendingEvidenceRecordCount": 0,
+            "methodWarningRecordCount": 0
+          },
+          {
+            "component": "KPI-1.2.1",
+            "resultUnit": "person-days",
+            "acceptedCertifiedResult": 322.66666666666663,
+            "provisionalEvidencePendingResult": null,
+            "calculatedWarningResult": null,
+            "calculatedTotal": 322.66666666666663,
+            "acceptedCertifiedCount": 20,
+            "provisionalCount": 0,
+            "warningCount": 0,
+            "notCalculatedCount": 0,
+            "excludedCount": 0,
+            "totalSourceRecordCount": 20,
+            "coveragePercentage": 100,
+            "pendingEvidenceRecordCount": 0,
+            "methodWarningRecordCount": 0
+          },
+          {
+            "component": "LINED-FP",
+            "resultUnit": "m3",
+            "acceptedCertifiedResult": 1250,
+            "provisionalEvidencePendingResult": null,
+            "calculatedWarningResult": null,
+            "calculatedTotal": 1250,
+            "acceptedCertifiedCount": 1,
+            "provisionalCount": 0,
+            "warningCount": 0,
+            "notCalculatedCount": 0,
+            "excludedCount": 0,
+            "totalSourceRecordCount": 1,
+            "coveragePercentage": 100,
+            "pendingEvidenceRecordCount": 0,
+            "methodWarningRecordCount": 0
+          },
+          {
+            "component": "WATER-EXCL",
+            "resultUnit": "m3",
+            "acceptedCertifiedResult": null,
+            "provisionalEvidencePendingResult": null,
+            "calculatedWarningResult": null,
+            "calculatedTotal": null,
+            "acceptedCertifiedCount": 0,
+            "provisionalCount": 0,
+            "warningCount": 0,
+            "notCalculatedCount": 0,
+            "excludedCount": 2,
+            "totalSourceRecordCount": 2,
+            "coveragePercentage": 0,
+            "pendingEvidenceRecordCount": 0,
+            "methodWarningRecordCount": 0
+          },
+          {
+            "component": "WATER-HOLD",
+            "resultUnit": "m3",
+            "acceptedCertifiedResult": null,
+            "provisionalEvidencePendingResult": null,
+            "calculatedWarningResult": null,
+            "calculatedTotal": null,
+            "acceptedCertifiedCount": 0,
+            "provisionalCount": 0,
+            "warningCount": 0,
+            "notCalculatedCount": 1,
+            "excludedCount": 0,
+            "totalSourceRecordCount": 1,
+            "coveragePercentage": 0,
+            "pendingEvidenceRecordCount": 0,
+            "methodWarningRecordCount": 0
+          }
+        ],
+        "hierarchyCounts": {
+          "structure": {
+            "aggregateRows": 40,
+            "sourceMemberships": 40
+          },
+          "village": {
+            "aggregateRows": 18,
+            "sourceMemberships": 40
+          },
+          "gram_panchayat": {
+            "aggregateRows": 6,
+            "sourceMemberships": 40
+          },
+          "block": {
+            "aggregateRows": 6,
+            "sourceMemberships": 40
+          },
+          "district": {
+            "aggregateRows": 6,
+            "sourceMemberships": 40
+          },
+          "PIA": {
+            "aggregateRows": 6,
+            "sourceMemberships": 40
+          },
+          "project": {
+            "aggregateRows": 6,
+            "sourceMemberships": 40
+          }
+        }
+      }
+    },
+    {
+      "name": "node-engine09-fixtures.mjs",
+      "status": "PASS",
+      "evidence": {
+        "status": "PASS",
+        "caseCount": 15,
+        "failedCount": 0,
+        "cases": [
+          {
+            "file": "FX_HR_001_Missing_Leap_Day.xlsx",
+            "status": "PASS",
+            "resultInventory": 40,
+            "validationIssues": 12,
+            "auditEvents": 9,
+            "auditStatus": "audit_complete_with_upstream_not_ready",
+            "notes": []
+          },
+          {
+            "file": "FX_HR_002_Duplicate_Rainfall_Date.xlsx",
+            "status": "PASS",
+            "resultInventory": 40,
+            "validationIssues": 2,
+            "auditEvents": 9,
+            "auditStatus": "audit_complete_with_upstream_not_ready",
+            "notes": []
+          },
+          {
+            "file": "FX_HR_003_Negative_Rainfall.xlsx",
+            "status": "PASS",
+            "resultInventory": 40,
+            "validationIssues": 2,
+            "auditEvents": 9,
+            "auditStatus": "audit_complete_with_upstream_not_ready",
+            "notes": []
+          },
+          {
+            "file": "FX_HR_004_Missing_Verified_Base_Area.xlsx",
+            "status": "PASS",
+            "resultInventory": 40,
+            "validationIssues": 2,
+            "auditEvents": 9,
+            "auditStatus": "audit_complete_with_upstream_not_ready",
+            "notes": []
+          },
+          {
+            "file": "FX_HR_005_Base_Area_Exceeds_Surface.xlsx",
+            "status": "PASS",
+            "resultInventory": 40,
+            "validationIssues": 2,
+            "auditEvents": 9,
+            "auditStatus": "audit_complete_with_upstream_not_ready",
+            "notes": []
+          },
+          {
+            "file": "FX_HR_006_Missing_Feb_Evaporation.xlsx",
+            "status": "PASS",
+            "resultInventory": 40,
+            "validationIssues": 12,
+            "auditEvents": 9,
+            "auditStatus": "audit_complete_with_upstream_not_ready",
+            "notes": []
+          },
+          {
+            "file": "FX_HR_007_Advanced_Stage_Missing_Group.xlsx",
+            "status": "PASS",
+            "resultInventory": 40,
+            "validationIssues": 3,
+            "auditEvents": 9,
+            "auditStatus": "audit_complete_with_upstream_not_ready",
+            "notes": []
+          },
+          {
+            "file": "FX_HR_008_Cascade_Cycle.xlsx",
+            "status": "PASS",
+            "resultInventory": 40,
+            "validationIssues": 2,
+            "auditEvents": 9,
+            "auditStatus": "audit_complete_with_upstream_not_ready",
+            "notes": []
+          },
+          {
+            "file": "FX_HR_009_REJ_A_Missing_Baseline.xlsx",
+            "status": "PASS",
+            "resultInventory": 40,
+            "validationIssues": 2,
+            "auditEvents": 9,
+            "auditStatus": "audit_complete_with_upstream_not_ready",
+            "notes": []
+          },
+          {
+            "file": "FX_HR_010_REJ_B_Missing_Desilted.xlsx",
+            "status": "PASS",
+            "resultInventory": 40,
+            "validationIssues": 2,
+            "auditEvents": 9,
+            "auditStatus": "audit_complete_with_upstream_not_ready",
+            "notes": []
+          },
+          {
+            "file": "FX_HR_011_Lined_Pond_Inlet_Fail.xlsx",
+            "status": "PASS",
+            "resultInventory": 40,
+            "validationIssues": 2,
+            "auditEvents": 9,
+            "auditStatus": "audit_complete_with_upstream_not_ready",
+            "notes": []
+          },
+          {
+            "file": "FX_HR_012_Other_Surface_Approval_Missing.xlsx",
+            "status": "PASS",
+            "resultInventory": 40,
+            "validationIssues": 2,
+            "auditEvents": 9,
+            "auditStatus": "audit_complete_with_upstream_not_ready",
+            "notes": []
+          },
+          {
+            "file": "FX_HR_013_Person_Day_Duplicate.xlsx",
+            "status": "PASS",
+            "resultInventory": 41,
+            "validationIssues": 5,
+            "auditEvents": 9,
+            "auditStatus": "audit_complete_with_upstream_not_ready",
+            "notes": []
+          },
+          {
+            "file": "FX_HR_014_Rainfall_Outside_FY.xlsx",
+            "status": "PASS",
+            "resultInventory": 40,
+            "validationIssues": 2,
+            "auditEvents": 9,
+            "auditStatus": "audit_complete",
+            "notes": []
+          },
+          {
+            "file": "FX_HR_015_Partial_Season_Missing_Functional_Date.xlsx",
+            "status": "PASS",
+            "resultInventory": 40,
+            "validationIssues": 2,
+            "auditEvents": 9,
+            "auditStatus": "audit_complete_with_upstream_not_ready",
+            "notes": []
+          }
+        ]
+      }
+    },
+    {
+      "name": "node-engine09.mjs",
+      "status": "PASS",
+      "evidence": {
+        "status": "PASS",
+        "checkCount": 54,
+        "failedCount": 0,
+        "checks": [
+          {
+            "id": "E09_ENGINE",
+            "actual": "E09",
+            "expected": "E09",
+            "status": "PASS"
+          },
+          {
+            "id": "E09_LIFECYCLE",
+            "actual": "audit_ready",
+            "expected": "audit_ready",
+            "status": "PASS"
+          },
+          {
+            "id": "E09_POLICY",
+            "actual": "HUF-E09-AUDIT-RUN-MANIFEST-v1.0",
+            "expected": "HUF-E09-AUDIT-RUN-MANIFEST-v1.0",
+            "status": "PASS"
+          },
+          {
+            "id": "RUN_ID_FORMAT",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          },
+          {
+            "id": "RUN_ID_MANIFEST_MATCH",
+            "actual": "RUN-136aace6-98f0-4fa8-8ff9-b52d8e0036de",
+            "expected": "RUN-136aace6-98f0-4fa8-8ff9-b52d8e0036de",
+            "status": "PASS"
+          },
+          {
+            "id": "APP_VERSION",
+            "actual": "1.0.0",
+            "expected": "1.0.0",
+            "status": "PASS"
+          },
+          {
+            "id": "PROJECT_ID",
+            "actual": "SYN-ALL-STRUCT-001",
+            "expected": "SYN-ALL-STRUCT-001",
+            "status": "PASS"
+          },
+          {
+            "id": "NONLEAP_DAYS",
+            "actual": 365,
+            "expected": 365,
+            "status": "PASS"
+          },
+          {
+            "id": "LEAP_DAYS",
+            "actual": 366,
+            "expected": 366,
+            "status": "PASS"
+          },
+          {
+            "id": "SOURCE_SHA_MATCH",
+            "actual": "7c6ba9498f8c87790503331f848cf4a83db577ab95c056473e202efd22fdddeb",
+            "expected": "7c6ba9498f8c87790503331f848cf4a83db577ab95c056473e202efd22fdddeb",
+            "status": "PASS"
+          },
+          {
+            "id": "FORMULA_VERSION",
+            "actual": "HUF-DESIGN2-FORMULA-CATALOG-v1.1",
+            "expected": "HUF-DESIGN2-FORMULA-CATALOG-v1.1",
+            "status": "PASS"
+          },
+          {
+            "id": "VALIDATION_VERSION",
+            "actual": "HUF-D4-VALIDATION-READINESS-v1.0",
+            "expected": "HUF-D4-VALIDATION-READINESS-v1.0",
+            "status": "PASS"
+          },
+          {
+            "id": "AUDIT_EVENTS",
+            "actual": 9,
+            "expected": 9,
+            "status": "PASS"
+          },
+          {
+            "id": "RESULT_INVENTORY",
+            "actual": 40,
+            "expected": 40,
+            "status": "PASS"
+          },
+          {
+            "id": "WATER_RESULTS",
+            "actual": 20,
+            "expected": 20,
+            "status": "PASS"
+          },
+          {
+            "id": "PD_RESULTS",
+            "actual": 20,
+            "expected": 20,
+            "status": "PASS"
+          },
+          {
+            "id": "PROJECT_SUMMARY_ROWS",
+            "actual": 6,
+            "expected": 6,
+            "status": "PASS"
+          },
+          {
+            "id": "SNAPSHOT_HASH_COUNT",
+            "actual": 8,
+            "expected": 8,
+            "status": "PASS"
+          },
+          {
+            "id": "VERSION_COUNT",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          },
+          {
+            "id": "PROJECT_URL_FALSE",
+            "actual": false,
+            "expected": false,
+            "status": "PASS"
+          },
+          {
+            "id": "PRIVACY_MODE",
+            "actual": "standard",
+            "expected": "standard",
+            "status": "PASS"
+          },
+          {
+            "id": "AUDIT_STATUS",
+            "actual": "audit_complete",
+            "expected": "audit_complete",
+            "status": "PASS"
+          },
+          {
+            "id": "HASH_MAPPING",
+            "actual": "e5b7a7af40109879605fc71b53108ca4f401c2037e3aab519ad029df6bedf52d",
+            "expected": "e5b7a7af40109879605fc71b53108ca4f401c2037e3aab519ad029df6bedf52d",
+            "status": "PASS"
+          },
+          {
+            "id": "HASH_CANONICAL",
+            "actual": "fdbe1d9f9e65102dc412961582fdb950b1f7989fff2d18a8c3487348e30614bb",
+            "expected": "fdbe1d9f9e65102dc412961582fdb950b1f7989fff2d18a8c3487348e30614bb",
+            "status": "PASS"
+          },
+          {
+            "id": "HASH_VALIDATION",
+            "actual": "4f1f35e9c7d283158713accb2b3f4fcc47a2894d18efd466ff25604db10bf3a9",
+            "expected": "4f1f35e9c7d283158713accb2b3f4fcc47a2894d18efd466ff25604db10bf3a9",
+            "status": "PASS"
+          },
+          {
+            "id": "HASH_ROUTING",
+            "actual": "e05ae1b58f5e9e9e687d8fed3ae04056206cf29b138ce41925eddd12bc93fd44",
+            "expected": "e05ae1b58f5e9e9e687d8fed3ae04056206cf29b138ce41925eddd12bc93fd44",
+            "status": "PASS"
+          },
+          {
+            "id": "HASH_CALC",
+            "actual": "89974f3971b02e96fb575f624e9cff9196da71a3cbb9032b2886c68fd5b2f18f",
+            "expected": "89974f3971b02e96fb575f624e9cff9196da71a3cbb9032b2886c68fd5b2f18f",
+            "status": "PASS"
+          },
+          {
+            "id": "HASH_ASSURANCE",
+            "actual": "3448045dca166beea85f769491b9d2cfc9985db09e610824109b8febbf1c56c6",
+            "expected": "3448045dca166beea85f769491b9d2cfc9985db09e610824109b8febbf1c56c6",
+            "status": "PASS"
+          },
+          {
+            "id": "HASH_AGG",
+            "actual": "388eee8e7a954ab6eb1e12697d8795dff02b757234fce6f2442e5a45113a719c",
+            "expected": "388eee8e7a954ab6eb1e12697d8795dff02b757234fce6f2442e5a45113a719c",
+            "status": "PASS"
+          },
+          {
+            "id": "HASH_MANIFEST_LEN",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          },
+          {
+            "id": "HASH_EXPORT_LEN",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          },
+          {
+            "id": "HASH_AUDIT_LEN",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          },
+          {
+            "id": "EVENT_ENGINES",
+            "actual": "E01,E02,E03,E04,E05,E06,E07,E08,E09",
+            "expected": "E01,E02,E03,E04,E05,E06,E07,E08,E09",
+            "status": "PASS"
+          },
+          {
+            "id": "EVENT_CHAIN_1",
+            "actual": "7c6ba9498f8c87790503331f848cf4a83db577ab95c056473e202efd22fdddeb",
+            "expected": "7c6ba9498f8c87790503331f848cf4a83db577ab95c056473e202efd22fdddeb",
+            "status": "PASS"
+          },
+          {
+            "id": "EVENT_CHAIN_2",
+            "actual": "e5b7a7af40109879605fc71b53108ca4f401c2037e3aab519ad029df6bedf52d",
+            "expected": "e5b7a7af40109879605fc71b53108ca4f401c2037e3aab519ad029df6bedf52d",
+            "status": "PASS"
+          },
+          {
+            "id": "EVENT_CHAIN_3",
+            "actual": "fdbe1d9f9e65102dc412961582fdb950b1f7989fff2d18a8c3487348e30614bb",
+            "expected": "fdbe1d9f9e65102dc412961582fdb950b1f7989fff2d18a8c3487348e30614bb",
+            "status": "PASS"
+          },
+          {
+            "id": "EVENT_CHAIN_4",
+            "actual": "4f1f35e9c7d283158713accb2b3f4fcc47a2894d18efd466ff25604db10bf3a9",
+            "expected": "4f1f35e9c7d283158713accb2b3f4fcc47a2894d18efd466ff25604db10bf3a9",
+            "status": "PASS"
+          },
+          {
+            "id": "EVENT_CHAIN_5",
+            "actual": "e05ae1b58f5e9e9e687d8fed3ae04056206cf29b138ce41925eddd12bc93fd44",
+            "expected": "e05ae1b58f5e9e9e687d8fed3ae04056206cf29b138ce41925eddd12bc93fd44",
+            "status": "PASS"
+          },
+          {
+            "id": "EVENT_CHAIN_6",
+            "actual": "89974f3971b02e96fb575f624e9cff9196da71a3cbb9032b2886c68fd5b2f18f",
+            "expected": "89974f3971b02e96fb575f624e9cff9196da71a3cbb9032b2886c68fd5b2f18f",
+            "status": "PASS"
+          },
+          {
+            "id": "EVENT_CHAIN_7",
+            "actual": "3448045dca166beea85f769491b9d2cfc9985db09e610824109b8febbf1c56c6",
+            "expected": "3448045dca166beea85f769491b9d2cfc9985db09e610824109b8febbf1c56c6",
+            "status": "PASS"
+          },
+          {
+            "id": "EVENT_CHAIN_8",
+            "actual": "388eee8e7a954ab6eb1e12697d8795dff02b757234fce6f2442e5a45113a719c",
+            "expected": "388eee8e7a954ab6eb1e12697d8795dff02b757234fce6f2442e5a45113a719c",
+            "status": "PASS"
+          },
+          {
+            "id": "EVENT_E09_AFTER",
+            "actual": "bb55f510caee7b6dee27669345b0401f40e9c2e997d373dddcc0bd28ef836e2f",
+            "expected": "bb55f510caee7b6dee27669345b0401f40e9c2e997d373dddcc0bd28ef836e2f",
+            "status": "PASS"
+          },
+          {
+            "id": "EXPORT_MANIFEST",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          },
+          {
+            "id": "EXPORT_EVENTS",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          },
+          {
+            "id": "EXPORT_OBSERVED_VALUE",
+            "actual": false,
+            "expected": false,
+            "status": "PASS"
+          },
+          {
+            "id": "EXPORT_RAW_BYTES",
+            "actual": false,
+            "expected": false,
+            "status": "PASS"
+          },
+          {
+            "id": "EXPORT_CANONICAL_TABLES",
+            "actual": false,
+            "expected": false,
+            "status": "PASS"
+          },
+          {
+            "id": "EXPORT_PARTICIPANT_NAME",
+            "actual": false,
+            "expected": false,
+            "status": "PASS"
+          },
+          {
+            "id": "UPSTREAM_MAPPING_UNCHANGED",
+            "actual": "e5b7a7af40109879605fc71b53108ca4f401c2037e3aab519ad029df6bedf52d",
+            "expected": "e5b7a7af40109879605fc71b53108ca4f401c2037e3aab519ad029df6bedf52d",
+            "status": "PASS"
+          },
+          {
+            "id": "UPSTREAM_AGG_UNCHANGED",
+            "actual": "388eee8e7a954ab6eb1e12697d8795dff02b757234fce6f2442e5a45113a719c",
+            "expected": "388eee8e7a954ab6eb1e12697d8795dff02b757234fce6f2442e5a45113a719c",
+            "status": "PASS"
+          },
+          {
+            "id": "PRIVATE_AUDIT_FROZEN",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          },
+          {
+            "id": "PUBLIC_NO_AUDITED",
+            "actual": false,
+            "expected": false,
+            "status": "PASS"
+          },
+          {
+            "id": "RERUN_NEW_RUN_ID",
+            "actual": true,
+            "expected": true,
+            "status": "PASS"
+          },
+          {
+            "id": "RERUN_CONTENT_HASH_STABLE",
+            "actual": "bb55f510caee7b6dee27669345b0401f40e9c2e997d373dddcc0bd28ef836e2f",
+            "expected": "bb55f510caee7b6dee27669345b0401f40e9c2e997d373dddcc0bd28ef836e2f",
+            "status": "PASS"
+          }
+        ],
+        "stats": {
+          "validationIssues": 1,
+          "auditEvents": 9,
+          "resultInventoryRecords": 40,
+          "waterResults": 20,
+          "personDayResults": 20,
+          "projectSummaryRows": 6,
+          "controllingVersions": 12,
+          "snapshotHashes": 8
+        },
+        "manifest": {
+          "runId": "RUN-136aace6-98f0-4fa8-8ff9-b52d8e0036de",
+          "runTimestamp": "2026-09-08T16:28:40.751Z",
+          "sourceSessionId": "SRC-09c59ec3-1b93-4b0e-ad5b-e7fda4d3160c",
+          "sourceWorkbookName": "nonleap.xlsx",
+          "sourceWorkbookSha256": "7c6ba9498f8c87790503331f848cf4a83db577ab95c056473e202efd22fdddeb",
+          "sourceWorkbookSizeBytes": 195495,
+          "templateVersion": "HUF-SS-INPUT-v1.1",
+          "projectId": "SYN-ALL-STRUCT-001",
+          "projectName": "Synthetic All-Structure Validation Project",
+          "piaImplementingAgency": "Synthetic PIA",
+          "reportingStartDate": "2024-04-01",
+          "reportingEndDate": "2025-03-31",
+          "expectedCalendarDays": 365,
+          "formulaCatalogVersion": "HUF-DESIGN2-FORMULA-CATALOG-v1.1",
+          "capacityCatalogVersion": "legacy-capacity-v1",
+          "validationRulebookVersion": "HUF-D4-VALIDATION-READINESS-v1.0",
+          "routeRegistryVersion": "HUF-DESIGN1-ROUTE-REGISTRY-v1.1",
+          "inputSchemaVersion": "HUF-SS-INPUT-v1.1",
+          "appVersion": "1.0.0",
+          "ddwRunoffMethod": "Legacy v1 fallback (provisional)",
+          "ddwCalibrationId": null,
+          "defaultAreaMethod": "Standard simple",
+          "mappingSnapshotHash": "e5b7a7af40109879605fc71b53108ca4f401c2037e3aab519ad029df6bedf52d",
+          "canonicalizationSnapshotHash": "fdbe1d9f9e65102dc412961582fdb950b1f7989fff2d18a8c3487348e30614bb",
+          "validationIssueCount": 1,
+          "blockingIssueCount": 0,
+          "warningCount": 1,
+          "readyWaterRecordCount": 17,
+          "notReadyWaterRecordCount": 0,
+          "holdWaterRecordCount": 1,
+          "excludedWaterRecordCount": 2,
+          "privacyMode": "standard",
+          "piiReportingPolicy": "Raw participant names and source workbook bytes are excluded from standard audit exports. Pseudonymous/result identifiers may be included where needed for lineage.",
+          "projectDataInUrl": false,
+          "formalHufGovernanceStatus": "Expert-selected controlled methodology baseline; formal HUF confirmation pending",
+          "runNotes": "SYNTHETIC NON-LEAP VALIDATION DATA — not project reporting data."
+        },
+        "snapshotHashes": {
+          "sourceWorkbookSha256": "7c6ba9498f8c87790503331f848cf4a83db577ab95c056473e202efd22fdddeb",
+          "mappingSnapshotHash": "e5b7a7af40109879605fc71b53108ca4f401c2037e3aab519ad029df6bedf52d",
+          "canonicalSnapshotHash": "fdbe1d9f9e65102dc412961582fdb950b1f7989fff2d18a8c3487348e30614bb",
+          "validationSnapshotHash": "4f1f35e9c7d283158713accb2b3f4fcc47a2894d18efd466ff25604db10bf3a9",
+          "routingSnapshotHash": "e05ae1b58f5e9e9e687d8fed3ae04056206cf29b138ce41925eddd12bc93fd44",
+          "calculationSnapshotHash": "89974f3971b02e96fb575f624e9cff9196da71a3cbb9032b2886c68fd5b2f18f",
+          "assuranceSnapshotHash": "3448045dca166beea85f769491b9d2cfc9985db09e610824109b8febbf1c56c6",
+          "aggregationSnapshotHash": "388eee8e7a954ab6eb1e12697d8795dff02b757234fce6f2442e5a45113a719c"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,1634 @@
+{
+  "schema": "HUF-D6-FRESH-REMAINING80-v1",
+  "status": "PASS",
+  "total": 80,
+  "passed": 80,
+  "failed": 0,
+  "methodologyChanged": false,
+  "results": [
+    {
+      "test_id": "D4-VAL-001",
+      "status": "PASS",
+      "executionMode": "CANONICAL_NEGATIVE_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-001",
+          "severity": "BLOCKING_ERROR",
+          "scopeEffect": "WORKBOOK_BLOCK",
+          "readinessEffect": "workbook_not_ready",
+          "affectedStructureIds": []
+        }
+      ],
+      "workbookReadiness": "workbook_not_ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-002",
+      "status": "PASS",
+      "executionMode": "CANONICAL_NEGATIVE_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-002",
+          "severity": "BLOCKING_ERROR",
+          "scopeEffect": "WORKBOOK_BLOCK",
+          "readinessEffect": "workbook_not_ready",
+          "affectedStructureIds": []
+        }
+      ],
+      "workbookReadiness": "workbook_not_ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-003",
+      "status": "PASS",
+      "executionMode": "CANONICAL_NEGATIVE_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-003",
+          "severity": "BLOCKING_ERROR",
+          "scopeEffect": "WORKBOOK_BLOCK",
+          "readinessEffect": "workbook_not_ready",
+          "affectedStructureIds": []
+        }
+      ],
+      "workbookReadiness": "workbook_not_ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-004",
+      "status": "PASS",
+      "executionMode": "CANONICAL_NEGATIVE_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-004",
+          "severity": "BLOCKING_ERROR",
+          "scopeEffect": "WORKBOOK_BLOCK",
+          "readinessEffect": "workbook_not_ready",
+          "affectedStructureIds": []
+        }
+      ],
+      "workbookReadiness": "workbook_not_ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-005",
+      "status": "PASS",
+      "executionMode": "CANONICAL_NEGATIVE_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-005",
+          "severity": "BLOCKING_ERROR",
+          "scopeEffect": "WORKBOOK_BLOCK",
+          "readinessEffect": "workbook_not_ready",
+          "affectedStructureIds": []
+        }
+      ],
+      "workbookReadiness": "workbook_not_ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-006",
+      "status": "PASS",
+      "executionMode": "POSITIVE_OR_ROUTE_ASSERTION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "leapDays": 366,
+      "nonLeapDays": 365
+    },
+    {
+      "test_id": "D4-VAL-007",
+      "status": "PASS",
+      "executionMode": "POSITIVE_OR_ROUTE_ASSERTION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "leapDays": 366,
+      "nonLeapDays": 365
+    },
+    {
+      "test_id": "D4-VAL-008",
+      "status": "PASS",
+      "executionMode": "POSITIVE_OR_ROUTE_ASSERTION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "leapDays": 366,
+      "nonLeapDays": 365
+    },
+    {
+      "test_id": "D4-VAL-009",
+      "status": "PASS",
+      "executionMode": "CANONICAL_NEGATIVE_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-009",
+          "severity": "BLOCKING_ERROR",
+          "scopeEffect": "WORKBOOK_BLOCK",
+          "readinessEffect": "workbook_not_ready",
+          "affectedStructureIds": []
+        }
+      ],
+      "workbookReadiness": "workbook_not_ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-010",
+      "status": "PASS",
+      "executionMode": "CANONICAL_NEGATIVE_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-010",
+          "severity": "BLOCKING_ERROR",
+          "scopeEffect": "WORKBOOK_BLOCK",
+          "readinessEffect": "workbook_not_ready",
+          "affectedStructureIds": []
+        }
+      ],
+      "workbookReadiness": "workbook_not_ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-011",
+      "status": "PASS",
+      "executionMode": "CANONICAL_NEGATIVE_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-011",
+          "severity": "SCOPED_ERROR",
+          "scopeEffect": "RECORD_BLOCK",
+          "readinessEffect": "not_ready",
+          "affectedStructureIds": [
+            "S-CCT-01"
+          ]
+        }
+      ],
+      "workbookReadiness": "ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-012",
+      "status": "PASS",
+      "executionMode": "CANONICAL_NEGATIVE_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-012",
+          "severity": "SCOPED_ERROR",
+          "scopeEffect": "SERIES_BLOCK",
+          "readinessEffect": "not_ready",
+          "affectedStructureIds": [
+            "S-CCT-01",
+            "S-SCT-01",
+            "S-FB-01",
+            "S-TCB-01",
+            "S-CB-01",
+            "S-FP-U-01",
+            "S-GS-01",
+            "S-CD-01",
+            "S-LBS-01",
+            "S-MW-01",
+            "S-OASS-01"
+          ]
+        }
+      ],
+      "workbookReadiness": "ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-013",
+      "status": "PASS",
+      "executionMode": "CANONICAL_WARNING_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-013",
+          "severity": "WARNING",
+          "scopeEffect": "WARNING_ONLY",
+          "readinessEffect": "ready_with_warning",
+          "affectedStructureIds": [
+            "S-CCT-01",
+            "S-SCT-01",
+            "S-FB-01",
+            "S-TCB-01",
+            "S-CB-01",
+            "S-FP-U-01",
+            "S-GS-01",
+            "S-CD-01",
+            "S-LBS-01",
+            "S-MW-01",
+            "S-OASS-01"
+          ]
+        }
+      ],
+      "workbookReadiness": "ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-014",
+      "status": "PASS",
+      "executionMode": "CANONICAL_NEGATIVE_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-014",
+          "severity": "SCOPED_ERROR",
+          "scopeEffect": "RECORD_BLOCK",
+          "readinessEffect": "not_ready",
+          "affectedStructureIds": [
+            "S-CCT-01"
+          ]
+        }
+      ],
+      "workbookReadiness": "ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-015",
+      "status": "PASS",
+      "executionMode": "CANONICAL_NEGATIVE_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-015",
+          "severity": "SCOPED_ERROR",
+          "scopeEffect": "RECORD_BLOCK",
+          "readinessEffect": "not_ready",
+          "affectedStructureIds": []
+        }
+      ],
+      "workbookReadiness": "ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-016",
+      "status": "PASS",
+      "executionMode": "CANONICAL_NEGATIVE_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-016",
+          "severity": "SCOPED_ERROR",
+          "scopeEffect": "RECORD_BLOCK",
+          "readinessEffect": "not_ready",
+          "affectedStructureIds": []
+        }
+      ],
+      "workbookReadiness": "ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-017",
+      "status": "PASS",
+      "executionMode": "CANONICAL_NEGATIVE_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-017",
+          "severity": "SCOPED_ERROR",
+          "scopeEffect": "SERIES_BLOCK",
+          "readinessEffect": "not_ready",
+          "affectedStructureIds": [
+            "S-CCT-01"
+          ]
+        }
+      ],
+      "workbookReadiness": "ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-018",
+      "status": "PASS",
+      "executionMode": "CANONICAL_NEGATIVE_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-018",
+          "severity": "SCOPED_ERROR",
+          "scopeEffect": "RECORD_BLOCK",
+          "readinessEffect": "not_ready",
+          "affectedStructureIds": [
+            "S-CCT-01"
+          ]
+        }
+      ],
+      "workbookReadiness": "ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-020",
+      "status": "PASS",
+      "executionMode": "CANONICAL_WARNING_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-020",
+          "severity": "WARNING",
+          "scopeEffect": "WARNING_ONLY",
+          "readinessEffect": "unchanged",
+          "affectedStructureIds": []
+        }
+      ],
+      "workbookReadiness": "ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-021",
+      "status": "PASS",
+      "executionMode": "CANONICAL_NEGATIVE_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-021",
+          "severity": "SCOPED_ERROR",
+          "scopeEffect": "RECORD_BLOCK",
+          "readinessEffect": "not_ready",
+          "affectedStructureIds": [
+            "S-CCT-01"
+          ]
+        }
+      ],
+      "workbookReadiness": "ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-022",
+      "status": "PASS",
+      "executionMode": "CANONICAL_NEGATIVE_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-022",
+          "severity": "SCOPED_ERROR",
+          "scopeEffect": "RECORD_BLOCK",
+          "readinessEffect": "not_ready",
+          "affectedStructureIds": [
+            "S-CCT-01"
+          ]
+        }
+      ],
+      "workbookReadiness": "ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-023",
+      "status": "PASS",
+      "executionMode": "CANONICAL_NEGATIVE_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-023",
+          "severity": "SCOPED_ERROR",
+          "scopeEffect": "RECORD_BLOCK",
+          "readinessEffect": "not_ready",
+          "affectedStructureIds": [
+            "S-CCT-01"
+          ]
+        }
+      ],
+      "workbookReadiness": "ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-024",
+      "status": "PASS",
+      "executionMode": "CANONICAL_NEGATIVE_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-024",
+          "severity": "SCOPED_ERROR",
+          "scopeEffect": "RECORD_BLOCK",
+          "readinessEffect": "not_ready",
+          "affectedStructureIds": [
+            "S-CCT-01"
+          ]
+        }
+      ],
+      "workbookReadiness": "ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-025",
+      "status": "PASS",
+      "executionMode": "POSITIVE_OR_ROUTE_ASSERTION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true
+    },
+    {
+      "test_id": "D4-VAL-027",
+      "status": "PASS",
+      "executionMode": "POSITIVE_INVARIANT_ASSERTION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "addendum": "HUF-D6-VAL027-POSITIVE-INVARIANT-v1.1",
+      "structures": 20,
+      "overrides": 1
+    },
+    {
+      "test_id": "D4-VAL-028",
+      "status": "PASS",
+      "executionMode": "POSITIVE_OR_ROUTE_ASSERTION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true
+    },
+    {
+      "test_id": "D4-VAL-029",
+      "status": "PASS",
+      "executionMode": "POSITIVE_OR_ROUTE_ASSERTION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true
+    },
+    {
+      "test_id": "D4-VAL-030",
+      "status": "PASS",
+      "executionMode": "POSITIVE_OR_ROUTE_ASSERTION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true
+    },
+    {
+      "test_id": "D4-VAL-032",
+      "status": "PASS",
+      "executionMode": "CANONICAL_NEGATIVE_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-032",
+          "severity": "SCOPED_ERROR",
+          "scopeEffect": "RECORD_BLOCK",
+          "readinessEffect": "not_ready",
+          "affectedStructureIds": [
+            "S-FB-01"
+          ]
+        }
+      ],
+      "workbookReadiness": "ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-035",
+      "status": "PASS",
+      "executionMode": "CANONICAL_NEGATIVE_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-035",
+          "severity": "SCOPED_ERROR",
+          "scopeEffect": "RECORD_BLOCK",
+          "readinessEffect": "not_ready",
+          "affectedStructureIds": [
+            "S-FB-01"
+          ]
+        }
+      ],
+      "workbookReadiness": "ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-036",
+      "status": "PASS",
+      "executionMode": "CANONICAL_NEGATIVE_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-036",
+          "severity": "SCOPED_ERROR",
+          "scopeEffect": "RECORD_BLOCK",
+          "readinessEffect": "not_ready",
+          "affectedStructureIds": [
+            "S-CCT-01"
+          ]
+        }
+      ],
+      "workbookReadiness": "ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-037",
+      "status": "PASS",
+      "executionMode": "CANONICAL_NEGATIVE_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-037",
+          "severity": "SCOPED_ERROR",
+          "scopeEffect": "RECORD_BLOCK",
+          "readinessEffect": "not_ready",
+          "affectedStructureIds": [
+            "S-CCT-01"
+          ]
+        }
+      ],
+      "workbookReadiness": "ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-038",
+      "status": "PASS",
+      "executionMode": "CANONICAL_NEGATIVE_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-038",
+          "severity": "SCOPED_ERROR",
+          "scopeEffect": "RECORD_BLOCK",
+          "readinessEffect": "not_ready",
+          "affectedStructureIds": [
+            "S-CCT-01"
+          ]
+        }
+      ],
+      "workbookReadiness": "ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-039",
+      "status": "PASS",
+      "executionMode": "CANONICAL_WARNING_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-039",
+          "severity": "WARNING",
+          "scopeEffect": "WARNING_ONLY",
+          "readinessEffect": "ready_with_warning",
+          "affectedStructureIds": [
+            "S-CCT-01"
+          ]
+        }
+      ],
+      "workbookReadiness": "ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-040",
+      "status": "PASS",
+      "executionMode": "CANONICAL_NEGATIVE_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-040",
+          "severity": "SCOPED_ERROR",
+          "scopeEffect": "RECORD_BLOCK",
+          "readinessEffect": "not_ready",
+          "affectedStructureIds": [
+            "S-CCT-01"
+          ]
+        }
+      ],
+      "workbookReadiness": "ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-041",
+      "status": "PASS",
+      "executionMode": "CANONICAL_NEGATIVE_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-041",
+          "severity": "SCOPED_ERROR",
+          "scopeEffect": "RECORD_BLOCK",
+          "readinessEffect": "not_ready",
+          "affectedStructureIds": [
+            "S-CCT-01"
+          ]
+        }
+      ],
+      "workbookReadiness": "ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-042",
+      "status": "PASS",
+      "executionMode": "CANONICAL_NEGATIVE_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-042",
+          "severity": "SCOPED_ERROR",
+          "scopeEffect": "RECORD_BLOCK",
+          "readinessEffect": "not_ready",
+          "affectedStructureIds": [
+            "S-CCT-01"
+          ]
+        }
+      ],
+      "workbookReadiness": "ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-044",
+      "status": "PASS",
+      "executionMode": "CANONICAL_NEGATIVE_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-044",
+          "severity": "SCOPED_ERROR",
+          "scopeEffect": "NETWORK_BLOCK",
+          "readinessEffect": "not_ready",
+          "affectedStructureIds": [
+            "S-CCT-01"
+          ]
+        }
+      ],
+      "workbookReadiness": "ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-046",
+      "status": "PASS",
+      "executionMode": "CANONICAL_NEGATIVE_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-046",
+          "severity": "SCOPED_ERROR",
+          "scopeEffect": "SERIES_BLOCK",
+          "readinessEffect": "not_ready",
+          "affectedStructureIds": [
+            "S-CCT-01",
+            "S-SCT-01",
+            "S-FB-01",
+            "S-TCB-01",
+            "S-CB-01",
+            "S-FP-U-01",
+            "S-GS-01",
+            "S-CD-01",
+            "S-LBS-01",
+            "S-MW-01",
+            "S-OASS-01"
+          ]
+        }
+      ],
+      "workbookReadiness": "ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-048",
+      "status": "PASS",
+      "executionMode": "CANONICAL_NEGATIVE_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-048",
+          "severity": "SCOPED_ERROR",
+          "scopeEffect": "SERIES_BLOCK",
+          "readinessEffect": "not_ready",
+          "affectedStructureIds": [
+            "S-CCT-01",
+            "S-SCT-01",
+            "S-FB-01",
+            "S-TCB-01",
+            "S-CB-01",
+            "S-FP-U-01",
+            "S-GS-01",
+            "S-CD-01",
+            "S-LBS-01",
+            "S-OASS-01"
+          ]
+        }
+      ],
+      "workbookReadiness": "ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-051",
+      "status": "PASS",
+      "executionMode": "CANONICAL_NEGATIVE_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-051",
+          "severity": "SCOPED_ERROR",
+          "scopeEffect": "SERIES_BLOCK",
+          "readinessEffect": "not_ready",
+          "affectedStructureIds": [
+            "S-CCT-01"
+          ]
+        }
+      ],
+      "workbookReadiness": "ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-052",
+      "status": "PASS",
+      "executionMode": "CANONICAL_NEGATIVE_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-052",
+          "severity": "SCOPED_ERROR",
+          "scopeEffect": "SERIES_BLOCK",
+          "readinessEffect": "not_ready",
+          "affectedStructureIds": [
+            "S-CCT-01"
+          ]
+        }
+      ],
+      "workbookReadiness": "ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-053",
+      "status": "PASS",
+      "executionMode": "CANONICAL_NEGATIVE_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-053",
+          "severity": "SCOPED_ERROR",
+          "scopeEffect": "SERIES_BLOCK",
+          "readinessEffect": "not_ready",
+          "affectedStructureIds": [
+            "S-CCT-01"
+          ]
+        }
+      ],
+      "workbookReadiness": "ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-054",
+      "status": "PASS",
+      "executionMode": "CANONICAL_NEGATIVE_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-054",
+          "severity": "SCOPED_ERROR",
+          "scopeEffect": "RECORD_BLOCK",
+          "readinessEffect": "not_ready",
+          "affectedStructureIds": [
+            "S-CCT-01",
+            "S-SCT-01",
+            "S-FB-01",
+            "S-TCB-01",
+            "S-CB-01",
+            "S-FP-U-01",
+            "S-GS-01",
+            "S-CD-01",
+            "S-LBS-01",
+            "S-MW-01",
+            "S-OASS-01"
+          ]
+        }
+      ],
+      "workbookReadiness": "ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-057",
+      "status": "PASS",
+      "executionMode": "CANONICAL_NEGATIVE_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-057",
+          "severity": "SCOPED_ERROR",
+          "scopeEffect": "RECORD_BLOCK",
+          "readinessEffect": "not_ready",
+          "affectedStructureIds": [
+            "S-CCT-01"
+          ]
+        },
+        {
+          "ruleId": "VAL-057",
+          "severity": "SCOPED_ERROR",
+          "scopeEffect": "RECORD_BLOCK",
+          "readinessEffect": "not_ready",
+          "affectedStructureIds": [
+            "S-SCT-01"
+          ]
+        },
+        {
+          "ruleId": "VAL-057",
+          "severity": "SCOPED_ERROR",
+          "scopeEffect": "RECORD_BLOCK",
+          "readinessEffect": "not_ready",
+          "affectedStructureIds": [
+            "S-FB-01"
+          ]
+        },
+        {
+          "ruleId": "VAL-057",
+          "severity": "SCOPED_ERROR",
+          "scopeEffect": "RECORD_BLOCK",
+          "readinessEffect": "not_ready",
+          "affectedStructureIds": [
+            "S-TCB-01"
+          ]
+        },
+        {
+          "ruleId": "VAL-057",
+          "severity": "SCOPED_ERROR",
+          "scopeEffect": "RECORD_BLOCK",
+          "readinessEffect": "not_ready",
+          "affectedStructureIds": [
+            "S-CB-01"
+          ]
+        },
+        {
+          "ruleId": "VAL-057",
+          "severity": "SCOPED_ERROR",
+          "scopeEffect": "RECORD_BLOCK",
+          "readinessEffect": "not_ready",
+          "affectedStructureIds": [
+            "S-FP-U-01"
+          ]
+        },
+        {
+          "ruleId": "VAL-057",
+          "severity": "SCOPED_ERROR",
+          "scopeEffect": "RECORD_BLOCK",
+          "readinessEffect": "not_ready",
+          "affectedStructureIds": [
+            "S-GS-01"
+          ]
+        },
+        {
+          "ruleId": "VAL-057",
+          "severity": "SCOPED_ERROR",
+          "scopeEffect": "RECORD_BLOCK",
+          "readinessEffect": "not_ready",
+          "affectedStructureIds": [
+            "S-CD-01"
+          ]
+        },
+        {
+          "ruleId": "VAL-057",
+          "severity": "SCOPED_ERROR",
+          "scopeEffect": "RECORD_BLOCK",
+          "readinessEffect": "not_ready",
+          "affectedStructureIds": [
+            "S-LBS-01"
+          ]
+        },
+        {
+          "ruleId": "VAL-057",
+          "severity": "SCOPED_ERROR",
+          "scopeEffect": "RECORD_BLOCK",
+          "readinessEffect": "not_ready",
+          "affectedStructureIds": [
+            "S-MW-01"
+          ]
+        },
+        {
+          "ruleId": "VAL-057",
+          "severity": "SCOPED_ERROR",
+          "scopeEffect": "RECORD_BLOCK",
+          "readinessEffect": "not_ready",
+          "affectedStructureIds": [
+            "S-OASS-01"
+          ]
+        }
+      ],
+      "workbookReadiness": "ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-058",
+      "status": "PASS",
+      "executionMode": "CANONICAL_WARNING_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-058",
+          "severity": "WARNING",
+          "scopeEffect": "WARNING_ONLY",
+          "readinessEffect": "ready_with_warning",
+          "affectedStructureIds": [
+            "S-CCT-01"
+          ]
+        },
+        {
+          "ruleId": "VAL-058",
+          "severity": "WARNING",
+          "scopeEffect": "WARNING_ONLY",
+          "readinessEffect": "ready_with_warning",
+          "affectedStructureIds": [
+            "S-SCT-01"
+          ]
+        },
+        {
+          "ruleId": "VAL-058",
+          "severity": "WARNING",
+          "scopeEffect": "WARNING_ONLY",
+          "readinessEffect": "ready_with_warning",
+          "affectedStructureIds": [
+            "S-FB-01"
+          ]
+        },
+        {
+          "ruleId": "VAL-058",
+          "severity": "WARNING",
+          "scopeEffect": "WARNING_ONLY",
+          "readinessEffect": "ready_with_warning",
+          "affectedStructureIds": [
+            "S-TCB-01"
+          ]
+        },
+        {
+          "ruleId": "VAL-058",
+          "severity": "WARNING",
+          "scopeEffect": "WARNING_ONLY",
+          "readinessEffect": "ready_with_warning",
+          "affectedStructureIds": [
+            "S-CB-01"
+          ]
+        },
+        {
+          "ruleId": "VAL-058",
+          "severity": "WARNING",
+          "scopeEffect": "WARNING_ONLY",
+          "readinessEffect": "ready_with_warning",
+          "affectedStructureIds": [
+            "S-FP-U-01"
+          ]
+        },
+        {
+          "ruleId": "VAL-058",
+          "severity": "WARNING",
+          "scopeEffect": "WARNING_ONLY",
+          "readinessEffect": "ready_with_warning",
+          "affectedStructureIds": [
+            "S-GS-01"
+          ]
+        },
+        {
+          "ruleId": "VAL-058",
+          "severity": "WARNING",
+          "scopeEffect": "WARNING_ONLY",
+          "readinessEffect": "ready_with_warning",
+          "affectedStructureIds": [
+            "S-CD-01"
+          ]
+        },
+        {
+          "ruleId": "VAL-058",
+          "severity": "WARNING",
+          "scopeEffect": "WARNING_ONLY",
+          "readinessEffect": "ready_with_warning",
+          "affectedStructureIds": [
+            "S-LBS-01"
+          ]
+        },
+        {
+          "ruleId": "VAL-058",
+          "severity": "WARNING",
+          "scopeEffect": "WARNING_ONLY",
+          "readinessEffect": "ready_with_warning",
+          "affectedStructureIds": [
+            "S-MW-01"
+          ]
+        },
+        {
+          "ruleId": "VAL-058",
+          "severity": "WARNING",
+          "scopeEffect": "WARNING_ONLY",
+          "readinessEffect": "ready_with_warning",
+          "affectedStructureIds": [
+            "S-OASS-01"
+          ]
+        }
+      ],
+      "workbookReadiness": "ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-060",
+      "status": "PASS",
+      "executionMode": "POSITIVE_OR_ROUTE_ASSERTION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true
+    },
+    {
+      "test_id": "D4-VAL-061",
+      "status": "PASS",
+      "executionMode": "CANONICAL_WARNING_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-061",
+          "severity": "WARNING",
+          "scopeEffect": "WARNING_ONLY",
+          "readinessEffect": "ready_with_warning",
+          "affectedStructureIds": [
+            "S-CCT-01"
+          ]
+        },
+        {
+          "ruleId": "VAL-061",
+          "severity": "WARNING",
+          "scopeEffect": "WARNING_ONLY",
+          "readinessEffect": "ready_with_warning",
+          "affectedStructureIds": [
+            "S-SCT-01"
+          ]
+        },
+        {
+          "ruleId": "VAL-061",
+          "severity": "WARNING",
+          "scopeEffect": "WARNING_ONLY",
+          "readinessEffect": "ready_with_warning",
+          "affectedStructureIds": [
+            "S-FB-01"
+          ]
+        },
+        {
+          "ruleId": "VAL-061",
+          "severity": "WARNING",
+          "scopeEffect": "WARNING_ONLY",
+          "readinessEffect": "ready_with_warning",
+          "affectedStructureIds": [
+            "S-TCB-01"
+          ]
+        },
+        {
+          "ruleId": "VAL-061",
+          "severity": "WARNING",
+          "scopeEffect": "WARNING_ONLY",
+          "readinessEffect": "ready_with_warning",
+          "affectedStructureIds": [
+            "S-CB-01"
+          ]
+        },
+        {
+          "ruleId": "VAL-061",
+          "severity": "WARNING",
+          "scopeEffect": "WARNING_ONLY",
+          "readinessEffect": "ready_with_warning",
+          "affectedStructureIds": [
+            "S-FP-U-01"
+          ]
+        },
+        {
+          "ruleId": "VAL-061",
+          "severity": "WARNING",
+          "scopeEffect": "WARNING_ONLY",
+          "readinessEffect": "ready_with_warning",
+          "affectedStructureIds": [
+            "S-GS-01"
+          ]
+        },
+        {
+          "ruleId": "VAL-061",
+          "severity": "WARNING",
+          "scopeEffect": "WARNING_ONLY",
+          "readinessEffect": "ready_with_warning",
+          "affectedStructureIds": [
+            "S-CD-01"
+          ]
+        },
+        {
+          "ruleId": "VAL-061",
+          "severity": "WARNING",
+          "scopeEffect": "WARNING_ONLY",
+          "readinessEffect": "ready_with_warning",
+          "affectedStructureIds": [
+            "S-LBS-01"
+          ]
+        },
+        {
+          "ruleId": "VAL-061",
+          "severity": "WARNING",
+          "scopeEffect": "WARNING_ONLY",
+          "readinessEffect": "ready_with_warning",
+          "affectedStructureIds": [
+            "S-MW-01"
+          ]
+        },
+        {
+          "ruleId": "VAL-061",
+          "severity": "WARNING",
+          "scopeEffect": "WARNING_ONLY",
+          "readinessEffect": "ready_with_warning",
+          "affectedStructureIds": [
+            "S-OASS-01"
+          ]
+        }
+      ],
+      "workbookReadiness": "ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-062",
+      "status": "PASS",
+      "executionMode": "CANONICAL_NEGATIVE_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-062",
+          "severity": "SCOPED_ERROR",
+          "scopeEffect": "RECORD_BLOCK",
+          "readinessEffect": "not_ready",
+          "affectedStructureIds": [
+            "S-CCT-01"
+          ]
+        }
+      ],
+      "workbookReadiness": "ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-063",
+      "status": "PASS",
+      "executionMode": "CALCULATION_STATE_INJECTION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "injectionDetected": true,
+      "assertionBoundary": "Test-only prepared-state oracle; does not claim production re-execution of injected daily state"
+    },
+    {
+      "test_id": "D4-VAL-064",
+      "status": "PASS",
+      "executionMode": "CANONICAL_NEGATIVE_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-064",
+          "severity": "SCOPED_ERROR",
+          "scopeEffect": "RECORD_BLOCK",
+          "readinessEffect": "not_ready",
+          "affectedStructureIds": [
+            "S-CCT-01"
+          ]
+        }
+      ],
+      "workbookReadiness": "ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-065",
+      "status": "PASS",
+      "executionMode": "CANONICAL_WARNING_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-065",
+          "severity": "WARNING",
+          "scopeEffect": "WARNING_ONLY",
+          "readinessEffect": "ready_with_warning",
+          "affectedStructureIds": [
+            "S-CCT-01"
+          ]
+        }
+      ],
+      "workbookReadiness": "ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-066",
+      "status": "PASS",
+      "executionMode": "CANONICAL_NEGATIVE_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualCalculationStatus": "calculation_error"
+    },
+    {
+      "test_id": "D4-VAL-067",
+      "status": "PASS",
+      "executionMode": "CANONICAL_WARNING_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-067",
+          "severity": "WARNING",
+          "scopeEffect": "WARNING_ONLY",
+          "readinessEffect": "ready_with_warning",
+          "affectedStructureIds": [
+            "S-CCT-01"
+          ]
+        }
+      ],
+      "workbookReadiness": "ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-068",
+      "status": "PASS",
+      "executionMode": "CANONICAL_NEGATIVE_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-068",
+          "severity": "SCOPED_ERROR",
+          "scopeEffect": "RECORD_BLOCK",
+          "readinessEffect": "not_ready",
+          "affectedStructureIds": [
+            "S-SCT-01"
+          ]
+        }
+      ],
+      "workbookReadiness": "ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-069",
+      "status": "PASS",
+      "executionMode": "CANONICAL_WARNING_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-069",
+          "severity": "WARNING",
+          "scopeEffect": "WARNING_ONLY",
+          "readinessEffect": "ready_with_warning",
+          "affectedStructureIds": [
+            "S-SCT-01"
+          ]
+        }
+      ],
+      "workbookReadiness": "ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-070",
+      "status": "PASS",
+      "executionMode": "CANONICAL_NEGATIVE_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-070",
+          "severity": "SCOPED_ERROR",
+          "scopeEffect": "RECORD_BLOCK",
+          "readinessEffect": "not_ready",
+          "affectedStructureIds": [
+            "S-SCT-01"
+          ]
+        }
+      ],
+      "workbookReadiness": "ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-071",
+      "status": "PASS",
+      "executionMode": "CANONICAL_NEGATIVE_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-071",
+          "severity": "SCOPED_ERROR",
+          "scopeEffect": "RECORD_BLOCK",
+          "readinessEffect": "not_ready",
+          "affectedStructureIds": [
+            "S-SCT-01"
+          ]
+        }
+      ],
+      "workbookReadiness": "ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-072",
+      "status": "PASS",
+      "executionMode": "CANONICAL_NEGATIVE_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-072",
+          "severity": "SCOPED_ERROR",
+          "scopeEffect": "RECORD_BLOCK",
+          "readinessEffect": "not_ready",
+          "affectedStructureIds": [
+            "S-SCT-01"
+          ]
+        }
+      ],
+      "workbookReadiness": "ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-074",
+      "status": "PASS",
+      "executionMode": "CANONICAL_WARNING_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-074",
+          "severity": "WARNING",
+          "scopeEffect": "ASSURANCE_DOWNGRADE",
+          "readinessEffect": "ready_with_warning",
+          "affectedStructureIds": [
+            "S-WAT-01"
+          ]
+        }
+      ],
+      "workbookReadiness": "ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-075",
+      "status": "PASS",
+      "executionMode": "CANONICAL_WARNING_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-075",
+          "severity": "WARNING",
+          "scopeEffect": "ASSURANCE_DOWNGRADE",
+          "readinessEffect": "ready_with_warning",
+          "affectedStructureIds": []
+        }
+      ],
+      "workbookReadiness": "ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-076",
+      "status": "PASS",
+      "executionMode": "CANONICAL_NEGATIVE_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-076",
+          "severity": "SCOPED_ERROR",
+          "scopeEffect": "RECORD_BLOCK",
+          "readinessEffect": "not_ready",
+          "affectedStructureIds": []
+        }
+      ],
+      "workbookReadiness": "ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-077",
+      "status": "PASS",
+      "executionMode": "CANONICAL_NEGATIVE_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-077",
+          "severity": "SCOPED_ERROR",
+          "scopeEffect": "RECORD_BLOCK",
+          "readinessEffect": "not_ready",
+          "affectedStructureIds": []
+        }
+      ],
+      "workbookReadiness": "ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-078",
+      "status": "PASS",
+      "executionMode": "CANONICAL_NEGATIVE_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-078",
+          "severity": "SCOPED_ERROR",
+          "scopeEffect": "RECORD_BLOCK",
+          "readinessEffect": "not_ready",
+          "affectedStructureIds": []
+        }
+      ],
+      "workbookReadiness": "ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-079",
+      "status": "PASS",
+      "executionMode": "CANONICAL_NEGATIVE_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-079",
+          "severity": "SCOPED_ERROR",
+          "scopeEffect": "RECORD_BLOCK",
+          "readinessEffect": "not_ready",
+          "affectedStructureIds": []
+        }
+      ],
+      "workbookReadiness": "ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-080",
+      "status": "PASS",
+      "executionMode": "CANONICAL_NEGATIVE_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-080",
+          "severity": "SCOPED_ERROR",
+          "scopeEffect": "RECORD_BLOCK",
+          "readinessEffect": "not_ready",
+          "affectedStructureIds": []
+        }
+      ],
+      "workbookReadiness": "ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-081",
+      "status": "PASS",
+      "executionMode": "CANONICAL_NEGATIVE_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-081",
+          "severity": "SCOPED_ERROR",
+          "scopeEffect": "RECORD_BLOCK",
+          "readinessEffect": "not_ready",
+          "affectedStructureIds": []
+        }
+      ],
+      "workbookReadiness": "ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-083",
+      "status": "PASS",
+      "executionMode": "CANONICAL_NEGATIVE_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-083",
+          "severity": "SCOPED_ERROR",
+          "scopeEffect": "RECORD_BLOCK",
+          "readinessEffect": "not_ready",
+          "affectedStructureIds": []
+        },
+        {
+          "ruleId": "VAL-083",
+          "severity": "SCOPED_ERROR",
+          "scopeEffect": "RECORD_BLOCK",
+          "readinessEffect": "not_ready",
+          "affectedStructureIds": []
+        }
+      ],
+      "workbookReadiness": "ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-084",
+      "status": "PASS",
+      "executionMode": "POSITIVE_OR_ROUTE_ASSERTION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "affectedStructureCount": 10
+    },
+    {
+      "test_id": "D4-VAL-085",
+      "status": "PASS",
+      "executionMode": "CANONICAL_NEGATIVE_MUTATION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualIssues": [
+        {
+          "ruleId": "VAL-085",
+          "severity": "BLOCKING_ERROR",
+          "scopeEffect": "SCOPED_BY_FIELD",
+          "readinessEffect": "not_ready_if_required",
+          "affectedStructureIds": []
+        }
+      ],
+      "workbookReadiness": "ready",
+      "scopeIsolation": "PASS"
+    },
+    {
+      "test_id": "D4-VAL-086",
+      "status": "PASS",
+      "executionMode": "CALCULATION_STATE_INJECTION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "injectionDetected": true,
+      "assertionBoundary": "Test-only prepared-state oracle; does not claim production re-execution of injected daily state"
+    },
+    {
+      "test_id": "D4-VAL-087",
+      "status": "PASS",
+      "executionMode": "CALCULATION_STATE_INJECTION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "injectionDetected": true,
+      "assertionBoundary": "Test-only prepared-state oracle; does not claim production re-execution of injected daily state"
+    },
+    {
+      "test_id": "D4-VAL-088",
+      "status": "PASS",
+      "executionMode": "CALCULATION_STATE_INJECTION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "injectionDetected": true,
+      "assertionBoundary": "Test-only prepared-state oracle; does not claim production re-execution of injected daily state"
+    },
+    {
+      "test_id": "D4-VAL-089",
+      "status": "PASS",
+      "executionMode": "POSITIVE_OR_ROUTE_ASSERTION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true
+    },
+    {
+      "test_id": "D4-VAL-090",
+      "status": "PASS",
+      "executionMode": "AGGREGATION_STATE_INJECTION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualAggregationStatus": "aggregation_not_ready"
+    },
+    {
+      "test_id": "D4-VAL-091",
+      "status": "PASS",
+      "executionMode": "AGGREGATION_STATE_INJECTION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "actualAggregationStatus": "aggregation_not_ready"
+    },
+    {
+      "test_id": "D4-VAL-092",
+      "status": "PASS",
+      "executionMode": "POSITIVE_OR_ROUTE_ASSERTION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true
+    },
+    {
+      "test_id": "D4-VAL-093",
+      "status": "PASS",
+      "executionMode": "POSITIVE_OR_ROUTE_ASSERTION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true,
+      "affectedStructureCount": 10
+    },
+    {
+      "test_id": "D4-VAL-094",
+      "status": "PASS",
+      "executionMode": "POSITIVE_OR_ROUTE_ASSERTION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true
+    },
+    {
+      "test_id": "D4-VAL-095",
+      "status": "PASS",
+      "executionMode": "POSITIVE_OR_ROUTE_ASSERTION",
+      "expectedReference": "Frozen Scenario Builder Registry; VAL-027 v1.1 addendum",
+      "upstreamTruthPreserved": true
+    }
+  ]
+}

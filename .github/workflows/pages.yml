@@ -1,5 +1,7 @@
 name: Deploy Pages
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
 permissions: { contents: read, pages: write, id-token: write }
 concurrency: { group: pages, cancel-in-progress: true }
@@ -10,7 +12,12 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with: { node-version: '20' }
+      - run: npm install --no-save --package-lock=false jszip@3.10.1 @xmldom/xmldom@0.9.12
       - run: npm test
+      - run: npm run test:product
+      - run: node tests/protected/run.mjs
+      - run: node tests/protected/remaining80.mjs
+      - run: node tests/protected/design6-summary.mjs
       - run: npm run build:pages
       - name: Retain validation evidence
         if: always()
@@ -20,6 +27,12 @@ jobs:
           if-no-files-found: error
           path: |
             tests/evidence/phase7be-test-result.json
+            tests/evidence/product-flow.json
+            tests/evidence/protected-regression.json
+            tests/evidence/design6-remaining80.json
+            tests/evidence/design6-logical.json
+            tests/evidence/report-contract.json
+            tests/evidence/export-reconciliation.json
             VALIDATION_STATUS.json
             FINAL_VALIDATION_STATUS.json
             RELEASE_MANIFEST.json
@@ -47,6 +60,7 @@ jobs:
         run: npx playwright install --with-deps chromium
       - name: Run real-XLSX acceptance against curated Pages payload
         env:
+          HUF_SCREENSHOT_DIR: ${{ runner.temp }}/screenshots
           HUF_SITE_ROOT: _site
           HUF_ACCEPTANCE_EVIDENCE_PATH: ${{ runner.temp }}/phase7be-browser-acceptance.json
         run: node tests/browser/run-imp7b-browser-acceptance.mjs
@@ -56,14 +70,18 @@ jobs:
         with:
           name: huf-phase7be-pages-browser-acceptance
           if-no-files-found: error
-          path: ${{ runner.temp }}/phase7be-browser-acceptance.json
+          path: |
+            ${{ runner.temp }}/phase7be-browser-acceptance.json
+            ${{ runner.temp }}/screenshots
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v4
         with: { path: './_site' }
   deploy:
-    needs: browser_acceptance
+    outputs:
+      page_url: ${{ steps.deployment.outputs.page_url }}
+    needs: [browser_acceptance, capacity_acceptance]
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -72,3 +90,82 @@ jobs:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
+
+  capacity_acceptance:
+    needs: validate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - run: npm install --no-save --package-lock=false jszip@3.10.1 @xmldom/xmldom@0.9.12 playwright@1.55.0
+      - run: node tests/performance/generate-fixture.mjs
+      - uses: actions/download-artifact@v4
+        with:
+          name: huf-phase7be-curated-site
+          path: _site
+      - run: npx playwright install --with-deps chromium
+      - run: node tests/performance/browser-capacity.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: huf-pages-capacity-acceptance
+          path: /tmp/huf-performance
+  live_acceptance:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - uses: actions/download-artifact@v4
+        with:
+          name: huf-phase7be-curated-site
+          path: _site
+      - run: npm install --no-save --package-lock=false playwright@1.55.0
+      - run: npx playwright install --with-deps chromium
+      - name: Verify every deployed file against the accepted payload
+        env:
+          HUF_LIVE_URL: ${{ needs.deploy.outputs.page_url }}
+        run: node tests/browser/verify-deployed-files.mjs
+      - name: Accept live application end to end
+        env:
+          HUF_LIVE_URL: ${{ needs.deploy.outputs.page_url }}
+          HUF_SITE_ROOT: _site
+          HUF_SCREENSHOT_DIR: ${{ runner.temp }}/live-screenshots
+          HUF_ACCEPTANCE_EVIDENCE_PATH: ${{ runner.temp }}/phase7be-browser-acceptance.json
+        run: node tests/browser/run-imp7b-browser-acceptance.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: huf-live-release-acceptance
+          path: |
+            deployed-files.runtime.json
+            ${{ runner.temp }}/phase7be-browser-acceptance.json
+            ${{ runner.temp }}/live-screenshots
+  release:
+    needs: live_acceptance
+    if: github.ref == 'refs/heads/main'
+    permissions: { contents: write }
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: huf-*
+          path: ${{ runner.temp }}/release-evidence
+      - name: Build verified source, site, evidence and Obsidian packages
+        run: python3 tools/build-release-deliverables.py "$RUNNER_TEMP/release-evidence" "$RUNNER_TEMP/release-output"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: huf-final-release-deliverables
+          path: ${{ runner.temp }}/release-output
+          if-no-files-found: error
+      - name: Publish the accepted source tag and release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          version="$(cat VERSION)"
+          gh release create "v$version" "$RUNNER_TEMP"/release-output/* --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" --title "HUF KPI Clean Rebuild $version" --notes-file docs/release/RELEASE_NOTES.md

@@ -1,35 +1,29 @@
 {
-  "schema": "HUF-IMP7BE-FINAL-VALIDATION-v1",
-  "version": "0.1.6-acceptance",
-  "phase": "IMP-7B-E",
-  "status": "ACCEPTANCE_READY_COMPATIBLE_BROWSER_EXECUTION_REQUIRED",
+  "schema": "HUF-REBUILD-RELEASE-STATUS-v1",
+  "version": "1.0.0",
+  "status": "IMPLEMENTATION_COMPLETE_GATED_RELEASE_BUILD",
+  "protectedCore": "UNCHANGED",
   "methodologyChanged": false,
-  "protectedCore": "UNCHANGED_27_OF_27",
-  "localGates": {
-    "status": "PASS",
-    "nonManifestSuites": 28,
-    "browserCiContractChecks": 13,
-    "pagesWorkflowChecks": 8,
-    "releaseManifest": "PASS_171_OF_171",
-    "packagedFreshExtract": "PASS",
-    "sourceToPackagedParity": "172_OF_172"
+  "sourceSnapshotQualification": "This immutable source status is prepared before deployment. Successful publication requires all workflow gates; RELEASE_CERTIFICATE.json attached to the GitHub release records actual deployed outcomes and exact source SHA. Historical failures in the master plan are retained as history, not current status.",
+  "verifiedImplementationCandidate": {
+    "sha": "dc4c00bc0bdddd90d64651f848ccb01ef76c33f9",
+    "runId": 34265094774,
+    "foundation": "PASS",
+    "logical": 154,
+    "physical": 15,
+    "browser": 79,
+    "capacity": "PASS for both365/366-day synthetic workloads"
   },
-  "browserAcceptance": {
-    "status": "NOT_EXECUTED_IN_COMPATIBLE_BROWSER_ENVIRONMENT",
-    "localContainer": "ENVIRONMENT_BLOCKED_EVEN_ON_ABOUT_BLANK",
-    "applicationFailure": false,
-    "ciRunner": "tests/browser/run-imp7b-browser-acceptance.mjs",
-    "pinnedRuntime": "playwright@1.55.0 / Chromium",
-    "realXlsx": "samples/nonleap/GOLDEN_E2E_NONLEAP_FY2024-25.xlsx",
-    "requiredFlow": "Upload -> protected E01 -> Workbook Preflight -> protected E02 Mapping Review -> manual mapping -> mapping confirmation snapshot",
-    "machineReadableEvidence": "phase7be-browser-acceptance.json"
-  },
-  "pagesAcceptance": {
-    "status": "WORKFLOW_READY_NOT_DEPLOYED_FROM_THIS_ENVIRONMENT",
-    "browserGateBeforeDeploy": true,
-    "curatedPayload": "_site",
-    "deploymentRequiresSuccessfulBrowserAcceptance": true
-  },
-  "imp7bClosure": "NOT_YET_CLAIMED",
-  "next": "Execute pinned GitHub Actions browser acceptance and Pages deployment; retain PASS evidence before closing IMP-7B and starting Data Preparation."
+  "releaseGates": [
+    "fresh foundation/product/protected checks",
+    "curated payload browser acceptance",
+    "declared fixed-budget capacity acceptance",
+    "every deployed file hash matches curated payload",
+    "live end-to-end browser acceptance",
+    "release source manifest and retained evidence verification"
+  ],
+  "performanceBudget": "tests/performance/budget.json",
+  "actualProductionVolumeSupplied": false,
+  "historicalE7": "CLOSED: baseline fe54aa2dd80262a63788e09d236e53da782806b6; master v0.53",
+  "formalHufConfirmation": "SEPARATE_GOVERNANCE_NOT_CLAIMED"
 }

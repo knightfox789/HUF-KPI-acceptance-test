@@ -1,0 +1,9 @@
+{
+  "schema": "HUF-PERFORMANCE-BUDGET-v1",
+  "status": "DECLARED_BEFORE_BROWSER_EXECUTION",
+  "workload": {"structures":1000,"personDayRecords":1000,"calendarDays":[365,366],"districts":5,"villagesMin":50,"synthetic":true,"confirmedActualProductionVolume":false},
+  "qualification": "Initial supported workload chosen under the user's instruction to proceed autonomously. Generated from frozen route/type goldens; no claim that these are actual production records. Larger or materially different portfolios require further qualification.",
+  "referenceEnvironment": "GitHub-hosted Ubuntu Chromium, desktop1440x1000; hardware and browser versions recorded in evidence",
+  "limits": {"endToEndMs":90000,"stageMs":30000,"interactionMs":1000,"mainThreadGapMs":1000,"exportMs":30000},
+  "basis": "Existing1000-structure Node probe completed pipeline work in approximately11seconds with1.34GB peak process RSS. Budgets allow browser parsing/rendering/export overhead while explicitly rejecting UI freezes above1second. Limits are fixed before this browser acceptance run; a failure requires implementation repair, not an undisclosed budget increase."
+}
