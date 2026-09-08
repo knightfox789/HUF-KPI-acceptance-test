@@ -14,6 +14,8 @@ jobs:
       - run: npm test
       - run: npm run test:product
       - run: node tests/protected/run.mjs
+      - run: node tests/protected/remaining80.mjs
+      - run: node tests/protected/design6-summary.mjs
       - run: npm run build:pages
       - name: Retain validation evidence
         if: always()
@@ -25,6 +27,9 @@ jobs:
             tests/evidence/phase7be-test-result.json
             tests/evidence/product-flow.json
             tests/evidence/protected-regression.json
+            tests/evidence/design6-remaining80.json
+            tests/evidence/design6-logical.json
+            tests/evidence/report-contract.json
             VALIDATION_STATUS.json
             FINAL_VALIDATION_STATUS.json
             RELEASE_MANIFEST.json

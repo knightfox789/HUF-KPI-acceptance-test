@@ -12,6 +12,8 @@ jobs:
       - run: npm test
       - run: npm run test:product
       - run: node tests/protected/run.mjs
+      - run: node tests/protected/remaining80.mjs
+      - run: node tests/protected/design6-summary.mjs
       - name: Retain machine-readable validation evidence
         if: always()
         uses: actions/upload-artifact@v4
@@ -22,6 +24,9 @@ jobs:
             tests/evidence/phase7be-test-result.json
             tests/evidence/product-flow.json
             tests/evidence/protected-regression.json
+            tests/evidence/design6-remaining80.json
+            tests/evidence/design6-logical.json
+            tests/evidence/report-contract.json
             VALIDATION_STATUS.json
             RELEASE_MANIFEST.json
             PROTECTED_CORE_MANIFEST.json

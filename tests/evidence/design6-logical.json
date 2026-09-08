@@ -1,0 +1,114 @@
+{
+  "schema": "HUF-D6-FRESH-LOGICAL-ASSESSMENT-v1",
+  "methodologyChanged": false,
+  "logicalTests": {
+    "total": 154,
+    "pass": 154,
+    "fail": 0,
+    "notVerified": 0,
+    "bySuite": {
+      "positiveGolden": 2,
+      "formulaGolden": 29,
+      "physicalRuleCases": 15,
+      "remainingRuleCases": 80,
+      "outputSchema": 28
+    }
+  },
+  "physicalFixtures": {
+    "total": 15,
+    "pass": 15,
+    "hashes": [
+      {
+        "file": "FX_HR_001_Missing_Leap_Day.xlsx",
+        "sha256": "91856faa2e2ffa8916ff2994d84f95e9920dea22b431fd8f2897764fd2578d8c",
+        "status": "PASS"
+      },
+      {
+        "file": "FX_HR_002_Duplicate_Rainfall_Date.xlsx",
+        "sha256": "3029511a0056b71af66713318beb49137b459d380337a57612e3b59649c8f9a1",
+        "status": "PASS"
+      },
+      {
+        "file": "FX_HR_003_Negative_Rainfall.xlsx",
+        "sha256": "095cb555793a64d967267c8105e62f1239b3ad8972365a0651c9522ee70d1e30",
+        "status": "PASS"
+      },
+      {
+        "file": "FX_HR_004_Missing_Verified_Base_Area.xlsx",
+        "sha256": "c8a28f754ad26c461878d3367fc72ce5a4f08f3ea9b013c1d033ce0b7ec52b04",
+        "status": "PASS"
+      },
+      {
+        "file": "FX_HR_005_Base_Area_Exceeds_Surface.xlsx",
+        "sha256": "5794f0c286d3fce3921a2bf93561846b8cef18ce1709c73f31d8a450dff4ebf9",
+        "status": "PASS"
+      },
+      {
+        "file": "FX_HR_006_Missing_Feb_Evaporation.xlsx",
+        "sha256": "7885ee63ad2f00d25464fde142d8d1dcc84c9bcb5e8aa5215e900400563fc12c",
+        "status": "PASS"
+      },
+      {
+        "file": "FX_HR_007_Advanced_Stage_Missing_Group.xlsx",
+        "sha256": "b870eb8abc71cf8f5ae4ceb9301b4ee518b767780496ce616497252b815905f3",
+        "status": "PASS"
+      },
+      {
+        "file": "FX_HR_008_Cascade_Cycle.xlsx",
+        "sha256": "b908b64a68f8aebf62db9a5d1e4019306e8354d214832320dc80b8ec5b8dde61",
+        "status": "PASS"
+      },
+      {
+        "file": "FX_HR_009_REJ_A_Missing_Baseline.xlsx",
+        "sha256": "54611229be5e5d17ba1046c87e8641270246c6fc671562248cff868771a473b5",
+        "status": "PASS"
+      },
+      {
+        "file": "FX_HR_010_REJ_B_Missing_Desilted.xlsx",
+        "sha256": "2faae7a88cd2431caa27a8a33174be2da03373929a969bd7caefe4d8603091ec",
+        "status": "PASS"
+      },
+      {
+        "file": "FX_HR_011_Lined_Pond_Inlet_Fail.xlsx",
+        "sha256": "c437dfe92b194841f414119768306c910f97c54abd04c8ff4809d0fe377c7bc0",
+        "status": "PASS"
+      },
+      {
+        "file": "FX_HR_012_Other_Surface_Approval_Missing.xlsx",
+        "sha256": "88fd7e21e6f7f5f66c4ab2720e80b0f77242390a0c8075d230c97138a540fd12",
+        "status": "PASS"
+      },
+      {
+        "file": "FX_HR_013_Person_Day_Duplicate.xlsx",
+        "sha256": "41632717c2f38b256287aaa0f6860ca80b88db524d5bd34687722b9be9a0abb9",
+        "status": "PASS"
+      },
+      {
+        "file": "FX_HR_014_Rainfall_Outside_FY.xlsx",
+        "sha256": "448ac4fe04457dd4d549d9a301f247371a23c2b682948405b44825510c3377d5",
+        "status": "PASS"
+      },
+      {
+        "file": "FX_HR_015_Partial_Season_Missing_Functional_Date.xlsx",
+        "sha256": "14af22a254886633d338cf9fd9362f66b5f2b3b2157f16177ab4fd40702736d3",
+        "status": "PASS"
+      }
+    ]
+  },
+  "positiveGolden": [
+    {
+      "prefix": "E2E_",
+      "status": "PASS",
+      "assertions": 17
+    },
+    {
+      "prefix": "LEAP_",
+      "status": "PASS",
+      "assertions": 17
+    }
+  ],
+  "calculationInjectionBoundary": "VAL-063/086/087/088 use the frozen test-only prepared-state injection/tolerance oracle. These do not assert that production accepts arbitrary mutated daily snapshots.",
+  "browserAcceptance": "SEPARATE_REQUIRED_GATE",
+  "deploymentAcceptance": "SEPARATE_REQUIRED_GATE",
+  "formalHufConfirmation": "SEPARATE_GOVERNANCE"
+}

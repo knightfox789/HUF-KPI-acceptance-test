@@ -5,9 +5,10 @@
   "protectedCore": "UNCHANGED",
   "freshProtectedSuites": "16/16 PASS locally",
   "freshProductFlowChecks": "90/90 PASS locally",
-  "fullDesign6Logical": "FRESH_REMAINING_80_PENDING",
-  "browserAcceptance": "CI_PENDING",
+  "browserAcceptance": "Desktop full workflow passed through bulk export; tablet navigation issue found and fixed; rerun pending",
   "deployedAcceptance": "PENDING",
   "performanceBudget": "REPRESENTATIVE_PRODUCTION_FIXTURE_AND_BUDGET_PENDING",
-  "historicalE7": "CLOSED: baseline fe54aa2dd80262a63788e09d236e53da782806b6; see master v0.53"
+  "historicalE7": "CLOSED: baseline fe54aa2dd80262a63788e09d236e53da782806b6; see master v0.53",
+  "freshDesign6Logical": "154/154 PASS locally; CI execution pending",
+  "freshReportScopeChecks": "318/318 PASS locally"
 }

@@ -1,0 +1,280 @@
+{
+  "status": "PASS",
+  "scopes": 39,
+  "typedNullAndPrecision": "PASS",
+  "spreadsheetFormulaInjection": "PASS",
+  "checks": [
+    {
+      "filter": {},
+      "status": "PASS",
+      "records": 40
+    },
+    {
+      "filter": {
+        "scope": "BLOCK:Gujarat|Mehsana|Kheralu"
+      },
+      "status": "PASS",
+      "records": 40
+    },
+    {
+      "filter": {
+        "scope": "DISTRICT:Gujarat|Mehsana"
+      },
+      "status": "PASS",
+      "records": 40
+    },
+    {
+      "filter": {
+        "scope": "GP:Gujarat|Mehsana|Kheralu|Synthetic GP"
+      },
+      "status": "PASS",
+      "records": 40
+    },
+    {
+      "filter": {
+        "scope": "PIA:Synthetic PIA"
+      },
+      "status": "PASS",
+      "records": 40
+    },
+    {
+      "filter": {
+        "scope": "PROJECT:SYN-ALL-STRUCT-001"
+      },
+      "status": "PASS",
+      "records": 40
+    },
+    {
+      "filter": {
+        "scope": "STRUCTURE:S-CB-01"
+      },
+      "status": "PASS",
+      "records": 2
+    },
+    {
+      "filter": {
+        "scope": "STRUCTURE:S-CCT-01"
+      },
+      "status": "PASS",
+      "records": 2
+    },
+    {
+      "filter": {
+        "scope": "STRUCTURE:S-CD-01"
+      },
+      "status": "PASS",
+      "records": 2
+    },
+    {
+      "filter": {
+        "scope": "STRUCTURE:S-FB-01"
+      },
+      "status": "PASS",
+      "records": 2
+    },
+    {
+      "filter": {
+        "scope": "STRUCTURE:S-FP-L-01"
+      },
+      "status": "PASS",
+      "records": 2
+    },
+    {
+      "filter": {
+        "scope": "STRUCTURE:S-FP-P-01"
+      },
+      "status": "PASS",
+      "records": 2
+    },
+    {
+      "filter": {
+        "scope": "STRUCTURE:S-FP-U-01"
+      },
+      "status": "PASS",
+      "records": 2
+    },
+    {
+      "filter": {
+        "scope": "STRUCTURE:S-GOV-01"
+      },
+      "status": "PASS",
+      "records": 2
+    },
+    {
+      "filter": {
+        "scope": "STRUCTURE:S-GP-01"
+      },
+      "status": "PASS",
+      "records": 2
+    },
+    {
+      "filter": {
+        "scope": "STRUCTURE:S-GS-01"
+      },
+      "status": "PASS",
+      "records": 2
+    },
+    {
+      "filter": {
+        "scope": "STRUCTURE:S-LBS-01"
+      },
+      "status": "PASS",
+      "records": 2
+    },
+    {
+      "filter": {
+        "scope": "STRUCTURE:S-LL-01"
+      },
+      "status": "PASS",
+      "records": 2
+    },
+    {
+      "filter": {
+        "scope": "STRUCTURE:S-MW-01"
+      },
+      "status": "PASS",
+      "records": 2
+    },
+    {
+      "filter": {
+        "scope": "STRUCTURE:S-OASS-01"
+      },
+      "status": "PASS",
+      "records": 2
+    },
+    {
+      "filter": {
+        "scope": "STRUCTURE:S-PT-01"
+      },
+      "status": "PASS",
+      "records": 2
+    },
+    {
+      "filter": {
+        "scope": "STRUCTURE:S-SCT-01"
+      },
+      "status": "PASS",
+      "records": 2
+    },
+    {
+      "filter": {
+        "scope": "STRUCTURE:S-SUB-01"
+      },
+      "status": "PASS",
+      "records": 2
+    },
+    {
+      "filter": {
+        "scope": "STRUCTURE:S-TCB-01"
+      },
+      "status": "PASS",
+      "records": 2
+    },
+    {
+      "filter": {
+        "scope": "STRUCTURE:S-VP-01"
+      },
+      "status": "PASS",
+      "records": 2
+    },
+    {
+      "filter": {
+        "scope": "STRUCTURE:S-WAT-01"
+      },
+      "status": "PASS",
+      "records": 2
+    },
+    {
+      "filter": {
+        "scope": "VILLAGE:Gujarat|Mehsana|Kheralu|Synthetic GP|Synthetic Village 1"
+      },
+      "status": "PASS",
+      "records": 8
+    },
+    {
+      "filter": {
+        "scope": "VILLAGE:Gujarat|Mehsana|Kheralu|Synthetic GP|Synthetic Village 2"
+      },
+      "status": "PASS",
+      "records": 8
+    },
+    {
+      "filter": {
+        "scope": "VILLAGE:Gujarat|Mehsana|Kheralu|Synthetic GP|Synthetic Village 3"
+      },
+      "status": "PASS",
+      "records": 8
+    },
+    {
+      "filter": {
+        "scope": "VILLAGE:Gujarat|Mehsana|Kheralu|Synthetic GP|Synthetic Village 4"
+      },
+      "status": "PASS",
+      "records": 8
+    },
+    {
+      "filter": {
+        "scope": "VILLAGE:Gujarat|Mehsana|Kheralu|Synthetic GP|Synthetic Village 5"
+      },
+      "status": "PASS",
+      "records": 8
+    },
+    {
+      "filter": {
+        "status": "accepted-certified"
+      },
+      "status": "PASS",
+      "records": 26
+    },
+    {
+      "filter": {
+        "status": "provisional-evidence-pending"
+      },
+      "status": "PASS",
+      "records": 0
+    },
+    {
+      "filter": {
+        "status": "calculated-warning"
+      },
+      "status": "PASS",
+      "records": 11
+    },
+    {
+      "filter": {
+        "status": "not-calculated"
+      },
+      "status": "PASS",
+      "records": 1
+    },
+    {
+      "filter": {
+        "status": "excluded"
+      },
+      "status": "PASS",
+      "records": 2
+    },
+    {
+      "filter": {
+        "component": "KPI-1.2.1"
+      },
+      "status": "PASS",
+      "records": 20
+    },
+    {
+      "filter": {
+        "route": "WTR-111-NEW"
+      },
+      "status": "PASS",
+      "records": 9
+    },
+    {
+      "filter": {
+        "unit": "BL",
+        "structureType": "Farm Pond"
+      },
+      "status": "PASS",
+      "records": 6
+    }
+  ]
+}

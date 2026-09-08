@@ -14863,3 +14863,10 @@ E03-only integration and separate E04 command implemented. Preparation orchestra
 - Extended browser acceptance from intake/mapping to preparation, validation, calculation, results, trace exports, CSV/XLSX/PDF/audit/bulk exports, correction invalidation, privacy and desktop/tablet/mobile screens. CI execution pending.
 - Local foundation checks: 28/28 PASS; product goldens: 90/90 PASS; protected regression:16/16 suites PASS. These do not substitute for 154/154 logical or live browser acceptance.
 - User authorization remains continuous for remaining governed implementation/checks; only critical scope/methodology decisions or actual access blockers require intervention.
+
+### EXEC-D6-001 — reconstructed fresh Design-6 logical execution
+- Recovered scenario definitions and v1.1 VAL-027 override invariant. Implemented 80 scenarios as test-only mutations/assertions; no protected engine/config changes.
+- Fresh local aggregate:154/154 logical PASS (2 positive goldens +29 formula cases +15 physical rule cases +80 remaining rule cases +28 output-schema cases). Physical source bytes match their frozen Design-6 duplicates.
+- VAL-063/086/087/088 retain the frozen prepared-state injection/tolerance-oracle boundary; evidence does not claim production re-execution of arbitrary mutated daily snapshots.
+- CI at implementation SHA01d2dc454429d9d413abb924b8c69041e3cbd2f5 passed foundation/product/protected tests and desktop flow through bulk/combined exports. Browser UAT correctly failed at tablet navigation because baseline CSS hid the sidebar. Fixed responsive navigation; rerun pending.
+- Draft PR1 is an implementation/acceptance workspace, not release approval. No production deployment or final release claim made.
