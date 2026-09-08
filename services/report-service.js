@@ -1,6 +1,15 @@
 import {normalFont,boldFont} from '../vendor/fonts/dejavu-sans.js';
 import {selectResults,summarizeResults,scopeMetadata} from '../views/result-model.js';
 export function reportData(model,filter,synthetic,mode='management'){
+ const rows=selectResults(model,filter);return {title:'HUF Supply-Side KPI Calculator',mode,metadata:scopeMetadata(model,filter,synthetic),generatedAt:new Date().toISOString(),summary:summarizeResults(rows),records:rows.map(r=>({id:r.recordId,name:r.name,component:r.component,value:r.value,unit:r.unit,status:r.statusLabel,route:r.route,reason:r.assurance.statusReason,calculation:r.calculation,sourceBasis:r.sourceBasis,identity:r.identity,evidence:r.assurance.evidenceRequirements})),geography:model.scopes.filter(s=>s.parent===(filter.scope||model.defaultScope)).map(s=>({scope:s,summary:summarizeResults(rows.filter(r=>r.memberships.includes(s.key)))})).filter(s=>s.summary.length),issues:model.pack.audit.validationIssues.filter(i=>i.entityType==='workbook'||rows.some(r=>r.recordId===i.entityId||r.structureId===i.entityId)),audit:model.pack.audit};
+}
+export function makePdf(input){
+ const reports=Array.isArray(input)?input:[input];if(!reports.length)throw new Error('No reports selected.');
+ const doc=new globalThis.jspdf.jsPDF({unit:'mm',format:'a4',compress:true});doc.addFileToVFS('DejaVuSans.ttf',normalFont);doc.addFont('DejaVuSans.ttf','HUFReport','normal');doc.addFileToVFS('DejaVuSans-Bold.ttf',boldFont);doc.addFont('DejaVuSans-Bold.ttf','HUFReport','bold');let y=20;const pageScopes=[];
+ const clean=v=>String(v??'Not available').replace(/[—–]/g,'-').replaceAll('³','3');
+ const room=h=>{if(y+h>270){doc.addPage();y=24;}};
+ const text=(value,size=9,bold=false)=>{doc.setFont('HUFReport',bold?'bold':'normal');doc.setFontSize(size);const lines=doc.splitTextToSize(clean(value),174);for(const line of lines){room(size*.45+2);doc.text(line,18,y);y+=size*.45+1.8;}y+=2;};
+ const heading=(value)=>{room(18);doc.setTextColor(18,84,105);text(value,13,true);doc.setTextColor(28,45,53);};
  const rows=(columns,data,widths)=>{
   const measure=(cells,header=false)=>{doc.setFont('HUFReport',header?'bold':'normal');return cells.map((cell,i)=>{const value=clean(cell);doc.setFontSize(8);const numeric=/^-?\d+(?:\.\d+)?(?:e[+-]?\d+)?$/i.test(value);const size=numeric?Math.min(8,8*(widths[i]-4)/Math.max(1,doc.getTextWidth(value))):8;doc.setFontSize(size);return {lines:numeric?[value]:doc.splitTextToSize(value,widths[i]-4),size};});};
   const height=layout=>Math.max(...layout.map(c=>c.lines.length))*3.7+5;

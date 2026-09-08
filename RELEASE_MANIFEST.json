@@ -176,8 +176,8 @@
     },
     {
       "path": "docs/continuity/master-plan.md",
-      "sizeBytes": 487593,
-      "sha256": "a3c51cbcda87a2ab72aedc9454666abf3e788f9c5e89576038777e0438311a58"
+      "sizeBytes": 488103,
+      "sha256": "5aabba90b2317817142c9ad1b36dd8dfabc7607db5e077004d5ed4181be6ef0a"
     },
     {
       "path": "docs/release/PHASE7A_IMPLEMENTATION_REPORT.md",
@@ -456,8 +456,8 @@
     },
     {
       "path": "services/report-service.js",
-      "sizeBytes": 6826,
-      "sha256": "c74a9bf46431319967bae5c5e89debf1e404abc7a7dc5afb7cfcfa48b507414c"
+      "sizeBytes": 8632,
+      "sha256": "f62b58874ffc77d3f9ecbf8b44cf949f15b580b446f95bbb0f46fae218229d53"
     },
     {
       "path": "services/source-intake-service.js",

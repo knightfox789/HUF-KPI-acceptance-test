@@ -14893,3 +14893,7 @@ E03-only integration and separate E04 command implemented. Preparation orchestra
 ### EXEC-VISUAL-004 — deterministic report typography
 - Embedded unmodified licensed DejaVu Sans2.37 normal/bold fonts in PDFs to remove reader-dependent substitute-font layout. Font bytes and license are included in vendor manifest; controlled code/config unchanged. Missing aggregate buckets are labelled No value, never zero or certified.
 - Standard preflight boundary test now checks the new equivalent plain-language sentence; its E02 exclusion and governed navigation checks remain intact.
+
+### EXEC-CI-004 — rejected intermediate candidate and repair
+- CI34256885383 rejected6a8a6bac at product tests: a PDF layout edit accidentally displaced reportData initialization. No deployment occurred. Restored the shared report model and kept the font/numeric-cell layout change inside makePdf.
+- Fresh local product checks after repair:90 result checks,318 report checks,39 export scopes and repeat-run failure-safe checks PASS. The rejected SHA is not accepted evidence; rerun required for the repair.
