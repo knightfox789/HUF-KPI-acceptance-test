@@ -14899,3 +14899,6 @@ E03-only integration and separate E04 command implemented. Preparation orchestra
 - Fresh local product checks after repair:90 result checks,318 report checks,39 export scopes and repeat-run failure-safe checks PASS. The rejected SHA is not accepted evidence; rerun required for the repair.
 
 - Accessibility skip-link uses the fixed #main landmark fragment. URL privacy acceptance explicitly permits only an empty fragment or #main, still forbids all query strings and other fragments; this is a structural navigation identifier, never workbook/project data.
+
+### EXEC-UAT-005 — preflight acceptance expectation correction
+- CI34257236027 passed all foundation/product/protected/154 logical gates and keyboard skip-link checks. Its new preflight-export test incorrectly expected11 prepared data tables rather than the13-sheet source inventory (including00_Instructions and99_Lookups). Verified the golden XLSX inventory and corrected the assertion to13 with both auxiliary sheet names required. Export implementation was unchanged; browser rerun required.

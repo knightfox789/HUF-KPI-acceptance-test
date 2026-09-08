@@ -44,7 +44,7 @@ try{
   check('PREFLIGHT_READY',preflightText.includes('Ready for mapping'));
   check('PREFLIGHT_TEMPLATE_VERSION',preflightText.includes('HUF-SS-INPUT-v1.1'));
   check('PREFLIGHT_FORMULA_VISIBILITY',preflightText.includes('Formula'));
-  await page.locator('summary').filter({hasText:'Advanced preflight'}).click();const preflightExport=JSON.parse((await download('[data-preflight-export]')).bytes);check('PREFLIGHT_SUMMARY_EXPORT',preflightExport.sheets.length===11&&!JSON.stringify(preflightExport).includes('rawWorkbookBytes'));
+  await page.locator('summary').filter({hasText:'Advanced preflight'}).click();const preflightExport=JSON.parse((await download('[data-preflight-export]')).bytes);check('PREFLIGHT_SUMMARY_EXPORT',preflightExport.sheets.length===13&&preflightExport.sheets.some(s=>s.name==='00_Instructions')&&preflightExport.sheets.some(s=>s.name==='99_Lookups')&&!JSON.stringify(preflightExport).includes('rawWorkbookBytes'));
   await page.locator('[data-continue]').click();
   await page.locator('[data-mapping-root]').waitFor({state:'visible',timeout:30000});
   const mappingText=await page.locator('[data-mapping-root]').innerText();
