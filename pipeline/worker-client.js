@@ -1,6 +1,6 @@
 function makeError(error){const e=new Error(error?.message||'Worker command failed.');e.name=error?.name||'WorkerError';return e;}
 
-export function createWorkerPipelineClient({WorkerCtor=globalThis.Worker,workerUrl=new URL('./worker-entry.js',import.meta.url),timeoutMs=15000}={}){
+export function createWorkerPipelineClient({WorkerCtor=globalThis.Worker,workerUrl=new URL('./worker-entry.js',import.meta.url),timeoutMs=45000}={}){
   if(typeof WorkerCtor!=='function')throw new Error('Web Worker is not available.');
   const worker=new WorkerCtor(workerUrl,{type:'module',name:'huf-kpi-protected-pipeline'});
   let seq=0;

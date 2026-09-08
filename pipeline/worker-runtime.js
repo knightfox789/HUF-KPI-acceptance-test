@@ -9,6 +9,7 @@ export async function ensureLocalJsZip(){
 }
 
 export async function probePipelineRuntimeCapabilities(){
+  await ensureWorkerDomParser();
   let jszip=false;
   try{await ensureLocalJsZip();jszip=Boolean(globalThis.JSZip);}catch{jszip=false;}
   return Object.freeze({
@@ -19,4 +20,11 @@ export async function probePipelineRuntimeCapabilities(){
     crypto:Boolean(globalThis.crypto?.subtle),
     xlsxIntakeCompatible:jszip&&typeof DOMParser!=='undefined'&&typeof File!=='undefined'&&Boolean(globalThis.crypto?.subtle)
   });
+}
+
+export async function ensureWorkerDomParser(){
+  if(typeof WorkerGlobalScope!=='undefined'&&globalThis instanceof WorkerGlobalScope&&typeof globalThis.DOMParser==='undefined'){
+    const {default:xml}=await import('../vendor/xmldom/xmldom.js');
+    globalThis.DOMParser=xml.DOMParser;
+  }
 }

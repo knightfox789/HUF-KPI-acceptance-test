@@ -1,11 +1,12 @@
 import { loadProtectedConfig } from '../adapters/protected-config-adapter.js';
 import { createProtectedPipelineAdapter } from './pipeline-adapter.js';
-import { ensureLocalJsZip, probePipelineRuntimeCapabilities } from './worker-runtime.js';
+import { ensureLocalJsZip, ensureWorkerDomParser, probePipelineRuntimeCapabilities } from './worker-runtime.js';
 
 let adapterPromise=null;
 async function adapter(){
   adapterPromise??=(async()=>{
     await ensureLocalJsZip();
+    await ensureWorkerDomParser();
     return createProtectedPipelineAdapter(await loadProtectedConfig());
   })();
   return adapterPromise;

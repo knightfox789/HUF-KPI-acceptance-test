@@ -151,14 +151,14 @@
       "test": "source-package-governance.mjs",
       "status": "PASS",
       "exitCode": 0,
-      "stdout": "{\n  \"suite\": \"source-package-governance\",\n  \"status\": \"PASS\",\n  \"checks\": 8,\n  \"failed\": 0,\n  \"details\": [\n    {\n      \"id\": \"NO_SITE_IN_SOURCE_PACKAGE\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"NO_NODE_MODULES_IN_SOURCE_PACKAGE\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"RELEASE_MANIFEST_INCLUDED\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"MANIFEST_DRIVES_PACKAGE\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"BUILD_ENTRY_COUNT\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"ZIP_LIST_READABLE\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"ZIP_EXACT_COVERAGE\",\n      \"status\": \"PASS\",\n      \"note\": \"zip=208, expected=208\"\n    },\n    {\n      \"id\": \"ZIP_NO_SITE\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    }\n  ]\n}",
+      "stdout": "{\n  \"suite\": \"source-package-governance\",\n  \"status\": \"PASS\",\n  \"checks\": 8,\n  \"failed\": 0,\n  \"details\": [\n    {\n      \"id\": \"NO_SITE_IN_SOURCE_PACKAGE\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"NO_NODE_MODULES_IN_SOURCE_PACKAGE\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"RELEASE_MANIFEST_INCLUDED\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"MANIFEST_DRIVES_PACKAGE\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"BUILD_ENTRY_COUNT\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"ZIP_LIST_READABLE\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"ZIP_EXACT_COVERAGE\",\n      \"status\": \"PASS\",\n      \"note\": \"zip=210, expected=210\"\n    },\n    {\n      \"id\": \"ZIP_NO_SITE\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    }\n  ]\n}",
       "stderr": ""
     },
     {
       "test": "static-architecture.mjs",
       "status": "PASS",
       "exitCode": 0,
-      "stdout": "{\n  \"suite\": \"static-architecture\",\n  \"status\": \"PASS\",\n  \"jsFiles\": 126,\n  \"violations\": []\n}",
+      "stdout": "{\n  \"suite\": \"static-architecture\",\n  \"status\": \"PASS\",\n  \"jsFiles\": 127,\n  \"violations\": []\n}",
       "stderr": ""
     },
     {

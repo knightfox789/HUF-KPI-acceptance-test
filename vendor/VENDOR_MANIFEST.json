@@ -29,6 +29,15 @@
       "purpose": "Embedded PDF normal/bold font with deterministic text metrics",
       "source": "System-provided unmodified DejaVu font files",
       "licensePath": "vendor/fonts/LICENSE"
+    },
+    {
+      "library": "@xmldom/xmldom",
+      "version": "0.9.12",
+      "path": "vendor/xmldom/xmldom.js",
+      "sha256": "ba6d92dd6e599fc34061f59c80f0ad26dffd7642db2951321b196d0bae4e2fa5",
+      "purpose": "Worker-local XML DOM adapter for unchanged controlled XLSX parser",
+      "source": "npm @xmldom/xmldom0.9.12 bundled with esbuild0.25.9, platform browser, format esm",
+      "licensePath": "vendor/xmldom/LICENSE"
     }
   ]
 }

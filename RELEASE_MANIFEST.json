@@ -12,7 +12,7 @@
     "classification": "HUF protected operational final v1.0.0"
   },
   "validationStatus": "PASS",
-  "payloadFiles": 207,
+  "payloadFiles": 209,
   "files": [
     {
       "path": ".github/workflows/pages.yml",
@@ -51,8 +51,8 @@
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
-      "sizeBytes": 482,
-      "sha256": "38880633212683b97436b619c2a16b4d930200604abcb0f68c5622c7ab0b86aa"
+      "sizeBytes": 744,
+      "sha256": "4f23c5756d849feb9896d211936ccc02f82059f14a3a13d9f84c4a61d3890def"
     },
     {
       "path": "VALIDATION_STATUS.json",
@@ -176,8 +176,8 @@
     },
     {
       "path": "docs/continuity/master-plan.md",
-      "sizeBytes": 493812,
-      "sha256": "335ab5f85dd88fbe28f9bad341921ce4db58d4872aeb8082cd9fbe2e940a4a01"
+      "sizeBytes": 494297,
+      "sha256": "904c420bfab2b50eafbbb05fa440ad6278aecf4efe64061640203af7d9fb97d8"
     },
     {
       "path": "docs/release/PHASE7A_IMPLEMENTATION_REPORT.md",
@@ -247,17 +247,17 @@
     {
       "path": "pipeline/worker-client.js",
       "sizeBytes": 2962,
-      "sha256": "510236f5e30fcbbfd32ecbb31af78cc3e146465b7e440d735c3b498f04debefd"
+      "sha256": "d430ef9f43756ef9893841acce9adb4f655fe347b2c2e4a16cc06c63254ef570"
     },
     {
       "path": "pipeline/worker-entry.js",
-      "sizeBytes": 2340,
-      "sha256": "3806639798f90e53171a262816fd1a027d24a344fa24d6733453a32e93066930"
+      "sizeBytes": 2398,
+      "sha256": "57905b410f8a12cffd492f6ffcbef6afd9a8cd3148213f451a4286686e76e24f"
     },
     {
       "path": "pipeline/worker-runtime.js",
-      "sizeBytes": 895,
-      "sha256": "06f37bfae14ae3a5f2219dfb528c3bc83af43aed696b995677c022d9a445ef99"
+      "sizeBytes": 1220,
+      "sha256": "fdb0b7dbb27cdd4227ca2b3005c3421138a4bf041bce447fab6ffbe93131980b"
     },
     {
       "path": "protected-core/config/aggregation-policy-v1.0.json",
@@ -607,7 +607,7 @@
     {
       "path": "tests/evidence/phase7be-test-result.json",
       "sizeBytes": 28506,
-      "sha256": "8841f342b1f5b76c71c9cd3d95c6d689620d829316768a08e0a09a17b7bd135a"
+      "sha256": "681786679ab79be23b470cb2648ed9e3452d45ebd8fb8f909d04dfb76e6d0bf5"
     },
     {
       "path": "tests/evidence/phase8-browser-a3ebd7a.json",
@@ -846,8 +846,8 @@
     },
     {
       "path": "tests/performance/browser-capacity.mjs",
-      "sizeBytes": 5373,
-      "sha256": "b36ccd3b0a878d431ec73b466091164e104857ffdac3f89c240694a029b543b2"
+      "sizeBytes": 5457,
+      "sha256": "d660403ef3af075c2bec4eb53b04fe343765f870a906071b04e00abffd4cd03f"
     },
     {
       "path": "tests/performance/budget.json",
@@ -856,8 +856,8 @@
     },
     {
       "path": "tests/performance/generate-fixture.mjs",
-      "sizeBytes": 1938,
-      "sha256": "1bf0bf6adde15e1f45a73b9fc5c22a0d1fffc89533065cd10d5b0c11b16bdb27"
+      "sizeBytes": 2097,
+      "sha256": "790486fa2165825ccf2680df1e8595c6d530d2f24f8b8fd41c9b3a5881ce2fd3"
     },
     {
       "path": "tests/protected/baseline-tests.zip",
@@ -956,8 +956,8 @@
     },
     {
       "path": "vendor/VENDOR_MANIFEST.json",
-      "sizeBytes": 1187,
-      "sha256": "ec930fa8b153b8162085f8a4e21c96e1ca91471e106571675a2c5721c0f68cec"
+      "sizeBytes": 1619,
+      "sha256": "40495f23c82328b8f41bc404dbb604dd1e5eb4bfd0b29f0eaca7db699183f2a9"
     },
     {
       "path": "vendor/fonts/LICENSE",
@@ -988,6 +988,16 @@
       "path": "vendor/jszip/jszip.min.js",
       "sizeBytes": 97630,
       "sha256": "acc7e41455a80765b5fd9c7ee1b8078a6d160bbbca455aeae854de65c947d59e"
+    },
+    {
+      "path": "vendor/xmldom/LICENSE",
+      "sizeBytes": 1298,
+      "sha256": "4da724fc305d81606b245b324d4d2586916b9d248b23d82183df753ace0fdf71"
+    },
+    {
+      "path": "vendor/xmldom/xmldom.js",
+      "sizeBytes": 224715,
+      "sha256": "ba6d92dd6e599fc34061f59c80f0ad26dffd7642db2951321b196d0bae4e2fa5"
     },
     {
       "path": "views/README.md",
