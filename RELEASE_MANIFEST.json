@@ -176,8 +176,8 @@
     },
     {
       "path": "docs/continuity/master-plan.md",
-      "sizeBytes": 488870,
-      "sha256": "a4d7397ddff475a970df430917d5e9b5e6e7f7dc9141ae0d37cff3ffc260fd7a"
+      "sizeBytes": 489162,
+      "sha256": "b987bdb26dd6fcb1815d4096decc532a0bb7585b75da6352abab4680c3b76f0f"
     },
     {
       "path": "docs/release/PHASE7A_IMPLEMENTATION_REPORT.md",
@@ -526,8 +526,8 @@
     },
     {
       "path": "tests/browser/run-imp7b-browser-acceptance.mjs",
-      "sizeBytes": 14756,
-      "sha256": "1fef1edc57c624cebced75cf946bf4440cd0e9cb23951863b7a262faf5a7f704"
+      "sizeBytes": 15032,
+      "sha256": "df99209a9a6820665dd629932712741b64e3de39fffa03c8c7b387ae458a181b"
     },
     {
       "path": "tests/design6/certification/HUF_D6_Remaining80_Execution_Results_v1.1.json",
@@ -916,8 +916,8 @@
     },
     {
       "path": "ui/pages/report-centre.js",
-      "sizeBytes": 4712,
-      "sha256": "211480bc3239d4d0320cb5d1ac1ae2f73d836012645ba6508b44f9a608dcb79f"
+      "sizeBytes": 4934,
+      "sha256": "c40debdfcbe21e246e6ea6edd42e1717ae00dcb4b1ef608a63d4d64b5b03d28b"
     },
     {
       "path": "ui/pages/results.js",

@@ -14902,3 +14902,5 @@ E03-only integration and separate E04 command implemented. Preparation orchestra
 
 ### EXEC-UAT-005 — preflight acceptance expectation correction
 - CI34257236027 passed all foundation/product/protected/154 logical gates and keyboard skip-link checks. Its new preflight-export test incorrectly expected11 prepared data tables rather than the13-sheet source inventory (including00_Instructions and99_Lookups). Verified the golden XLSX inventory and corrected the assertion to13 with both auxiliary sheet names required. Export implementation was unchanged; browser rerun required.
+
+- Empty-filter CSV exports are disabled with a clear zero-record explanation because a row-oriented empty CSV cannot retain run/scope metadata. XLSX/PDF empty summaries retain metadata. Added an accepted/KPI1.1.1 empty-intersection browser check; no result membership or values are changed.
