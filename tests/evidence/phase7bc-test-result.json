@@ -1,0 +1,158 @@
+{
+  "schema": "HUF-IMP7BC-PREFLIGHT-TEST-RESULT-v1",
+  "productVersion": "0.1.4-preflight",
+  "phase": "IMP-7B-C",
+  "status": "PASS",
+  "tests": 21,
+  "passed": 21,
+  "failed": 0,
+  "results": [
+    {
+      "test": "protected-core-manifest.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"suite\": \"protected-core-manifest\",\n  \"status\": \"PASS\",\n  \"checks\": 37,\n  \"failed\": 0\n}",
+      "stderr": ""
+    },
+    {
+      "test": "protected-imports.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"suite\": \"protected-imports\",\n  \"status\": \"PASS\",\n  \"checks\": 10,\n  \"failed\": 0\n}",
+      "stderr": ""
+    },
+    {
+      "test": "state-invalidation.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"suite\": \"state-invalidation\",\n  \"status\": \"PASS\",\n  \"checks\": 9,\n  \"failed\": 0\n}",
+      "stderr": ""
+    },
+    {
+      "test": "state-hardening.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"suite\": \"state-hardening\",\n  \"status\": \"PASS\",\n  \"checks\": 6,\n  \"failed\": 0\n}",
+      "stderr": ""
+    },
+    {
+      "test": "mapping-state-governance.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"suite\": \"mapping-state-governance\",\n  \"status\": \"PASS\",\n  \"checks\": 20,\n  \"failed\": 0,\n  \"details\": [\n    {\n      \"id\": \"WRAPPER_FROZEN\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"SNAPSHOT_FROZEN\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"FIELD_ARRAY_FROZEN\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"FIELD_ENTRY_FROZEN\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"CLONED_FROM_INPUT\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"NESTED_MUTATION_BLOCKED\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"ORIGINAL_NOT_REUSED\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"ADAPTER_UPDATESHEETMAPPING_EXPOSED\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"ADAPTER_CONFIRMSHEETMAPPING_EXPOSED\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"ADAPTER_UPDATEFIELDMAPPING_EXPOSED\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"ADAPTER_CONFIRMFIELDMAPPING_EXPOSED\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"ADAPTER_CONFIRMALLSUGGESTED_EXPOSED\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"ADAPTER_CONFIRMMAPPING_EXPOSED\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"GOVERNED_COMMAND_COUNT\",\n      \"status\": \"PASS\",\n      \"note\": \"[[\\\"build\\\"],[\\\"update-sheet\\\",\\\"02_Structures\\\",\\\"02_Structures\\\"],[\\\"confirm-sheet\\\",\\\"02_Structures\\\",true],[\\\"update-field\\\",\\\"STR-001\\\",\\\"02_Structures\\\",0],[\\\"confirm-field\\\",\\\"STR-001\\\",true],[\\\"confirm-all\\\"],[\\\"finalize\\\"]]\"\n    },\n    {\n      \"id\": \"UPDATE_FIELD_ROUTED\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"FINALIZE_HAS_NO_MAPPING_PAYLOAD\",\n      \"status\": \"PASS\",\n      \"note\": \"[\\\"finalize\\\"]\"\n    },\n    {\n      \"id\": \"FINAL_STATE_CONFIRMED\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"FINAL_MAPPING_FROZEN\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"FINAL_MAPPING_MUTATION_BLOCKED\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"CONTROLLER_NO_MUTABLE_STORE\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    }\n  ]\n}",
+      "stderr": ""
+    },
+    {
+      "test": "orchestrator.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"suite\": \"orchestrator\",\n  \"status\": \"PASS\",\n  \"checks\": 10,\n  \"failed\": 0\n}",
+      "stderr": ""
+    },
+    {
+      "test": "controlled-config-hardening.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"suite\": \"controlled-config-hardening\",\n  \"status\": \"PASS\",\n  \"checks\": 6,\n  \"failed\": 0\n}",
+      "stderr": ""
+    },
+    {
+      "test": "worker-runtime.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"suite\": \"worker-runtime\",\n  \"status\": \"PASS\",\n  \"checks\": 4,\n  \"failed\": 0,\n  \"capabilities\": {\n    \"workerGlobal\": false,\n    \"domParser\": false,\n    \"jszip\": true,\n    \"fileApi\": true,\n    \"crypto\": true,\n    \"xlsxIntakeCompatible\": false\n  }\n}",
+      "stderr": ""
+    },
+    {
+      "test": "worker-client-lifecycle.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"suite\": \"worker-client-lifecycle\",\n  \"status\": \"PASS\",\n  \"checks\": 11,\n  \"failed\": 0,\n  \"details\": [\n    {\n      \"id\": \"FATAL_ERROR_REJECTS_PENDING\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"FATAL_ERROR_TERMINATES\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"FATAL_ERROR_CLOSES_CLIENT\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"MESSAGE_ERROR_FAILS_CLOSED\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"EXPLICIT_TERMINATE_CLOSES\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"WORKER_UPDATE_SHEET_COMMAND\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"WORKER_CONFIRM_SHEET_COMMAND\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"WORKER_UPDATE_FIELD_COMMAND\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"WORKER_CONFIRM_FIELD_COMMAND\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"WORKER_CONFIRM_ALL_COMMAND\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"WORKER_FINALIZE_NO_MAPPING_PAYLOAD\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    }\n  ]\n}",
+      "stderr": ""
+    },
+    {
+      "test": "source-selection.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"suite\": \"source-selection\",\n  \"status\": \"PASS\",\n  \"checks\": 19,\n  \"failed\": 0,\n  \"details\": [\n    {\n      \"id\": \"PREPARED_NAME\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"PREPARED_SIZE\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"PREPARED_SHA256\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"PREPARED_KIND\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"INVALID_EXTENSION_REJECTED\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"SAMPLE_SYNTHETIC\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"SAMPLE_NAME\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"CONTROLLER_FILE_SELECTED\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"CONTROLLER_SOURCE_METADATA\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"CONTROLLER_FILE_PRIVATE\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"REPLACEMENT_RESETS_ADAPTER\",\n      \"status\": \"PASS\",\n      \"note\": \"resetCount=1\"\n    },\n    {\n      \"id\": \"REPLACEMENT_CLEARS_SNAPSHOTS\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"REPLACEMENT_MARKED\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"CLEAR_RETURNS_EMPTY\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"CONTROLLER_SAMPLE_STATE\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"REVIEW_HANDOFF_PRESERVES_SYNTHETIC\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"PREFLIGHT_STORED\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"PREFLIGHT_FROZEN\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"RAW_PREVIEW_NOT_EXPOSED\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    }\n  ]\n}",
+      "stderr": ""
+    },
+    {
+      "test": "template-contract.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"suite\": \"template-contract\",\n  \"status\": \"PASS\",\n  \"checks\": 9,\n  \"failed\": 0,\n  \"formulaCount\": 0,\n  \"sheetNames\": [\n    \"00_Instructions\",\n    \"01_Control\",\n    \"02_Structures\",\n    \"03_Technical\",\n    \"04_Catchments\",\n    \"05_Cascade_Links\",\n    \"06_Daily_Rainfall\",\n    \"07_Hydro_Params\",\n    \"08_Stage_Area_Optional\",\n    \"09_Silt_Assessment\",\n    \"10_Person_Days\",\n    \"11_Evidence\",\n    \"99_Lookups\"\n  ],\n  \"details\": [\n    {\n      \"id\": \"TEMPLATE_HASH\",\n      \"status\": \"PASS\",\n      \"note\": \"e654bb67cd8a5223224bdefd9406d2714b7cfb2ee045b52a7c3c9b5f9711a5bd\"\n    },\n    {\n      \"id\": \"TEMPLATE_SIZE\",\n      \"status\": \"PASS\",\n      \"note\": \"183833\"\n    },\n    {\n      \"id\": \"TEMPLATE_VERSION\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"INPUT_ONLY\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"REQUIRED_SHEETS\",\n      \"status\": \"PASS\",\n      \"note\": \"[\\\"00_Instructions\\\",\\\"01_Control\\\",\\\"02_Structures\\\",\\\"03_Technical\\\",\\\"04_Catchments\\\",\\\"05_Cascade_Links\\\",\\\"06_Daily_Rainfall\\\",\\\"07_Hydro_Params\\\",\\\"08_Stage_Area_Optional\\\",\\\"09_Silt_Assessment\\\",\\\"10_Person_Days\\\",\\\"11_Evidence\\\",\\\"99_Lookups\\\"]\"\n    },\n    {\n      \"id\": \"NO_EMBEDDED_FORMULAS\",\n      \"status\": \"PASS\",\n      \"note\": \"formulaCount=0\"\n    },\n    {\n      \"id\": \"CONTAINS_HUF_SS_INPUT\",\n      \"status\": \"PASS\",\n      \"note\": \"HUF-SS-INPUT-v1.1\"\n    },\n    {\n      \"id\": \"CONTAINS_HUF_DESIGN2_\",\n      \"status\": \"PASS\",\n      \"note\": \"HUF-DESIGN2-FORMULA-CATALOG-v1.1\"\n    },\n    {\n      \"id\": \"CONTAINS_Controlled_B\",\n      \"status\": \"PASS\",\n      \"note\": \"Controlled Blank Input Template v1.1\"\n    }\n  ]\n}",
+      "stderr": ""
+    },
+    {
+      "test": "sample-manifest.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"suite\": \"sample-manifest\",\n  \"status\": \"PASS\",\n  \"synthetic\": true,\n  \"samples\": [\n    {\n      \"id\": \"leap\",\n      \"status\": \"PASS\",\n      \"hash\": \"e1a592ce49e3a308b8d402ca65a090f5d5f0e39b7bda3484be6e653ddc015f56\",\n      \"size\": 195502\n    },\n    {\n      \"id\": \"nonleap\",\n      \"status\": \"PASS\",\n      \"hash\": \"7c6ba9498f8c87790503331f848cf4a83db577ab95c056473e202efd22fdddeb\",\n      \"size\": 195495\n    }\n  ]\n}",
+      "stderr": ""
+    },
+    {
+      "test": "upload-ui-contract.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"suite\": \"upload-ui-contract\",\n  \"status\": \"PASS\",\n  \"checks\": 14,\n  \"failed\": 0,\n  \"details\": [\n    {\n      \"id\": \"LOCAL_PRIVACY\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"DRAG_DROP\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"CHOOSE\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"TEMPLATE\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"SAMPLE\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"CLEAR\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"SYNTHETIC\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"PREVIEW_HANDOFF\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"REVIEW_ENABLED\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"XLSX_ACCEPT\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"DROP_EVENT\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"STATE_SUBSCRIPTION\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"TEMPLATE_SERVICE\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"LOCAL_JSZIP\",\n      \"status\": \"PASS\"\n    }\n  ]\n}",
+      "stderr": ""
+    },
+    {
+      "test": "preflight-service.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"suite\": \"preflight-service\",\n  \"status\": \"PASS\",\n  \"checks\": 18,\n  \"failed\": 0,\n  \"details\": [\n    {\n      \"id\": \"GOOD_READY\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"TEMPLATE_SUPPORTED\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"SHEET_COUNTS\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"STRUCTURES\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"REPORTING_PERIOD\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"SOURCE_FINGERPRINT\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"NO_RAW_PREVIEW_LEAK\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"DEEP_FROZEN\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"MUTATION_BLOCKED\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"VIEW_CARDS\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"FORMULA_WARNING\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"EXTRA_WARNING\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"MISSING_BLOCKS\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"UNSUPPORTED_VERSION_BLOCKS\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"MISSING_VERSION_BLOCKS\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"PERIOD_WARNING\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"ERRORS_FIRST\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"NOT_DESIGN4\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    }\n  ]\n}",
+      "stderr": ""
+    },
+    {
+      "test": "preflight-ui-contract.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"suite\": \"preflight-ui-contract\",\n  \"status\": \"PASS\",\n  \"checks\": 20,\n  \"failed\": 0,\n  \"details\": [\n    {\n      \"id\": \"TITLE\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"TEMPLATE\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"PERIOD\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"SHEETS\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"STRUCTURES\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"FORMULAS\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"STATUS\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"INVENTORY\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"ERRORS\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"WARNINGS\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"INFORMATION\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"FINGERPRINT\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"ADVANCED\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"CONTINUE\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"BOUNDARY\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"NO_RAW\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"UI_USES_VIEW_MODEL\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"BOOTSTRAP_MOUNTS_PREFLIGHT\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"REVIEW_NAV_GOVERNED\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"NO_E02_IN_PREFLIGHT_SERVICE\",\n      \"status\": \"PASS\"\n    }\n  ]\n}",
+      "stderr": ""
+    },
+    {
+      "test": "static-architecture.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"suite\": \"static-architecture\",\n  \"status\": \"PASS\",\n  \"jsFiles\": 92,\n  \"violations\": []\n}",
+      "stderr": ""
+    },
+    {
+      "test": "relative-imports.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"suite\": \"relative-imports\",\n  \"status\": \"PASS\",\n  \"files\": 91,\n  \"imports\": 81,\n  \"unresolved\": []\n}",
+      "stderr": ""
+    },
+    {
+      "test": "config-parse.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"suite\": \"config-parse\",\n  \"status\": \"PASS\",\n  \"parsed\": 16,\n  \"failed\": []\n}",
+      "stderr": ""
+    },
+    {
+      "test": "javascript-syntax.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"suite\": \"javascript-syntax\",\n  \"status\": \"PASS\",\n  \"checked\": 91,\n  \"failed\": []\n}",
+      "stderr": ""
+    },
+    {
+      "test": "pages-payload.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"suite\": \"pages-payload\",\n  \"status\": \"PASS\",\n  \"forbiddenPresent\": [],\n  \"requiredMissing\": []\n}",
+      "stderr": ""
+    },
+    {
+      "test": "pages-workflow.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"suite\": \"pages-workflow\",\n  \"status\": \"PASS\",\n  \"checks\": 5,\n  \"failed\": 0,\n  \"details\": [\n    {\n      \"id\": \"CONFIGURE_PAGES_V5\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"UPLOAD_PAGES_ARTIFACT_V4\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"DEPLOY_PAGES_V4\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"CURATED_SITE_PATH\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"id\": \"VALIDATION_BEFORE_DEPLOY\",\n      \"status\": \"PASS\"\n    }\n  ]\n}",
+      "stderr": ""
+    }
+  ]
+}

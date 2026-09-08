@@ -1,0 +1,46 @@
+name: Validate Hardened Foundation
+on: [push, pull_request]
+permissions: { contents: read }
+jobs:
+  foundation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - run: npm test
+      - name: Retain machine-readable validation evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: huf-phase7be-validation-evidence
+          if-no-files-found: error
+          path: |
+            tests/evidence/phase7be-test-result.json
+            VALIDATION_STATUS.json
+            RELEASE_MANIFEST.json
+            PROTECTED_CORE_MANIFEST.json
+  browser_acceptance:
+    needs: foundation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - run: npm run build:pages
+      - name: Install pinned Playwright runtime
+        run: npm install --no-save --package-lock=false playwright@1.55.0
+      - name: Install Chromium for acceptance
+        run: npx playwright install --with-deps chromium
+      - name: Run IMP-7B real-XLSX browser acceptance
+        env:
+          HUF_SITE_ROOT: _site
+          HUF_ACCEPTANCE_EVIDENCE_PATH: ${{ runner.temp }}/phase7be-browser-acceptance.json
+        run: node tests/browser/run-imp7b-browser-acceptance.mjs
+      - name: Retain browser acceptance evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: huf-phase7be-browser-acceptance
+          if-no-files-found: error
+          path: ${{ runner.temp }}/phase7be-browser-acceptance.json

@@ -1,0 +1,238 @@
+{
+  "assessment_id": "HUF-D6-CERTIFICATION-CLOSURE-v1.0",
+  "date": "2026-09-05",
+  "protected_release": {
+    "file": "HUF_Supply_Side_KPI_Calculator_v1.0.0_FINAL(2).zip",
+    "sha256": "6ff4a19f65e2bd36a38863c98289ad5e5b45870aabf3513574ee134285302392",
+    "version": "1.0.0"
+  },
+  "rc3_reference": {
+    "file": "HUF_Supply_Side_KPI_Calculator_v1.0.0-rc.3_UI_UX_POLISH.zip",
+    "sha256": "31a91a61ef60fb840b5e31df0a2323d3403a0b5467da82be9155dac94a15e15a"
+  },
+  "methodology_changed_during_closure": false,
+  "val027_test_governance_addendum": "HUF-D6-VAL027-POSITIVE-INVARIANT-v1.1",
+  "logical_suite": {
+    "e2e_positive": {
+      "pass": 2,
+      "total": 2
+    },
+    "design2_formula_golden": {
+      "pass": 29,
+      "total": 29
+    },
+    "design4_rule_linked": {
+      "pass": 95,
+      "total": 95
+    },
+    "design5_output_audit": {
+      "pass": 28,
+      "total": 28
+    },
+    "total": {
+      "pass": 154,
+      "fail": 0,
+      "not_verified": 0,
+      "total": 154
+    },
+    "status": "PASS"
+  },
+  "physical_fixtures": {
+    "frozen_count": 15,
+    "fresh_sha256_integrity": {
+      "pass": 15,
+      "fail": 0,
+      "total": 15,
+      "status": "PASS"
+    },
+    "packaged_execution_evidence": [
+      {
+        "file": "tests/node-engine04-fixtures-result.json",
+        "sha256": "281938b0887bceacc71fbf0852ba319bcc3520942164a9ce9397fc441eff94a7",
+        "status": "PASS",
+        "case_count": null,
+        "failed_count": 0
+      },
+      {
+        "file": "tests/node-engine05-fixtures-result.json",
+        "sha256": "be4dfb08b237106e4f97a5e771f4cd94a0410fec0b051b3d7070ee13536a111f",
+        "status": "PASS",
+        "case_count": null,
+        "failed_count": 0
+      },
+      {
+        "file": "tests/node-engine06-fixtures-result.json",
+        "sha256": "545d67420f0c8b08987e354a4c38a5c60ed2b4196b3a3ec2143798bd0e9db4a9",
+        "status": "PASS",
+        "case_count": 15,
+        "failed_count": 0
+      },
+      {
+        "file": "tests/node-engine07-fixtures-result.json",
+        "sha256": "6656e35b1edf2a61f1591e15731a968251b3fa4d0744910dd766867df78eb257",
+        "status": "PASS",
+        "case_count": 15,
+        "failed_count": 0
+      },
+      {
+        "file": "tests/node-engine08-fixtures-result.json",
+        "sha256": "5a02f2e6586b08820da6c1025c14086fb461168f8de338cee6ce135b5d69f169",
+        "status": "PASS",
+        "case_count": 15,
+        "failed_count": 0
+      },
+      {
+        "file": "tests/node-engine09-fixtures-result.json",
+        "sha256": "b89f386a86077614cb1a2b549ae9b9df7695de3749979533f9cdbfcff4be7959",
+        "status": "PASS",
+        "case_count": 15,
+        "failed_count": 0
+      }
+    ],
+    "execution_interpretation": "15/15 PASS is retained from protected E04-E09 packaged fixture-result artifacts. Fixture file integrity was freshly verified 15/15. Fresh Node re-execution was not possible because the final source ZIP does not include installed jszip/@xmldom dependencies and the current environment cannot install them offline.",
+    "status": "PASS_EVIDENCE_WITH_HISTORICAL_EXECUTION"
+  },
+  "fresh_static_architecture": {
+    "result_file": "HUF_D6_Static_Architecture_Fresh_Result.json",
+    "sha256": "bfdbc8faabea8b2aab46c6c8bdb8e6795c27e56c04d90563bdd9d12170e9e79a",
+    "status": "PASS"
+  },
+  "fresh_browser_attempt": {
+    "result_file": "HUF_D6_Browser_Acceptance_Fresh_Result.json",
+    "sha256": "9df5154d6544e05fe002771af277bf7d1329cf678aaae8386692a60ddbe940a8",
+    "status": "ENVIRONMENT_BLOCKED",
+    "raw_runner_status": "FAIL",
+    "passed": 0,
+    "failed": 9,
+    "reason": "All nine local browser harness navigations were blocked with ERR_BLOCKED_BY_ADMINISTRATOR. This is an environment restriction, not treated as an application FAIL."
+  },
+  "release_browser_pages_evidence": {
+    "github_actions_browser_regression": "PASS_REPORTED_ON_RC3",
+    "github_pages_deployment": "PASS_REPORTED_ON_RC3",
+    "live_workflow": "PASS_REPORTED_ON_RC3",
+    "final_release_notes": "Records GitHub validation green, browser regression green, Pages deployment successful, and live browser workflow exercised through Results.",
+    "final_release_checklist": "Records browser regression and Pages deployment previously reported green/successful on rc.3.",
+    "evidence_quality": "PASS_REPORTED_EXTERNAL_RUN_ARTIFACT_NOT_EMBEDDED",
+    "qualification": "The release package records operational PASS on rc.3, but the raw GitHub Actions browser result and GitHub Pages deployment-run artifact are not embedded. A public repository/run could not be independently located from the available package metadata."
+  },
+  "gates": {
+    "GATE-01_specification_completeness": "PASS",
+    "GATE-02_design4_rule_coverage": "PASS_95_OF_95",
+    "GATE-03_positive_calendar_coverage": "PASS_2_OF_2",
+    "GATE-04_physical_fixture_coverage": "PASS_EVIDENCE_15_OF_15",
+    "GATE-05_design2_formula_coverage": "PASS_29_OF_29",
+    "GATE-06_design5_output_audit_coverage": "PASS_28_OF_28",
+    "GATE-07_browser_execution": "PASS_REPORTED_ON_RC3_FRESH_LOCAL_ENVIRONMENT_BLOCKED_RAW_CI_ARTIFACT_NOT_EMBEDDED",
+    "GATE-08_github_pages_browser_proof": "PASS_REPORTED_ON_RC3_LIVE_RESULTS_WORKFLOW_REPORTED_RAW_DEPLOY_ARTIFACT_NOT_EMBEDDED"
+  },
+  "certification_classification": "DESIGN6_LOGICAL_CERTIFIED_OPERATIONAL_BROWSER_PAGES_PASS_REPORTED_WITH_EVIDENCE_RETENTION_QUALIFICATION",
+  "rebuild_go_no_go": "GO_TO_PRODUCT_REQUIREMENTS",
+  "next_release_requirement": "Archive machine-readable GitHub Actions browser-acceptance result and GitHub Pages deployment/live acceptance artifact inside the release evidence package.",
+  "physical_fixture_hash_checks": [
+    {
+      "file": "fixtures/negative_high_risk/FX_HR_001_Missing_Leap_Day.xlsx",
+      "exists": true,
+      "expected_sha256": "91856faa2e2ffa8916ff2994d84f95e9920dea22b431fd8f2897764fd2578d8c",
+      "actual_sha256": "91856faa2e2ffa8916ff2994d84f95e9920dea22b431fd8f2897764fd2578d8c",
+      "sha256_match": true
+    },
+    {
+      "file": "fixtures/negative_high_risk/FX_HR_002_Duplicate_Rainfall_Date.xlsx",
+      "exists": true,
+      "expected_sha256": "3029511a0056b71af66713318beb49137b459d380337a57612e3b59649c8f9a1",
+      "actual_sha256": "3029511a0056b71af66713318beb49137b459d380337a57612e3b59649c8f9a1",
+      "sha256_match": true
+    },
+    {
+      "file": "fixtures/negative_high_risk/FX_HR_003_Negative_Rainfall.xlsx",
+      "exists": true,
+      "expected_sha256": "095cb555793a64d967267c8105e62f1239b3ad8972365a0651c9522ee70d1e30",
+      "actual_sha256": "095cb555793a64d967267c8105e62f1239b3ad8972365a0651c9522ee70d1e30",
+      "sha256_match": true
+    },
+    {
+      "file": "fixtures/negative_high_risk/FX_HR_004_Missing_Verified_Base_Area.xlsx",
+      "exists": true,
+      "expected_sha256": "c8a28f754ad26c461878d3367fc72ce5a4f08f3ea9b013c1d033ce0b7ec52b04",
+      "actual_sha256": "c8a28f754ad26c461878d3367fc72ce5a4f08f3ea9b013c1d033ce0b7ec52b04",
+      "sha256_match": true
+    },
+    {
+      "file": "fixtures/negative_high_risk/FX_HR_005_Base_Area_Exceeds_Surface.xlsx",
+      "exists": true,
+      "expected_sha256": "5794f0c286d3fce3921a2bf93561846b8cef18ce1709c73f31d8a450dff4ebf9",
+      "actual_sha256": "5794f0c286d3fce3921a2bf93561846b8cef18ce1709c73f31d8a450dff4ebf9",
+      "sha256_match": true
+    },
+    {
+      "file": "fixtures/negative_high_risk/FX_HR_006_Missing_Feb_Evaporation.xlsx",
+      "exists": true,
+      "expected_sha256": "7885ee63ad2f00d25464fde142d8d1dcc84c9bcb5e8aa5215e900400563fc12c",
+      "actual_sha256": "7885ee63ad2f00d25464fde142d8d1dcc84c9bcb5e8aa5215e900400563fc12c",
+      "sha256_match": true
+    },
+    {
+      "file": "fixtures/negative_high_risk/FX_HR_007_Advanced_Stage_Missing_Group.xlsx",
+      "exists": true,
+      "expected_sha256": "b870eb8abc71cf8f5ae4ceb9301b4ee518b767780496ce616497252b815905f3",
+      "actual_sha256": "b870eb8abc71cf8f5ae4ceb9301b4ee518b767780496ce616497252b815905f3",
+      "sha256_match": true
+    },
+    {
+      "file": "fixtures/negative_high_risk/FX_HR_008_Cascade_Cycle.xlsx",
+      "exists": true,
+      "expected_sha256": "b908b64a68f8aebf62db9a5d1e4019306e8354d214832320dc80b8ec5b8dde61",
+      "actual_sha256": "b908b64a68f8aebf62db9a5d1e4019306e8354d214832320dc80b8ec5b8dde61",
+      "sha256_match": true
+    },
+    {
+      "file": "fixtures/negative_high_risk/FX_HR_009_REJ_A_Missing_Baseline.xlsx",
+      "exists": true,
+      "expected_sha256": "54611229be5e5d17ba1046c87e8641270246c6fc671562248cff868771a473b5",
+      "actual_sha256": "54611229be5e5d17ba1046c87e8641270246c6fc671562248cff868771a473b5",
+      "sha256_match": true
+    },
+    {
+      "file": "fixtures/negative_high_risk/FX_HR_010_REJ_B_Missing_Desilted.xlsx",
+      "exists": true,
+      "expected_sha256": "2faae7a88cd2431caa27a8a33174be2da03373929a969bd7caefe4d8603091ec",
+      "actual_sha256": "2faae7a88cd2431caa27a8a33174be2da03373929a969bd7caefe4d8603091ec",
+      "sha256_match": true
+    },
+    {
+      "file": "fixtures/negative_high_risk/FX_HR_011_Lined_Pond_Inlet_Fail.xlsx",
+      "exists": true,
+      "expected_sha256": "c437dfe92b194841f414119768306c910f97c54abd04c8ff4809d0fe377c7bc0",
+      "actual_sha256": "c437dfe92b194841f414119768306c910f97c54abd04c8ff4809d0fe377c7bc0",
+      "sha256_match": true
+    },
+    {
+      "file": "fixtures/negative_high_risk/FX_HR_012_Other_Surface_Approval_Missing.xlsx",
+      "exists": true,
+      "expected_sha256": "88fd7e21e6f7f5f66c4ab2720e80b0f77242390a0c8075d230c97138a540fd12",
+      "actual_sha256": "88fd7e21e6f7f5f66c4ab2720e80b0f77242390a0c8075d230c97138a540fd12",
+      "sha256_match": true
+    },
+    {
+      "file": "fixtures/negative_high_risk/FX_HR_013_Person_Day_Duplicate.xlsx",
+      "exists": true,
+      "expected_sha256": "41632717c2f38b256287aaa0f6860ca80b88db524d5bd34687722b9be9a0abb9",
+      "actual_sha256": "41632717c2f38b256287aaa0f6860ca80b88db524d5bd34687722b9be9a0abb9",
+      "sha256_match": true
+    },
+    {
+      "file": "fixtures/negative_high_risk/FX_HR_014_Rainfall_Outside_FY.xlsx",
+      "exists": true,
+      "expected_sha256": "448ac4fe04457dd4d549d9a301f247371a23c2b682948405b44825510c3377d5",
+      "actual_sha256": "448ac4fe04457dd4d549d9a301f247371a23c2b682948405b44825510c3377d5",
+      "sha256_match": true
+    },
+    {
+      "file": "fixtures/negative_high_risk/FX_HR_015_Partial_Season_Missing_Functional_Date.xlsx",
+      "exists": true,
+      "expected_sha256": "14af22a254886633d338cf9fd9362f66b5f2b3b2157f16177ab4fd40702736d3",
+      "actual_sha256": "14af22a254886633d338cf9fd9362f66b5f2b3b2157f16177ab4fd40702736d3",
+      "sha256_match": true
+    }
+  ]
+}

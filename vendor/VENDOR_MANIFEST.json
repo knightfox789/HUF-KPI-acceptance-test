@@ -1,0 +1,16 @@
+{
+  "schema": "HUF-VENDOR-MANIFEST-v1",
+  "generatedFor": "0.1.0-foundation",
+  "runtimeCdnRequired": false,
+  "vendors": [
+    {
+      "library": "JSZip",
+      "version": "3.10.1",
+      "path": "vendor/jszip/jszip.min.js",
+      "sha256": "acc7e41455a80765b5fd9c7ee1b8078a6d160bbbca455aeae854de65c947d59e",
+      "purpose": "Controlled XLSX ZIP parsing",
+      "source": "Protected HUF v1.0.0 release",
+      "licensePath": "vendor/jszip/JSZIP-LICENSE.md"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "schema": "HUF-IMP7BD-BROWSER-SMOKE-v1",
+  "version": "0.1.5-mapping",
+  "phase": "IMP-7B-D",
+  "status": "ENVIRONMENT_BLOCKED",
+  "applicationFailure": false,
+  "attempt": {
+    "server": "python3 -m http.server 8766 --bind 127.0.0.1",
+    "browser": "chromium --headless=new --no-sandbox --disable-gpu --disable-dev-shm-usage --no-zygote --single-process --dump-dom",
+    "timeoutSeconds": 25,
+    "exitCode": 124,
+    "domBytes": 0
+  },
+  "environmentEvidence": {
+    "dbusErrors": "Chromium could not connect to system/session DBus in the container.",
+    "singleProcessErrors": "Chromium reported V8 proxy resolver limitations in single-process mode.",
+    "stderrTail": [
+      "[11722:11748:0908/091315.848553:ERROR:dbus/bus.cc:406] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory",
+      "[11722:11748:0908/091315.855242:ERROR:dbus/bus.cc:406] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")",
+      "[11722:11748:0908/091315.855311:ERROR:dbus/bus.cc:406] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory",
+      "[11722:11748:0908/091315.855562:ERROR:dbus/bus.cc:406] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory",
+      "[11722:11748:0908/091315.868582:ERROR:dbus/bus.cc:406] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")",
+      "[11722:11722:0908/091315.868970:ERROR:chrome/browser/net/system_network_context_manager.cc:961] Cannot use V8 Proxy resolver in single process mode.",
+      "[11722:11748:0908/091315.880357:ERROR:dbus/bus.cc:406] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")",
+      "[11722:11722:0908/091315.880900:ERROR:chrome/browser/net/system_network_context_manager.cc:961] Cannot use V8 Proxy resolver in single process mode.",
+      "[11722:11722:0908/091315.892937:ERROR:chrome/browser/net/system_network_context_manager.cc:961] Cannot use V8 Proxy resolver in single process mode.",
+      "[11722:11722:0908/091315.894571:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: ",
+      "[11722:11748:0908/091315.894641:ERROR:dbus/bus.cc:406] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")",
+      "[11722:11722:0908/091315.894730:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: ",
+      "[11722:11722:0908/091315.896879:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: ",
+      "[11722:11722:0908/091315.905342:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: ",
+      "[11722:11748:0908/091315.905525:ERROR:dbus/bus.cc:406] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory",
+      "[11722:11748:0908/091315.905545:ERROR:dbus/bus.cc:406] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory",
+      "[11722:11748:0908/091315.923279:ERROR:dbus/bus.cc:406] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")",
+      "[11722:11722:0908/091315.973932:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.Properties.GetAll: object_path= /org/freedesktop/UPower/devices/DisplayDevice: unknown error type: ",
+      "[11722:11722:0908/091315.976511:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: ",
+      "[11722:11748:0908/091315.976595:ERROR:dbus/bus.cc:406] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")",
+      "[11722:11722:0908/091315.991980:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: ",
+      "[11722:11748:0908/091315.992212:ERROR:dbus/bus.cc:406] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")",
+      "[11722:11722:0908/091315.993023:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: ",
+      "[11722:11748:0908/091315.993107:ERROR:dbus/bus.cc:406] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")",
+      "[11722:11722:0908/091315.993956:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: ",
+      "[11722:11748:0908/091315.994009:ERROR:dbus/bus.cc:406] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")",
+      "[11722:11722:0908/091316.001872:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: "
+    ]
+  },
+  "classification": "Fresh browser execution could not produce DOM in this container. This is retained as an environment block, not an application failure. Full real-XLSX browser workflow acceptance remains required in IMP-7B-E in a compatible environment."
+}

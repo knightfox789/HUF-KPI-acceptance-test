@@ -1,0 +1,14 @@
+{
+  "schema": "HUF-IMP7BE-LOCAL-BROWSER-ENVIRONMENT-v1",
+  "phase": "IMP-7B-E",
+  "productVersion": "0.1.6-acceptance",
+  "status": "ENVIRONMENT_BLOCKED",
+  "applicationFailure": false,
+  "scope": "Local container browser capability only; this is not the compatible CI acceptance result.",
+  "checks": {
+    "chromiumExecutable": "/usr/bin/chromium",
+    "aboutBlankDomReturned": false,
+    "applicationDomReturned": false
+  },
+  "classification": "The local Chromium binary times out even on about:blank with DBus/zygote environment errors. IMP-7B-E therefore moves browser execution to the pinned Playwright/Chromium CI gate; no browser PASS is claimed locally."
+}

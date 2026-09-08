@@ -1,0 +1,188 @@
+{
+  "addendum_id": "HUF-D6-VAL027-POSITIVE-INVARIANT-v1.1",
+  "date": "2026-09-05",
+  "supersedes_for_test_execution_only": {
+    "contract": "HUF-D6-GOLDEN-UAT-v1.0",
+    "case_id": "D4-VAL-027",
+    "rule_id": "VAL-027",
+    "former_execution_interpretation": "Negative mutation expecting simultaneous strict-cutoff and partial-season timing to emit VAL-027."
+  },
+  "approved_decision": "Positive invariant approach",
+  "effective_assertion": "For every structure/run, exactly one resolved timing method is active. The structure-level timing override, when present, deterministically supersedes the project default; otherwise the project default applies. A dual active timing state must never reach E05 routing.",
+  "production_methodology_change": false,
+  "engine_change": false,
+  "validation_rulebook_change": false,
+  "test_governance_change": true,
+  "effective_test_mode": "POSITIVE_INVARIANT_ASSERTION",
+  "allowed_resolved_values": [
+    "Actual functional date - partial season",
+    "Strict cutoff"
+  ],
+  "project_default": "Strict cutoff",
+  "structures_checked": 20,
+  "structures_with_override": 1,
+  "structures_without_override": 19,
+  "checks": [
+    {
+      "structure_id": "S-CCT-01",
+      "project_default": "Strict cutoff",
+      "structure_override": null,
+      "resolved_timing_method": "Strict cutoff",
+      "exactly_one_active_method": true,
+      "status": "PASS"
+    },
+    {
+      "structure_id": "S-SCT-01",
+      "project_default": "Strict cutoff",
+      "structure_override": null,
+      "resolved_timing_method": "Strict cutoff",
+      "exactly_one_active_method": true,
+      "status": "PASS"
+    },
+    {
+      "structure_id": "S-WAT-01",
+      "project_default": "Strict cutoff",
+      "structure_override": null,
+      "resolved_timing_method": "Strict cutoff",
+      "exactly_one_active_method": true,
+      "status": "PASS"
+    },
+    {
+      "structure_id": "S-FB-01",
+      "project_default": "Strict cutoff",
+      "structure_override": null,
+      "resolved_timing_method": "Strict cutoff",
+      "exactly_one_active_method": true,
+      "status": "PASS"
+    },
+    {
+      "structure_id": "S-TCB-01",
+      "project_default": "Strict cutoff",
+      "structure_override": null,
+      "resolved_timing_method": "Strict cutoff",
+      "exactly_one_active_method": true,
+      "status": "PASS"
+    },
+    {
+      "structure_id": "S-CB-01",
+      "project_default": "Strict cutoff",
+      "structure_override": null,
+      "resolved_timing_method": "Strict cutoff",
+      "exactly_one_active_method": true,
+      "status": "PASS"
+    },
+    {
+      "structure_id": "S-LL-01",
+      "project_default": "Strict cutoff",
+      "structure_override": null,
+      "resolved_timing_method": "Strict cutoff",
+      "exactly_one_active_method": true,
+      "status": "PASS"
+    },
+    {
+      "structure_id": "S-FP-U-01",
+      "project_default": "Strict cutoff",
+      "structure_override": null,
+      "resolved_timing_method": "Strict cutoff",
+      "exactly_one_active_method": true,
+      "status": "PASS"
+    },
+    {
+      "structure_id": "S-FP-L-01",
+      "project_default": "Strict cutoff",
+      "structure_override": null,
+      "resolved_timing_method": "Strict cutoff",
+      "exactly_one_active_method": true,
+      "status": "PASS"
+    },
+    {
+      "structure_id": "S-FP-P-01",
+      "project_default": "Strict cutoff",
+      "structure_override": null,
+      "resolved_timing_method": "Strict cutoff",
+      "exactly_one_active_method": true,
+      "status": "PASS"
+    },
+    {
+      "structure_id": "S-GS-01",
+      "project_default": "Strict cutoff",
+      "structure_override": null,
+      "resolved_timing_method": "Strict cutoff",
+      "exactly_one_active_method": true,
+      "status": "PASS"
+    },
+    {
+      "structure_id": "S-GP-01",
+      "project_default": "Strict cutoff",
+      "structure_override": null,
+      "resolved_timing_method": "Strict cutoff",
+      "exactly_one_active_method": true,
+      "status": "PASS"
+    },
+    {
+      "structure_id": "S-CD-01",
+      "project_default": "Strict cutoff",
+      "structure_override": null,
+      "resolved_timing_method": "Strict cutoff",
+      "exactly_one_active_method": true,
+      "status": "PASS"
+    },
+    {
+      "structure_id": "S-VP-01",
+      "project_default": "Strict cutoff",
+      "structure_override": null,
+      "resolved_timing_method": "Strict cutoff",
+      "exactly_one_active_method": true,
+      "status": "PASS"
+    },
+    {
+      "structure_id": "S-PT-01",
+      "project_default": "Strict cutoff",
+      "structure_override": null,
+      "resolved_timing_method": "Strict cutoff",
+      "exactly_one_active_method": true,
+      "status": "PASS"
+    },
+    {
+      "structure_id": "S-LBS-01",
+      "project_default": "Strict cutoff",
+      "structure_override": null,
+      "resolved_timing_method": "Strict cutoff",
+      "exactly_one_active_method": true,
+      "status": "PASS"
+    },
+    {
+      "structure_id": "S-MW-01",
+      "project_default": "Strict cutoff",
+      "structure_override": "Actual functional date - partial season",
+      "resolved_timing_method": "Actual functional date - partial season",
+      "exactly_one_active_method": true,
+      "status": "PASS"
+    },
+    {
+      "structure_id": "S-OASS-01",
+      "project_default": "Strict cutoff",
+      "structure_override": null,
+      "resolved_timing_method": "Strict cutoff",
+      "exactly_one_active_method": true,
+      "status": "PASS"
+    },
+    {
+      "structure_id": "S-SUB-01",
+      "project_default": "Strict cutoff",
+      "structure_override": null,
+      "resolved_timing_method": "Strict cutoff",
+      "exactly_one_active_method": true,
+      "status": "PASS"
+    },
+    {
+      "structure_id": "S-GOV-01",
+      "project_default": "Strict cutoff",
+      "structure_override": null,
+      "resolved_timing_method": "Strict cutoff",
+      "exactly_one_active_method": true,
+      "status": "PASS"
+    }
+  ],
+  "result": "PASS"
+}

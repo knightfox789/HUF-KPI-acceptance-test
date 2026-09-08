@@ -1,0 +1,9 @@
+import { createAppStateStore } from '../../state/app-state.js';
+import { createSnapshotRegistry } from '../../pipeline/snapshot-registry.js';
+import { createAppController } from '../../app/app-controller.js';
+const c=[];const check=(id,ok,note='')=>c.push({id,status:ok?'PASS':'FAIL',note});
+const s=createAppStateStore();const state=s.getState();let mutated=false;try{state.presentation.filters.x=1;mutated=state.presentation.filters.x===1;}catch{}check('NESTED_STATE_IMMUTABLE',!mutated&&state.presentation.filters.x===undefined);
+const reg=createSnapshotRegistry();reg.replaceDraft('E01',{v:1});reg.replaceDraft('E09',{v:9});reg.complete({runId:'R1'});let locked=false;try{reg.replaceDraft('E08',{v:8});}catch{locked=true;}check('COMPLETED_LOCK',locked);reg.startNewDraft('E07',['E01','E02','E03','E04','E05','E06','E07','E08','E09']);check('NEW_DRAFT_UNLOCKS',!reg.isCompletedLocked()&&reg.has('E01')&&!reg.has('E09'));check('COMPLETED_ARCHIVED',reg.listCompleted().length===1);
+const resetReg=createSnapshotRegistry();resetReg.replaceDraft('E01',{v:1});const fake={reset(){},runIntake:async()=>({summary:{sourceWorkbook:{fileName:'a.xlsx',byteLength:1,sha256:'x'}}}),buildMapping:async()=>({}),confirmMapping:async x=>x,runStage:async s=>({engine:s}),getPublicProtectedState:()=>({audit:{runId:'R'}})};const controller=createAppController({adapter:fake,snapshots:resetReg,supportedTemplateVersion:'HUF-SS-INPUT-v1.1'});await controller.reset();check('CONTROLLER_RESET_CLEARS_SNAPSHOTS',resetReg.list().length===0&&resetReg.listCompleted().length===0);
+check('CONTROLLER_NARROW_API',!('appState'in controller)&&!('snapshots'in controller)&&!('orchestrator'in controller)&&typeof controller.getState==='function');
+const failed=c.filter(x=>x.status==='FAIL');console.log(JSON.stringify({suite:'state-hardening',status:failed.length?'FAIL':'PASS',checks:c.length,failed:failed.length},null,2));if(failed.length)process.exitCode=1;

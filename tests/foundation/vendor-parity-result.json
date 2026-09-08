@@ -1,0 +1,8 @@
+{
+  "suite": "vendor-parity",
+  "status": "PASS",
+  "library": "JSZip",
+  "version": "3.10.1",
+  "currentSha256": "acc7e41455a80765b5fd9c7ee1b8078a6d160bbbca455aeae854de65c947d59e",
+  "sourceSha256": "acc7e41455a80765b5fd9c7ee1b8078a6d160bbbca455aeae854de65c947d59e"
+}

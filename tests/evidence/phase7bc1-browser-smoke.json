@@ -1,0 +1,33 @@
+{
+  "schema": "HUF-IMP7BC1-BROWSER-SMOKE-v1",
+  "version": "0.1.4-preflight-c1",
+  "phase": "IMP-7B-C1",
+  "status": "ENVIRONMENT_BLOCKED",
+  "applicationFailure": false,
+  "attempt": {
+    "server": "python3 -m http.server 8765 --bind 127.0.0.1",
+    "browser": "chromium --headless --no-sandbox --disable-gpu --disable-dev-shm-usage --dump-dom",
+    "timeoutSeconds": 20,
+    "exitCode": 124,
+    "domBytes": 0
+  },
+  "environmentEvidence": {
+    "dbusErrors": "Failed to connect to system/session DBus in container",
+    "zygoteErrors": "Chromium zygote communication errors at timeout",
+    "stderrTail": [
+      "[2271:2271:0908/084607.285103:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.Properties.GetAll: object_path= /org/freedesktop/UPower/devices/DisplayDevice: unknown error type: ",
+      "[2271:2271:0908/084607.287707:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: ",
+      "[2271:2298:0908/084607.287851:ERROR:dbus/bus.cc:406] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")",
+      "[2271:2271:0908/084607.300281:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: ",
+      "[2271:2298:0908/084607.300457:ERROR:dbus/bus.cc:406] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")",
+      "[2271:2271:0908/084607.312638:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: ",
+      "[2271:2298:0908/084607.313257:ERROR:dbus/bus.cc:406] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")",
+      "[2271:2271:0908/084607.314418:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: ",
+      "[2271:2298:0908/084607.314491:ERROR:dbus/bus.cc:406] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")",
+      "[2271:2271:0908/084607.323706:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: ",
+      "[2271:2271:0908/084626.891737:ERROR:content/common/zygote/zygote_communication_linux.cc:293] Failed to send GetTerminationStatus message to zygote",
+      "[2271:2271:0908/084626.892392:ERROR:content/common/zygote/zygote_communication_linux.cc:293] Failed to send GetTerminationStatus message to zygote"
+    ]
+  },
+  "classification": "Fresh browser execution could not produce DOM in this container. This is retained as an environment block, not an application failure. Browser workflow acceptance remains required in a compatible environment."
+}

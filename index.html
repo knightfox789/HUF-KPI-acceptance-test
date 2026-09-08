@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="HUF Supply-Side KPI Calculator — browser-local controlled workbook workflow">
+  <link rel="icon" href="./assets/icons/favicon.svg">
+  <link rel="stylesheet" href="./css/tokens.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/layout.css">
+  <link rel="stylesheet" href="./css/components.css">
+  <title>HUF Supply-Side KPI Calculator</title>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar"><div><strong>HUF Supply-Side KPI Calculator</strong><span class="topbar-subtitle">Controlled supply-side KPI workflow</span></div><span class="badge">Workbook processing: local browser</span></header>
+    <aside class="sidebar" aria-label="Primary"><div class="nav-list" data-nav></div><div class="sidebar-foot"><span class="muted">Phase 7B-C</span><span class="muted" data-runtime-status></span></div></aside>
+    <main class="main" id="main" tabindex="-1"></main>
+  </div>
+  <script src="./vendor/jszip/jszip.min.js"></script>
+  <script type="module" src="./app/bootstrap.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+import fs from 'node:fs/promises';import path from 'node:path';import crypto from 'node:crypto';import {fileURLToPath} from 'node:url';
+await import('../../vendor/jszip/jszip.min.js');
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
+const manifest=JSON.parse(await fs.readFile(path.join(root,'templates/TEMPLATE_MANIFEST.json'),'utf8'));
+const file=path.join(root,manifest.path);const buf=await fs.readFile(file);const hash=crypto.createHash('sha256').update(buf).digest('hex');
+const checks=[];const check=(id,ok,note='')=>checks.push({id,status:ok?'PASS':'FAIL',note});
+check('TEMPLATE_HASH',hash===manifest.sha256,hash);check('TEMPLATE_SIZE',buf.length===manifest.sizeBytes,String(buf.length));check('TEMPLATE_VERSION',manifest.templateVersion==='HUF-SS-INPUT-v1.1');check('INPUT_ONLY',manifest.inputOnly===true&&manifest.officialKpiFormulasEmbedded===false);
+const zip=await globalThis.JSZip.loadAsync(buf);const workbook=await zip.file('xl/workbook.xml').async('text');const sheetNames=[...workbook.matchAll(/<(?:\w+:)?sheet\b[^>]+name="([^"]+)"/g)].map(m=>m[1]);
+const required=['00_Instructions','01_Control','02_Structures','03_Technical','04_Catchments','05_Cascade_Links','06_Daily_Rainfall','07_Hydro_Params','08_Stage_Area_Optional','09_Silt_Assessment','10_Person_Days','11_Evidence','99_Lookups'];
+check('REQUIRED_SHEETS',required.every(n=>sheetNames.includes(n))&&sheetNames.length===required.length,JSON.stringify(sheetNames));
+let formulaCount=0;let workbookText=workbook;for(const name of Object.keys(zip.files).filter(n=>/^xl\/worksheets\/sheet\d+\.xml$/.test(n))){const xml=await zip.file(name).async('text');workbookText+=xml;formulaCount+=(xml.match(/<(?:\w+:)?f(?:\s|>)/g)||[]).length;}check('NO_EMBEDDED_FORMULAS',formulaCount===0,`formulaCount=${formulaCount}`);
+for(const value of ['HUF-SS-INPUT-v1.1','HUF-DESIGN2-FORMULA-CATALOG-v1.1','Controlled Blank Input Template v1.1'])check(`CONTAINS_${value.slice(0,12).replace(/\W/g,'_')}`,workbookText.includes(value),value);
+const failed=checks.filter(x=>x.status==='FAIL');console.log(JSON.stringify({suite:'template-contract',status:failed.length?'FAIL':'PASS',checks:checks.length,failed:failed.length,formulaCount,sheetNames,details:checks},null,2));if(failed.length)process.exitCode=1;

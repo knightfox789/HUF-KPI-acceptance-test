@@ -1,0 +1,12 @@
+{
+  "schema": "HUF-IMP7BC-BROWSER-SMOKE-v1",
+  "version": "0.1.4-preflight",
+  "phase": "IMP-7B-C",
+  "status": "ENVIRONMENT_BLOCKED",
+  "applicationFailure": false,
+  "url": "http://127.0.0.1:8765/",
+  "browser": "Chromium headless",
+  "attempt": "Fresh local static-server navigation with Chromium --headless --dump-dom",
+  "error": "Headless browser did not return before the execution timeout and produced no DOM. Runtime stderr showed container DBus/zygote environment errors.",
+  "interpretation": "No application failure is established. Static architecture, source-selection, preflight-service and preflight-UI contracts are the authoritative evidence for IMP-7B-C; full browser acceptance remains governed under later IMP-7B-E / Phase 8 in a permitted browser environment."
+}

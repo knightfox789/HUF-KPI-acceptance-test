@@ -1,0 +1,35 @@
+{
+  "schema": "HUF-IMP7BE-FINAL-VALIDATION-v1",
+  "version": "0.1.6-acceptance",
+  "phase": "IMP-7B-E",
+  "status": "ACCEPTANCE_READY_COMPATIBLE_BROWSER_EXECUTION_REQUIRED",
+  "methodologyChanged": false,
+  "protectedCore": "UNCHANGED_27_OF_27",
+  "localGates": {
+    "status": "PASS",
+    "nonManifestSuites": 28,
+    "browserCiContractChecks": 13,
+    "pagesWorkflowChecks": 8,
+    "releaseManifest": "PASS_171_OF_171",
+    "packagedFreshExtract": "PASS",
+    "sourceToPackagedParity": "172_OF_172"
+  },
+  "browserAcceptance": {
+    "status": "NOT_EXECUTED_IN_COMPATIBLE_BROWSER_ENVIRONMENT",
+    "localContainer": "ENVIRONMENT_BLOCKED_EVEN_ON_ABOUT_BLANK",
+    "applicationFailure": false,
+    "ciRunner": "tests/browser/run-imp7b-browser-acceptance.mjs",
+    "pinnedRuntime": "playwright@1.55.0 / Chromium",
+    "realXlsx": "samples/nonleap/GOLDEN_E2E_NONLEAP_FY2024-25.xlsx",
+    "requiredFlow": "Upload -> protected E01 -> Workbook Preflight -> protected E02 Mapping Review -> manual mapping -> mapping confirmation snapshot",
+    "machineReadableEvidence": "phase7be-browser-acceptance.json"
+  },
+  "pagesAcceptance": {
+    "status": "WORKFLOW_READY_NOT_DEPLOYED_FROM_THIS_ENVIRONMENT",
+    "browserGateBeforeDeploy": true,
+    "curatedPayload": "_site",
+    "deploymentRequiresSuccessfulBrowserAcceptance": true
+  },
+  "imp7bClosure": "NOT_YET_CLAIMED",
+  "next": "Execute pinned GitHub Actions browser acceptance and Pages deployment; retain PASS evidence before closing IMP-7B and starting Data Preparation."
+}

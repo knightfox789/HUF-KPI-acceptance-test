@@ -1,0 +1,4 @@
+import fs from 'node:fs/promises';import crypto from 'node:crypto';
+const root=new URL('../../',import.meta.url);const manifest=JSON.parse(await fs.readFile(new URL('PROTECTED_CORE_MANIFEST.json',root),'utf8'));
+const checks=[];for(const entry of manifest.protectedFiles){const buf=await fs.readFile(new URL(entry.path,root));const actual=crypto.createHash('sha256').update(buf).digest('hex');checks.push({id:`HASH:${entry.path}`,status:actual===entry.sha256?'PASS':'FAIL',actual,expected:entry.sha256});if(entry.expectedHistoricalSha256)checks.push({id:`HISTORICAL:${entry.path}`,status:actual===entry.expectedHistoricalSha256?'PASS':'FAIL',actual,expected:entry.expectedHistoricalSha256});}
+const failed=checks.filter(x=>x.status==='FAIL');console.log(JSON.stringify({suite:'protected-core-manifest',status:failed.length?'FAIL':'PASS',checks:checks.length,failed:failed.length},null,2));if(failed.length)process.exitCode=1;

@@ -1,0 +1,17 @@
+{
+  "name": "huf-kpi-clean-rebuild",
+  "version": "0.1.6-acceptance",
+  "private": true,
+  "type": "module",
+  "description": "Phase 7B-E browser, CI and release acceptance hardening for the HUF Supply-Side KPI Calculator rebuild",
+  "scripts": {
+    "test:core": "node tests/foundation/run-hardening.mjs",
+    "test:manifest": "node tests/foundation/release-manifest.mjs",
+    "test": "npm run test:core && npm run test:manifest",
+    "release:manifest": "node tools/generate-release-manifest.mjs",
+    "build:pages": "node tools/build-pages-payload.mjs",
+    "release:zip": "node tools/build-source-package.mjs",
+    "test:browser-ci-contract": "node tests/foundation/browser-ci-contract.mjs",
+    "accept:browser": "node tests/browser/run-imp7b-browser-acceptance.mjs"
+  }
+}

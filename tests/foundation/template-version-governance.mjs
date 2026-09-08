@@ -1,0 +1,12 @@
+import fs from 'node:fs/promises';import path from 'node:path';import {fileURLToPath} from 'node:url';import {resolveSupportedTemplateVersion} from '../../services/product-config-service.js';import {buildWorkbookPreflight} from '../../services/preflight-service.js';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');const checks=[];const check=(id,ok,note='')=>checks.push({id,status:ok?'PASS':'FAIL',note});
+const read=async rel=>JSON.parse(await fs.readFile(path.join(root,rel),'utf8'));
+const [product,templateManifest,inputSchema,sheetContract]=await Promise.all([read('config/product-config.json'),read('templates/TEMPLATE_MANIFEST.json'),read('protected-core/config/input-schema-v1.1.json'),read('protected-core/config/required-sheets-v1.1.json')]);
+const governed=resolveSupportedTemplateVersion(product,templateManifest);
+check('PRODUCT_TEMPLATE_AGREEMENT',governed===product.controlledTemplate.version&&governed===product.designVersions.inputSchema);
+check('PROTECTED_INPUT_SCHEMA_AGREEMENT',inputSchema.schema_version===governed);
+check('PROTECTED_SHEET_CONTRACT_AGREEMENT',sheetContract.templateVersion===governed);
+let disagreementBlocked=false;try{resolveSupportedTemplateVersion({...product,controlledTemplate:{...product.controlledTemplate,version:'HUF-SS-INPUT-v9'}},templateManifest);}catch{disagreementBlocked=true;}check('RUNTIME_DISAGREEMENT_BLOCKED',disagreementBlocked);
+let missingDependencyBlocked=false;try{buildWorkbookPreflight({summary:{controlMetadataHint:{'Template Version':governed}}});}catch{missingDependencyBlocked=true;}check('PREFLIGHT_REQUIRES_INJECTED_VERSION',missingDependencyBlocked);
+const ok=buildWorkbookPreflight({summary:{sourceWorkbook:{},controlMetadataHint:{'Template Version':governed},templateHint:{missingSheets:[],extraSheets:[]},sheetInventory:[]}},{supportedTemplateVersion:governed});check('PREFLIGHT_USES_GOVERNED_VERSION',ok.template.supportedVersion===governed&&ok.canContinueToMapping);
+const failed=checks.filter(x=>x.status==='FAIL');console.log(JSON.stringify({suite:'template-version-governance',status:failed.length?'FAIL':'PASS',checks:checks.length,failed:failed.length,details:checks},null,2));if(failed.length)process.exitCode=1;
