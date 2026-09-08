@@ -1,8 +1,8 @@
 {
   "appName": "HUF Supply-Side KPI Calculator",
-  "appVersion": "1.0.0-rc.1",
-  "implementationPhase": "IMP-7C-G",
-  "implementationStatus": "IMPLEMENTATION_IN_PROGRESS_NOT_RELEASED",
+  "appVersion": "1.0.0",
+  "implementationPhase": "PHASE-9",
+  "implementationStatus": "IMPLEMENTATION_COMPLETE_GATED_RELEASE",
   "methodologyBaseline": "HUF protected v1.0.0 E01-E09",
   "designVersions": {
     "routeRegistry": "HUF-DESIGN1-ROUTE-REGISTRY-v1.1",

@@ -32,6 +32,7 @@ jobs:
             tests/evidence/design6-remaining80.json
             tests/evidence/design6-logical.json
             tests/evidence/report-contract.json
+            tests/evidence/export-reconciliation.json
             VALIDATION_STATUS.json
             FINAL_VALIDATION_STATUS.json
             RELEASE_MANIFEST.json
@@ -142,3 +143,29 @@ jobs:
             deployed-files.runtime.json
             ${{ runner.temp }}/phase7be-browser-acceptance.json
             ${{ runner.temp }}/live-screenshots
+  release:
+    needs: live_acceptance
+    if: github.ref == 'refs/heads/main'
+    permissions: { contents: write }
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: huf-*
+          path: ${{ runner.temp }}/release-evidence
+      - name: Build verified source, site, evidence and Obsidian packages
+        run: python3 tools/build-release-deliverables.py "$RUNNER_TEMP/release-evidence" "$RUNNER_TEMP/release-output"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: huf-final-release-deliverables
+          path: ${{ runner.temp }}/release-output
+          if-no-files-found: error
+      - name: Publish the accepted source tag and release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          version="$(cat VERSION)"
+          gh release create "v$version" "$RUNNER_TEMP"/release-output/* --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" --title "HUF KPI Clean Rebuild $version" --notes-file docs/release/RELEASE_NOTES.md

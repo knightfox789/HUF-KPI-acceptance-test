@@ -2,7 +2,7 @@
 
 Browser-local preparation, controlled calculation, analysis and reporting for HUF supply-side water KPIs and person-days.
 
-**Current build: 1.0.0-rc.1 — acceptance candidate, not a final release.** See `FINAL_VALIDATION_STATUS.json` for open gates and `docs/continuity/master-plan.md` for the governing history.
+**Release build: 1.0.0.** Publication requires successful staged, capacity and live acceptance. The published release certificate records those completed gates; `FINAL_VALIDATION_STATUS.json` explains the source snapshot and `docs/continuity/master-plan.md` retains the governing history.
 
 ## Workflow
 
@@ -44,4 +44,6 @@ The browser runner accepts `HUF_LIVE_URL` for the authorized deployed project-su
 
 The sole authorized repository is `knightfox789/HUF-KPI-acceptance-test`. Protected E01–E09 and controlled configuration files must remain identical to `PROTECTED_CORE_MANIFEST.json`. Product changes must not replace formula, route, assurance, null or aggregation semantics.
 
-Final release requires fresh logical/physical tests, browser and actual deployed workflow acceptance, privacy, cross-surface reconciliation, report/visual QA, an approved representative production performance fixture/budget, and a complete release/evidence manifest. Passing a small synthetic golden is not production-scale acceptance.
+Final release requires fresh logical/physical tests, browser and actual deployed workflow acceptance, privacy, cross-surface reconciliation, report/visual QA, the declared 1,000-structure/1,000-person-day synthetic desktop workload and fixed performance budget, and a complete release/evidence manifest. Passing a small synthetic golden is not production-scale acceptance.
+
+The initial capacity envelope covers365/366 days, five districts and at least50 villages on the recorded reference desktop environment. Actual production volumes were not supplied. Larger or materially different portfolios require further qualification. See `docs/release/USER_GUIDE.md`, `RECOVERY_AND_CHANGE_GUIDE.md` and `RELEASE_NOTES.md`.

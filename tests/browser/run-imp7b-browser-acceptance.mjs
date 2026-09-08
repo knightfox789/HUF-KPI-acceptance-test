@@ -14,7 +14,7 @@ const check=(id,ok,note='')=>{checks.push({id,status:ok?'PASS':'FAIL',note});if(
 const mime={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.mjs':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json; charset=utf-8','.xlsx':'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet','.svg':'image/svg+xml','.png':'image/png','.ico':'image/x-icon'};
 function safePath(url){const pathname=decodeURIComponent(new URL(url,'http://127.0.0.1').pathname);const rel=pathname==='/'?'index.html':pathname.replace(/^\/+/, '');const resolved=path.resolve(siteRoot,rel);if(!resolved.startsWith(siteRoot+path.sep)&&resolved!==siteRoot)throw new Error('Unsafe static path');return resolved;}
 const server=http.createServer(async(req,res)=>{try{const p=safePath(req.url||'/');const data=await fs.readFile(p);res.writeHead(200,{'content-type':mime[path.extname(p)]||'application/octet-stream','cache-control':'no-store'});res.end(data);}catch{res.writeHead(404,{'content-type':'text/plain'});res.end('Not found');}});
-const evidence={schema:'HUF-IMP7BE-BROWSER-ACCEPTANCE-v1',phase:'PHASE-8',productVersion:'1.0.0-rc.1',startedAt,status:'RUNNING',applicationFailure:false,siteRoot,sample:path.relative(root,samplePath),checks,consoleErrors:[],pageErrors:[]};
+const evidence={schema:'HUF-IMP7BE-BROWSER-ACCEPTANCE-v1',phase:'PHASE-8',productVersion:'1.0.0',startedAt,status:'RUNNING',applicationFailure:false,siteRoot,sample:path.relative(root,samplePath),checks,consoleErrors:[],pageErrors:[]};
 let browser;
 try{
   await fs.access(path.join(siteRoot,'index.html'));await fs.access(samplePath);

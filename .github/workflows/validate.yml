@@ -1,5 +1,8 @@
 name: Validate Hardened Foundation
-on: [push, pull_request]
+on:
+  push:
+    branches: [main]
+  pull_request:
 permissions: { contents: read }
 jobs:
   foundation:
@@ -27,6 +30,7 @@ jobs:
             tests/evidence/design6-remaining80.json
             tests/evidence/design6-logical.json
             tests/evidence/report-contract.json
+            tests/evidence/export-reconciliation.json
             VALIDATION_STATUS.json
             RELEASE_MANIFEST.json
             PROTECTED_CORE_MANIFEST.json

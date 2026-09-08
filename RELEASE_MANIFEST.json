@@ -1,9 +1,9 @@
 {
   "schema": "HUF-REBUILD-RELEASE-MANIFEST-v1",
   "product": "HUF Supply-Side KPI Calculator Clean Rebuild",
-  "version": "1.0.0-rc.1",
-  "phase": "IMP-7C-G",
-  "classification": "BROWSER_CI_RELEASE_ACCEPTANCE_READY_NOT_CLOSED",
+  "version": "1.0.0",
+  "phase": "PHASE-9",
+  "classification": "VERIFIED_SOURCE_PAYLOAD_OPERATIONAL_GATES_RECORDED_IN_RELEASE_CERTIFICATE",
   "methodologyBaseline": "HUF protected v1.0.0 E01-E09",
   "methodologyChanged": false,
   "sourceProtectedRelease": {
@@ -12,17 +12,17 @@
     "classification": "HUF protected operational final v1.0.0"
   },
   "validationStatus": "PASS",
-  "payloadFiles": 210,
+  "payloadFiles": 214,
   "files": [
     {
       "path": ".github/workflows/pages.yml",
-      "sizeBytes": 5372,
-      "sha256": "e4ad024325cbb8a4a8927710bd2701a37ca8ade47d5d7c4a3d5c4ff62aec1bae"
+      "sizeBytes": 6575,
+      "sha256": "1746673566ee15c3f95ab2d931b7b877fa29f9a67f60e808f6a9a8a63ee07300"
     },
     {
       "path": ".github/workflows/validate.yml",
-      "sizeBytes": 2925,
-      "sha256": "308cb86cf5691829f6ae1cdc47dff0a66a5faeb63df6c2233aed5ecde0b5d614"
+      "sizeBytes": 3003,
+      "sha256": "dc143adb18e37ef6e01ad3f64411a33b7dd827131a467909fc43d270a23e7657"
     },
     {
       "path": ".gitignore",
@@ -36,8 +36,8 @@
     },
     {
       "path": "FINAL_VALIDATION_STATUS.json",
-      "sizeBytes": 1016,
-      "sha256": "eb365f696e218ab0be1290b63f4a906a6bf36bf750f222e88c67366b918492ae"
+      "sizeBytes": 1390,
+      "sha256": "6f04f5db909f41132783b6c2ce7953257f831c31c4eae68410d9aeeb4646beb5"
     },
     {
       "path": "PROTECTED_CORE_MANIFEST.json",
@@ -46,8 +46,8 @@
     },
     {
       "path": "README.md",
-      "sizeBytes": 3419,
-      "sha256": "2c0a3a12a989955eb209c5126fa5bb6145a149687bf248b4092ab15ac0bba9ee"
+      "sizeBytes": 3898,
+      "sha256": "44586d920d3c857bb2bb5ff07248ee3f1f6c21acd0542718edcc605c54ae5477"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -56,13 +56,13 @@
     },
     {
       "path": "VALIDATION_STATUS.json",
-      "sizeBytes": 347,
-      "sha256": "17a079b9edd598a6754a019c643967a521da0fcc56c768e6bc0202bc7a430f8c"
+      "sizeBytes": 331,
+      "sha256": "4583f9aae6b8f2f5ca0f9ba395ab66eb1fe160c45291eb794929f5160806f014"
     },
     {
       "path": "VERSION",
-      "sizeBytes": 11,
-      "sha256": "8e3ccfbe492191dbb919be7b4ef3d93bd88f92b1d99532b25ba19c5ad9f1f722"
+      "sizeBytes": 6,
+      "sha256": "59854984853104df5c353e2f681a15fc7924742f9a2e468c29af248dce45ce03"
     },
     {
       "path": "adapters/browser-capabilities.js",
@@ -131,8 +131,8 @@
     },
     {
       "path": "config/product-config.json",
-      "sizeBytes": 1475,
-      "sha256": "bd4247d37415132c49a0cfe9aa35d1da012a7991d3adace8dfef872b47a8e501"
+      "sizeBytes": 1467,
+      "sha256": "b2247ef4cdd401d5eb24f20c9f54fd55e75496e8d93d93c95b904198dce00e93"
     },
     {
       "path": "css/base.css",
@@ -176,8 +176,8 @@
     },
     {
       "path": "docs/continuity/master-plan.md",
-      "sizeBytes": 495529,
-      "sha256": "44fb158b29b14cd186cb1c87a060d90478ba30013c52715c6b27b89d14f179a9"
+      "sizeBytes": 496580,
+      "sha256": "195255adfde53a4faa0bacf63076e8602aa4fc689e172245dee50ed41d316b65"
     },
     {
       "path": "docs/release/PHASE7A_IMPLEMENTATION_REPORT.md",
@@ -196,8 +196,23 @@
     },
     {
       "path": "docs/release/PRD_IMPLEMENTATION_COVERAGE.json",
-      "sizeBytes": 80758,
-      "sha256": "64a6ab2dc94bae115fb5b297bdbe2fb61532d776456b7c20884d843a69e738cc"
+      "sizeBytes": 80953,
+      "sha256": "5597a61b363135c6a0958cc3155e04f7e6d73e5d6819eb8c1f7e4752d60485ed"
+    },
+    {
+      "path": "docs/release/RECOVERY_AND_CHANGE_GUIDE.md",
+      "sizeBytes": 2885,
+      "sha256": "d1a8b7f3d6dcca9c3b67ad1e5106e48d2a2d2e96a636c9270f37228b0a6ff1aa"
+    },
+    {
+      "path": "docs/release/RELEASE_NOTES.md",
+      "sizeBytes": 1656,
+      "sha256": "98375f0f2a7280608c5394cda16868ecc37316d20f5e37f68351e4231ec5fc88"
+    },
+    {
+      "path": "docs/release/USER_GUIDE.md",
+      "sizeBytes": 3098,
+      "sha256": "b77d1ff4666e7a75562bcd85b4062a8273f5aad817a59e3a302db1beb0a5f565"
     },
     {
       "path": "exports/README.md",
@@ -211,8 +226,8 @@
     },
     {
       "path": "package.json",
-      "sizeBytes": 991,
-      "sha256": "d12a5507174666e8faa78b9d5b9affac869fde740310fd4b4e18d6e75641690d"
+      "sizeBytes": 986,
+      "sha256": "275d33ffc85447ca7b5a14f5c30ff84447e9f7e1dca34009e3d2ed274eb5b672"
     },
     {
       "path": "pipeline/dependency-policy.js",
@@ -526,8 +541,8 @@
     },
     {
       "path": "tests/browser/run-imp7b-browser-acceptance.mjs",
-      "sizeBytes": 15105,
-      "sha256": "beea95b46c6d4d125d705753e2baed080d7aa90164b6c55c62bd635b1fae7c58"
+      "sizeBytes": 15100,
+      "sha256": "3a6a0f3d18888c638da5a0fc7cb6ecd6e116cb2956ab832e0391d5e991734356"
     },
     {
       "path": "tests/browser/verify-deployed-files.mjs",
@@ -611,8 +626,8 @@
     },
     {
       "path": "tests/evidence/phase7be-test-result.json",
-      "sizeBytes": 28819,
-      "sha256": "43afc25dfa8d72f467b44bb021bb225408824fc0bbfea5b3e06f626137ead2f3"
+      "sizeBytes": 28803,
+      "sha256": "440a2d1462816b3927fef4772f1d499d4ad7d56e1eacf92c66e93bd8f4bfbdaf"
     },
     {
       "path": "tests/evidence/phase8-browser-a3ebd7a.json",
@@ -786,8 +801,8 @@
     },
     {
       "path": "tests/foundation/run-hardening.mjs",
-      "sizeBytes": 2245,
-      "sha256": "f67c4d8d4de1c307c53b5a31f617819b24b45ee34de07263f2810b3d0aa2b633"
+      "sizeBytes": 2213,
+      "sha256": "4e169e78dbb0ebd80ac722fa67c63230e8e72752e39913bac5af8cabebba689d"
     },
     {
       "path": "tests/foundation/sample-manifest.mjs",
@@ -861,8 +876,8 @@
     },
     {
       "path": "tests/performance/generate-fixture.mjs",
-      "sizeBytes": 2097,
-      "sha256": "790486fa2165825ccf2680df1e8595c6d530d2f24f8b8fd41c9b3a5881ce2fd3"
+      "sizeBytes": 2376,
+      "sha256": "ebf9866572099ea330ba8cb2e2c7621fa9ac9c0241e56f71e54ec55ed32f1a53"
     },
     {
       "path": "tests/protected/baseline-tests.zip",
@@ -895,14 +910,19 @@
       "sha256": "9241f33d0d0926690fd8a4d85ccc53e10d6011fc8dec691acf3f483b0b3e5cf6"
     },
     {
+      "path": "tools/build-release-deliverables.py",
+      "sizeBytes": 3726,
+      "sha256": "03cc4cb5c86c04aa651f4dfb33be283f398e60b9a57ded545f96f729d9a9a1a1"
+    },
+    {
       "path": "tools/build-source-package.mjs",
       "sizeBytes": 1777,
       "sha256": "3c20a1b47ca74e7515585730a8a66f2db1369070c17c2ccc432a620ca186841d"
     },
     {
       "path": "tools/generate-release-manifest.mjs",
-      "sizeBytes": 1760,
-      "sha256": "d1d037759050a35ae45458942a697fc33bf7bcb41e1a9c1cd6161202aabc7e7c"
+      "sizeBytes": 1787,
+      "sha256": "179d1eb7521f345c0d1384bf8ece1f5d929b3f4634a1b0ef0d3cebcbc47d5a83"
     },
     {
       "path": "ui/README.md",

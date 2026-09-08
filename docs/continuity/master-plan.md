@@ -6,7 +6,7 @@ date: "2026-09-08"
 purpose: "Standalone restart document in case the original ChatGPT conversation is unavailable."
 ---
 
-> **Current checkpoint v0.55:** E7 closed. IMP-7C–G candidate implemented in the authorized repository. Candidate e42ed99834c614127eff3292166c832036be621b (tree cf680ed5373fb04f709631447c69b07ea39c8939), draft PR1. Fresh154/154 logical and15/15 physical checks PASS in CI34257867045; expanded browser79/79 PASS with zero console/page errors. Production performance workload/budget remains the one critical user decision; deployment and final release packaging have not been promoted. This current checkpoint governs over earlier historical “next step” entries.
+> **Current checkpoint v0.56:** E7 closed; IMP-7C–G complete. Candidate dc4c00bc0bdddd90d64651f848ccb01ef76c33f9 passed CI34265094774:154/154 logical,15/15 physical,79/79 browser and both declared capacity workloads. User instruction “proceed” is applied as delegation to establish the initial synthetic1000-structure/1000-person-day envelope; actual production volumes are not claimed. Final1.0.0 packaging and gated deployment/live verification are in progress. The current checkpoint governs over historical next-step entries.
 
 
 
@@ -14932,3 +14932,9 @@ E03-only integration and separate E04 command implemented. Preparation orchestra
 - Measured result package~153MB including full daily traces. Added acknowledgement-paced20-record transfer chunks; all values, nulls, traces and hashes retained, worker yields between chunks. Protected engines/configs unchanged. Full gates rerun pending.
 - Standard browser check exposed asynchronous mapping-test timing after enabling worker. Runner now waits for mapping drawer to close after completed apply, then verifies manual mapping; no assertion removed.
 - Pages workflow prepared to require both browser and capacity acceptance before deploy; post-deploy check compares every served payload file and repeats full live browser acceptance. User authorized this continuous release workflow; no deployment has occurred yet.
+
+### EXEC-RELEASE-058 — Final version and release preparation
+- Candidate dc4c00bc0bdddd90d64651f848ccb01ef76c33f9 PASS: foundation,154logical,15physical,79browser and capacity365/366 in CI34265094774. Capacity end-to-end10.951/10.766s; maximum UI gap671.8/587.6ms; no page errors or off-origin/upload requests. Fixed budgets unchanged.
+- Product version1.0.0, methodology protectedv1.0.0 unchanged. User guide, recovery/change guide, release notes and Obsidian/source/site/evidence package builder added. P2 stays deferred.
+- Source status records now explain the immutable pre-deployment snapshot and identify the release certificate as the authority for actual operational results, avoiding stale unqualified candidate status.
+- Gated release workflow: validate → independent browser/capacity gates → Pages deploy → every served file hash and live browser acceptance → build verified packages/certificate/checksums → publish tagv1.0.0 at the exact accepted commit. Publication cannot run if live acceptance fails. Final version rerun pending; no release claimed yet.

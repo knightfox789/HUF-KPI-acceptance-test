@@ -1,6 +1,6 @@
 {
   "name": "huf-kpi-clean-rebuild",
-  "version": "1.0.0-rc.1",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
   "description": "Browser-local HUF supply-side KPI preparation, calculation, analysis and reporting",

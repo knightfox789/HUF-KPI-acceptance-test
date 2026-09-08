@@ -5,8 +5,8 @@
   "disclaimer": "Coverage is not equivalent to every acceptance criterion independently PASS. Latest operational outcomes are recorded in FINAL_VALIDATION_STATUS.json and the master plan.",
   "counts": {
     "IMPLEMENTED_WITH_LINKED_EVIDENCE": 143,
-    "PENDING_RELEASE_ENVIRONMENT": 5,
-    "BLOCKED_CRITICAL_WORKLOAD_DECISION": 1,
+    "GATED_BY_RELEASE_CERTIFICATE": 5,
+    "QUALIFIED_DECLARED_INITIAL_CAPACITY": 1,
     "DEFERRED_BY_FROZEN_PRD": 5
   },
   "priorities": {
@@ -1523,13 +1523,13 @@
       "id": "PRD-NFR-001",
       "priority": "P0",
       "title": "Static GitHub Pages deployment",
-      "status": "PENDING_RELEASE_ENVIRONMENT",
+      "status": "GATED_BY_RELEASE_CERTIFICATE",
       "acceptanceCriterion": "Deployment acceptance proves application assets/configs load correctly from a repository subpath.",
       "implementation": [
         "tests/browser/run-imp7b-browser-acceptance.mjs",
         "tests/foundation/repeat-run.mjs"
       ],
-      "note": "Candidate exists and browser CI passed; exact promoted SHA, deployed acceptance and final evidence package remain dependent on release gates."
+      "note": "A published release requires this operational gate. The attached RELEASE_CERTIFICATE.json records exact completed outcomes; immutable source is prepared before deployment."
     },
     {
       "id": "PRD-NFR-002",
@@ -1571,13 +1571,13 @@
       "id": "PRD-NFR-005",
       "priority": "P0",
       "title": "Production-scale performance",
-      "status": "BLOCKED_CRITICAL_WORKLOAD_DECISION",
+      "status": "QUALIFIED_DECLARED_INITIAL_CAPACITY",
       "acceptanceCriterion": "Architecture phase defines a production-scale fixture and measurable performance budget; acceptance must pass that budget.",
       "implementation": [
-        "tests/browser/run-imp7b-browser-acceptance.mjs",
-        "tests/foundation/repeat-run.mjs"
+        "tests/performance/budget.json",
+        "tests/performance/browser-capacity.mjs"
       ],
-      "note": "Architecture27.5 leaves representative production fixture and numeric budget undefined. Synthetic100/1000 structure Node measurements are retained separately."
+      "note": "CI34265094774 PASS for declared synthetic1000 structures/1000 person-day rows,365/366days. Actual production volumes were not supplied; larger/materially different portfolios require further qualification."
     },
     {
       "id": "PRD-NFR-006",
@@ -1595,25 +1595,25 @@
       "id": "PRD-NFR-007",
       "priority": "P0",
       "title": "Release evidence package",
-      "status": "PENDING_RELEASE_ENVIRONMENT",
+      "status": "GATED_BY_RELEASE_CERTIFICATE",
       "acceptanceCriterion": "Release package contains all evidence required to remove the current evidence-retention qualification.",
       "implementation": [
         "tests/browser/run-imp7b-browser-acceptance.mjs",
         "tests/foundation/repeat-run.mjs"
       ],
-      "note": "Candidate exists and browser CI passed; exact promoted SHA, deployed acceptance and final evidence package remain dependent on release gates."
+      "note": "A published release requires this operational gate. The attached RELEASE_CERTIFICATE.json records exact completed outcomes; immutable source is prepared before deployment."
     },
     {
       "id": "PRD-NFR-008",
       "priority": "P0",
       "title": "No stale contradictory status files",
-      "status": "PENDING_RELEASE_ENVIRONMENT",
+      "status": "GATED_BY_RELEASE_CERTIFICATE",
       "acceptanceCriterion": "Release contains no stale FAIL summary contradicting the promoted PASS status without an explicit explanatory qualification.",
       "implementation": [
         "tests/browser/run-imp7b-browser-acceptance.mjs",
         "tests/foundation/repeat-run.mjs"
       ],
-      "note": "Candidate exists and browser CI passed; exact promoted SHA, deployed acceptance and final evidence package remain dependent on release gates."
+      "note": "A published release requires this operational gate. The attached RELEASE_CERTIFICATE.json records exact completed outcomes; immutable source is prepared before deployment."
     },
     {
       "id": "PRD-NFR-009",
@@ -1760,14 +1760,14 @@
       "id": "PRD-ACC-010",
       "priority": "P0",
       "title": "GitHub Pages deployed acceptance",
-      "status": "PENDING_RELEASE_ENVIRONMENT",
+      "status": "GATED_BY_RELEASE_CERTIFICATE",
       "acceptanceCriterion": "Live acceptance proves Upload \u2192 Review/Correct \u2192 Calculate \u2192 Results and critical export/report actions on the deployed site.",
       "implementation": [
         "tests/protected/design6-summary.mjs",
         "tests/evidence/",
         "tests/browser/run-imp7b-browser-acceptance.mjs"
       ],
-      "note": "Candidate exists and browser CI passed; exact promoted SHA, deployed acceptance and final evidence package remain dependent on release gates."
+      "note": "A published release requires this operational gate. The attached RELEASE_CERTIFICATE.json records exact completed outcomes; immutable source is prepared before deployment."
     },
     {
       "id": "PRD-ACC-011",
@@ -1786,14 +1786,14 @@
       "id": "PRD-ACC-012",
       "priority": "P0",
       "title": "Release integrity",
-      "status": "PENDING_RELEASE_ENVIRONMENT",
+      "status": "GATED_BY_RELEASE_CERTIFICATE",
       "acceptanceCriterion": "Independent manifest verification passes 100% for controlled release payloads.",
       "implementation": [
         "tests/protected/design6-summary.mjs",
         "tests/evidence/",
         "tests/browser/run-imp7b-browser-acceptance.mjs"
       ],
-      "note": "Candidate exists and browser CI passed; exact promoted SHA, deployed acceptance and final evidence package remain dependent on release gates."
+      "note": "A published release requires this operational gate. The attached RELEASE_CERTIFICATE.json records exact completed outcomes; immutable source is prepared before deployment."
     },
     {
       "id": "PRD-ACC-013",

@@ -1,7 +1,7 @@
 {
   "schema": "HUF-IMP7BE-ACCEPTANCE-READINESS-TEST-RESULT-v1",
-  "productVersion": "1.0.0-rc.1",
-  "phase": "IMP-7C-G / PHASE-8",
+  "productVersion": "1.0.0",
+  "phase": "PHASE-9",
   "status": "PASS",
   "tests": 28,
   "passed": 28,
@@ -151,7 +151,7 @@
       "test": "source-package-governance.mjs",
       "status": "PASS",
       "exitCode": 0,
-      "stdout": "{\n  \"suite\": \"source-package-governance\",\n  \"status\": \"PASS\",\n  \"checks\": 8,\n  \"failed\": 0,\n  \"details\": [\n    {\n      \"id\": \"NO_SITE_IN_SOURCE_PACKAGE\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"NO_NODE_MODULES_IN_SOURCE_PACKAGE\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"RELEASE_MANIFEST_INCLUDED\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"MANIFEST_DRIVES_PACKAGE\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"BUILD_ENTRY_COUNT\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"ZIP_LIST_READABLE\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"ZIP_EXACT_COVERAGE\",\n      \"status\": \"PASS\",\n      \"note\": \"zip=211, expected=211\"\n    },\n    {\n      \"id\": \"ZIP_NO_SITE\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    }\n  ]\n}",
+      "stdout": "{\n  \"suite\": \"source-package-governance\",\n  \"status\": \"PASS\",\n  \"checks\": 8,\n  \"failed\": 0,\n  \"details\": [\n    {\n      \"id\": \"NO_SITE_IN_SOURCE_PACKAGE\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"NO_NODE_MODULES_IN_SOURCE_PACKAGE\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"RELEASE_MANIFEST_INCLUDED\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"MANIFEST_DRIVES_PACKAGE\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"BUILD_ENTRY_COUNT\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"ZIP_LIST_READABLE\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"ZIP_EXACT_COVERAGE\",\n      \"status\": \"PASS\",\n      \"note\": \"zip=215, expected=215\"\n    },\n    {\n      \"id\": \"ZIP_NO_SITE\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    }\n  ]\n}",
       "stderr": ""
     },
     {
