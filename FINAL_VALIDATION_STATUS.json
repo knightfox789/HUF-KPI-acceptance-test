@@ -5,7 +5,15 @@
   "protectedCore": "UNCHANGED",
   "freshProtectedSuites": "16/16 PASS locally",
   "freshProductFlowChecks": "90/90 PASS locally",
-  "browserAcceptance": "Desktop and tablet passed at ff4fbfc; mobile intrinsic sizing corrected, complete rerun pending",
+  "browserAcceptance": {
+    "status": "PASS",
+    "sourceSha": "a3ebd7aa9215d735038e868c924cd27ea23714ba",
+    "runId": 34255671505,
+    "checks": 56,
+    "artifactId": 10067857231,
+    "artifactSha256": "13832cabc3b3353a355e29f45520e1b072910d4b46d7fe110c6a853fc8c83e75",
+    "currentPolishRerun": "PENDING"
+  },
   "deployedAcceptance": "PENDING",
   "performanceBudget": "REPRESENTATIVE_PRODUCTION_FIXTURE_AND_BUDGET_PENDING",
   "historicalE7": "CLOSED: baseline fe54aa2dd80262a63788e09d236e53da782806b6; see master v0.53",

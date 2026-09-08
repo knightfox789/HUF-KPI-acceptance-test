@@ -4,3 +4,6 @@
 
 ## jsPDF 3.0.3
 Locally bundled for structured PDF output. MIT license: vendor/jspdf/LICENSE. No runtime CDN required.
+
+## DejaVu Sans 2.37
+Unmodified normal and bold font bytes are bundled for PDF embedding. Copyright and redistribution terms: vendor/fonts/LICENSE. The DejaVu changes are public domain; original Bitstream Vera font license is retained.

@@ -20,6 +20,15 @@
       "purpose": "Structured local PDF generation",
       "source": "npm jspdf@3.0.3",
       "licensePath": "vendor/jspdf/LICENSE"
+    },
+    {
+      "library": "DejaVu Sans",
+      "version": "2.37",
+      "path": "vendor/fonts/dejavu-sans.js",
+      "sha256": "0de0544fae34b888a6f6a2c634d722d501efb31eb4e75e55559708ee11c37dd1",
+      "purpose": "Embedded PDF normal/bold font with deterministic text metrics",
+      "source": "System-provided unmodified DejaVu font files",
+      "licensePath": "vendor/fonts/LICENSE"
     }
   ]
 }

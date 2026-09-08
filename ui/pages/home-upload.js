@@ -17,7 +17,7 @@ export function mountHomeUpload({main,controller,templateManifest=null,pipelineM
   main.innerHTML=`
   <div class="upload-page" data-upload-root>
     <section class="page-heading">
-      <div><span class="eyebrow">IMP-7B-C · Intake & preflight</span><h1>Start a controlled KPI run</h1><p class="lead">Choose the HUF supply-side input workbook. Your workbook stays in this browser; no project data is uploaded to an application server.</p></div>
+      <div><span class="eyebrow">Upload your workbook</span><h1>Start a controlled KPI run</h1><p class="lead">Choose the HUF supply-side input workbook. Your workbook stays in this browser; no project data is uploaded to an application server.</p></div>
       <div class="privacy-chip" aria-label="Privacy status">Local browser processing</div>
     </section>
 
@@ -75,7 +75,7 @@ export function mountHomeUpload({main,controller,templateManifest=null,pipelineM
     if(!file)return;
     setBusy(root,true,'Preparing selected workbook…');
     status.classList.remove('error-text');
-    try{await controller.selectWorkbook(file,options);status.textContent='Workbook selected. Review it to run protected E01 intake and open preflight.';}
+    try{await controller.selectWorkbook(file,options);status.textContent='Workbook selected. Review its sheets and template compatibility next.';}
     catch(error){status.textContent=error.message;status.classList.add('error-text');}
     finally{setBusy(root,false);}
   }

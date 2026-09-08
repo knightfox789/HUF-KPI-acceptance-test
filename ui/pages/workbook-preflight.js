@@ -1,3 +1,4 @@
+import {downloadBlob} from '../../services/export-service.js';
 import { createPreflightViewModel } from '../../views/preflight-view-model.js';
 
 function esc(value){return String(value??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));}
@@ -16,7 +17,7 @@ export function mountWorkbookPreflight({main,controller,onBack=null,onContinue=n
   main.innerHTML=`
   <div class="preflight-page" data-preflight-root>
     <section class="page-heading">
-      <div><span class="eyebrow">IMP-7B-C · Workbook Preflight</span><h1>Review workbook structure</h1><p class="lead">Check the protected E01 intake summary before moving to controlled mapping. This screen reports workbook structure; it is not Design-4 validation.</p></div>
+      <div><span class="eyebrow">Review workbook</span><h1>Review workbook structure</h1><p class="lead">Check the sheets, dates and template version before mapping your fields. Record-level validation follows data preparation.</p></div>
       <span class="status-pill ${vm.canContinueToMapping?'ready':'error'}">${vm.canContinueToMapping?'Ready for mapping':'Needs attention'}</span>
     </section>
 
@@ -40,10 +41,11 @@ export function mountWorkbookPreflight({main,controller,onBack=null,onContinue=n
       ${vm.groups.map(group=>`<article class="card issue-group"><div class="card-heading"><h2>${group.label}</h2><span class="status-pill ${group.tone}">${group.items.length}</span></div>${issueList(group)}</article>`).join('')}
     </section>
 
-    <details class="card advanced-details"><summary>Advanced preflight details</summary><div class="advanced-grid"><dl class="compact-meta"><div><dt>Full SHA-256</dt><dd class="mono">${esc(vm.source.sha256||'Not available')}</dd></div><div><dt>E01 contract</dt><dd class="mono">${esc(vm.advanced.engineContractVersion||'Not available')}</dd></div><div><dt>Intake hint</dt><dd>${esc(vm.template.intakeHintStatus||'Not available')}</dd></div></dl><p class="muted">Raw workbook rows and preview values are intentionally not displayed here. Advanced detail remains intake metadata only.</p></div></details>
+    <details class="card advanced-details"><summary>Advanced preflight details</summary><div class="advanced-grid"><dl class="compact-meta"><div><dt>Full SHA-256</dt><dd class="mono">${esc(vm.source.sha256||'Not available')}</dd></div><div><dt>E01 contract</dt><dd class="mono">${esc(vm.advanced.engineContractVersion||'Not available')}</dd></div><div><dt>Intake hint</dt><dd>${esc(vm.template.intakeHintStatus||'Not available')}</dd></div></dl><p class="muted">Raw workbook rows and preview values are intentionally not displayed here. Advanced detail remains intake metadata only.</p></div><button class="button secondary" data-preflight-export>Download preflight summary</button></details>
 
     <section class="preflight-actions"><button class="button secondary" data-back>Back to Upload</button><div><span class="muted action-note">${vm.canContinueToMapping?'Preflight is complete. Mapping Review is the next governed workflow step.':'Resolve the preflight errors before controlled mapping.'}</span><button class="button primary" data-continue ${vm.canContinueToMapping?'':'disabled aria-disabled="true"'}>Continue to Mapping</button></div></section>
   </div>`;
+  main.querySelector('[data-preflight-export]').addEventListener('click',()=>downloadBlob(new Blob([JSON.stringify({schema:'HUF-PREFLIGHT-SUMMARY-v1',source:vm.source,template:vm.template,reportingPeriod:vm.reportingPeriod,sheets:vm.sheetRows,checks:vm.groups,status:vm.overallStatus,synthetic:Boolean(source.synthetic)},null,2)],{type:'application/json'}),'HUF_Preflight_Summary.json'));
   main.querySelector('[data-back]').addEventListener('click',()=>onBack?.());
   main.querySelector('[data-continue]').addEventListener('click',()=>{if(vm.canContinueToMapping)onContinue?.();});
 }

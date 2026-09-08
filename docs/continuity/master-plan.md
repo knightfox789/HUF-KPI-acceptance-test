@@ -1,7 +1,7 @@
 ---
 title: "HUF Supply-Side KPI Calculator — Master Audit, Recovery and Clean Rebuild Plan"
 status: "active"
-version: "0.53"
+version: "0.55"
 date: "2026-09-08"
 purpose: "Standalone restart document in case the original ChatGPT conversation is unavailable."
 ---
@@ -14881,3 +14881,15 @@ E03-only integration and separate E04 command implemented. Preparation orchestra
 - Synthetic Node probes completed at100/1000 structures with100/1000 person-day rows and365 rainfall rows; all E01–E09 stages completed. At1000 structures: input7.42MB; E03~3.30s; E06~3.75s; peak process RSS~1.34GB. This is an engineering measurement, not a production/browser acceptance claim.
 - Evidence: tests/evidence/synthetic-performance.json; reproducible probe: tests/protected/performance-probe.mjs. The production workload and numeric performance budget remain unset under Architecture27.5.
 - Added full leap-year browser calculation and366-day trace verification to the desktop/tablet/mobile acceptance rerun.
+
+### EXEC-UAT-003 — complete browser PASS and final visual corrections
+- Candidate a3ebd7aa9215d735038e868c924cd27ea23714ba: CI34255671505 passed foundation/product/protected and fresh154 logical checks plus complete browser acceptance. Desktop1440x1000, tablet834x1112, mobile390x844;365/366-day traces; correction invalidation; exports and no external/upload/URL/debug-state leaks. No page/console errors.
+- Retained browser artifact10067857231, SHA25613832cabc3b3353a355e29f45520e1b072910d4b46d7fe110c6a853fc8c83e75. JSON committed under tests/evidence/phase8-browser-a3ebd7a.json; screenshots retained in candidate evidence.
+- Visual inspection found mobile table-header letter wrapping despite zero page overflow. Added readable minimum column widths and keyboard-scrollable containers. Workbook rendering found clipped nested metadata; flattened metadata paths and adjusted row sizing/widths without changing result cell values. Re-rendered metadata is readable.
+- Completed P1 preflight-summary download, plain-language upload/preflight text, programme-first DSC-context header, keyboard skip link and form focus styles. Browser gate now includes control labels, keyboard primary actions, drag/drop, blocked external requests and mobile review/assurance.
+- Implementation coverage register: docs/release/PRD_IMPLEMENTATION_COVERAGE.json. It distinguishes implemented coverage from independent acceptance proof, one unresolved production-performance requirement, operational release gates and frozen P2 deferrals.
+- Final release is NOT declared. Production performance decision remains blocking. Candidate promotion, actual deployed workflow and final SHA-bound release packaging follow after that gate; do not overwrite this qualification with logical/browser PASS.
+
+### EXEC-VISUAL-004 — deterministic report typography
+- Embedded unmodified licensed DejaVu Sans2.37 normal/bold fonts in PDFs to remove reader-dependent substitute-font layout. Font bytes and license are included in vendor manifest; controlled code/config unchanged. Missing aggregate buckets are labelled No value, never zero or certified.
+- Standard preflight boundary test now checks the new equivalent plain-language sentence; its E02 exclusion and governed navigation checks remain intact.

@@ -1,0 +1,1870 @@
+{
+  "schema": "HUF-PRD-IMPLEMENTATION-COVERAGE-v1",
+  "baseline": "docs/baselines/HUF_KPI_Product_Requirements_Specification_v1.0.md",
+  "scope": "Initial release P0/P1; P2 remains explicitly deferred",
+  "disclaimer": "Coverage is not equivalent to every acceptance criterion independently PASS. Latest operational outcomes are recorded in FINAL_VALIDATION_STATUS.json and the master plan.",
+  "counts": {
+    "IMPLEMENTED_WITH_LINKED_EVIDENCE": 143,
+    "PENDING_RELEASE_ENVIRONMENT": 5,
+    "BLOCKED_CRITICAL_WORKLOAD_DECISION": 1,
+    "DEFERRED_BY_FROZEN_PRD": 5
+  },
+  "priorities": {
+    "P0": 134,
+    "P1": 15,
+    "P2": 5
+  },
+  "requirements": [
+    {
+      "id": "PRD-CORE-001",
+      "priority": "P0",
+      "title": "Protect E01\u2013E09 methodology",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "A code/config comparison against the protected baseline identifies no uncontrolled changes to E01\u2013E09 or controlled configs. Any RED change requires an explicit governed methodology version.",
+      "implementation": [
+        "PROTECTED_CORE_MANIFEST.json",
+        "pipeline/orchestrator.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-CORE-002",
+      "priority": "P0",
+      "title": "Calculate truth once",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Changing a presentation filter or report scope does not invoke or alter E05/E06/E07 routing/calculation truth; totals reconcile to the prepared result package.",
+      "implementation": [
+        "PROTECTED_CORE_MANIFEST.json",
+        "pipeline/orchestrator.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-CORE-003",
+      "priority": "P0",
+      "title": "Null is not zero",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Golden cases containing null/HOLD/excluded states never display or export those states as 0 unless the controlled source value is actually zero.",
+      "implementation": [
+        "PROTECTED_CORE_MANIFEST.json",
+        "pipeline/orchestrator.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-CORE-004",
+      "priority": "P0",
+      "title": "Preserve full precision",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Dashboard/export/report displayed values reconcile to full-precision source truth within controlled tolerance; no intermediate product-layer rounding affects totals.",
+      "implementation": [
+        "PROTECTED_CORE_MANIFEST.json",
+        "pipeline/orchestrator.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-CORE-005",
+      "priority": "P0",
+      "title": "Use controlled assurance terminology",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "No user-facing result label says \u201ccertified water\u201d or \u201cHUF certified\u201d unless an explicit formal HUF confirmation field supports that statement.",
+      "implementation": [
+        "PROTECTED_CORE_MANIFEST.json",
+        "pipeline/orchestrator.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-CORE-006",
+      "priority": "P0",
+      "title": "Expose controlling versions",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "A user can identify which controlled versions produced a result without opening source code.",
+      "implementation": [
+        "PROTECTED_CORE_MANIFEST.json",
+        "pipeline/orchestrator.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-CORE-007",
+      "priority": "P0",
+      "title": "Synthetic data disclosure",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Loading a synthetic sample produces a persistent visible synthetic-data badge/disclosure in Results and exports.",
+      "implementation": [
+        "PROTECTED_CORE_MANIFEST.json",
+        "pipeline/orchestrator.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-CORE-008",
+      "priority": "P0",
+      "title": "No engine-strip navigation",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Primary navigation contains user tasks/product areas and does not require users to understand engine numbering.",
+      "implementation": [
+        "PROTECTED_CORE_MANIFEST.json",
+        "pipeline/orchestrator.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-CORE-009",
+      "priority": "P0",
+      "title": "VAL-027 positive timing invariant",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "The Design-6 VAL-027 v1.1 invariant test passes for all applicable structures and no dual active timing state reaches routing.",
+      "implementation": [
+        "PROTECTED_CORE_MANIFEST.json",
+        "pipeline/orchestrator.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-CORE-010",
+      "priority": "P0",
+      "title": "Separate logical certification from operational evidence",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Release status surfaces never collapse these states into one ambiguous \u201ccertified\u201d label.",
+      "implementation": [
+        "PROTECTED_CORE_MANIFEST.json",
+        "pipeline/orchestrator.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-IN-001",
+      "priority": "P0",
+      "title": "Controlled XLSX upload",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "A valid controlled workbook can be selected both ways; unsupported formats are rejected with clear guidance.",
+      "implementation": [
+        "ui/pages/home-upload.js",
+        "ui/pages/workbook-preflight.js",
+        "services/source-intake-service.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-IN-002",
+      "priority": "P0",
+      "title": "Local-browser processing disclosure",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Privacy message is visible before calculation begins.",
+      "implementation": [
+        "ui/pages/home-upload.js",
+        "ui/pages/workbook-preflight.js",
+        "services/source-intake-service.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-IN-003",
+      "priority": "P0",
+      "title": "Selected-file summary",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Selected-file card updates deterministically and can be cleared/replaced.",
+      "implementation": [
+        "ui/pages/home-upload.js",
+        "ui/pages/workbook-preflight.js",
+        "services/source-intake-service.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-IN-004",
+      "priority": "P0",
+      "title": "Workbook Preflight",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Preflight is available for every selected workbook and distinguishes errors, warnings and information.",
+      "implementation": [
+        "ui/pages/home-upload.js",
+        "ui/pages/workbook-preflight.js",
+        "services/source-intake-service.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-IN-005",
+      "priority": "P0",
+      "title": "Source fingerprint",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Run Summary/Audit can show the source SHA-256/session identity while the main UI may abbreviate it.",
+      "implementation": [
+        "ui/pages/home-upload.js",
+        "ui/pages/workbook-preflight.js",
+        "services/source-intake-service.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-IN-006",
+      "priority": "P0",
+      "title": "Controlled blank template download",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "User can download `HUF-SS-INPUT-v1.1` (or the governed successor) from the upload/help surface; the template contains the controlled sheets/headers and no hidden calculation formulas.",
+      "implementation": [
+        "ui/pages/home-upload.js",
+        "ui/pages/workbook-preflight.js",
+        "services/source-intake-service.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-IN-007",
+      "priority": "P0",
+      "title": "Template-version compatibility",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Unsupported versions cannot be silently interpreted as the current schema.",
+      "implementation": [
+        "ui/pages/home-upload.js",
+        "ui/pages/workbook-preflight.js",
+        "services/source-intake-service.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-IN-008",
+      "priority": "P0",
+      "title": "Sample data action",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Sample loading requires no manual file editing and is visibly marked synthetic.",
+      "implementation": [
+        "ui/pages/home-upload.js",
+        "ui/pages/workbook-preflight.js",
+        "services/source-intake-service.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-IN-009",
+      "priority": "P1",
+      "title": "Preflight details export",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Preflight summary can be retained for support without exposing raw workbook rows by default.",
+      "implementation": [
+        "ui/pages/home-upload.js",
+        "ui/pages/workbook-preflight.js",
+        "services/source-intake-service.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-IN-010",
+      "priority": "P0",
+      "title": "Replace/reset workbook safely",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "No result from a prior source workbook remains active after source replacement.",
+      "implementation": [
+        "ui/pages/home-upload.js",
+        "ui/pages/workbook-preflight.js",
+        "services/source-intake-service.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-MAP-001",
+      "priority": "P0",
+      "title": "Preserve controlled mapping order",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Mapping regression produces the protected mapping outcomes for golden inputs.",
+      "implementation": [
+        "ui/pages/mapping-review.js",
+        "pipeline/pipeline-adapter.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-MAP-002",
+      "priority": "P0",
+      "title": "Exception-first mapping review",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "A clean workbook can be confirmed quickly; exceptional mappings are visually prioritized.",
+      "implementation": [
+        "ui/pages/mapping-review.js",
+        "pipeline/pipeline-adapter.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-MAP-003",
+      "priority": "P0",
+      "title": "Explicit confirmation",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Calculate cannot proceed while required mapping confirmations remain unresolved.",
+      "implementation": [
+        "ui/pages/mapping-review.js",
+        "pipeline/pipeline-adapter.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-MAP-004",
+      "priority": "P0",
+      "title": "Conflict blocking",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Conflicted field shows candidate sources and a clear resolution action.",
+      "implementation": [
+        "ui/pages/mapping-review.js",
+        "pipeline/pipeline-adapter.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-MAP-005",
+      "priority": "P0",
+      "title": "Manual override",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "The final mapping snapshot records the chosen source and mapping method.",
+      "implementation": [
+        "ui/pages/mapping-review.js",
+        "pipeline/pipeline-adapter.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-MAP-006",
+      "priority": "P1",
+      "title": "Advanced mapping diagnostics",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Advanced details can be expanded per field without changing the mapping result.",
+      "implementation": [
+        "ui/pages/mapping-review.js",
+        "pipeline/pipeline-adapter.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-MAP-007",
+      "priority": "P0",
+      "title": "Mapping snapshot and invalidation",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Changing one mapping prevents stale downstream results from being presented as current.",
+      "implementation": [
+        "ui/pages/mapping-review.js",
+        "pipeline/pipeline-adapter.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-PREP-001",
+      "priority": "P0",
+      "title": "Protected canonicalisation",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Golden canonical snapshots remain unchanged for the same source/mapping/config versions.",
+      "implementation": [
+        "ui/pages/data-preparation.js",
+        "pipeline/orchestrator.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-PREP-002",
+      "priority": "P0",
+      "title": "Data Preparation summary",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "User can see what changed in representation without needing field IDs/hashes.",
+      "implementation": [
+        "ui/pages/data-preparation.js",
+        "pipeline/orchestrator.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-PREP-003",
+      "priority": "P0",
+      "title": "Source lineage retained",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "A validation issue can navigate back to its source location.",
+      "implementation": [
+        "ui/pages/data-preparation.js",
+        "pipeline/orchestrator.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-PREP-004",
+      "priority": "P0",
+      "title": "No silent coercion",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Known malformed golden cases are flagged and do not silently become valid canonical values.",
+      "implementation": [
+        "ui/pages/data-preparation.js",
+        "pipeline/orchestrator.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-PREP-005",
+      "priority": "P1",
+      "title": "Preparation details",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Technical view exposes source value, canonical value, unit conversion and lineage where policy permits.",
+      "implementation": [
+        "ui/pages/data-preparation.js",
+        "pipeline/orchestrator.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-VAL-001",
+      "priority": "P0",
+      "title": "Protect 95-rule validation contract",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Design-6 95/95 rule-linked tests remain PASS after rebuild.",
+      "implementation": [
+        "ui/pages/validation-centre.js",
+        "pipeline/pipeline-adapter.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-VAL-002",
+      "priority": "P0",
+      "title": "Validation & Correction Centre",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "User can filter, inspect and resolve issues without navigating raw engine screens.",
+      "implementation": [
+        "ui/pages/validation-centre.js",
+        "pipeline/pipeline-adapter.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-VAL-003",
+      "priority": "P0",
+      "title": "Issue grouping",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Every validation issue appears in at least one clear user-facing group.",
+      "implementation": [
+        "ui/pages/validation-centre.js",
+        "pipeline/pipeline-adapter.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-VAL-004",
+      "priority": "P0",
+      "title": "Source location",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "User can identify the exact source cell/row context without inspecting hashes.",
+      "implementation": [
+        "ui/pages/validation-centre.js",
+        "pipeline/pipeline-adapter.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-VAL-005",
+      "priority": "P0",
+      "title": "Scope isolation",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Unaffected valid scopes remain calculable when the protected rulebook allows it.",
+      "implementation": [
+        "ui/pages/validation-centre.js",
+        "pipeline/pipeline-adapter.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-VAL-006",
+      "priority": "P0",
+      "title": "Readiness states",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "User can distinguish ready, warning/review, blocked, excluded/HOLD and downstream-deferred states.",
+      "implementation": [
+        "ui/pages/validation-centre.js",
+        "pipeline/pipeline-adapter.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-VAL-007",
+      "priority": "P0",
+      "title": "Warning behavior",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Golden warning cases calculate and propagate the expected warning assurance state.",
+      "implementation": [
+        "ui/pages/validation-centre.js",
+        "pipeline/pipeline-adapter.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-VAL-008",
+      "priority": "P0",
+      "title": "Issue resolution refresh",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "No stale issue/result remains marked current after a governing source change.",
+      "implementation": [
+        "ui/pages/validation-centre.js",
+        "pipeline/pipeline-adapter.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-VAL-009",
+      "priority": "P1",
+      "title": "Advanced rule detail",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Technical user can trace an issue to the controlled rulebook without cluttering normal correction UI.",
+      "implementation": [
+        "ui/pages/validation-centre.js",
+        "pipeline/pipeline-adapter.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-VAL-010",
+      "priority": "P0",
+      "title": "Validation summary",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Summary reconciles to the issue registry and scoped readiness.",
+      "implementation": [
+        "ui/pages/validation-centre.js",
+        "pipeline/pipeline-adapter.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-VAL-011",
+      "priority": "P1",
+      "title": "Issue-register export",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Export includes rule, affected entity/scope, severity, status and source location while respecting privacy rules.",
+      "implementation": [
+        "ui/pages/validation-centre.js",
+        "pipeline/pipeline-adapter.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-VAL-012",
+      "priority": "P0",
+      "title": "No forced pass",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Regression/UAT evidence retains FAIL/NOT VERIFIED states honestly when they occur.",
+      "implementation": [
+        "ui/pages/validation-centre.js",
+        "pipeline/pipeline-adapter.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-CALC-001",
+      "priority": "P0",
+      "title": "Official routing only",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Every calculated structure has exactly one controlled route or an explicit unresolved/excluded/HOLD state.",
+      "implementation": [
+        "pipeline/orchestrator.js",
+        "protected-core/"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-CALC-002",
+      "priority": "P0",
+      "title": "Plain-language route reason",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Structure detail reconciles route display to the controlled route ID.",
+      "implementation": [
+        "pipeline/orchestrator.js",
+        "protected-core/"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-CALC-003",
+      "priority": "P0",
+      "title": "Protected formula execution",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "29/29 formula golden tests pass after rebuild.",
+      "implementation": [
+        "pipeline/orchestrator.js",
+        "protected-core/"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-CALC-004",
+      "priority": "P0",
+      "title": "Calculation progress",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "User sees when calculation, assurance, aggregation and audit finalization complete or fail.",
+      "implementation": [
+        "pipeline/orchestrator.js",
+        "protected-core/"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-CALC-005",
+      "priority": "P0",
+      "title": "Run finalization",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Results are not presented as final/current until the run finalization chain completes.",
+      "implementation": [
+        "pipeline/orchestrator.js",
+        "protected-core/"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-CALC-006",
+      "priority": "P0",
+      "title": "No formula editing in normal UI",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "No standard UI control mutates controlled methodology configuration.",
+      "implementation": [
+        "pipeline/orchestrator.js",
+        "protected-core/"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-RES-001",
+      "priority": "P0",
+      "title": "Executive Results dashboard",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Dashboard loads after successful run finalization and reconciles to the project aggregation package.",
+      "implementation": [
+        "ui/pages/results.js",
+        "views/result-model.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-RES-002",
+      "priority": "P0",
+      "title": "Primary KPI cards",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Each KPI card shows value, unit, coverage and included assurance buckets.",
+      "implementation": [
+        "ui/pages/results.js",
+        "views/result-model.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-RES-003",
+      "priority": "P0",
+      "title": "Assurance-aware totals",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Bucket totals reconcile exactly to E08.",
+      "implementation": [
+        "ui/pages/results.js",
+        "views/result-model.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-RES-004",
+      "priority": "P0",
+      "title": "Calculated Total semantics",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Displayed total and label match the frozen aggregation semantics.",
+      "implementation": [
+        "ui/pages/results.js",
+        "views/result-model.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-RES-005",
+      "priority": "P0",
+      "title": "Coverage indicators",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Users can see calculated, not-calculated, excluded/HOLD and evidence-pending counts for the current scope.",
+      "implementation": [
+        "ui/pages/results.js",
+        "views/result-model.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-RES-006",
+      "priority": "P0",
+      "title": "Presentation filters",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Applying filters changes only the prepared view and not E05\u2013E09 truth.",
+      "implementation": [
+        "ui/pages/results.js",
+        "views/result-model.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-RES-007",
+      "priority": "P0",
+      "title": "Filter context",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Export/report generated from a filtered view records that scope explicitly.",
+      "implementation": [
+        "ui/pages/results.js",
+        "views/result-model.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-RES-008",
+      "priority": "P0",
+      "title": "Display-unit selector",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Changing display unit does not change stored result truth; conversion is deterministic.",
+      "implementation": [
+        "ui/pages/results.js",
+        "views/result-model.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-RES-009",
+      "priority": "P0",
+      "title": "HUF-specific chart suite",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Each chart reconciles to prepared values and includes scope/coverage/source context.",
+      "implementation": [
+        "ui/pages/results.js",
+        "views/result-model.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-RES-010",
+      "priority": "P1",
+      "title": "Small-multiple portfolio views",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Panels use a consistent scale where comparison requires it and disclose missing scopes.",
+      "implementation": [
+        "ui/pages/results.js",
+        "views/result-model.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-RES-011",
+      "priority": "P0",
+      "title": "No hidden excluded/HOLD data",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "User can open the relevant list and reason/status for every non-calculated entity.",
+      "implementation": [
+        "ui/pages/results.js",
+        "views/result-model.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-RES-012",
+      "priority": "P0",
+      "title": "Drill-through from summary",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Drill-through result count/totals reconcile to the originating summary element.",
+      "implementation": [
+        "ui/pages/results.js",
+        "views/result-model.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-GEO-001",
+      "priority": "P0",
+      "title": "Frozen reporting hierarchy",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "No VWB cluster hierarchy is introduced into HUF.",
+      "implementation": [
+        "ui/pages/results.js",
+        "views/result-model.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-GEO-002",
+      "priority": "P0",
+      "title": "Geography Explorer",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Users can navigate to each governed level supported by the current result package.",
+      "implementation": [
+        "ui/pages/results.js",
+        "views/result-model.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-GEO-003",
+      "priority": "P0",
+      "title": "Breadcrumb/current scope",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "User can return to parent scopes without losing run context.",
+      "implementation": [
+        "ui/pages/results.js",
+        "views/result-model.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-GEO-004",
+      "priority": "P0",
+      "title": "Parent-child reconciliation",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Automated acceptance checks prove reconciliation for golden portfolios.",
+      "implementation": [
+        "ui/pages/results.js",
+        "views/result-model.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-GEO-005",
+      "priority": "P0",
+      "title": "Geography summaries",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Values reconcile to the current filtered aggregation scope.",
+      "implementation": [
+        "ui/pages/results.js",
+        "views/result-model.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-GEO-006",
+      "priority": "P0",
+      "title": "Scoped structure list",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "List includes status, route, assurance and relevant result values.",
+      "implementation": [
+        "ui/pages/results.js",
+        "views/result-model.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-STR-001",
+      "priority": "P0",
+      "title": "Structure Register",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Register supports geography, type, route, KPI and assurance filters and includes non-calculated/excluded/HOLD structures.",
+      "implementation": [
+        "ui/pages/results.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-STR-002",
+      "priority": "P0",
+      "title": "Structure identity",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Displayed identity reconciles to the canonical structure record.",
+      "implementation": [
+        "ui/pages/results.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-STR-003",
+      "priority": "P0",
+      "title": "Route and timing detail",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Display matches E05 routing snapshot.",
+      "implementation": [
+        "ui/pages/results.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-STR-004",
+      "priority": "P0",
+      "title": "Calculation explanation",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Explanation values reconcile to E06 full-precision truth and do not invent unavailable inputs.",
+      "implementation": [
+        "ui/pages/results.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-STR-005",
+      "priority": "P0",
+      "title": "Daily WTR-111 trace",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Trace displays date, rainfall/input, storage states, infiltration, evaporation, overflow and controlled result components available in E06.",
+      "implementation": [
+        "ui/pages/results.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-STR-006",
+      "priority": "P0",
+      "title": "Structure validation history/current issues",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Issue count/details reconcile to the validation registry.",
+      "implementation": [
+        "ui/pages/results.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-STR-007",
+      "priority": "P0",
+      "title": "Structure assurance/evidence",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Assurance presentation reconciles to E07 and never rewrites E06 result.",
+      "implementation": [
+        "ui/pages/results.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-STR-008",
+      "priority": "P1",
+      "title": "Network/cascade context",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Displayed network relationships reconcile to controlled cascade records.",
+      "implementation": [
+        "ui/pages/results.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-STR-009",
+      "priority": "P0",
+      "title": "Person-day detail",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Detail reconciles to E06 person-day truth and standard audit privacy rules.",
+      "implementation": [
+        "ui/pages/results.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-STR-010",
+      "priority": "P0",
+      "title": "Structure technical export/report",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Exported values reconcile exactly to the displayed structure/run truth.",
+      "implementation": [
+        "ui/pages/results.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-ASSR-001",
+      "priority": "P0",
+      "title": "Protect five assurance states",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Design-5/E07 assurance tests remain PASS.",
+      "implementation": [
+        "ui/pages/assurance.js",
+        "pipeline/pipeline-adapter.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-ASSR-002",
+      "priority": "P0",
+      "title": "Evidence Review Centre",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "User can filter by evidence status/type, geography, structure, KPI and assurance state.",
+      "implementation": [
+        "ui/pages/assurance.js",
+        "pipeline/pipeline-adapter.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-ASSR-003",
+      "priority": "P0",
+      "title": "Evidence requirements and references",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Displayed evidence reconciles to controlled evidence records/E07 snapshot.",
+      "implementation": [
+        "ui/pages/assurance.js",
+        "pipeline/pipeline-adapter.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-ASSR-004",
+      "priority": "P0",
+      "title": "Assurance-only refresh boundary",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Changing evidence state can alter E07/E08/E09 downstream state only according to the governed dependency model.",
+      "implementation": [
+        "ui/pages/assurance.js",
+        "pipeline/pipeline-adapter.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-ASSR-005",
+      "priority": "P0",
+      "title": "Formal HUF confirmation separate",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "No assurance state is automatically converted into formal HUF certification.",
+      "implementation": [
+        "ui/pages/assurance.js",
+        "pipeline/pipeline-adapter.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-ASSR-006",
+      "priority": "P0",
+      "title": "Assurance analytics",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Counts/values reconcile to E07/E08 prepared result buckets.",
+      "implementation": [
+        "ui/pages/assurance.js",
+        "pipeline/pipeline-adapter.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-ASSR-007",
+      "priority": "P0",
+      "title": "Pending-evidence drill-down",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Drill-down totals reconcile to the assurance summary.",
+      "implementation": [
+        "ui/pages/assurance.js",
+        "pipeline/pipeline-adapter.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-EXP-001",
+      "priority": "P0",
+      "title": "Compact Result export",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Export schema/value/status fields reconcile to the frozen Design-5 contract.",
+      "implementation": [
+        "services/export-service.js",
+        "tests/foundation/export-reconciliation.mjs"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-EXP-002",
+      "priority": "P0",
+      "title": "Reporting Summary / Management XLSX",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Workbook totals reconcile to E08/Design-5 truth and clearly state included assurance buckets.",
+      "implementation": [
+        "services/export-service.js",
+        "tests/foundation/export-reconciliation.mjs"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-EXP-003",
+      "priority": "P0",
+      "title": "Technical/M&E XLSX",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Workbook preserves IDs/statuses and reconciles to the run result package.",
+      "implementation": [
+        "services/export-service.js",
+        "tests/foundation/export-reconciliation.mjs"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-EXP-004",
+      "priority": "P0",
+      "title": "Daily Trace export",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Trace row count and values reconcile to the protected daily calculation trace.",
+      "implementation": [
+        "services/export-service.js",
+        "tests/foundation/export-reconciliation.mjs"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-EXP-005",
+      "priority": "P0",
+      "title": "Standard Audit JSON",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Audit JSON passes E09 schema/privacy tests and omits prohibited raw source data.",
+      "implementation": [
+        "services/export-service.js",
+        "tests/foundation/export-reconciliation.mjs"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-EXP-006",
+      "priority": "P1",
+      "title": "Audit Package ZIP",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Package content manifest/hash reconciles to the governed run and privacy policy.",
+      "implementation": [
+        "services/export-service.js",
+        "tests/foundation/export-reconciliation.mjs"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-EXP-007",
+      "priority": "P0",
+      "title": "Export scope disclosure",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Export metadata records project/run ID, hierarchy/filter scope, generated time and controlling versions.",
+      "implementation": [
+        "services/export-service.js",
+        "tests/foundation/export-reconciliation.mjs"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-EXP-008",
+      "priority": "P0",
+      "title": "Status and unit preservation",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "No status is inferred from blank numeric values; unit metadata is explicit.",
+      "implementation": [
+        "services/export-service.js",
+        "tests/foundation/export-reconciliation.mjs"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-EXP-009",
+      "priority": "P0",
+      "title": "No screenshot-based exports",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Export content remains correct even if dashboard layout changes.",
+      "implementation": [
+        "services/export-service.js",
+        "tests/foundation/export-reconciliation.mjs"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-EXP-010",
+      "priority": "P1",
+      "title": "Bulk export bundle",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Bundle includes manifest listing scope and included files.",
+      "implementation": [
+        "services/export-service.js",
+        "tests/foundation/export-reconciliation.mjs"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-RPT-001",
+      "priority": "P0",
+      "title": "Report Centre",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "User can see exactly what report will be generated before generation.",
+      "implementation": [
+        "services/report-service.js",
+        "ui/pages/report-centre.js",
+        "tests/foundation/report-contract.mjs"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-RPT-002",
+      "priority": "P0",
+      "title": "Project management PDF",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Report contains run/KPI summary, coverage, assurance disclosure, geography analysis and methodology/version footer.",
+      "implementation": [
+        "services/report-service.js",
+        "ui/pages/report-centre.js",
+        "tests/foundation/report-contract.mjs"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-RPT-003",
+      "priority": "P0",
+      "title": "District management PDF",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "District totals reconcile to dashboard/export for identical scope.",
+      "implementation": [
+        "services/report-service.js",
+        "ui/pages/report-centre.js",
+        "tests/foundation/report-contract.mjs"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-RPT-004",
+      "priority": "P1",
+      "title": "Block / GP management PDFs",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Report values reconcile to corresponding hierarchy aggregation.",
+      "implementation": [
+        "services/report-service.js",
+        "ui/pages/report-centre.js",
+        "tests/foundation/report-contract.mjs"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-RPT-005",
+      "priority": "P0",
+      "title": "Village PDF",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Village report reconciles to village prepared result scope.",
+      "implementation": [
+        "services/report-service.js",
+        "ui/pages/report-centre.js",
+        "tests/foundation/report-contract.mjs"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-RPT-006",
+      "priority": "P0",
+      "title": "Structure technical PDF",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Report includes identity, route/timing, calculation basis, assurance/evidence, validation, and applicable daily-trace summary.",
+      "implementation": [
+        "services/report-service.js",
+        "ui/pages/report-centre.js",
+        "tests/foundation/report-contract.mjs"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-RPT-007",
+      "priority": "P0",
+      "title": "Management vs Technical/M&E modes",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Mode selection changes presentation/detail only, not official result truth.",
+      "implementation": [
+        "services/report-service.js",
+        "ui/pages/report-centre.js",
+        "tests/foundation/report-contract.mjs"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-RPT-008",
+      "priority": "P1",
+      "title": "Bulk PDF ZIP",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "ZIP includes manifest and preserves one report per requested scope.",
+      "implementation": [
+        "services/report-service.js",
+        "ui/pages/report-centre.js",
+        "tests/foundation/report-contract.mjs"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-RPT-009",
+      "priority": "P1",
+      "title": "Combined PDF",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Table of contents/scope markers prevent ambiguity between combined sections.",
+      "implementation": [
+        "services/report-service.js",
+        "ui/pages/report-centre.js",
+        "tests/foundation/report-contract.mjs"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-RPT-010",
+      "priority": "P0",
+      "title": "Report quality disclosure",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "A reader can determine what the reported total includes without accessing the app.",
+      "implementation": [
+        "services/report-service.js",
+        "ui/pages/report-centre.js",
+        "tests/foundation/report-contract.mjs"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-RPT-011",
+      "priority": "P0",
+      "title": "Shared prepared view model",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Automated acceptance confirms identical scope produces reconciled totals across screen/XLSX/PDF.",
+      "implementation": [
+        "services/report-service.js",
+        "ui/pages/report-centre.js",
+        "tests/foundation/report-contract.mjs"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-RPT-012",
+      "priority": "P0",
+      "title": "Structured/vector reporting",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Text/tables remain selectable/searchable where the PDF technology permits and charts are generated from result data.",
+      "implementation": [
+        "services/report-service.js",
+        "ui/pages/report-centre.js",
+        "tests/foundation/report-contract.mjs"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-AUD-001",
+      "priority": "P0",
+      "title": "Run Summary",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Summary reconciles to E09 run manifest.",
+      "implementation": [
+        "ui/pages/audit.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-AUD-002",
+      "priority": "P0",
+      "title": "Audit & Methodology area",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Normal users can ignore it; technical/audit users can trace the result end-to-end.",
+      "implementation": [
+        "ui/pages/audit.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-AUD-003",
+      "priority": "P0",
+      "title": "Audit event chain",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Audit chain continuity tests pass.",
+      "implementation": [
+        "ui/pages/audit.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-AUD-004",
+      "priority": "P0",
+      "title": "Privacy-reduced audit boundary",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "E09 privacy regression remains PASS.",
+      "implementation": [
+        "ui/pages/audit.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-AUD-005",
+      "priority": "P0",
+      "title": "Certification status disclosure",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Product never presents evidence-retention qualification as a methodology failure.",
+      "implementation": [
+        "ui/pages/audit.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-AUD-006",
+      "priority": "P1",
+      "title": "Rule/formula lookup",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Lookup content is sourced from versioned controlled catalogs/documentation.",
+      "implementation": [
+        "ui/pages/audit.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-AUD-007",
+      "priority": "P0",
+      "title": "Help and terminology",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Terms match frozen controlled terminology.",
+      "implementation": [
+        "ui/pages/audit.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-AUD-008",
+      "priority": "P0",
+      "title": "Release evidence status",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Future release can link/identify its machine-readable acceptance evidence package.",
+      "implementation": [
+        "ui/pages/audit.js"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-TPL-001",
+      "priority": "P0",
+      "title": "Template manager",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "User can determine which template to use for the current release.",
+      "implementation": [
+        "ui/pages/audit.js",
+        "templates/"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-TPL-002",
+      "priority": "P0",
+      "title": "Template history",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "A future version change does not silently reinterpret an older workbook.",
+      "implementation": [
+        "ui/pages/audit.js",
+        "templates/"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-TPL-003",
+      "priority": "P0",
+      "title": "Formula-free input template",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Template audit finds no hidden official calculation formulas in controlled input sheets.",
+      "implementation": [
+        "ui/pages/audit.js",
+        "templates/"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-TPL-004",
+      "priority": "P1",
+      "title": "Template guidance",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "User can access field purpose/unit/requiredness guidance from template/help.",
+      "implementation": [
+        "ui/pages/audit.js",
+        "templates/"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-PRIV-001",
+      "priority": "P0",
+      "title": "No backend requirement",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "A complete run can be executed from the deployed static application without sending workbook data to an application server.",
+      "implementation": [
+        "tests/browser/run-imp7b-browser-acceptance.mjs",
+        "tests/protected/run.mjs"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-PRIV-002",
+      "priority": "P0",
+      "title": "No project data in URL",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Privacy regression confirms no raw project data appears in location/history URLs.",
+      "implementation": [
+        "tests/browser/run-imp7b-browser-acceptance.mjs",
+        "tests/protected/run.mjs"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-PRIV-003",
+      "priority": "P0",
+      "title": "No runtime external-data transmission",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Network inspection during golden run shows no project-data upload.",
+      "implementation": [
+        "tests/browser/run-imp7b-browser-acceptance.mjs",
+        "tests/protected/run.mjs"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-PRIV-004",
+      "priority": "P0",
+      "title": "Redacted standard audit",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Raw participant names/source values prohibited by E09 do not appear in standard export.",
+      "implementation": [
+        "tests/browser/run-imp7b-browser-acceptance.mjs",
+        "tests/protected/run.mjs"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-PRIV-005",
+      "priority": "P0",
+      "title": "No production debug global",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Production build/window global inspection finds no equivalent of VWB debug global carrying project data.",
+      "implementation": [
+        "tests/browser/run-imp7b-browser-acceptance.mjs",
+        "tests/protected/run.mjs"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-PRIV-006",
+      "priority": "P0",
+      "title": "Dependency privacy/determinism",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Core golden run succeeds with external network blocked.",
+      "implementation": [
+        "tests/browser/run-imp7b-browser-acceptance.mjs",
+        "tests/protected/run.mjs"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-NFR-001",
+      "priority": "P0",
+      "title": "Static GitHub Pages deployment",
+      "status": "PENDING_RELEASE_ENVIRONMENT",
+      "acceptanceCriterion": "Deployment acceptance proves application assets/configs load correctly from a repository subpath.",
+      "implementation": [
+        "tests/browser/run-imp7b-browser-acceptance.mjs",
+        "tests/foundation/repeat-run.mjs"
+      ],
+      "note": "Candidate exists and browser CI passed; exact promoted SHA, deployed acceptance and final evidence package remain dependent on release gates."
+    },
+    {
+      "id": "PRD-NFR-002",
+      "priority": "P0",
+      "title": "Deterministic repeatability",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Repeat-run deterministic-content tests pass.",
+      "implementation": [
+        "tests/browser/run-imp7b-browser-acceptance.mjs",
+        "tests/foundation/repeat-run.mjs"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-NFR-003",
+      "priority": "P0",
+      "title": "Responsive application",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Responsive acceptance covers agreed viewport matrix with no inaccessible controls or clipped critical values.",
+      "implementation": [
+        "tests/browser/run-imp7b-browser-acceptance.mjs",
+        "tests/foundation/repeat-run.mjs"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-NFR-004",
+      "priority": "P0",
+      "title": "Accessible interaction",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Accessibility review finds no critical keyboard/navigation blockers in the P0 workflow.",
+      "implementation": [
+        "tests/browser/run-imp7b-browser-acceptance.mjs",
+        "tests/foundation/repeat-run.mjs"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-NFR-005",
+      "priority": "P0",
+      "title": "Production-scale performance",
+      "status": "BLOCKED_CRITICAL_WORKLOAD_DECISION",
+      "acceptanceCriterion": "Architecture phase defines a production-scale fixture and measurable performance budget; acceptance must pass that budget.",
+      "implementation": [
+        "tests/browser/run-imp7b-browser-acceptance.mjs",
+        "tests/foundation/repeat-run.mjs"
+      ],
+      "note": "Architecture27.5 leaves representative production fixture and numeric budget undefined. Synthetic100/1000 structure Node measurements are retained separately."
+    },
+    {
+      "id": "PRD-NFR-006",
+      "priority": "P0",
+      "title": "Failure-safe state",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Injected stage failure never labels an older run as the current completed result.",
+      "implementation": [
+        "tests/browser/run-imp7b-browser-acceptance.mjs",
+        "tests/foundation/repeat-run.mjs"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-NFR-007",
+      "priority": "P0",
+      "title": "Release evidence package",
+      "status": "PENDING_RELEASE_ENVIRONMENT",
+      "acceptanceCriterion": "Release package contains all evidence required to remove the current evidence-retention qualification.",
+      "implementation": [
+        "tests/browser/run-imp7b-browser-acceptance.mjs",
+        "tests/foundation/repeat-run.mjs"
+      ],
+      "note": "Candidate exists and browser CI passed; exact promoted SHA, deployed acceptance and final evidence package remain dependent on release gates."
+    },
+    {
+      "id": "PRD-NFR-008",
+      "priority": "P0",
+      "title": "No stale contradictory status files",
+      "status": "PENDING_RELEASE_ENVIRONMENT",
+      "acceptanceCriterion": "Release contains no stale FAIL summary contradicting the promoted PASS status without an explicit explanatory qualification.",
+      "implementation": [
+        "tests/browser/run-imp7b-browser-acceptance.mjs",
+        "tests/foundation/repeat-run.mjs"
+      ],
+      "note": "Candidate exists and browser CI passed; exact promoted SHA, deployed acceptance and final evidence package remain dependent on release gates."
+    },
+    {
+      "id": "PRD-NFR-009",
+      "priority": "P0",
+      "title": "Local/bundled dependency strategy",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Offline/network-blocked core run succeeds using release-contained dependencies.",
+      "implementation": [
+        "tests/browser/run-imp7b-browser-acceptance.mjs",
+        "tests/foundation/repeat-run.mjs"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-NFR-010",
+      "priority": "P1",
+      "title": "Progressive disclosure",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "A nontechnical user can complete a valid golden workflow without interacting with raw engine IDs.",
+      "implementation": [
+        "tests/browser/run-imp7b-browser-acceptance.mjs",
+        "tests/foundation/repeat-run.mjs"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-ACC-001",
+      "priority": "P0",
+      "title": "Protected regression suite",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Machine-readable release evidence records zero unresolved protected regression failures.",
+      "implementation": [
+        "tests/protected/design6-summary.mjs",
+        "tests/evidence/",
+        "tests/browser/run-imp7b-browser-acceptance.mjs"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-ACC-002",
+      "priority": "P0",
+      "title": "Design-6 logical suite",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Release evidence records 154 PASS, 0 FAIL, 0 NOT VERIFIED.",
+      "implementation": [
+        "tests/protected/design6-summary.mjs",
+        "tests/evidence/",
+        "tests/browser/run-imp7b-browser-acceptance.mjs"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-ACC-003",
+      "priority": "P0",
+      "title": "Physical fixtures",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Machine-readable release evidence records 15/15 PASS and fixture hashes match the frozen manifest.",
+      "implementation": [
+        "tests/protected/design6-summary.mjs",
+        "tests/evidence/",
+        "tests/browser/run-imp7b-browser-acceptance.mjs"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-ACC-004",
+      "priority": "P0",
+      "title": "Leap/non-leap goldens",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "366-day and 365-day golden assertions pass within controlled tolerance.",
+      "implementation": [
+        "tests/protected/design6-summary.mjs",
+        "tests/evidence/",
+        "tests/browser/run-imp7b-browser-acceptance.mjs"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-ACC-005",
+      "priority": "P0",
+      "title": "Dashboard reconciliation",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Automated comparison finds no unexplained dashboard/result differences.",
+      "implementation": [
+        "tests/protected/design6-summary.mjs",
+        "tests/evidence/",
+        "tests/browser/run-imp7b-browser-acceptance.mjs"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-ACC-006",
+      "priority": "P0",
+      "title": "Export reconciliation",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Automated export assertions pass for values, status, units and scope metadata.",
+      "implementation": [
+        "tests/protected/design6-summary.mjs",
+        "tests/evidence/",
+        "tests/browser/run-imp7b-browser-acceptance.mjs"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-ACC-007",
+      "priority": "P0",
+      "title": "PDF reconciliation",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Automated/structured report assertions and spot-checks pass for KPI totals, coverage and assurance disclosure.",
+      "implementation": [
+        "tests/protected/design6-summary.mjs",
+        "tests/evidence/",
+        "tests/browser/run-imp7b-browser-acceptance.mjs"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-ACC-008",
+      "priority": "P0",
+      "title": "Privacy acceptance",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Machine-readable privacy acceptance is included in release evidence.",
+      "implementation": [
+        "tests/protected/design6-summary.mjs",
+        "tests/evidence/",
+        "tests/browser/run-imp7b-browser-acceptance.mjs"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-ACC-009",
+      "priority": "P0",
+      "title": "Browser acceptance evidence",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "P0 workflow passes in the agreed browser matrix and result artifact is embedded in release evidence.",
+      "implementation": [
+        "tests/protected/design6-summary.mjs",
+        "tests/evidence/",
+        "tests/browser/run-imp7b-browser-acceptance.mjs"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-ACC-010",
+      "priority": "P0",
+      "title": "GitHub Pages deployed acceptance",
+      "status": "PENDING_RELEASE_ENVIRONMENT",
+      "acceptanceCriterion": "Live acceptance proves Upload \u2192 Review/Correct \u2192 Calculate \u2192 Results and critical export/report actions on the deployed site.",
+      "implementation": [
+        "tests/protected/design6-summary.mjs",
+        "tests/evidence/",
+        "tests/browser/run-imp7b-browser-acceptance.mjs"
+      ],
+      "note": "Candidate exists and browser CI passed; exact promoted SHA, deployed acceptance and final evidence package remain dependent on release gates."
+    },
+    {
+      "id": "PRD-ACC-011",
+      "priority": "P0",
+      "title": "Responsive acceptance",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "No critical content is inaccessible or clipped in the acceptance matrix.",
+      "implementation": [
+        "tests/protected/design6-summary.mjs",
+        "tests/evidence/",
+        "tests/browser/run-imp7b-browser-acceptance.mjs"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-ACC-012",
+      "priority": "P0",
+      "title": "Release integrity",
+      "status": "PENDING_RELEASE_ENVIRONMENT",
+      "acceptanceCriterion": "Independent manifest verification passes 100% for controlled release payloads.",
+      "implementation": [
+        "tests/protected/design6-summary.mjs",
+        "tests/evidence/",
+        "tests/browser/run-imp7b-browser-acceptance.mjs"
+      ],
+      "note": "Candidate exists and browser CI passed; exact promoted SHA, deployed acceptance and final evidence package remain dependent on release gates."
+    },
+    {
+      "id": "PRD-ACC-013",
+      "priority": "P0",
+      "title": "Cross-surface scope consistency",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Acceptance fixture proves identical included entity IDs/status counts across P0 surfaces.",
+      "implementation": [
+        "tests/protected/design6-summary.mjs",
+        "tests/evidence/",
+        "tests/browser/run-imp7b-browser-acceptance.mjs"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-ACC-014",
+      "priority": "P0",
+      "title": "No methodology drift",
+      "status": "IMPLEMENTED_WITH_LINKED_EVIDENCE",
+      "acceptanceCriterion": "Any difference from protected methodology is either zero or explicitly governed/versioned with full regression evidence.",
+      "implementation": [
+        "tests/protected/design6-summary.mjs",
+        "tests/evidence/",
+        "tests/browser/run-imp7b-browser-acceptance.mjs"
+      ],
+      "note": "Implementation coverage; linked suites cover the area. This row is not an independent release-certification claim."
+    },
+    {
+      "id": "PRD-FUT-001",
+      "priority": "P2",
+      "title": "Run-to-run comparison",
+      "status": "DEFERRED_BY_FROZEN_PRD",
+      "acceptanceCriterion": "Not required for initial rebuild release; any future comparison uses immutable completed run packages.",
+      "implementation": [],
+      "note": "Explicitly outside initial release."
+    },
+    {
+      "id": "PRD-FUT-002",
+      "priority": "P2",
+      "title": "Map/GIS visualization",
+      "status": "DEFERRED_BY_FROZEN_PRD",
+      "acceptanceCriterion": "Not required for initial rebuild; no map dependency may block core results.",
+      "implementation": [],
+      "note": "Explicitly outside initial release."
+    },
+    {
+      "id": "PRD-FUT-003",
+      "priority": "P2",
+      "title": "Multi-project portfolio",
+      "status": "DEFERRED_BY_FROZEN_PRD",
+      "acceptanceCriterion": "Initial rebuild remains single-workbook/run focused.",
+      "implementation": [],
+      "note": "Explicitly outside initial release."
+    },
+    {
+      "id": "PRD-FUT-004",
+      "priority": "P2",
+      "title": "Collaborative/backend workflows",
+      "status": "DEFERRED_BY_FROZEN_PRD",
+      "acceptanceCriterion": "Initial release requires no login/backend.",
+      "implementation": [],
+      "note": "Explicitly outside initial release."
+    },
+    {
+      "id": "PRD-FUT-005",
+      "priority": "P2",
+      "title": "Demand-side KPI integration",
+      "status": "DEFERRED_BY_FROZEN_PRD",
+      "acceptanceCriterion": "No demand-side formula/schema is introduced into the supply-side protected core.",
+      "implementation": [],
+      "note": "Explicitly outside initial release."
+    }
+  ]
+}

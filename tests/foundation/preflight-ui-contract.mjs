@@ -6,7 +6,7 @@ const service=await fs.readFile(path.join(root,'services/preflight-service.js'),
 const view=await fs.readFile(path.join(root,'views/preflight-view-model.js'),'utf8');
 const productText=ui+'\n'+view;
 const checks=[];const check=(id,ok)=>checks.push({id,status:ok?'PASS':'FAIL'});
-for(const [id,text] of [['TITLE','Workbook Preflight'],['TEMPLATE','Template version'],['PERIOD','Reporting period'],['SHEETS','Recognized sheets'],['STRUCTURES','Structures detected'],['FORMULAS','Formula presence'],['STATUS','Preflight status'],['INVENTORY','Controlled sheet inventory'],['ERRORS','Errors'],['WARNINGS','Warnings'],['INFORMATION','Information'],['FINGERPRINT','Source fingerprint'],['ADVANCED','Advanced preflight details'],['CONTINUE','Continue to Mapping'],['BOUNDARY','not Design-4 validation'],['NO_RAW','Raw workbook rows']])check(id,productText.includes(text));
+for(const [id,text] of [['TITLE','Workbook Preflight'],['TEMPLATE','Template version'],['PERIOD','Reporting period'],['SHEETS','Recognized sheets'],['STRUCTURES','Structures detected'],['FORMULAS','Formula presence'],['STATUS','Preflight status'],['INVENTORY','Controlled sheet inventory'],['ERRORS','Errors'],['WARNINGS','Warnings'],['INFORMATION','Information'],['FINGERPRINT','Source fingerprint'],['ADVANCED','Advanced preflight details'],['CONTINUE','Continue to Mapping'],['BOUNDARY','Record-level validation follows data preparation'],['NO_RAW','Raw workbook rows']])check(id,productText.includes(text));
 check('UI_USES_VIEW_MODEL',ui.includes('createPreflightViewModel'));
 check('BOOTSTRAP_MOUNTS_PREFLIGHT',bootstrap.includes('mountWorkbookPreflight')&&bootstrap.includes('function preflight()'));
 check('REVIEW_NAV_GOVERNED',bootstrap.includes("id==='review'?Boolean(s.source.preflight)"));

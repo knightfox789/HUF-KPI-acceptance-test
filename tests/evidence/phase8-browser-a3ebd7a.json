@@ -1,0 +1,297 @@
+{
+  "schema": "HUF-IMP7BE-BROWSER-ACCEPTANCE-v1",
+  "phase": "PHASE-8",
+  "productVersion": "1.0.0-rc.1",
+  "startedAt": "2026-09-08T17:15:13.087Z",
+  "status": "PASS",
+  "applicationFailure": false,
+  "siteRoot": "/home/runner/work/HUF-KPI-acceptance-test/HUF-KPI-acceptance-test/_site",
+  "sample": "samples/nonleap/GOLDEN_E2E_NONLEAP_FY2024-25.xlsx",
+  "checks": [
+    {
+      "id": "UPLOAD_SCREEN_RENDERED",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "REAL_XLSX_SELECTED",
+      "status": "PASS",
+      "note": "GOLDEN_E2E_NONLEAP_FY2024-25.xlsx"
+    },
+    {
+      "id": "SOURCE_FINGERPRINT_VISIBLE",
+      "status": "PASS",
+      "note": "7c6ba9498f8c…22fdddeb"
+    },
+    {
+      "id": "PREFLIGHT_READY",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "PREFLIGHT_TEMPLATE_VERSION",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "PREFLIGHT_FORMULA_VISIBILITY",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "SUMMARY_MAPPED_AUTOMATICALLY",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "SUMMARY_NEEDS_CONFIRMATION",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "SUMMARY_CONFLICTS",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "SUMMARY_UNMAPPED_REQUIRED",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "FILTER_NEEDS_ATTENTION",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "FILTER_CONFIRMED",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "FILTER_ALL_FIELDS",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "FILTER_ADVANCED",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "MAPPING_ROWS_PRESENT",
+      "status": "PASS",
+      "note": "147"
+    },
+    {
+      "id": "MANUAL_SOURCE_CURRENT_VALUE_AVAILABLE",
+      "status": "PASS",
+      "note": "01_Control::0"
+    },
+    {
+      "id": "MANUAL_MAPPING_APPLIED",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "FINALIZE_ENABLED",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "DATA_PREPARATION_EXECUTED",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "VALIDATION_SEPARATE_FROM_PREPARATION",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "SNAPSHOT_HASH_VISIBLE",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "VALIDATION_WARNING_IS_NOT_BLOCKER",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "RESULTS_CALCULATED",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "SYNTHETIC_DISCLOSURE",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "UNIT_SWITCH_RENDERS",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "TRACE_365_ROWS",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "TRACE_RUN_METADATA",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "STRUCTURE_PDF",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "ASSURANCE_REQUIREMENTS",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "COMPACT_CSV_FULL_PRECISION",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "CSV_SYNTHETIC_METADATA",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "XLSX_COMPACT",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "XLSX_MANAGEMENT",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "XLSX_TECHNICAL",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "MANAGEMENT_PDF",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "AUDIT_E01_TO_E09",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "AUDIT_NO_SOURCE_BYTES",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "AUDIT_SOURCE_HASH",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "BULK_ZIP",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "COMBINED_PDF",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "NO_PAGE_OVERFLOW_tablet_results",
+      "status": "PASS",
+      "note": "{\"width\":834,\"documentWidth\":834,\"elements\":[]}"
+    },
+    {
+      "id": "NO_PAGE_OVERFLOW_tablet_structures",
+      "status": "PASS",
+      "note": "{\"width\":834,\"documentWidth\":834,\"elements\":[]}"
+    },
+    {
+      "id": "NO_PAGE_OVERFLOW_tablet_reports",
+      "status": "PASS",
+      "note": "{\"width\":834,\"documentWidth\":834,\"elements\":[]}"
+    },
+    {
+      "id": "NO_PAGE_OVERFLOW_tablet_audit",
+      "status": "PASS",
+      "note": "{\"width\":834,\"documentWidth\":834,\"elements\":[]}"
+    },
+    {
+      "id": "NO_PAGE_OVERFLOW_mobile_results",
+      "status": "PASS",
+      "note": "{\"width\":390,\"documentWidth\":390,\"elements\":[]}"
+    },
+    {
+      "id": "NO_PAGE_OVERFLOW_mobile_structures",
+      "status": "PASS",
+      "note": "{\"width\":390,\"documentWidth\":390,\"elements\":[]}"
+    },
+    {
+      "id": "NO_PAGE_OVERFLOW_mobile_reports",
+      "status": "PASS",
+      "note": "{\"width\":390,\"documentWidth\":390,\"elements\":[]}"
+    },
+    {
+      "id": "NO_PAGE_OVERFLOW_mobile_audit",
+      "status": "PASS",
+      "note": "{\"width\":390,\"documentWidth\":390,\"elements\":[]}"
+    },
+    {
+      "id": "CORRECTION_INVALIDATES_RESULTS",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "LEAP_RESULTS_RENDERED",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "TRACE_366_ROWS",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "NO_PROJECT_DATA_IN_URL",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "NO_UPLOAD_REQUESTS",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "NO_OFFSITE_REQUESTS",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "NO_DEBUG_STATE_GLOBAL",
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "NO_PAGE_ERRORS",
+      "status": "PASS",
+      "note": ""
+    }
+  ],
+  "consoleErrors": [],
+  "pageErrors": [],
+  "target": "http://127.0.0.1:42273/",
+  "goldenCalculationMs": 248,
+  "finishedAt": "2026-09-08T17:15:21.588Z"
+}
