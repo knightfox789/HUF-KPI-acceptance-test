@@ -37,10 +37,19 @@ export async function handleWorkerCommand(command,payload={}){
   }
 }
 
+const chunkAcks=new Map();
+async function sendResultPackage(requestId,command,pack){
+  const send=payload=>new Promise(resolve=>{chunkAcks.set(requestId,resolve);self.postMessage(envelope(requestId,command,'partial',payload));});
+  await send({kind:'header',value:{...pack,calculation:{...pack.calculation,waterCalculations:[]}}});
+  for(let i=0;i<pack.calculation.waterCalculations.length;i+=20)await send({kind:'water',value:pack.calculation.waterCalculations.slice(i,i+20)});
+  self.postMessage(envelope(requestId,command,'complete'));
+}
+
 if(typeof self!=='undefined'&&'postMessage' in self){
   self.onmessage=async event=>{
     const {requestId,command,payload}=event.data||{};
-    try{self.postMessage(envelope(requestId,command,'complete',await handleWorkerCommand(command,payload)));}
+    if(command==='ACK_RESULT_CHUNK'){const ack=chunkAcks.get(requestId);chunkAcks.delete(requestId);ack?.();return;}
+    try{const result=await handleWorkerCommand(command,payload);if(command==='GET_RESULT_PACKAGE')await sendResultPackage(requestId,command,result);else self.postMessage(envelope(requestId,command,'complete',result));}
     catch(error){self.postMessage(envelope(requestId,command,'failed',null,{message:error.message,name:error.name}));}
   };
 }

@@ -176,8 +176,8 @@
     },
     {
       "path": "docs/continuity/master-plan.md",
-      "sizeBytes": 494297,
-      "sha256": "904c420bfab2b50eafbbb05fa440ad6278aecf4efe64061640203af7d9fb97d8"
+      "sizeBytes": 495529,
+      "sha256": "44fb158b29b14cd186cb1c87a060d90478ba30013c52715c6b27b89d14f179a9"
     },
     {
       "path": "docs/release/PHASE7A_IMPLEMENTATION_REPORT.md",
@@ -246,13 +246,13 @@
     },
     {
       "path": "pipeline/worker-client.js",
-      "sizeBytes": 2962,
-      "sha256": "d430ef9f43756ef9893841acce9adb4f655fe347b2c2e4a16cc06c63254ef570"
+      "sizeBytes": 3415,
+      "sha256": "17fd81fb356a8358669a2ddaa792b10e4fb70d1db3863fe939d434ee0972911a"
     },
     {
       "path": "pipeline/worker-entry.js",
-      "sizeBytes": 2398,
-      "sha256": "57905b410f8a12cffd492f6ffcbef6afd9a8cd3148213f451a4286686e76e24f"
+      "sizeBytes": 3166,
+      "sha256": "32eebbf6c6fdc01ab018780495e270c7b565f3702caa760edad26f7bc432a707"
     },
     {
       "path": "pipeline/worker-runtime.js",
@@ -526,8 +526,8 @@
     },
     {
       "path": "tests/browser/run-imp7b-browser-acceptance.mjs",
-      "sizeBytes": 15032,
-      "sha256": "df99209a9a6820665dd629932712741b64e3de39fffa03c8c7b387ae458a181b"
+      "sizeBytes": 15105,
+      "sha256": "beea95b46c6d4d125d705753e2baed080d7aa90164b6c55c62bd635b1fae7c58"
     },
     {
       "path": "tests/browser/verify-deployed-files.mjs",
@@ -611,8 +611,8 @@
     },
     {
       "path": "tests/evidence/phase7be-test-result.json",
-      "sizeBytes": 28506,
-      "sha256": "96c5c9c1c71c9b5cd171ca2fb5028dc02399929b7fddbf1199d7470e4930014b"
+      "sizeBytes": 28819,
+      "sha256": "43afc25dfa8d72f467b44bb021bb225408824fc0bbfea5b3e06f626137ead2f3"
     },
     {
       "path": "tests/evidence/phase8-browser-a3ebd7a.json",
@@ -841,8 +841,8 @@
     },
     {
       "path": "tests/foundation/worker-client-lifecycle.mjs",
-      "sizeBytes": 3366,
-      "sha256": "0502fa750ab4c599a8d9b66c3cb3b08ffe5c2120ac85fd003a4ef419a741bc5c"
+      "sizeBytes": 4296,
+      "sha256": "aac529aaef22b18d148d3d83793b07c7f32ed42ceae5ae1e30285eda632682c6"
     },
     {
       "path": "tests/foundation/worker-runtime.mjs",

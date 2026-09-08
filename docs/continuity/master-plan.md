@@ -14925,3 +14925,10 @@ E03-only integration and separate E04 command implemented. Preparation orchestra
 - Found browser worker DOMParser capability absent, causing main-thread fallback. Capacity acceptance is added to CI to measure this concrete risk before promotion. Protected engine/config files remain unchanged.
 
 - Worker repair under test: bundle@xmldom/xmldom0.9.12 (the same pinned DOM implementation used in controlled Node regression) to provide worker-local DOMParser. Original protected XLSX parser and all controlled modules/configs remain byte-identical. GET_CAPABILITIES must confirm compatibility; no forced-success capability flag. Worker command timeout45s allows the declared30s stage budget plus transport margin. Full browser goldens and capacity gates must pass before promotion.
+
+### EXEC-PERF-057 — Measured worker transfer repair
+- Baseline91f7a93 capacity test failed before calculation because generated empty optional sheet headers were absent. Fixture headers repaired; mapping gate remains intact.
+- Candidate216fdad and profileaffa77e completed1000 structures/1000 person-day records for365/366days in~11s, all numeric stage, interaction and export budgets passed. Main-thread gaps1.04–1.26s failed the fixed1s gate during result transfer. No capacity PASS is claimed.
+- Measured result package~153MB including full daily traces. Added acknowledgement-paced20-record transfer chunks; all values, nulls, traces and hashes retained, worker yields between chunks. Protected engines/configs unchanged. Full gates rerun pending.
+- Standard browser check exposed asynchronous mapping-test timing after enabling worker. Runner now waits for mapping drawer to close after completed apply, then verifies manual mapping; no assertion removed.
+- Pages workflow prepared to require both browser and capacity acceptance before deploy; post-deploy check compares every served payload file and repeats full live browser acceptance. User authorized this continuous release workflow; no deployment has occurred yet.

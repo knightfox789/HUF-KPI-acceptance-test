@@ -56,6 +56,7 @@ try{
   await page.locator('[data-mapping-drawer]').waitFor({state:'visible'});
   const select=page.locator('[data-field-source]');const currentValue=await select.inputValue();check('MANUAL_SOURCE_CURRENT_VALUE_AVAILABLE',Boolean(currentValue),currentValue);
   await page.locator('[data-apply-field]').click();
+  await page.locator('[data-mapping-drawer]').waitFor({state:'hidden'});
   await page.locator('[data-mapping-root]').waitFor({state:'visible'});
   const postManual=await page.locator('[data-mapping-root]').innerText();check('MANUAL_MAPPING_APPLIED',postManual.includes('Manual')||postManual.includes('manual'));
   const finalize=page.locator('[data-finalize-mapping]');check('FINALIZE_ENABLED',!(await finalize.isDisabled()));

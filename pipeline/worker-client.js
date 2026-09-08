@@ -10,15 +10,22 @@ export function createWorkerPipelineClient({WorkerCtor=globalThis.Worker,workerU
   const failClosed=error=>{if(!closed){closed=true;try{worker.terminate();}catch{}}rejectAll(error);};
   worker.onmessage=event=>{
     const msg=event.data||{};const slot=pending.get(msg.requestId);if(!slot)return;
+    if(msg.status==='partial'){
+      if(msg.payload?.kind==='header')slot.result=msg.payload.value;
+      else if(msg.payload?.kind==='water'&&slot.result)slot.result.calculation.waterCalculations.push(...msg.payload.value);
+      else{failClosed(new Error('Invalid result transfer chunk.'));return;}
+      setTimeout(()=>{if(!closed&&pending.has(msg.requestId))worker.postMessage({requestId:msg.requestId,command:'ACK_RESULT_CHUNK'});},0);
+      return;
+    }
     pending.delete(msg.requestId);clearTimeout(slot.timer);
-    if(msg.status==='complete')slot.resolve(msg.payload);else slot.reject(makeError(msg.error));
+    if(msg.status==='complete')slot.resolve(slot.result??msg.payload);else slot.reject(makeError(msg.error));
   };
   worker.onerror=event=>{event?.preventDefault?.();failClosed(new Error(event?.message||'Pipeline Worker failed.'));};
   worker.onmessageerror=()=>failClosed(new Error('Pipeline Worker message could not be deserialized.'));
   const rpc=(command,payload=null)=>new Promise((resolve,reject)=>{
     if(closed){reject(new Error('Pipeline Worker client is closed.'));return;}
     const requestId=`W-${++seq}`;
-    const timer=setTimeout(()=>{pending.delete(requestId);reject(new Error(`Worker command timed out: ${command}`));},timeoutMs);
+    const timer=setTimeout(()=>{failClosed(new Error(`Worker command timed out: ${command}`));},timeoutMs);
     pending.set(requestId,{resolve,reject,timer});
     try{worker.postMessage({requestId,command,payload});}catch(error){pending.delete(requestId);clearTimeout(timer);failClosed(error);reject(error);}
   });
