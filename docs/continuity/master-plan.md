@@ -1,10 +1,13 @@
 ---
 title: "HUF Supply-Side KPI Calculator — Master Audit, Recovery and Clean Rebuild Plan"
 status: "active"
-version: "0.55"
+version: "0.56"
 date: "2026-09-08"
 purpose: "Standalone restart document in case the original ChatGPT conversation is unavailable."
 ---
+
+> **Current checkpoint v0.55:** E7 closed. IMP-7C–G candidate implemented in the authorized repository. Candidate e42ed99834c614127eff3292166c832036be621b (tree cf680ed5373fb04f709631447c69b07ea39c8939), draft PR1. Fresh154/154 logical and15/15 physical checks PASS in CI34257867045; expanded browser79/79 PASS with zero console/page errors. Production performance workload/budget remains the one critical user decision; deployment and final release packaging have not been promoted. This current checkpoint governs over earlier historical “next step” entries.
+
 
 
 # 0. Living Rebuild-Plan Governance — Mandatory From This Point Forward
@@ -14904,3 +14907,19 @@ E03-only integration and separate E04 command implemented. Preparation orchestra
 - CI34257236027 passed all foundation/product/protected/154 logical gates and keyboard skip-link checks. Its new preflight-export test incorrectly expected11 prepared data tables rather than the13-sheet source inventory (including00_Instructions and99_Lookups). Verified the golden XLSX inventory and corrected the assertion to13 with both auxiliary sheet names required. Export implementation was unchanged; browser rerun required.
 
 - Empty-filter CSV exports are disabled with a clear zero-record explanation because a row-oriented empty CSV cannot retain run/scope metadata. XLSX/PDF empty summaries retain metadata. Added an accepted/KPI1.1.1 empty-intersection browser check; no result membership or values are changed.
+
+### EXEC-CHECKPOINT-055 — verified implementation candidate; critical performance gate outstanding
+- Candidate source e42ed99834c614127eff3292166c832036be621b, tree cf680ed5373fb04f709631447c69b07ea39c8939. Draft PR1 remains unmerged; sole authorized repository knightfox789/HUF-KPI-acceptance-test. Workspace tree matched the remotely committed tree and was clean.
+- CI34257867045: foundation job102168118587 PASS and browser job102168812765 PASS. Fresh154/154 logical (0 FAIL/0 NOT VERIFIED),15/15 physical fixture hashes/cases,16 protected suites,90 product-flow checks,318 report checks,39 export scopes and repeat-run failure-safe tests passed.
+- Browser79/79 PASS: desktop1440x1000,tablet834x1112,mobile390x844; full preparation/validation/calculation/results/export workflow,365/366-day trace, correction invalidation, keyboard skip/main focus and primary actions, labelled controls, drag/drop, preflight summary, no external requests with network blocking, no uploads/private URL/debug global, no page/console errors, and empty-filter CSV protection. Nonleap calculation237ms is a golden measurement only.
+- Browser artifact10068811092: SHA2567b88e8ab600b68dff02b0f357ed5e89509074a3fcbbbe3a13acb3a5854c38491. Foundation artifact10068678823: SHA2562c23b31af0ea31dde4976f5cdfecf8c2847ba4dda29fb3f082bbc6121ef32bde. Downloaded exact bytes verified against GitHub digests.
+- Final mobile screenshot review confirms readable table columns with container scrolling and accessible Results/Review/Assurance controls. Management project and CCT structure PDFs use embedded fonts, full-precision values and selectable text; five pages each reviewed. XLSX metadata clipping corrected and re-rendered. QA applies to retained synthetic samples, not every possible language or arbitrary text length.
+- This v0.55 checkpoint is the latest continuity authority. The repository's master/status snapshot predates CI completion by design; its prior-PASS/pending annotations are historical. The PR body and this retained checkpoint bind the completed evidence to e42ed99 without modifying that tested source. Do not treat the older embedded pending label as a new runtime failure.
+- Required next critical input: representative maximum production workbook, or expected structure/person-day counts. PRD-NFR-005 / Architecture27.5 forbid unsupported production thresholds. Synthetic100/1000 structure Node probes remain engineering measurements, not release acceptance.
+- Following that input, continue without routine approvals: document and pass production browser performance; promote/deploy the qualifying candidate; execute actual Pages workflow and deployed-file/protected-core drift verification; generate final source/release/evidence manifests, SHA files and notes; reconcile promoted status; update this master to released only after all gates pass.
+- Main/Pages remains accepted E7 baseline fe54aa2dd80262a63788e09d236e53da782806b6. No final release or formal HUF confirmation is claimed. Five P2 future requirements remain intentionally deferred under the frozen PRD.
+
+### EXEC-PERF-056 — user directs autonomous continuation
+- User replied “proceed” after the production-workload question. Proceed with a declared initial qualification workload, without asserting that actual production counts were supplied. Workload1000 structures +1000 person-day records,365/366-day calendars, five districts and at least50 villages, derived synthetically from protected route/type goldens. Larger/materially different portfolios remain outside this initial qualification.
+- Fixed before browser execution: end-to-end90s, individual stage30s, view interaction/navigation1s, exports30s and maximum main-thread heartbeat gap1s. Basis: prior1000-structure Node measurement~11s and1.34GB peak RSS. Record failures and fix implementation; do not silently raise budgets to pass.
+- Found browser worker DOMParser capability absent, causing main-thread fallback. Capacity acceptance is added to CI to measure this concrete risk before promotion. Protected engine/config files remain unchanged.

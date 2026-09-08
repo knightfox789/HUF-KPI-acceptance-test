@@ -12,7 +12,7 @@
     "classification": "HUF protected operational final v1.0.0"
   },
   "validationStatus": "PASS",
-  "payloadFiles": 204,
+  "payloadFiles": 207,
   "files": [
     {
       "path": ".github/workflows/pages.yml",
@@ -21,8 +21,8 @@
     },
     {
       "path": ".github/workflows/validate.yml",
-      "sizeBytes": 2291,
-      "sha256": "6c5a5872e5a2f490c553d8d18b61687163dd396a7cf0d73531c75ea1a18e455a"
+      "sizeBytes": 2925,
+      "sha256": "308cb86cf5691829f6ae1cdc47dff0a66a5faeb63df6c2233aed5ecde0b5d614"
     },
     {
       "path": ".gitignore",
@@ -176,8 +176,8 @@
     },
     {
       "path": "docs/continuity/master-plan.md",
-      "sizeBytes": 489162,
-      "sha256": "b987bdb26dd6fcb1815d4096decc532a0bb7585b75da6352abab4680c3b76f0f"
+      "sizeBytes": 493812,
+      "sha256": "335ab5f85dd88fbe28f9bad341921ce4db58d4872aeb8082cd9fbe2e940a4a01"
     },
     {
       "path": "docs/release/PHASE7A_IMPLEMENTATION_REPORT.md",
@@ -607,7 +607,7 @@
     {
       "path": "tests/evidence/phase7be-test-result.json",
       "sizeBytes": 28506,
-      "sha256": "285ea7d7a8342d570d2152fba6fac64e511983eeed2f72d7060b776ea442942a"
+      "sha256": "8841f342b1f5b76c71c9cd3d95c6d689620d829316768a08e0a09a17b7bd135a"
     },
     {
       "path": "tests/evidence/phase8-browser-a3ebd7a.json",
@@ -843,6 +843,21 @@
       "path": "tests/foundation/worker-runtime.mjs",
       "sizeBytes": 975,
       "sha256": "044970bf2ae432f1840bb376fe69d7518fded52af4866f7927fc044ff4bacef9"
+    },
+    {
+      "path": "tests/performance/browser-capacity.mjs",
+      "sizeBytes": 5373,
+      "sha256": "b36ccd3b0a878d431ec73b466091164e104857ffdac3f89c240694a029b543b2"
+    },
+    {
+      "path": "tests/performance/budget.json",
+      "sizeBytes": 1147,
+      "sha256": "b148a50a957cc3c98048a2c369ca94e3125abc47aa167b7a91164b8b343a2250"
+    },
+    {
+      "path": "tests/performance/generate-fixture.mjs",
+      "sizeBytes": 1938,
+      "sha256": "1bf0bf6adde15e1f45a73b9fc5c22a0d1fffc89533065cd10d5b0c11b16bdb27"
     },
     {
       "path": "tests/protected/baseline-tests.zip",

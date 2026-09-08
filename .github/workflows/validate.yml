@@ -57,3 +57,19 @@ jobs:
           path: |
             ${{ runner.temp }}/phase7be-browser-acceptance.json
             ${{ runner.temp }}/screenshots
+  capacity_acceptance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - run: npm install --no-save --package-lock=false jszip@3.10.1 @xmldom/xmldom@0.9.12 playwright@1.55.0
+      - run: node tests/performance/generate-fixture.mjs
+      - run: npm run build:pages
+      - run: npx playwright install --with-deps chromium
+      - run: node tests/performance/browser-capacity.mjs
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: huf-capacity-acceptance
+          path: /tmp/huf-performance
