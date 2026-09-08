@@ -13,6 +13,6 @@
     "release:zip": "node tools/build-source-package.mjs",
     "test:browser-ci-contract": "node tests/foundation/browser-ci-contract.mjs",
     "accept:browser": "node tests/browser/run-imp7b-browser-acceptance.mjs",
-    "test:product": "node tests/foundation/preparation.mjs && node tests/foundation/product-flow.mjs && node tests/foundation/report-contract.mjs && node tests/foundation/export-reconciliation.mjs"
+    "test:product": "node tests/foundation/preparation.mjs && node tests/foundation/product-flow.mjs && node tests/foundation/report-contract.mjs && node tests/foundation/export-reconciliation.mjs && node tests/foundation/repeat-run.mjs"
   }
 }

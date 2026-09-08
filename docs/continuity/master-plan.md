@@ -14870,3 +14870,14 @@ E03-only integration and separate E04 command implemented. Preparation orchestra
 - VAL-063/086/087/088 retain the frozen prepared-state injection/tolerance-oracle boundary; evidence does not claim production re-execution of arbitrary mutated daily snapshots.
 - CI at implementation SHA01d2dc454429d9d413abb924b8c69041e3cbd2f5 passed foundation/product/protected tests and desktop flow through bulk/combined exports. Browser UAT correctly failed at tablet navigation because baseline CSS hid the sidebar. Fixed responsive navigation; rerun pending.
 - Draft PR1 is an implementation/acceptance workspace, not release approval. No production deployment or final release claim made.
+
+### EXEC-UAT-002 — CI and responsive hardening
+- CI run34254308950 / source ff4fbfc28e8a376c74cc2635149d8dde8d607426 passed foundation, protected module/physical, product/export/report and fresh154 logical gates.
+- Browser desktop and tablet paths passed. Mobile Results exposed horizontal overflow. Corrected intrinsic grid sizing without hiding page overflow; retained the strict check and added element-bound diagnostics.
+- Completed-run revalidation/recalculation now opens a new immutable draft and preserves prior snapshots; an injected E06 failure cannot leave prior results marked current. Aggregation QA failure retains audit evidence and blocks current-result publication.
+- Final release remains blocked on successful complete browser/deployed acceptance and representative production performance fixture/budget (PRD-NFR-005 / Architecture27.5). Available indexed input files found so far are templates/goldens, not a verified representative production workload.
+
+### EXEC-PERF-001 — synthetic capacity measurements
+- Synthetic Node probes completed at100/1000 structures with100/1000 person-day rows and365 rainfall rows; all E01–E09 stages completed. At1000 structures: input7.42MB; E03~3.30s; E06~3.75s; peak process RSS~1.34GB. This is an engineering measurement, not a production/browser acceptance claim.
+- Evidence: tests/evidence/synthetic-performance.json; reproducible probe: tests/protected/performance-probe.mjs. The production workload and numeric performance budget remain unset under Architecture27.5.
+- Added full leap-year browser calculation and366-day trace verification to the desktop/tablet/mobile acceptance rerun.

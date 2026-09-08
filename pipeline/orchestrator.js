@@ -66,6 +66,7 @@ export function createPipelineOrchestrator({adapter,appState,bus,snapshotRegistr
       if(!current)throw new Error('Create the Mapping Review before confirming mapping.');
       const requiredUnmapped=(current.fieldMappings||[]).filter(item=>item.requirementClass==='Core'&&item.sourceHeader===null);
       if(requiredUnmapped.length)throw new Error(`Map all required Core fields before confirming mapping (${requiredUnmapped.length} unresolved).`);
+      invalidateMappingDependents('Mapping confirmation starts a new prepared draft');
       const frozen=await executeOperation('E02',()=>adapter.confirmMapping(),{snapshotStage:'E02'});
       const safeState=createMappingState(frozen,'confirmed');
       appState.patch({mapping:safeState});appState.setRunState('MAPPING_CONFIRMED');return safeState.snapshot;
@@ -76,14 +77,17 @@ export function createPipelineOrchestrator({adapter,appState,bus,snapshotRegistr
     },
     async validateData(){
       if(!snapshotRegistry?.has('E03'))throw new Error('Prepare data before validation.');
+      if(snapshotRegistry?.isCompletedLocked?.()){snapshotRegistry.startNewDraft('E04',STAGE_ORDER);appState.bumpDraft('Revalidation requested');}
       await executeStages(['E04']);appState.setRunState('VALIDATION_REVIEW');return publicState();
     },
     async prepareAndValidate(){await executeStages(['E03','E04']);appState.setRunState('VALIDATION_REVIEW');return publicState();},
     async calculateToAudit(){
       const validation=(await publicState())?.validation;if(validation?.workbookReadiness==='workbook_not_ready')throw new Error('Resolve workbook blockers before calculation.');
       if(!snapshotRegistry?.has('E04'))throw new Error('Validate data before calculation.');
+      if(snapshotRegistry?.isCompletedLocked?.()){snapshotRegistry.startNewDraft('E05',STAGE_ORDER);appState.bumpDraft('Calculation requested');}
       appState.setRunState('CALCULATING');await executeStages(['E05','E06','E07','E08']);appState.setRunState('FINALIZING');await executeStages(['E09']);
       const state=await publicState();const audit=state?.audit??null;
+      if(state?.aggregation?.status==='aggregation_not_ready'){appState.patch({runState:'FAILED',error:{stage:'E08',message:'Aggregation QA did not pass. Audit evidence is retained; results are not current.'}});throw new Error('Aggregation QA did not pass. Review validation and audit evidence.');}
       snapshotRegistry?.complete({runId:audit?.runId??audit?.runManifest?.runId??null,audit});
       appState.patch({runState:'COMPLETE',completedRun:audit,error:null});return audit;
     },

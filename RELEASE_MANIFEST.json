@@ -12,7 +12,7 @@
     "classification": "HUF protected operational final v1.0.0"
   },
   "validationStatus": "PASS",
-  "payloadFiles": 197,
+  "payloadFiles": 200,
   "files": [
     {
       "path": ".github/workflows/pages.yml",
@@ -36,8 +36,8 @@
     },
     {
       "path": "FINAL_VALIDATION_STATUS.json",
-      "sizeBytes": 730,
-      "sha256": "2dd3fae58c9bcd821868a65e1c599f67a27d08e44ce58ad7af0f71122cb5aeb4"
+      "sizeBytes": 824,
+      "sha256": "c98b35fc911a48a39e859415234691b649736695f20972f029b6c6b2236c82b2"
     },
     {
       "path": "PROTECTED_CORE_MANIFEST.json",
@@ -46,8 +46,8 @@
     },
     {
       "path": "README.md",
-      "sizeBytes": 2394,
-      "sha256": "9fe016539435dca57caa712dc7aa6461f4df32079bfdb30deef6a8d9d8cd89cd"
+      "sizeBytes": 3419,
+      "sha256": "2c0a3a12a989955eb209c5126fa5bb6145a149687bf248b4092ab15ac0bba9ee"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -101,8 +101,8 @@
     },
     {
       "path": "app/bootstrap.js",
-      "sizeBytes": 7529,
-      "sha256": "a7f3c0a0968aa15babed212bbcb0cb3aca42f8648a428f8960f138f601c0f6fe"
+      "sizeBytes": 7693,
+      "sha256": "3695eded456a03503de5a4a9af8259a281fd07d4a17c496cec265ea03ba4c73a"
     },
     {
       "path": "app/error-boundary.js",
@@ -141,13 +141,13 @@
     },
     {
       "path": "css/components.css",
-      "sizeBytes": 13296,
-      "sha256": "c92cf5f0707c3d759ae8b535de111bf2af41b29ef1db41eb94d3912cea8d71db"
+      "sizeBytes": 13885,
+      "sha256": "46162345d631b216ca89de45b3cde977e85e4ec0334734b312d24202d5f5b8e6"
     },
     {
       "path": "css/layout.css",
-      "sizeBytes": 2328,
-      "sha256": "a2bbdd3aee2c3a4df63f73e35f38c547fb8f318132e9db8aaefbfae632911f95"
+      "sizeBytes": 2499,
+      "sha256": "52fd23b16fc435ad25b81cef87e5c3108c39a2c94d6a4c017287a255ed7152c3"
     },
     {
       "path": "css/tokens.css",
@@ -176,8 +176,8 @@
     },
     {
       "path": "docs/continuity/master-plan.md",
-      "sizeBytes": 483663,
-      "sha256": "ae9aa5701a1812bb34e0f4ff16cfe185aada372e277a1f2b49ce455467ccd88f"
+      "sizeBytes": 485318,
+      "sha256": "b78fe966824675c9b92c9872b9213df70834b4df0847917849593b553bf8f5de"
     },
     {
       "path": "docs/release/PHASE7A_IMPLEMENTATION_REPORT.md",
@@ -206,8 +206,8 @@
     },
     {
       "path": "package.json",
-      "sizeBytes": 951,
-      "sha256": "3c22e42925ca76b0e6ac69da92c933bd5f8d89b2d785378a029cb4ba4da42906"
+      "sizeBytes": 991,
+      "sha256": "d12a5507174666e8faa78b9d5b9affac869fde740310fd4b4e18d6e75641690d"
     },
     {
       "path": "pipeline/dependency-policy.js",
@@ -216,8 +216,8 @@
     },
     {
       "path": "pipeline/orchestrator.js",
-      "sizeBytes": 7169,
-      "sha256": "e07541ef2b177ead41acfbf90164e1f39bd233632aa6c3be7e1f7953c7f3a578"
+      "sizeBytes": 7848,
+      "sha256": "e2f86244316f52ee21041685c07123b25d3235b0055754033873a2887d686187"
     },
     {
       "path": "pipeline/pipeline-adapter.js",
@@ -451,8 +451,8 @@
     },
     {
       "path": "services/report-service.js",
-      "sizeBytes": 7685,
-      "sha256": "58c30815839437e62e99366a57e4b3a6c8fb456649d5d49f253567b77b0005a9"
+      "sizeBytes": 8068,
+      "sha256": "03b3a59948b7ab91b63d0c4be5a52689e54d1431e0ef7fc64142866a4a16cf45"
     },
     {
       "path": "services/source-intake-service.js",
@@ -521,8 +521,8 @@
     },
     {
       "path": "tests/browser/run-imp7b-browser-acceptance.mjs",
-      "sizeBytes": 11620,
-      "sha256": "32169ced219e15d80fbba7dc97bed5e6b3a738017118b2a3b7470cfbb3a80e35"
+      "sizeBytes": 12846,
+      "sha256": "3640eab65a0beba2063de5a3e6cb720887402712afe3d02dafd5a927c6bf8fa2"
     },
     {
       "path": "tests/design6/certification/HUF_D6_Remaining80_Execution_Results_v1.1.json",
@@ -602,7 +602,7 @@
     {
       "path": "tests/evidence/phase7be-test-result.json",
       "sizeBytes": 28506,
-      "sha256": "c04df72024b5a675ff53be2da880066b965123218c0525370424818bac9e4998"
+      "sha256": "898bac7e13754ee5809c6c670aaf59305156eac200eee7ce8dc13236aa781a1a"
     },
     {
       "path": "tests/evidence/product-flow.json",
@@ -618,6 +618,11 @@
       "path": "tests/evidence/report-contract.json",
       "sizeBytes": 38309,
       "sha256": "4912cc252cdc88bcb6d3868fc8130dc030bfb47ec047e2ac7f4aa87a3a39e3a6"
+    },
+    {
+      "path": "tests/evidence/synthetic-performance.json",
+      "sizeBytes": 1694,
+      "sha256": "540fcb721d4c0de04778b115be760fb3f66c06a2e0b499163e7a0257e701da6f"
     },
     {
       "path": "tests/fixtures/positive/GOLDEN_E2E_LEAP_FY2023-24.xlsx",
@@ -750,6 +755,11 @@
       "sha256": "798a6448ab9ac9fe187f0b1769c8073b199b110435091ade2f8a404dceeac3e7"
     },
     {
+      "path": "tests/foundation/repeat-run.mjs",
+      "sizeBytes": 1564,
+      "sha256": "32380b15c6992385e5d06f612cea10a212d13e776202923dd3717d13750870ff"
+    },
+    {
       "path": "tests/foundation/report-contract.mjs",
       "sizeBytes": 2981,
       "sha256": "c2da556598cbf79b51bdb11db1db5b9a7231ec32acfbd432357af933d56349ac"
@@ -835,6 +845,11 @@
       "sha256": "98db616aac6c48ff2d72ee53846a0e7c963f8f80769ddc8c2a3dc65bd1c7606f"
     },
     {
+      "path": "tests/protected/performance-probe.mjs",
+      "sizeBytes": 2683,
+      "sha256": "bba09a1370f2cb2fd468fc3fcb799b93f5eb220ea9884fbb3418f1311757c104"
+    },
+    {
       "path": "tests/protected/remaining80.mjs",
       "sizeBytes": 15673,
       "sha256": "218c38b842d87a37f9821ee978f9730119405d42bcecf0fd3adb76cf36e8b750"
@@ -866,13 +881,13 @@
     },
     {
       "path": "ui/pages/assurance.js",
-      "sizeBytes": 3367,
-      "sha256": "956a356c6772e77ae34b946c694cef322b4c6b8e6ea3b907093dfca646af94d6"
+      "sizeBytes": 3650,
+      "sha256": "56f265ba8b501178f3da5a220d1479ba6298d330765b93c99eec1cdc7f3b5ce5"
     },
     {
       "path": "ui/pages/audit.js",
-      "sizeBytes": 5121,
-      "sha256": "79f152fe652da9d45dbefea301a24e1ff61179efd2e2efdfb1bb7a56c3feb552"
+      "sizeBytes": 5467,
+      "sha256": "6226d26a55d38f14ad1a51a5541975ecf443131ffc5abf4aecdda2f06bd3b3be"
     },
     {
       "path": "ui/pages/data-preparation.js",
@@ -896,8 +911,8 @@
     },
     {
       "path": "ui/pages/results.js",
-      "sizeBytes": 16447,
-      "sha256": "4ea7fd8508b92f622cb0de1d4b73b382857aef893d9d66f88c9cd7a5ec31f5cf"
+      "sizeBytes": 16515,
+      "sha256": "2edfb82f277892afe2234aa698a2477ea6376fff32d2854b1ec822bb4967e59d"
     },
     {
       "path": "ui/pages/validation-centre.js",
@@ -911,8 +926,8 @@
     },
     {
       "path": "ui/product-ui.js",
-      "sizeBytes": 2718,
-      "sha256": "9010b8c2441d20c6a759f3b4991641cb5ce32840c92777a3d4a3b79a31fdf672"
+      "sizeBytes": 2888,
+      "sha256": "2ba016ecb8b13817c9db3503804d6555a3e6ec8e517fae4500957bd47a785839"
     },
     {
       "path": "vendor/VENDOR_MANIFEST.json",

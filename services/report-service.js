@@ -20,6 +20,7 @@ export function makePdf(input){
   text('Accepted means accepted under controlled methodology. Formal HUF confirmation: '+data.metadata.formalHufConfirmation,9);
   if(data.geography.length){heading('Geography comparison');rows(['Geography','Component','Calculated / unit','Accepted'],data.geography.flatMap(g=>g.summary.map(s=>[g.scope.label,s.component,precise(s.calculatedTotal)+' '+s.unit,precise(s.accepted)])),[42,30,55,47]);}
   heading('Included result records');rows(['Record / name','Component','Result / unit','Assurance'],data.records.map(r=>[r.id+' / '+r.name,r.component,precise(r.value)+' '+r.unit,r.status]),[48,27,48,51]);
+  if(data.mode!=='technical'&&data.issues.length){heading('Validation and evidence disclosure');text(`${data.issues.length} scoped/workbook validation finding(s) remain visible. Evidence-pending and warning totals above are included only in their stated buckets.`,9);rows(['Finding','Severity','Scope'],data.issues.map(i=>[i.message,i.severity,i.entityId||'Workbook']),[96,38,40]);}
   if(data.mode==='technical'){
    heading('Technical calculation basis');
    for(const r of data.records){heading(r.id+' - '+r.route);text(r.reason,9);text(Object.values(r.identity||{}).filter(v=>typeof v==='string').join(' | '),8);

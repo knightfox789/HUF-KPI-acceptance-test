@@ -151,21 +151,21 @@
       "test": "source-package-governance.mjs",
       "status": "PASS",
       "exitCode": 0,
-      "stdout": "{\n  \"suite\": \"source-package-governance\",\n  \"status\": \"PASS\",\n  \"checks\": 8,\n  \"failed\": 0,\n  \"details\": [\n    {\n      \"id\": \"NO_SITE_IN_SOURCE_PACKAGE\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"NO_NODE_MODULES_IN_SOURCE_PACKAGE\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"RELEASE_MANIFEST_INCLUDED\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"MANIFEST_DRIVES_PACKAGE\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"BUILD_ENTRY_COUNT\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"ZIP_LIST_READABLE\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"ZIP_EXACT_COVERAGE\",\n      \"status\": \"PASS\",\n      \"note\": \"zip=198, expected=198\"\n    },\n    {\n      \"id\": \"ZIP_NO_SITE\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    }\n  ]\n}",
+      "stdout": "{\n  \"suite\": \"source-package-governance\",\n  \"status\": \"PASS\",\n  \"checks\": 8,\n  \"failed\": 0,\n  \"details\": [\n    {\n      \"id\": \"NO_SITE_IN_SOURCE_PACKAGE\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"NO_NODE_MODULES_IN_SOURCE_PACKAGE\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"RELEASE_MANIFEST_INCLUDED\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"MANIFEST_DRIVES_PACKAGE\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"BUILD_ENTRY_COUNT\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"ZIP_LIST_READABLE\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    },\n    {\n      \"id\": \"ZIP_EXACT_COVERAGE\",\n      \"status\": \"PASS\",\n      \"note\": \"zip=201, expected=201\"\n    },\n    {\n      \"id\": \"ZIP_NO_SITE\",\n      \"status\": \"PASS\",\n      \"note\": \"\"\n    }\n  ]\n}",
       "stderr": ""
     },
     {
       "test": "static-architecture.mjs",
       "status": "PASS",
       "exitCode": 0,
-      "stdout": "{\n  \"suite\": \"static-architecture\",\n  \"status\": \"PASS\",\n  \"jsFiles\": 121,\n  \"violations\": []\n}",
+      "stdout": "{\n  \"suite\": \"static-architecture\",\n  \"status\": \"PASS\",\n  \"jsFiles\": 123,\n  \"violations\": []\n}",
       "stderr": ""
     },
     {
       "test": "relative-imports.mjs",
       "status": "PASS",
       "exitCode": 0,
-      "stdout": "{\n  \"suite\": \"relative-imports\",\n  \"status\": \"PASS\",\n  \"files\": 119,\n  \"imports\": 144,\n  \"unresolved\": []\n}",
+      "stdout": "{\n  \"suite\": \"relative-imports\",\n  \"status\": \"PASS\",\n  \"files\": 121,\n  \"imports\": 150,\n  \"unresolved\": []\n}",
       "stderr": ""
     },
     {
@@ -179,7 +179,7 @@
       "test": "javascript-syntax.mjs",
       "status": "PASS",
       "exitCode": 0,
-      "stdout": "{\n  \"suite\": \"javascript-syntax\",\n  \"status\": \"PASS\",\n  \"checked\": 119,\n  \"failed\": []\n}",
+      "stdout": "{\n  \"suite\": \"javascript-syntax\",\n  \"status\": \"PASS\",\n  \"checked\": 121,\n  \"failed\": []\n}",
       "stderr": ""
     },
     {
