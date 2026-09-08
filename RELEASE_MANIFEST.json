@@ -12,12 +12,12 @@
     "classification": "HUF protected operational final v1.0.0"
   },
   "validationStatus": "PASS",
-  "payloadFiles": 209,
+  "payloadFiles": 210,
   "files": [
     {
       "path": ".github/workflows/pages.yml",
-      "sizeBytes": 3198,
-      "sha256": "e959aef240555ef7954ee0c3749150d18682184ad04f3c7aee991ffc7fd35d90"
+      "sizeBytes": 5372,
+      "sha256": "e4ad024325cbb8a4a8927710bd2701a37ca8ade47d5d7c4a3d5c4ff62aec1bae"
     },
     {
       "path": ".github/workflows/validate.yml",
@@ -530,6 +530,11 @@
       "sha256": "df99209a9a6820665dd629932712741b64e3de39fffa03c8c7b387ae458a181b"
     },
     {
+      "path": "tests/browser/verify-deployed-files.mjs",
+      "sizeBytes": 1694,
+      "sha256": "74a2a26ab17104dac86f1fcb0c50be2caf4e06d651af277749a6c7db485119c9"
+    },
+    {
       "path": "tests/design6/certification/HUF_D6_Remaining80_Execution_Results_v1.1.json",
       "sizeBytes": 45212,
       "sha256": "3e3333d807ad76a6539a57f87a264bde0086ef8dbdf34701321539b3c41cc0e6"
@@ -607,7 +612,7 @@
     {
       "path": "tests/evidence/phase7be-test-result.json",
       "sizeBytes": 28506,
-      "sha256": "681786679ab79be23b470cb2648ed9e3452d45ebd8fb8f909d04dfb76e6d0bf5"
+      "sha256": "96c5c9c1c71c9b5cd171ca2fb5028dc02399929b7fddbf1199d7470e4930014b"
     },
     {
       "path": "tests/evidence/phase8-browser-a3ebd7a.json",
@@ -651,8 +656,8 @@
     },
     {
       "path": "tests/foundation/browser-ci-contract.mjs",
-      "sizeBytes": 1802,
-      "sha256": "2dadb54a421ecb0efacfe0578354268de028b468a4c48bfda8b35ba4ca04e81a"
+      "sizeBytes": 1827,
+      "sha256": "1977d23ea1646915ccf1c013c109eee6dfb9eaa2bd3f87909009a91461ad0611"
     },
     {
       "path": "tests/foundation/config-parse.mjs",
@@ -716,8 +721,8 @@
     },
     {
       "path": "tests/foundation/pages-workflow.mjs",
-      "sizeBytes": 1166,
-      "sha256": "7ed94a43bcdde46b02bf1b5cc5bf706b5d79f306ab04649debc773e815739e99"
+      "sizeBytes": 1191,
+      "sha256": "a3c4ac287ffcfca0c1dcc72a9d0442c59715c5c44be54d6b4b30fa7af0d75c63"
     },
     {
       "path": "tests/foundation/preflight-service.mjs",
@@ -846,8 +851,8 @@
     },
     {
       "path": "tests/performance/browser-capacity.mjs",
-      "sizeBytes": 5457,
-      "sha256": "d660403ef3af075c2bec4eb53b04fe343765f870a906071b04e00abffd4cd03f"
+      "sizeBytes": 5648,
+      "sha256": "2aa677eed4d721219dd6323afcdb0e1cc242aad4ff9ef75b7e6b6d54fee1d51d"
     },
     {
       "path": "tests/performance/budget.json",

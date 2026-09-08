@@ -14,5 +14,5 @@ check('RUNNER_REAL_XLSX',runner.includes('GOLDEN_E2E_NONLEAP_FY2024-25.xlsx')&&r
 check('RUNNER_PREFLIGHT',runner.includes('PREFLIGHT_READY')&&runner.includes('[data-preflight-root]'));
 check('RUNNER_MAPPING',runner.includes('[data-mapping-root]')&&runner.includes('MANUAL_MAPPING_APPLIED'));
 check('RUNNER_FINAL_SNAPSHOT',runner.includes('SNAPSHOT_HASH_VISIBLE')&&runner.includes('DATA_PREPARATION_EXECUTED')&&runner.includes('AUDIT_E01_TO_E09'));
-check('PAGES_BROWSER_BEFORE_DEPLOY',/browser_acceptance:[\s\S]*needs:\s*validate[\s\S]*deploy:[\s\S]*needs:\s*browser_acceptance/.test(pages));
+check('PAGES_BROWSER_BEFORE_DEPLOY',/browser_acceptance:[\s\S]*needs:\s*validate[\s\S]*deploy:[\s\S]*needs:\s*\[browser_acceptance, capacity_acceptance\]/.test(pages));
 const failed=checks.filter(x=>x.status==='FAIL');console.log(JSON.stringify({suite:'browser-ci-contract',status:failed.length?'FAIL':'PASS',checks:checks.length,failed:failed.length,details:checks},null,2));if(failed.length)process.exitCode=1;

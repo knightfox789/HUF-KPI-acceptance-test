@@ -1,5 +1,7 @@
 name: Deploy Pages
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
 permissions: { contents: read, pages: write, id-token: write }
 concurrency: { group: pages, cancel-in-progress: true }
@@ -76,7 +78,9 @@ jobs:
         uses: actions/upload-pages-artifact@v4
         with: { path: './_site' }
   deploy:
-    needs: browser_acceptance
+    outputs:
+      page_url: ${{ steps.deployment.outputs.page_url }}
+    needs: [browser_acceptance, capacity_acceptance]
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -85,3 +89,56 @@ jobs:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
+
+  capacity_acceptance:
+    needs: validate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - run: npm install --no-save --package-lock=false jszip@3.10.1 @xmldom/xmldom@0.9.12 playwright@1.55.0
+      - run: node tests/performance/generate-fixture.mjs
+      - uses: actions/download-artifact@v4
+        with:
+          name: huf-phase7be-curated-site
+          path: _site
+      - run: npx playwright install --with-deps chromium
+      - run: node tests/performance/browser-capacity.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: huf-pages-capacity-acceptance
+          path: /tmp/huf-performance
+  live_acceptance:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - uses: actions/download-artifact@v4
+        with:
+          name: huf-phase7be-curated-site
+          path: _site
+      - run: npm install --no-save --package-lock=false playwright@1.55.0
+      - run: npx playwright install --with-deps chromium
+      - name: Verify every deployed file against the accepted payload
+        env:
+          HUF_LIVE_URL: ${{ needs.deploy.outputs.page_url }}
+        run: node tests/browser/verify-deployed-files.mjs
+      - name: Accept live application end to end
+        env:
+          HUF_LIVE_URL: ${{ needs.deploy.outputs.page_url }}
+          HUF_SITE_ROOT: _site
+          HUF_SCREENSHOT_DIR: ${{ runner.temp }}/live-screenshots
+          HUF_ACCEPTANCE_EVIDENCE_PATH: ${{ runner.temp }}/phase7be-browser-acceptance.json
+        run: node tests/browser/run-imp7b-browser-acceptance.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: huf-live-release-acceptance
+          path: |
+            deployed-files.runtime.json
+            ${{ runner.temp }}/phase7be-browser-acceptance.json
+            ${{ runner.temp }}/live-screenshots
